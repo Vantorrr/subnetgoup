@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubNet Group - Networks. Communications. Security.</title>
+    <meta name="description" content="SubNet Group provides technological solutions for private and corporate clients. Expert networking, communications, and security services.">
+    <meta name="keywords" content="networking, IT solutions, security, communications, corporate networks, technology">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="network-loader">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+                <div class="connection"></div>
+            </div>
+            <h2 class="loading-text">SubNet Group</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">
+            <span class="flag-icon">🇺🇸</span>
+        </button>
+        <button class="lang-btn" data-lang="he">
+            <span class="flag-icon">🇮🇱</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="SubNet Group" class="logo-img">
+                    <span class="logo-text">SubNet Group</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-translate="nav.home">Home</a></li>
+                    <li><a href="#about" data-translate="nav.about">About us</a></li>
+                    <li><a href="#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="#partners" data-translate="nav.partners">Our Partners</a></li>
+                    <li><a href="#contact" data-translate="nav.contact">Contact us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Digital Background -->
+        <div class="digital-background">
+            <div class="matrix-grid"></div>
+            <div class="circuit-lines"></div>
+            <div class="data-particles"></div>
+            <div class="neural-network"></div>
+            <div class="hologram-effects"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="line-1" data-translate="hero.networks">Networks.</span>
+                        <span class="line-2" data-translate="hero.communications">Communications.</span>
+                        <span class="line-3" data-translate="hero.security">Security.</span>
+                    </h1>
+                    <p class="hero-subtitle" data-translate="hero.subtitle">Technological solutions for private and corporate clients.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number" data-number="10">10+</div>
+                            <div class="stat-label" data-translate="hero.experience">EXPERIENCE</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-number="20">20</div>
+                            <div class="stat-label" data-translate="hero.products">PRODUCTS</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-number="30">30+</div>
+                            <div class="stat-label" data-translate="hero.projects">PROJECTS DONE</div>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button" data-translate="hero.consultation">
+                        <span><i class="fas fa-phone"></i> Get Consultation</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="command-center">
+                        <div class="monitors-grid">
+                            <div class="monitor" data-delay="0">
+                                <div class="screen">
+                                    <div class="screen-content network-topology"></div>
+                                </div>
+                            </div>
+                            <div class="monitor" data-delay="0.2">
+                                <div class="screen">
+                                    <div class="screen-content security-dashboard"></div>
+                                </div>
+                            </div>
+                            <div class="monitor" data-delay="0.4">
+                                <div class="screen">
+                                    <div class="screen-content data-flow"></div>
+                                </div>
+                            </div>
+                            <div class="monitor" data-delay="0.6">
+                                <div class="screen">
+                                    <div class="screen-content system-stats"></div>
+                                </div>
+                            </div>
+                            <div class="monitor" data-delay="0.8">
+                                <div class="screen">
+                                    <div class="screen-content traffic-analysis"></div>
+                                </div>
+                            </div>
+                            <div class="monitor" data-delay="1.0">
+                                <div class="screen">
+                                    <div class="screen-content threat-detection"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-desk"></div>
+                        <div class="ambient-lighting"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-translate="services.title">Our Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="networking">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 data-translate="services.networking.title">Network Solutions</h3>
+                    <p data-translate="services.networking.description">Professional network infrastructure design and implementation</p>
+                    <a href="services/network-solutions.html" class="learn-more-btn" data-translate="common.learn_more">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-service="security">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-translate="services.security.title">Cybersecurity</h3>
+                    <p data-translate="services.security.description">Comprehensive security solutions for your digital assets</p>
+                    <a href="services/cybersecurity.html" class="learn-more-btn" data-translate="common.learn_more">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-service="monitoring">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-translate="services.monitoring.title">System Monitoring</h3>
+                    <p data-translate="services.monitoring.description">24/7 monitoring and maintenance of your IT infrastructure</p>
+                    <a href="services/system-monitoring.html" class="learn-more-btn" data-translate="common.learn_more">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-service="support">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-translate="services.support.title">Technical Support</h3>
+                    <p data-translate="services.support.description">Expert technical support and consultation services</p>
+                    <a href="services/technical-support.html" class="learn-more-btn" data-translate="common.learn_more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <!-- Digital Background -->
+        <div class="digital-background">
+            <div class="matrix-grid"></div>
+            <div class="circuit-lines"></div>
+            <div class="data-particles"></div>
+            <div class="neural-network"></div>
+            <div class="hologram-effects"></div>
+        </div>
+        
+        <div class="container">
+            <div class="about-content">
+                <div class="about-visual">
+                    <div class="tech-hub">
+                        <div class="tech-center">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="tech-element">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="tech-element">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="tech-element">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="tech-element">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="tech-element">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 data-translate="about.title">About Us</h2>
+                    <p data-translate="about.description">
+                        SubNet Group is a leading technology company specializing in comprehensive IT solutions. 
+                        We provide cutting-edge network infrastructure, robust security systems, and reliable 
+                        communication solutions for businesses of all sizes.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span data-translate="about.feature1">Professional Team</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <span data-translate="about.feature2">24/7 Support</span>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <span data-translate="about.feature3">Proven Results</span>
+                        </div>
+                    </div>
+                    <button class="learn-more-btn" data-translate="about.why_choose">Why Choose Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title" data-translate="process.title">Our Working Process</h2>
+            <p class="section-subtitle" data-translate="process.subtitle">
+                Professional approach to every project with guaranteed results
+            </p>
+            
+            <div class="process-timeline">
+                <div class="process-steps">
+                    <div class="step" data-step="1">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 data-translate="process.discussion">Discussion</h3>
+                        <p data-translate="process.discussion_desc">Understanding your needs and requirements</p>
+                    </div>
+                    
+                    <div class="step highlighted" data-step="2">
+                        <div class="step-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 data-translate="process.installation">Installation</h3>
+                        <p data-translate="process.installation_desc">Professional implementation and setup</p>
+                    </div>
+                    
+                    <div class="step" data-step="3">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 data-translate="process.maintenance">Maintenance</h3>
+                        <p data-translate="process.maintenance_desc">Ongoing support and optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <div class="container">
+            <h2 class="section-title" data-translate="partners.title">Our Partners</h2>
+            <p class="section-subtitle" data-translate="partners.subtitle">
+                We work only with the most trusted companies on the market
+            </p>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="images/partner-1.svg" alt="Cisco">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-2.svg" alt="Microsoft">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-3.svg" alt="HP">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-4.svg" alt="Dell">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-5.svg" alt="IBM">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-6.svg" alt="VMware">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-7.svg" alt="Juniper">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-8.svg" alt="Fortinet">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-9.svg" alt="Palo Alto Networks">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-10.svg" alt="Aruba">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-11.svg" alt="SonicWall">
+                </div>
+                <div class="partner-logo">
+                    <img src="images/partner-12.svg" alt="Ubiquiti">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 data-translate="contact.title">Contact Us</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-translate="contact.phone">Phone</h4>
+                            <p>+972-507-123-123</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="contact.email">E-Mail</h4>
+                            <p>Sub@index.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Name" data-translate-placeholder="contact.name" required>
+                        <input type="email" placeholder="Email address" data-translate-placeholder="contact.email_address" required>
+                        <textarea placeholder="Message" data-translate-placeholder="contact.message" required></textarea>
+                        <button type="submit" data-translate="contact.send_message">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications & Achievements -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 data-translate="certifications.title">Certifications & Achievements</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>ISO 27001</h3>
+                    <p data-translate="certifications.iso">Information Security Management</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award"></i>
+                    <h3>CISSP</h3>
+                    <p data-translate="certifications.cissp">Certified Information Systems Security Professional</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>CCNP</h3>
+                    <p data-translate="certifications.ccnp">Cisco Certified Network Professional</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Microsoft Partner</h3>
+                    <p data-translate="certifications.microsoft">Gold Competency Status</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-number="500">0</div>
+                    <div class="stat-label" data-translate="stats.projects">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-number="50">0</div>
+                    <div class="stat-label" data-translate="stats.clients">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-number="10000">0</div>
+                    <div class="stat-label" data-translate="stats.devices">Devices Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-number="99.9">0</div>
+                    <div class="stat-label" data-translate="stats.uptime">% Uptime Guaranteed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SUBNET GROUP</h3>
+                    <p data-translate="footer.description">
+                        Installation, configuration and maintenance of access control systems, computer networks and other modern systems
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.navigation">Navigation</h4>
+                    <ul>
+                        <li><a href="#home" data-translate="nav.home">Home</a></li>
+                        <li><a href="#about" data-translate="nav.about">About Us</a></li>
+                        <li><a href="#partners" data-translate="nav.partners">Our Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=972507123123&text=Hello! I'm interested in your services." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

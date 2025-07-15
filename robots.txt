@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://subnetgroup.com/sitemap.xml
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
+
+# Disallow certain directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow access to CSS and JS files
+Allow: /styles.css
+Allow: /script.js
+Allow: /services/service-page.css
+Allow: /services/service-page.js
+
+# Allow access to images
+Allow: /images/
+Allow: /assets/ 

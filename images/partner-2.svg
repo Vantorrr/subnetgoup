@@ -1,0 +1,10 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" fill="#ffffff" rx="8"/>
+  <!-- Microsoft logo squares -->
+  <rect x="15" y="18" width="8" height="8" fill="#f25022"/>
+  <rect x="25" y="18" width="8" height="8" fill="#7fba00"/>
+  <rect x="15" y="28" width="8" height="8" fill="#00a4ef"/>
+  <rect x="25" y="28" width="8" height="8" fill="#ffb900"/>
+  <!-- Microsoft text -->
+  <text x="42" y="32" font-family="Arial, sans-serif" font-size="14" font-weight="normal" fill="#000">Microsoft</text>
+</svg> 

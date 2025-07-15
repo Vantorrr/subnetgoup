@@ -1,0 +1,61 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  
+  <!-- Network infrastructure visualization -->
+  <g filter="url(#glow)">
+    <!-- Server racks -->
+    <rect x="50" y="150" width="80" height="120" rx="5" fill="#333" stroke="#00d4ff" stroke-width="2"/>
+    <rect x="150" y="180" width="80" height="90" rx="5" fill="#333" stroke="#00d4ff" stroke-width="2"/>
+    <rect x="250" y="160" width="80" height="110" rx="5" fill="#333" stroke="#00d4ff" stroke-width="2"/>
+    
+    <!-- LED indicators -->
+    <circle cx="70" cy="170" r="3" fill="#00ff00"/>
+    <circle cx="110" cy="170" r="3" fill="#00ff00"/>
+    <circle cx="170" cy="200" r="3" fill="#00d4ff"/>
+    <circle cx="210" cy="200" r="3" fill="#00d4ff"/>
+    <circle cx="270" cy="180" r="3" fill="#00ff00"/>
+    <circle cx="310" cy="180" r="3" fill="#00ff00"/>
+    
+    <!-- Network connections -->
+    <path d="M130 200 Q200 120 250 180" stroke="#00d4ff" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M230 220 Q280 140 330 200" stroke="#00d4ff" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M90 150 Q150 100 190 180" stroke="#00d4ff" stroke-width="3" fill="none" opacity="0.8"/>
+    
+    <!-- Cloud representation -->
+    <ellipse cx="450" cy="120" rx="80" ry="40" fill="#333" stroke="#00d4ff" stroke-width="2" opacity="0.7"/>
+    <ellipse cx="430" cy="110" rx="50" ry="25" fill="#333" stroke="#00d4ff" stroke-width="2" opacity="0.7"/>
+    <ellipse cx="470" cy="110" rx="50" ry="25" fill="#333" stroke="#00d4ff" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Connection to cloud -->
+    <path d="M330 190 Q380 140 430 130" stroke="#00d4ff" stroke-width="3" fill="none" opacity="0.8"/>
+    
+    <!-- Security shield -->
+    <path d="M480 250 L460 270 L460 320 L480 340 L500 340 L520 320 L520 270 Z" fill="#333" stroke="#00d4ff" stroke-width="2"/>
+    <text x="490" y="300" font-family="Arial" font-size="16" fill="#00d4ff" text-anchor="middle">🔒</text>
+  </g>
+  
+  <!-- Floating particles for tech effect -->
+  <circle cx="400" cy="200" r="2" fill="#00d4ff" opacity="0.6">
+    <animate attributeName="cy" values="200;180;200" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="380" cy="250" r="1.5" fill="#00d4ff" opacity="0.4">
+    <animate attributeName="cy" values="250;230;250" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="420" cy="280" r="2" fill="#00d4ff" opacity="0.5">
+    <animate attributeName="cy" values="280;260;280" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

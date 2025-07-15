@@ -1,0 +1,7 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" fill="#ffffff" rx="8"/>
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0066cc" text-anchor="middle">cisco</text>
+  <!-- Cisco wave pattern -->
+  <path d="M10 45 Q20 40 30 45 T50 45" stroke="#0066cc" stroke-width="2" fill="none"/>
+  <path d="M70 45 Q80 40 90 45 T110 45" stroke="#0066cc" stroke-width="2" fill="none"/>
+</svg> 
