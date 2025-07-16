@@ -21,20 +21,20 @@ const translations = {
         services: {
             title: "Our Services",
             networking: {
-                title: "Network Solutions",
-                description: "Professional network infrastructure design and implementation"
+                title: "Internet & Networking",
+                description: "WiFi setup, cable installation, and router configuration"
             },
             security: {
-                title: "Cybersecurity",
-                description: "Comprehensive security solutions for your digital assets"
+                title: "Video Surveillance",
+                description: "HD cameras, recording systems, and remote monitoring"
             },
             monitoring: {
-                title: "System Monitoring",
-                description: "24/7 monitoring and maintenance of your IT infrastructure"
+                title: "Access Control",
+                description: "Smart locks, card readers, and mobile app management"
             },
             support: {
-                title: "Technical Support",
-                description: "Expert technical support and consultation services"
+                title: "Maintenance & Support",
+                description: "System updates, repairs, and ongoing technical support"
             }
         },
         about: {
@@ -111,20 +111,20 @@ const translations = {
         services: {
             title: "השירותים שלנו",
             networking: {
-                title: "פתרונות רשת",
-                description: "עיצוב והטמעה מקצועית של תשתית רשת"
+                title: "אינטרנט ורשתות",
+                description: "התקנת WiFi, הטמעת כבלים והגדרת נתבים"
             },
             security: {
-                title: "אבטחת סייבר",
-                description: "פתרונות אבטחה מקיפים לנכסים הדיגיטליים שלכם"
+                title: "מעקבי וידאו",
+                description: "מצלמות HD, מערכות הקלטה וניטור מרחוק"
             },
             monitoring: {
-                title: "ניטור מערכות",
-                description: "ניטור ותחזוקה 24/7 של תשתית ה-IT שלכם"
+                title: "בקרת גישה",
+                description: "מנעולים חכמים, קוראי כרטיסים וניהול אפליקציות"
             },
             support: {
-                title: "תמיכה טכנית",
-                description: "שירותי תמיכה טכנית מומחים ויעוץ"
+                title: "תחזוקה ותמיכה",
+                description: "עדכוני מערכת, תיקונים ותמיכה טכנית שוטפת"
             }
         },
         about: {
@@ -466,10 +466,10 @@ function closeModal() {
 
 function getServiceTitle(service) {
     const titles = {
-        networking: 'Network Solutions',
-        security: 'Cybersecurity',
-        monitoring: 'System Monitoring',
-        support: 'Technical Support'
+        networking: 'Internet & Networking',
+        security: 'Video Surveillance',
+        monitoring: 'Access Control',
+        support: 'Maintenance & Support'
     };
     return titles[service] || 'Our Service';
 }
@@ -477,56 +477,56 @@ function getServiceTitle(service) {
 function getServiceContent(service) {
     const content = {
         networking: `
-            <h3>Professional Network Infrastructure</h3>
-            <p>We design and implement robust network solutions tailored to your business needs:</p>
+            <h3>Internet & Networking Solutions</h3>
+            <p>Professional internet setup and networking services for homes and businesses:</p>
             <ul>
-                <li>Network architecture design and planning</li>
-                <li>Installation of switches, routers, and access points</li>
-                <li>Network security implementation</li>
-                <li>Performance optimization and troubleshooting</li>
-                <li>Wireless network deployment</li>
-                <li>Network monitoring and maintenance</li>
+                <li>WiFi router installation and configuration</li>
+                <li>Ethernet cable installation and management</li>
+                <li>Network troubleshooting and optimization</li>
+                <li>Wireless coverage planning and setup</li>
+                <li>Internet provider configuration</li>
+                <li>Home and office network setup</li>
             </ul>
-            <p>Our team ensures your network infrastructure is scalable, secure, and reliable.</p>
+            <p>Get fast, reliable internet connectivity throughout your space with our expert installation.</p>
         `,
         security: `
-            <h3>Comprehensive Cybersecurity Solutions</h3>
-            <p>Protect your digital assets with our advanced security services:</p>
+            <h3>Video Surveillance Systems</h3>
+            <p>Secure your property with professional camera systems and monitoring:</p>
             <ul>
-                <li>Firewall configuration and management</li>
-                <li>Intrusion detection and prevention systems</li>
-                <li>Security audits and vulnerability assessments</li>
-                <li>Data encryption and backup solutions</li>
-                <li>Employee cybersecurity training</li>
-                <li>Incident response and recovery</li>
+                <li>HD security camera installation</li>
+                <li>Network video recording (NVR) setup</li>
+                <li>Remote monitoring via mobile app</li>
+                <li>Motion detection and smart alerts</li>
+                <li>Night vision and weatherproof cameras</li>
+                <li>Cloud storage and local backup</li>
             </ul>
-            <p>Stay ahead of cyber threats with our proactive security approach.</p>
+            <p>Monitor your property 24/7 with high-definition cameras and intelligent recording systems.</p>
         `,
         monitoring: `
-            <h3>24/7 System Monitoring</h3>
-            <p>Ensure optimal performance with our monitoring services:</p>
+            <h3>Access Control Systems</h3>
+            <p>Control and monitor access to your property with smart security solutions:</p>
             <ul>
-                <li>Real-time system monitoring and alerts</li>
-                <li>Performance analysis and reporting</li>
-                <li>Proactive maintenance and updates</li>
-                <li>Capacity planning and optimization</li>
-                <li>Disaster recovery planning</li>
-                <li>Remote troubleshooting and support</li>
+                <li>Electronic door locks and keypads</li>
+                <li>Card reader and key fob systems</li>
+                <li>Mobile app access management</li>
+                <li>Biometric access control (fingerprint, facial)</li>
+                <li>Visitor management and temporary access</li>
+                <li>Real-time access logging and reporting</li>
             </ul>
-            <p>Minimize downtime and maximize efficiency with our monitoring solutions.</p>
+            <p>Grant or revoke access remotely and track all entry activity with our smart access systems.</p>
         `,
         support: `
-            <h3>Expert Technical Support</h3>
-            <p>Get professional assistance when you need it most:</p>
+            <h3>Maintenance & Support Services</h3>
+            <p>Keep your technology running smoothly with our comprehensive support:</p>
             <ul>
-                <li>24/7 technical support helpdesk</li>
-                <li>Remote and on-site assistance</li>
-                <li>Hardware and software troubleshooting</li>
-                <li>System maintenance and updates</li>
-                <li>User training and documentation</li>
-                <li>Technology consulting and advice</li>
+                <li>Regular system maintenance and updates</li>
+                <li>Emergency repair services</li>
+                <li>Hardware troubleshooting and replacement</li>
+                <li>Software updates and security patches</li>
+                <li>Performance optimization and tuning</li>
+                <li>24/7 technical support assistance</li>
             </ul>
-            <p>Our experienced team is always ready to help you solve any technical challenge.</p>
+            <p>Ensure optimal performance and minimize downtime with our proactive maintenance services.</p>
         `
     };
     return content[service] || '<p>Service information will be available soon.</p>';

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#fef3c7"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#d97706">
+    Data Center Network
+  </text>
+  
+  <!-- Server Racks -->
+  <rect x="80" y="70" width="30" height="100" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  <rect x="130" y="70" width="30" height="100" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  <rect x="180" y="70" width="30" height="100" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  <rect x="230" y="70" width="30" height="100" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  <rect x="280" y="70" width="30" height="100" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- Server LED lights -->
+  <circle cx="95" cy="85" r="2" fill="#22c55e"/>
+  <circle cx="95" cy="95" r="2" fill="#22c55e"/>
+  <circle cx="95" cy="105" r="2" fill="#fbbf24"/>
+  <circle cx="95" cy="115" r="2" fill="#22c55e"/>
+  
+  <circle cx="145" cy="85" r="2" fill="#22c55e"/>
+  <circle cx="145" cy="95" r="2" fill="#22c55e"/>
+  <circle cx="145" cy="105" r="2" fill="#22c55e"/>
+  <circle cx="145" cy="115" r="2" fill="#22c55e"/>
+  
+  <circle cx="195" cy="85" r="2" fill="#fbbf24"/>
+  <circle cx="195" cy="95" r="2" fill="#22c55e"/>
+  <circle cx="195" cy="105" r="2" fill="#22c55e"/>
+  <circle cx="195" cy="115" r="2" fill="#22c55e"/>
+  
+  <!-- Core Switch -->
+  <rect x="150" y="200" width="100" height="30" fill="#b45309" stroke="#92400e" stroke-width="2"/>
+  <text x="200" y="220" text-anchor="middle" font-family="Arial" font-size="12" fill="white">Core Switch</text>
+  
+  <!-- Connections -->
+  <line x1="95" y1="170" x2="180" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="145" y1="170" x2="190" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="195" y1="170" x2="200" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="245" y1="170" x2="210" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="295" y1="170" x2="220" y2="200" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Stats -->
+  <text x="200" y="260" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">
+    High-performance data center network with redundancy and failover
+  </text>
+  
+  <text x="60" y="280" font-family="Arial" font-size="10" fill="#d97706">⚡ 10Gbps</text>
+  <text x="150" y="280" font-family="Arial" font-size="10" fill="#d97706">💾 100TB Storage</text>
+  <text x="280" y="280" font-family="Arial" font-size="10" fill="#d97706">📈 99.9% Uptime</text>
+</svg> 

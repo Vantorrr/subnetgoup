@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Solutions - SubNet Group</title>
-    <link rel="stylesheet" href="service-page.css">
+    <link rel="stylesheet" href="service-page.css?v=2">
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,13 +25,33 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="../index.html" class="logo">
-                    <img src="../images/logo.svg" alt="SubNet Group" class="logo-img">
+                    <img src="../images/subnet-logo-web.png" alt="SubNet Group" class="logo-img">
                     <span class="logo-text">SubNet Group</span>
                 </a>
                 <ul class="nav-menu">
                     <li><a href="../index.html" data-translate="nav.home">Home</a></li>
                     <li><a href="../index.html#about" data-translate="nav.about">About us</a></li>
-                    <li><a href="../index.html#services" data-translate="nav.services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#services" class="dropdown-toggle" data-translate="nav.services">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="network-solutions.html" class="dropdown-item active">
+                                <i class="fas fa-wifi"></i>
+                                <span data-translate="services.networking.title">Internet & Networking</span>
+                            </a>
+                            <a href="cybersecurity.html" class="dropdown-item">
+                                <i class="fas fa-video"></i>
+                                <span data-translate="services.security.title">Video Surveillance</span>
+                            </a>
+                            <a href="system-monitoring.html" class="dropdown-item">
+                                <i class="fas fa-key"></i>
+                                <span data-translate="services.monitoring.title">Access Control</span>
+                            </a>
+                            <a href="technical-support.html" class="dropdown-item">
+                                <i class="fas fa-tools"></i>
+                                <span data-translate="services.support.title">Maintenance & Support</span>
+                            </a>
+                        </div>
+                    </li>
                     <li><a href="../index.html#partners" data-translate="nav.partners">Our Partners</a></li>
                     <li><a href="../index.html#contact" data-translate="nav.contact">Contact us</a></li>
                 </ul>
@@ -191,7 +211,117 @@
         </div>
     </section>
 
-
+    <!-- Service Request Form -->
+    <section class="service-request">
+        <div class="container">
+            <div class="request-content">
+                <div class="request-info">
+                    <h2>Request Network Solutions Service</h2>
+                    <p>Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.</p>
+                    <div class="request-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free network assessment</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Performance optimization</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Enterprise-grade security</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 support included</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="request-form">
+                    <form class="service-form">
+                        <div class="form-group">
+                            <label for="service-type">Network Service Type</label>
+                            <select id="service-type" name="serviceType" required>
+                                <option value="">Select Service</option>
+                                <option value="network-design">Custom Network Design</option>
+                                <option value="network-installation">Network Installation</option>
+                                <option value="network-upgrade">Network Upgrade</option>
+                                <option value="wireless-setup">Wireless Network Setup</option>
+                                <option value="security-implementation">Network Security</option>
+                                <option value="performance-optimization">Performance Optimization</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-name">Full Name</label>
+                                <input type="text" id="client-name" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone">Phone Number</label>
+                                <input type="tel" id="client-phone" name="clientPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-email">Email Address</label>
+                                <input type="email" id="client-email" name="clientEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" name="companyName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="network-size">Network Size</label>
+                            <select id="network-size" name="networkSize" required>
+                                <option value="">Select Network Size</option>
+                                <option value="small">Small Office (1-20 users)</option>
+                                <option value="medium">Medium Business (21-100 users)</option>
+                                <option value="large">Large Enterprise (100+ users)</option>
+                                <option value="campus">Multi-building Campus</option>
+                                <option value="data-center">Data Center</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-infrastructure">Current Network Infrastructure</label>
+                            <textarea id="current-infrastructure" name="currentInfrastructure" rows="3" placeholder="Describe your current network setup, equipment, and any issues"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="requirements">Network Requirements</label>
+                            <textarea id="requirements" name="requirements" rows="4" placeholder="Describe your network needs: internet speed, number of devices, special requirements, etc."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="urgent">Urgent (Within 1 week)</option>
+                                <option value="asap">ASAP (Within 2-4 weeks)</option>
+                                <option value="month">Within 1 month</option>
+                                <option value="quarter">Within 3 months</option>
+                                <option value="flexible">Flexible timeline</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Project Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-50k">$15,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="over-100k">Over $100,000</option>
+                                <option value="consultation">Need consultation</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-network-wired"></i>
+                            Request Network Solution
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -200,6 +330,13 @@
         </div>
     </footer>
 
-    <script src="service-page.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=972507195100&text=Hello! I'm interested in your network solutions." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="service-page.js?v=2"></script>
 </body>
 </html> 

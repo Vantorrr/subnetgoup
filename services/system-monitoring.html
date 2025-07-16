@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Monitoring - SubNet Group</title>
-    <link rel="stylesheet" href="service-page.css">
+    <title>Access Control Systems - SubNet Group</title>
+    <link rel="stylesheet" href="service-page.css?v=2">
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,13 +25,33 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="../index.html" class="logo">
-                    <img src="../images/logo.svg" alt="SubNet Group" class="logo-img">
+                    <img src="../images/subnet-logo-web.png" alt="SubNet Group" class="logo-img">
                     <span class="logo-text">SubNet Group</span>
                 </a>
                 <ul class="nav-menu">
                     <li><a href="../index.html" data-translate="nav.home">Home</a></li>
                     <li><a href="../index.html#about" data-translate="nav.about">About us</a></li>
-                    <li><a href="../index.html#services" data-translate="nav.services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#services" class="dropdown-toggle" data-translate="nav.services">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="network-solutions.html" class="dropdown-item">
+                                <i class="fas fa-wifi"></i>
+                                <span data-translate="services.networking.title">Internet & Networking</span>
+                            </a>
+                            <a href="cybersecurity.html" class="dropdown-item">
+                                <i class="fas fa-video"></i>
+                                <span data-translate="services.security.title">Video Surveillance</span>
+                            </a>
+                            <a href="system-monitoring.html" class="dropdown-item active">
+                                <i class="fas fa-key"></i>
+                                <span data-translate="services.monitoring.title">Access Control</span>
+                            </a>
+                            <a href="technical-support.html" class="dropdown-item">
+                                <i class="fas fa-tools"></i>
+                                <span data-translate="services.support.title">Maintenance & Support</span>
+                            </a>
+                        </div>
+                    </li>
                     <li><a href="../index.html#partners" data-translate="nav.partners">Our Partners</a></li>
                     <li><a href="../index.html#contact" data-translate="nav.contact">Contact us</a></li>
                 </ul>
@@ -45,7 +65,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="service-hero monitoring-hero">
+    <section class="service-hero access-hero">
         <!-- Digital Background -->
         <div class="digital-background">
             <div class="matrix-grid"></div>
@@ -53,57 +73,216 @@
             <div class="data-particles"></div>
             <div class="neural-network"></div>
             <div class="hologram-effects"></div>
+            <!-- Unique Access Control Effects -->
+            <div class="access-locks">
+                <div class="lock-animation">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="lock-animation">
+                    <i class="fas fa-unlock"></i>
+                </div>
+                <div class="lock-animation">
+                    <i class="fas fa-key"></i>
+                </div>
+            </div>
+            <div class="biometric-scanner">
+                <div class="scanner-line"></div>
+                <div class="scanner-grid"></div>
+            </div>
+            <div class="access-zones">
+                <div class="zone secure"></div>
+                <div class="zone authorized"></div>
+                <div class="zone restricted"></div>
+            </div>
         </div>
         
         <div class="container">
             <div class="hero-content">
-                <div class="service-icon-large fade-in-up">
-                    <i class="fas fa-eye"></i>
+                <div class="service-icon-large access-icon fade-in-up">
+                    <i class="fas fa-key"></i>
+                    <div class="security-level">
+                        <div class="level-indicator high"></div>
+                        <span>HIGH</span>
+                    </div>
+                    <div class="access-badge">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
                 </div>
-                <h1 class="slide-in-left" data-translate="monitoring.title">System Monitoring</h1>
-                <p class="slide-in-right" data-translate="monitoring.subtitle">24/7 monitoring and maintenance of your IT infrastructure with proactive issue resolution</p>
+                <h1 class="access-title slide-in-left">
+                    <span class="gradient-text-access">Access Control</span>
+                    <br><span class="sub-title-access">& Security Systems</span>
+                </h1>
+                <p class="slide-in-right">Smart access control solutions with electronic locks, card readers, and mobile app management. Secure your property with modern keyless entry systems and comprehensive technical maintenance.</p>
+                
+                <!-- Access Status Dashboard -->
+                <div class="access-dashboard fade-in-up">
+                    <div class="dashboard-panel">
+                        <div class="access-points">
+                            <div class="point-value">8</div>
+                            <div class="point-label">Access Points</div>
+                        </div>
+                        <div class="access-level">
+                            <div class="level-badge secure">SECURE</div>
+                            <div class="level-label">System Status</div>
+                        </div>
+                        <div class="active-users">
+                            <div class="user-count">15</div>
+                            <div class="user-label">Active Users</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Service Details -->
-    <section class="service-details">
+    <section class="service-details access-details">
         <div class="container">
             <div class="service-content">
                 <div class="service-description">
-                    <h2 class="fade-in-up" data-translate="monitoring.what_we_do">Monitoring Services</h2>
-                    <p class="slide-in-left">Ensure optimal performance and maximum uptime with our advanced 24/7 monitoring solutions powered by AI-driven analytics.</p>
-                    <div class="features-list">
-                        <div class="feature fade-in-up">
-                            <i class="fas fa-chart-line"></i>
-                            <div class="feature-content">
-                                <h3>Performance Monitoring</h3>
-                                <p>Real-time performance metrics and alerts for servers, networks, and applications.</p>
+                    <h2 class="access-section-title fade-in-up">
+                        <i class="fas fa-door-open"></i>
+                        Smart Access Control Solutions
+                    </h2>
+                    <p class="slide-in-left">Control and monitor access to your property with advanced electronic locks, card readers, and smartphone-controlled entry systems. Grant or revoke access remotely and track all entry activity in real-time. <strong>Including 24/7 system monitoring and technical support!</strong></p>
+                    
+                    <!-- Access Control Interface -->
+                    <div class="access-control-interface">
+                        <div class="access-dashboard-main">
+                            <div class="dashboard-screen">
+                                <div class="dashboard-header">
+                                    <h4>Access Control Panel</h4>
+                                    <div class="system-status online">ONLINE</div>
+                                </div>
+                                <div class="access-log">
+                                    <div class="log-entry granted">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>John Doe - Main Entrance</span>
+                                        <time>15:42</time>
+                                    </div>
+                                    <div class="log-entry denied">
+                                        <i class="fas fa-times-circle"></i>
+                                        <span>Unknown Card - Side Door</span>
+                                        <time>15:38</time>
+                                    </div>
+                                    <div class="log-entry granted">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Jane Smith - Office 201</span>
+                                        <time>15:35</time>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="access-methods">
+                                <div class="method-card active">
+                                    <i class="fas fa-id-card"></i>
+                                    <span>Card Reader</span>
+                                    <div class="method-status"></div>
+                                </div>
+                                <div class="method-card">
+                                    <i class="fas fa-fingerprint"></i>
+                                    <span>Biometric</span>
+                                    <div class="method-status"></div>
+                                </div>
+                                <div class="method-card">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile App</span>
+                                    <div class="method-status"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="feature slide-in-left">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <div class="feature-content">
-                                <h3>Proactive Alerting</h3>
-                                <p>Intelligent alerting system that notifies you before issues become critical problems.</p>
+                    </div>
+                    
+                    <div class="service-highlights access-highlights">
+                        <div class="highlight-item access-card">
+                            <div class="card-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Mobile App Control</h4>
+                                <p>Control all locks and access points remotely from your smartphone</p>
+                                <div class="service-badge access-badge-green">+ Cloud Management</div>
+                            </div>
+                            <div class="card-glow access-glow"></div>
+                        </div>
+                        <div class="highlight-item access-card">
+                            <div class="card-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Multiple Access Methods</h4>
+                                <p>Key cards, PIN codes, biometrics, and mobile credentials</p>
+                                <div class="service-badge access-badge-green">+ Backup Methods</div>
+                            </div>
+                            <div class="card-glow access-glow"></div>
+                        </div>
+                        <div class="highlight-item access-card">
+                            <div class="card-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Access Logging</h4>
+                                <p>Complete audit trail of all entry and exit activities</p>
+                                <div class="service-badge access-badge-green">+ Reports & Analytics</div>
+                            </div>
+                            <div class="card-glow access-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Access Statistics -->
+                    <div class="access-stats">
+                        <div class="stat-item">
+                            <div class="stat-number access-number">200+</div>
+                            <div class="stat-label">Locks Installed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number access-number">99.9%</div>
+                            <div class="stat-label">System Availability</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number access-number">0</div>
+                            <div class="stat-label">Unauthorized Access</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Access Process -->
+                <div class="service-process access-process">
+                    <h3 class="process-title access-process-title">
+                        <i class="fas fa-cogs"></i>
+                        Access Control System Installation Process
+                    </h3>
+                    <div class="process-steps">
+                        <div class="step-item access-step">
+                            <div class="step-number access-step-number">1</div>
+                            <div class="step-content">
+                                <h4>Security Assessment</h4>
+                                <p>Evaluation of access points and security control system planning</p>
                             </div>
                         </div>
-                        <div class="feature slide-in-right">
-                            <i class="fas fa-tools"></i>
-                            <div class="feature-content">
-                                <h3>Automated Remediation</h3>
-                                <p>Automated scripts and procedures to resolve common issues without human intervention.</p>
+                        <div class="step-item access-step">
+                            <div class="step-number access-step-number">2</div>
+                            <div class="step-content">
+                                <h4>Equipment Installation</h4>
+                                <p>Professional mounting of electronic locks, card readers, and biometric scanners</p>
                             </div>
                         </div>
-                        <div class="feature fade-in-up">
-                            <i class="fas fa-chart-pie"></i>
-                            <div class="feature-content">
-                                <h3>Custom Dashboards</h3>
-                                <p>Personalized monitoring dashboards with KPIs and metrics that matter to your business.</p>
+                        <div class="step-item access-step">
+                            <div class="step-number access-step-number">3</div>
+                            <div class="step-content">
+                                <h4>System Configuration</h4>
+                                <p>User setup, access permissions, and mobile app integration</p>
+                            </div>
+                        </div>
+                        <div class="step-item access-step">
+                            <div class="step-number access-step-number">4</div>
+                            <div class="step-content">
+                                <h4>Support & Monitoring</h4>
+                                <p>Continuous system monitoring, updates, and technical maintenance</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="service-image">
                     <img class="service-img slide-in-right" src="../images/monitoring-dashboard.svg" alt="Monitoring Dashboard" />
                 </div>
@@ -114,76 +293,76 @@
     <!-- Monitoring Projects -->
     <section class="projects-gallery">
         <div class="container">
-            <h2>Monitoring Solutions Portfolio</h2>
+            <h2 data-translate="access.recent_projects">Recent Access Control Installations</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/project-monitoring-1.svg" alt="Enterprise Monitoring Platform" />
+                        <img src="../images/project-1.svg" alt="Office Access Control" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Enterprise Monitoring Platform</h3>
-                        <p>Complete monitoring solution for multi-site enterprise infrastructure</p>
+                        <h3>Corporate Office Access</h3>
+                        <p>Multi-door access control system with card readers and mobile app</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-server"></i> 500+ Devices</span>
-                            <span><i class="fas fa-clock"></i> 24/7 Monitoring</span>
-                            <span><i class="fas fa-bell"></i> Real-time Alerts</span>
+                            <span><i class="fas fa-building"></i> 3-Floor Office</span>
+                            <span><i class="fas fa-door-open"></i> 12 Access Points</span>
+                            <span><i class="fas fa-users"></i> 50 Employees</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/project-monitoring-2.svg" alt="Cloud Monitoring" />
+                        <img src="../images/project-2.svg" alt="Residential Building Access" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Cloud Infrastructure Monitoring</h3>
-                        <p>Hybrid cloud monitoring across AWS, Azure, and on-premise systems</p>
+                        <h3>Residential Building Entry</h3>
+                        <p>Smart building access with intercom system and mobile credentials</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-cloud"></i> Multi-Cloud</span>
-                            <span><i class="fas fa-tachometer-alt"></i> Auto-scaling</span>
-                            <span><i class="fas fa-chart-bar"></i> Cost Analytics</span>
+                            <span><i class="fas fa-home"></i> 24 Apartments</span>
+                            <span><i class="fas fa-key"></i> Smart Locks</span>
+                            <span><i class="fas fa-phone"></i> Video Intercom</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/project-monitoring-3.svg" alt="Application Performance" />
+                        <img src="../images/project-3.svg" alt="Warehouse Security" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Application Performance Monitoring</h3>
-                        <p>End-to-end application monitoring with user experience tracking</p>
+                        <h3>Warehouse Access Control</h3>
+                        <p>Industrial access control with biometric readers and time zones</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-mobile-alt"></i> User Experience</span>
-                            <span><i class="fas fa-code"></i> Code-level Insights</span>
-                            <span><i class="fas fa-rocket"></i> 99.9% Uptime</span>
+                            <span><i class="fas fa-warehouse"></i> Industrial</span>
+                            <span><i class="fas fa-fingerprint"></i> Biometric</span>
+                            <span><i class="fas fa-clock"></i> Time Zones</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/project-monitoring-4.svg" alt="IoT Monitoring" />
+                        <img src="../images/project-1.svg" alt="School Access System" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>IoT Device Monitoring</h3>
-                        <p>Large-scale IoT sensor monitoring for smart building management</p>
+                        <h3>Educational Facility Access</h3>
+                        <p>School access control with visitor management and emergency lockdown</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-wifi"></i> 10,000+ Sensors</span>
-                            <span><i class="fas fa-thermometer-half"></i> Environmental Data</span>
-                            <span><i class="fas fa-battery-three-quarters"></i> Battery Monitoring</span>
+                            <span><i class="fas fa-school"></i> School</span>
+                            <span><i class="fas fa-user-shield"></i> Visitor Control</span>
+                            <span><i class="fas fa-exclamation-triangle"></i> Emergency Lock</span>
                         </div>
                     </div>
                 </div>
@@ -191,7 +370,133 @@
         </div>
     </section>
 
-
+    <!-- Service Request Form -->
+    <section class="service-request">
+        <div class="container">
+            <div class="request-content">
+                <div class="request-info">
+                    <h2>Request Access Control Service</h2>
+                    <p>Ready to upgrade your security? Fill out the form and our access control experts will contact you within 24 hours for a free consultation and system design.</p>
+                    <div class="request-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free security assessment</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <span>Custom access control design</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Professional installation warranty</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>User training and support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="request-form">
+                    <form class="service-form">
+                        <div class="form-group">
+                            <label for="service-type">Access Control Type</label>
+                            <select id="service-type" name="serviceType" required>
+                                <option value="">Select Service</option>
+                                <option value="door-locks">Electronic Door Locks</option>
+                                <option value="card-readers">Card Access System</option>
+                                <option value="mobile-access">Mobile App Access</option>
+                                <option value="biometric">Biometric Access Control</option>
+                                <option value="full-system">Complete Access System</option>
+                                <option value="upgrade">System Upgrade</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-name">Full Name</label>
+                                <input type="text" id="client-name" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone">Phone Number</label>
+                                <input type="tel" id="client-phone" name="clientPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email Address</label>
+                            <input type="email" id="client-email" name="clientEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Property Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, area or full address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="property-type">Property Type</label>
+                            <select id="property-type" name="propertyType" required>
+                                <option value="">Select Property Type</option>
+                                <option value="residential">Residential Building</option>
+                                <option value="office">Office Building</option>
+                                <option value="retail">Retail Store</option>
+                                <option value="warehouse">Warehouse/Industrial</option>
+                                <option value="school">Educational Facility</option>
+                                <option value="medical">Medical/Healthcare</option>
+                                <option value="government">Government Building</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="door-count">Number of Access Points</label>
+                            <select id="door-count" name="doorCount" required>
+                                <option value="">Select Door Count</option>
+                                <option value="1">1 Door</option>
+                                <option value="2-3">2-3 Doors</option>
+                                <option value="4-8">4-8 Doors</option>
+                                <option value="9-15">9-15 Doors</option>
+                                <option value="16-30">16-30 Doors</option>
+                                <option value="30+">30+ Doors</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-count">Number of Users</label>
+                            <select id="user-count" name="userCount">
+                                <option value="">Select User Count</option>
+                                <option value="1-5">1-5 Users</option>
+                                <option value="6-15">6-15 Users</option>
+                                <option value="16-50">16-50 Users</option>
+                                <option value="51-100">51-100 Users</option>
+                                <option value="101-500">101-500 Users</option>
+                                <option value="500+">500+ Users</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="access-methods">Preferred Access Methods</label>
+                            <textarea id="access-methods" name="accessMethods" rows="3" placeholder="e.g., key cards, mobile app, PIN codes, fingerprint, facial recognition"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Access Control Requirements</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Describe your security needs, current access issues, or specific requirements"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="integration">Integration Needs</label>
+                            <textarea id="integration" name="integration" rows="2" placeholder="Do you need integration with video surveillance, alarm systems, or building management?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-2000">Under $2,000</option>
+                                <option value="2000-5000">$2,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000-25000">$10,000 - $25,000</option>
+                                <option value="over-25000">Over $25,000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-key"></i>
+                            Request Access Control Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -200,6 +505,13 @@
         </div>
     </footer>
 
-    <script src="service-page.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=972507195100&text=Hello! I'm interested in your monitoring services." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="service-page.js?v=2"></script>
 </body>
 </html> 

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f9ff"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1e40af">
+    Corporate Network Infrastructure
+  </text>
+  
+  <!-- Office Building -->
+  <rect x="50" y="80" width="120" height="120" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  
+  <!-- Windows -->
+  <rect x="60" y="90" width="12" height="12" fill="#3b82f6"/>
+  <rect x="80" y="90" width="12" height="12" fill="#3b82f6"/>
+  <rect x="100" y="90" width="12" height="12" fill="#fbbf24"/>
+  <rect x="120" y="90" width="12" height="12" fill="#3b82f6"/>
+  <rect x="140" y="90" width="12" height="12" fill="#3b82f6"/>
+  
+  <rect x="60" y="110" width="12" height="12" fill="#fbbf24"/>
+  <rect x="80" y="110" width="12" height="12" fill="#3b82f6"/>
+  <rect x="100" y="110" width="12" height="12" fill="#3b82f6"/>
+  <rect x="120" y="110" width="12" height="12" fill="#fbbf24"/>
+  <rect x="140" y="110" width="12" height="12" fill="#3b82f6"/>
+  
+  <!-- Server -->
+  <rect x="250" y="100" width="40" height="60" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+  <rect x="255" y="105" width="30" height="6" fill="#3b82f6"/>
+  <rect x="255" y="115" width="30" height="6" fill="#10b981"/>
+  <rect x="255" y="125" width="30" height="6" fill="#3b82f6"/>
+  <rect x="255" y="135" width="30" height="6" fill="#10b981"/>
+  
+  <!-- Network Switch -->
+  <rect x="300" y="130" width="50" height="20" fill="#059669" stroke="#047857" stroke-width="2"/>
+  <circle cx="310" cy="140" r="2" fill="#22c55e"/>
+  <circle cx="320" cy="140" r="2" fill="#22c55e"/>
+  <circle cx="330" cy="140" r="2" fill="#fbbf24"/>
+  <circle cx="340" cy="140" r="2" fill="#22c55e"/>
+  
+  <!-- Connections -->
+  <line x1="170" y1="140" x2="250" y2="130" stroke="#6366f1" stroke-width="2"/>
+  <line x1="290" y1="130" x2="300" y2="140" stroke="#6366f1" stroke-width="2"/>
+  
+  <!-- Stats -->
+  <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
+    Complete network redesign for 200+ employee corporate office
+  </text>
+  
+  <text x="80" y="270" font-family="Arial" font-size="10" fill="#0284c7">👥 200+ Users</text>
+  <text x="180" y="270" font-family="Arial" font-size="10" fill="#0284c7">🖥️ 15 Servers</text>
+  <text x="280" y="270" font-family="Arial" font-size="10" fill="#0284c7">📡 50 Access Points</text>
+</svg> 

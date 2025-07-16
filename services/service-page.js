@@ -1,5 +1,5 @@
 // Extended translations for service pages
-const serviceTranslations = {
+window.serviceTranslations = {
     en: {
         nav: {
             home: "Home",
@@ -80,6 +80,29 @@ const serviceTranslations = {
             subtitle: "Expert technical support and consultation services with rapid response times and comprehensive solutions",
             what_we_do: "Support Services"
         },
+        // Add services object for compatibility with main page translations
+        services: {
+            networking: {
+                title: "Internet & Networking"
+            },
+            security: {
+                title: "Video Surveillance"
+            },
+            monitoring: {
+                title: "Access Control"
+            },
+            support: {
+                title: "Maintenance & Support"
+            }
+        },
+        // Add surveillance translations
+        surveillance: {
+            recent_projects: "Recent Surveillance Installations"
+        },
+        // Add access control translations  
+        access: {
+            recent_projects: "Recent Access Control Installations"
+        },
         footer: {
             services: "Services"
         },
@@ -157,17 +180,118 @@ const serviceTranslations = {
         cybersecurity: {
             title: "שירותי אבטחת סייבר",
             subtitle: "פתרונות אבטחה מקיפים להגנה על הנכסים הדיגיטליים שלכם ולהבטחת רציפות עסקית",
-            what_we_do: "פתרונות אבטחה"
+            what_we_do: "פתרונות אבטחה",
+            description: "הגנו על הבית או העסק שלכם עם מערכות מעקב וידאו מקצועיות הכוללות מצלמות בחדות גבוהה, הקלטה חכמה ויכולות גישה מרחוק.",
+            features: "התכונות שלנו",
+            feature1: "מעקב 24/7",
+            feature2: "גישה מרחוק",
+            feature3: "הקלטה באיכות HD",
+            feature4: "זיהוי תנועה",
+            feature5: "התראות חכמות",
+            feature6: "אחסון ענן",
+            our_services: "שירותי האבטחה שלנו",
+            camera_installation: "התקנת מצלמות",
+            camera_installation_desc: "התקנה מקצועית של מצלמות אבטחה באיכות HD עם כיסוי מלא",
+            recording_systems: "מערכות הקלטה",
+            recording_systems_desc: "מערכות הקלטה דיגיטליות עם יכולות אחסון מקומי וענן",
+            remote_monitoring: "ניטור מרחוק",
+            remote_monitoring_desc: "צפייה ובקרה מכל מקום באמצעות אפליקציה ייעודית",
+            maintenance: "תחזוקה ותמיכה",
+            maintenance_desc: "תחזוקה שוטפת ותמיכה טכנית 24/7 למערכות האבטחה",
+            recent_projects: "התקנות מעקב אחרונות",
+            project1_title: "מערכת אבטחה למשרד",
+            project1_desc: "12 מצלמות HD עם מערכת הקלטה מרכזית",
+            project2_title: "אבטחה למחסן תעשייתי",
+            project2_desc: "כיסוי מלא עם מצלמות חיצוניות ופנימיות",
+            project3_title: "מעקב לחנות קמעונאות",
+            project3_desc: "מערכת אבטחה חכמה עם זיהוי פנים",
+            ready_to_secure: "מוכנים לאבטח את הנכס שלכם?",
+            cta_description: "צרו קשר היום להתקנה מקצועית של מערכת מעקב מתקדמת"
         },
         monitoring: {
-            title: "ניטור מערכות",
+            title: "מערכות בקרת גישה",
             subtitle: "ניטור ותחזוקה 24/7 של תשתית ה-IT שלכם עם פתרון יזום לבעיות",
-            what_we_do: "שירותי ניטור"
+            what_we_do: "שירותי בקרת גישה",
+            description: "בקרו על הגישה לנכס שלכם עם מערכות בקרת גישה חכמות הכוללות מנעולים דיגיטליים, קוראי כרטיסים וניהול מרחוק",
+            features: "התכונות שלנו",
+            feature1: "מנעולים חכמים",
+            feature2: "קוראי כרטיסים",
+            feature3: "ניהול מרחוק",
+            feature4: "זיהוי ביומטרי",
+            feature5: "רישום כניסות",
+            feature6: "בקרת זמנים",
+            our_services: "שירותי בקרת הגישה שלנו",
+            access_installation: "התקנת מערכות גישה",
+            access_installation_desc: "התקנה מקצועית של מנעולים חכמים וקוראי כרטיסים",
+            card_systems: "מערכות כרטיסים",
+            card_systems_desc: "מערכות קוראי כרטיסים מגנטיים ו-RFID לבקרת גישה מתקדמת",
+            mobile_management: "ניהול באפליקציה",
+            mobile_management_desc: "בקרה ומעקב אחר כל הכניסות באמצעות אפליקציה ייעודית",
+            maintenance: "תחזוקה ותמיכה",
+            maintenance_desc: "תחזוקה שוטפת ותמיכה טכנית למערכות בקרת הגישה",
+            recent_projects: "התקנות בקרת גישה אחרונות",
+            project1_title: "בקרת גישה למשרד",
+            project1_desc: "מערכת בקרת גישה עם קוראי כרטיסים לכל הקומות",
+            project2_title: "אבטחה למתחם תעשייתי",
+            project2_desc: "בקרת גישה רב-שלבית עם זיהוי ביומטרי",
+            project3_title: "מערכת גישה למבנה מגורים",
+            project3_desc: "מנעולים חכמים עם שליטה באפליקציה",
+            ready_to_control: "מוכנים לשלוט בגישה לנכס שלכם?",
+            cta_description: "צרו קשר היום להתקנה מקצועית של מערכת בקרת גישה מתקדמת"
         },
         support: {
-            title: "תמיכה טכנית",
+            title: "תמיכה טכנית ותחזוקה",
             subtitle: "שירותי תמיכה טכנית מומחים ושירותי ייעוץ עם זמני תגובה מהירים ופתרונות מקיפים",
-            what_we_do: "שירותי תמיכה"
+            what_we_do: "שירותי התמיכה שלנו",
+            description: "שמרו על המערכות שלכם פועלות בצורה מיטבית עם שירותי התמיכה והתחזוקה המקצועיים שלנו",
+            features: "התכונות שלנו",
+            feature1: "תמיכה 24/7",
+            feature2: "תחזוקה מונעת",
+            feature3: "אבחון מרחוק",
+            feature4: "עדכוני מערכת",
+            feature5: "גיבוי נתונים",
+            feature6: "תיקונים מהירים",
+            our_services: "שירותי התמיכה שלנו",
+            technical_support: "תמיכה טכנית",
+            technical_support_desc: "תמיכה טכנית מקצועית זמינה 24/7 לפתרון בעיות מיידי",
+            maintenance: "תחזוקה מונעת",
+            maintenance_desc: "תחזוקה שוטפת ובדיקות מערכת למניעת תקלות",
+            system_updates: "עדכוני מערכת",
+            system_updates_desc: "עדכונים שוטפים של תוכנות ומערכות להבטחת ביצועים מיטביים",
+            data_backup: "גיבוי נתונים",
+            data_backup_desc: "שירותי גיבוי אוטומטיים להגנה על המידע החשוב שלכם",
+            recent_projects: "פרויקטי תמיכה ותחזוקה אחרונים",
+            project1_title: "תמיכה למערכת משרדית",
+            project1_desc: "תחזוקה שוטפת ל-50 עמדות עבודה ושרתים",
+            project2_title: "תמיכה למערכת אבטחה",
+            project2_desc: "תחזוקה מונעת למערכת מעקב וידאו מתקדמת",
+            project3_title: "עדכון מערכת רשת",
+            project3_desc: "שדרוג ועדכון מערכת רשת תאגידית מלאה",
+            ready_to_maintain: "מוכנים לשמור על המערכות שלכם?",
+            cta_description: "צרו קשר היום לשירותי תמיכה ותחזוקה מקצועיים"
+        },
+        // Add services object for compatibility with main page translations
+        services: {
+            networking: {
+                title: "אינטרנט ורשתות"
+            },
+            security: {
+                title: "מעקבי וידאו"
+            },
+            monitoring: {
+                title: "בקרת גישה"
+            },
+            support: {
+                title: "תחזוקה ותמיכה"
+            }
+        },
+        // Add surveillance translations
+        surveillance: {
+            recent_projects: "התקנות מעקב אחרונות"
+        },
+        // Add access control translations  
+        access: {
+            recent_projects: "התקנות בקרת גישה אחרונות"
         },
         footer: {
             services: "שירותים"
@@ -383,17 +507,31 @@ class LanguageSwitcher {
 
     init() {
         // Language switcher functionality
-        document.querySelectorAll('.lang-btn').forEach(btn => {
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        // Debug mode logging
+        if (window.location.search.includes('debug=true')) {
+            console.log(`Initializing LanguageSwitcher with ${langButtons.length} buttons`);
+        }
+        
+        langButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
+                // Find the actual button element (in case we clicked on span inside)
+                const button = e.target.closest('.lang-btn');
+                if (!button) return;
+                
                 // Remove active class from all buttons
                 document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
                 
                 // Add active class to clicked button
-                e.target.classList.add('active');
+                button.classList.add('active');
                 
                 // Get selected language
-                const lang = e.target.dataset.lang;
+                const lang = button.dataset.lang;
                 this.currentLanguage = lang;
+                
+                // Save language preference
+                localStorage.setItem('preferred-language', lang);
                 
                 // Update document language and direction
                 document.documentElement.lang = lang;
@@ -401,32 +539,56 @@ class LanguageSwitcher {
                 
                 // Apply translations if available
                 this.applyTranslations(lang);
-                
-                console.log(`Language switched to: ${lang}`);
             });
         });
     }
 
     applyTranslations(lang) {
+        // Update all translated elements
         const elements = document.querySelectorAll('[data-translate]');
+        
+        let translatedCount = 0;
         elements.forEach(element => {
             const key = element.dataset.translate;
             const translation = this.getTranslation(key, lang);
             if (translation) {
                 element.textContent = translation;
+                translatedCount++;
             }
         });
+        
+        // Debug mode logging
+        if (window.location.search.includes('debug=true')) {
+            console.log(`Language switched to ${lang}: ${translatedCount}/${elements.length} elements translated`);
+        }
+        
+        // Update placeholder texts
+        const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+        placeholderElements.forEach(element => {
+            const key = element.getAttribute('data-translate-placeholder');
+            const translation = this.getTranslation(key, lang);
+            if (translation) {
+                element.placeholder = translation;
+            }
+        });
+        
+        // Update body class for RTL/LTR mode
+        document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
     }
 
     getTranslation(key, lang) {
         // Split the key by dots to navigate nested objects
         const keys = key.split('.');
-        let value = serviceTranslations[lang];
+        let value = window.serviceTranslations[lang];
         
         for (const k of keys) {
             if (value && value[k]) {
                 value = value[k];
             } else {
+                // Only log warnings for missing translations in debug mode
+                if (window.location.search.includes('debug=true')) {
+                    console.warn(`Translation key not found: ${k} in path ${key}`);
+                }
                 return null;
             }
         }
@@ -608,7 +770,7 @@ class PerformanceOptimizer {
     }
 
     lazyLoadImages() {
-        const images = document.querySelectorAll('img[src]');
+        const images = document.querySelectorAll('img[src]:not(.logo-img)');
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -629,6 +791,71 @@ class PerformanceOptimizer {
     }
 }
 
+// Test function for debugging
+window.testLanguageSwitch = function(lang) {
+    console.log('=== TESTING LANGUAGE SWITCH ===');
+    console.log('Target language:', lang);
+    console.log('Available translations:', window.serviceTranslations);
+    
+    const elements = document.querySelectorAll('[data-translate]');
+    console.log('Found elements with data-translate:', elements.length);
+    
+    elements.forEach((el, index) => {
+        console.log(`Element ${index}: key="${el.dataset.translate}" current="${el.textContent}"`);
+    });
+    
+    // Try to switch language manually
+    const langSwitcher = new LanguageSwitcher();
+    langSwitcher.applyTranslations(lang);
+};
+
+// Force Hebrew test function
+window.testHebrew = function() {
+    console.log('=== FORCING HEBREW ===');
+    
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === 'he') {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Force apply Hebrew translations
+    const elements = document.querySelectorAll('[data-translate]');
+    console.log(`Found ${elements.length} elements to translate`);
+    
+    let translated = 0;
+    elements.forEach(el => {
+        const key = el.dataset.translate;
+        const keys = key.split('.');
+        let value = window.serviceTranslations.he;
+        
+        for (const k of keys) {
+            if (value && value[k]) {
+                value = value[k];
+            } else {
+                value = null;
+                break;
+            }
+        }
+        
+        if (value) {
+            el.textContent = value;
+            translated++;
+            console.log(`✅ Translated ${key}: ${value}`);
+        } else {
+            console.log(`❌ No translation for ${key}`);
+        }
+    });
+    
+    // Set RTL
+    document.documentElement.dir = 'rtl';
+    document.body.className = 'rtl-mode';
+    
+    console.log(`Translated ${translated}/${elements.length} elements`);
+};
+
 // Initialize all components when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -638,7 +865,23 @@ document.addEventListener('DOMContentLoaded', () => {
     new HeaderScroll();
     new MobileMenu();
     new ServiceCardEffects();
-    new LanguageSwitcher();
+    
+    // Initialize language switcher
+    const languageSwitcher = new LanguageSwitcher();
+    
+    // Check for saved language preference or detect from URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+    const savedLang = localStorage.getItem('preferred-language');
+    const defaultLang = langParam || savedLang || 'en';
+    
+    // Set initial language
+    if (defaultLang === 'he') {
+        const hebrewBtn = document.querySelector('.lang-btn[data-lang="he"]');
+        if (hebrewBtn) {
+            hebrewBtn.click();
+        }
+    }
 
     // Initialize premium enhancements
     new ScrollAnimations();

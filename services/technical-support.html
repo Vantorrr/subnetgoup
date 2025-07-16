@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Support - SubNet Group</title>
-    <link rel="stylesheet" href="service-page.css">
+    <title>Maintenance & Support - SubNet Group</title>
+    <link rel="stylesheet" href="service-page.css?v=2">
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,13 +25,33 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="../index.html" class="logo">
-                    <img src="../images/logo.svg" alt="SubNet Group" class="logo-img">
+                    <img src="../images/subnet-logo-web.png" alt="SubNet Group" class="logo-img">
                     <span class="logo-text">SubNet Group</span>
                 </a>
                 <ul class="nav-menu">
                     <li><a href="../index.html" data-translate="nav.home">Home</a></li>
                     <li><a href="../index.html#about" data-translate="nav.about">About us</a></li>
-                    <li><a href="../index.html#services" data-translate="nav.services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#services" class="dropdown-toggle" data-translate="nav.services">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="network-solutions.html" class="dropdown-item">
+                                <i class="fas fa-wifi"></i>
+                                <span data-translate="services.networking.title">Internet & Networking</span>
+                            </a>
+                            <a href="cybersecurity.html" class="dropdown-item">
+                                <i class="fas fa-video"></i>
+                                <span data-translate="services.security.title">Video Surveillance</span>
+                            </a>
+                            <a href="system-monitoring.html" class="dropdown-item">
+                                <i class="fas fa-key"></i>
+                                <span data-translate="services.monitoring.title">Access Control</span>
+                            </a>
+                            <a href="technical-support.html" class="dropdown-item active">
+                                <i class="fas fa-tools"></i>
+                                <span data-translate="services.support.title">Maintenance & Support</span>
+                            </a>
+                        </div>
+                    </li>
                     <li><a href="../index.html#partners" data-translate="nav.partners">Our Partners</a></li>
                     <li><a href="../index.html#contact" data-translate="nav.contact">Contact us</a></li>
                 </ul>
@@ -53,57 +73,226 @@
             <div class="data-particles"></div>
             <div class="neural-network"></div>
             <div class="hologram-effects"></div>
+            <!-- Unique Support Effects -->
+            <div class="support-tools">
+                <div class="tool-icon rotating">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="tool-icon floating">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div class="tool-icon pulsing">
+                    <i class="fas fa-screwdriver"></i>
+                </div>
+                <div class="tool-icon spinning">
+                    <i class="fas fa-tools"></i>
+                </div>
+            </div>
+            <div class="diagnostic-waves">
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+            </div>
+            <div class="support-tickets">
+                <div class="ticket resolved">✓</div>
+                <div class="ticket in-progress">●</div>
+                <div class="ticket new">!</div>
+            </div>
         </div>
         
         <div class="container">
             <div class="hero-content">
-                <div class="service-icon-large fade-in-up">
-                    <i class="fas fa-headset"></i>
+                <div class="service-icon-large support-icon fade-in-up">
+                    <i class="fas fa-tools"></i>
+                    <div class="support-status">
+                        <div class="status-indicator active"></div>
+                        <span>24/7</span>
+                    </div>
+                    <div class="repair-animation">
+                        <i class="fas fa-hammer"></i>
+                    </div>
                 </div>
-                <h1 class="slide-in-left" data-translate="support.title">Technical Support</h1>
-                <p class="slide-in-right" data-translate="support.subtitle">Expert technical support and consultation services with rapid response times and comprehensive solutions</p>
+                <h1 class="support-title slide-in-left">
+                    <span class="gradient-text-support">Maintenance & Support</span>
+                    <br><span class="sub-title-support">Services</span>
+                </h1>
+                <p class="slide-in-right">Comprehensive maintenance and technical support for all your IT systems. Keep your technology infrastructure running at peak performance with regular updates, repairs, and expert assistance available 24/7.</p>
+                
+                <!-- Support Status Dashboard -->
+                <div class="support-dashboard fade-in-up">
+                    <div class="dashboard-grid">
+                        <div class="support-metric">
+                            <div class="metric-value">15min</div>
+                            <div class="metric-label">Avg Response Time</div>
+                        </div>
+                        <div class="support-metric">
+                            <div class="metric-value">99.5%</div>
+                            <div class="metric-label">Issue Resolution</div>
+                        </div>
+                        <div class="support-metric">
+                            <div class="metric-value">24/7</div>
+                            <div class="metric-label">Support Available</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Service Details -->
-    <section class="service-details">
+    <section class="service-details support-details">
         <div class="container">
             <div class="service-content">
                 <div class="service-description">
-                    <h2 class="fade-in-up" data-translate="support.what_we_do">Support Services</h2>
-                    <p class="slide-in-left">Get expert technical assistance when you need it most with our comprehensive support solutions designed for maximum uptime.</p>
-                    <div class="features-list">
-                        <div class="feature fade-in-up">
-                            <i class="fas fa-clock"></i>
-                            <div class="feature-content">
-                                <h3>24/7 Support</h3>
-                                <p>Round-the-clock technical support with guaranteed response times for critical issues.</p>
+                    <h2 class="support-section-title fade-in-up">
+                        <i class="fas fa-headset"></i>
+                        Complete Technical Maintenance & Support
+                    </h2>
+                    <p class="slide-in-left">Keep your technology infrastructure running at peak performance with our comprehensive maintenance and support services. From routine updates to emergency repairs, we ensure your systems operate reliably and efficiently. <strong>24/7 support and continuous monitoring included!</strong></p>
+                    
+                    <!-- Support Control Center -->
+                    <div class="support-control-center">
+                        <div class="control-main">
+                            <div class="system-monitor">
+                                <div class="monitor-header">
+                                    <h4>System Health Monitor</h4>
+                                    <div class="health-status excellent">EXCELLENT</div>
+                                </div>
+                                <div class="health-metrics">
+                                    <div class="metric-bar">
+                                        <span>CPU Usage</span>
+                                        <div class="bar">
+                                            <div class="fill" style="width: 45%"></div>
+                                        </div>
+                                        <span>45%</span>
+                                    </div>
+                                    <div class="metric-bar">
+                                        <span>Memory</span>
+                                        <div class="bar">
+                                            <div class="fill" style="width: 62%"></div>
+                                        </div>
+                                        <span>62%</span>
+                                    </div>
+                                    <div class="metric-bar">
+                                        <span>Storage</span>
+                                        <div class="bar">
+                                            <div class="fill" style="width: 35%"></div>
+                                        </div>
+                                        <span>35%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-actions">
+                                <div class="action-card active">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <span>System Update</span>
+                                    <div class="action-status running"></div>
+                                </div>
+                                <div class="action-card">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Security Scan</span>
+                                    <div class="action-status completed"></div>
+                                </div>
+                                <div class="action-card">
+                                    <i class="fas fa-broom"></i>
+                                    <span>Disk Cleanup</span>
+                                    <div class="action-status pending"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="feature slide-in-left">
-                            <i class="fas fa-desktop"></i>
-                            <div class="feature-content">
-                                <h3>Remote Assistance</h3>
-                                <p>Secure remote access for quick troubleshooting and problem resolution.</p>
+                    </div>
+                    
+                    <div class="service-highlights support-highlights">
+                        <div class="highlight-item support-card">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>24/7 Support Available</h4>
+                                <p>Round-the-clock technical assistance when you need it most</p>
+                                <div class="service-badge support-badge">+ Priority Service</div>
+                            </div>
+                            <div class="card-glow support-glow"></div>
+                        </div>
+                        <div class="highlight-item support-card">
+                            <div class="card-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Regular Maintenance</h4>
+                                <p>Scheduled maintenance to prevent issues before they occur</p>
+                                <div class="service-badge support-badge">+ Preventive Checks</div>
+                            </div>
+                            <div class="card-glow support-glow"></div>
+                        </div>
+                        <div class="highlight-item support-card">
+                            <div class="card-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Quick Repairs</h4>
+                                <p>Fast diagnosis and repair of hardware and software issues</p>
+                                <div class="service-badge support-badge">+ Emergency Calls</div>
+                            </div>
+                            <div class="card-glow support-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Support Statistics -->
+                    <div class="support-stats">
+                        <div class="stat-item">
+                            <div class="stat-number support-number">500+</div>
+                            <div class="stat-label">Systems Maintained</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number support-number">15min</div>
+                            <div class="stat-label">Average Response Time</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number support-number">99.8%</div>
+                            <div class="stat-label">Issues Resolved</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Process -->
+                <div class="service-process support-process">
+                    <h3 class="process-title support-process-title">
+                        <i class="fas fa-cogs"></i>
+                        Technical Maintenance Process
+                    </h3>
+                    <div class="process-steps">
+                        <div class="step-item support-step">
+                            <div class="step-number support-step-number">1</div>
+                            <div class="step-content">
+                                <h4>System Diagnostics</h4>
+                                <p>Comprehensive analysis of all system components and performance</p>
                             </div>
                         </div>
-                        <div class="feature slide-in-right">
-                            <i class="fas fa-user-tie"></i>
-                            <div class="feature-content">
-                                <h3>Dedicated Engineers</h3>
-                                <p>Experienced IT engineers assigned to your account for personalized support.</p>
+                        <div class="step-item support-step">
+                            <div class="step-number support-step-number">2</div>
+                            <div class="step-content">
+                                <h4>Scheduled Maintenance</h4>
+                                <p>Regular updates, cleaning, and system optimization</p>
                             </div>
                         </div>
-                        <div class="feature fade-in-up">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div class="feature-content">
-                                <h3>Training & Consultation</h3>
-                                <p>Technical training sessions and strategic IT consultation for your team.</p>
+                        <div class="step-item support-step">
+                            <div class="step-number support-step-number">3</div>
+                            <div class="step-content">
+                                <h4>Issue Resolution</h4>
+                                <p>Quick identification and resolution of hardware and software problems</p>
+                            </div>
+                        </div>
+                        <div class="step-item support-step">
+                            <div class="step-number support-step-number">4</div>
+                            <div class="step-content">
+                                <h4>Continuous Monitoring</h4>
+                                <p>24/7 performance tracking and preventive measures</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="service-image">
                     <img class="service-img slide-in-right" src="../images/support-team.svg" alt="Technical Support Team" />
                 </div>
@@ -111,81 +300,79 @@
         </div>
     </section>
 
-
-
     <!-- Support Cases -->
     <section class="projects-gallery">
         <div class="container">
-            <h2>Support Success Stories</h2>
+            <h2 data-translate="support.recent_projects">Recent Support & Maintenance Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/support-case-1.svg" alt="Critical System Recovery" />
+                        <img src="../images/project-1.svg" alt="Office IT Maintenance" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Critical System Recovery</h3>
-                        <p>Emergency server recovery during weekend outage preventing $2M loss</p>
+                        <h3>Office IT Maintenance Contract</h3>
+                        <p>Complete IT support and maintenance for 50-employee office</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-stopwatch"></i> 12min Response</span>
-                            <span><i class="fas fa-undo"></i> Full Recovery</span>
-                            <span><i class="fas fa-dollar-sign"></i> $2M Saved</span>
+                            <span><i class="fas fa-building"></i> Office Building</span>
+                            <span><i class="fas fa-desktop"></i> 50 Workstations</span>
+                            <span><i class="fas fa-calendar"></i> Monthly Service</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/support-case-2.svg" alt="Network Optimization" />
+                        <img src="../images/project-2.svg" alt="Network Maintenance" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Performance Optimization</h3>
-                        <p>Network performance tuning increased productivity by 40%</p>
+                        <h3>Network Infrastructure Support</h3>
+                        <p>24/7 monitoring and maintenance of business network systems</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-chart-line"></i> 40% Faster</span>
-                            <span><i class="fas fa-users"></i> 300 Users</span>
-                            <span><i class="fas fa-smile"></i> 98% Satisfaction</span>
+                            <span><i class="fas fa-network-wired"></i> Network Support</span>
+                            <span><i class="fas fa-clock"></i> 24/7 Monitoring</span>
+                            <span><i class="fas fa-shield-alt"></i> 99.9% Uptime</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/support-case-3.svg" alt="Migration Support" />
+                        <img src="../images/project-3.svg" alt="Security System Maintenance" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Cloud Migration Support</h3>
-                        <p>Seamless 24/7 support during critical cloud infrastructure migration</p>
+                        <h3>Security System Maintenance</h3>
+                        <p>Regular maintenance of cameras and access control systems</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-cloud"></i> Zero Downtime</span>
-                            <span><i class="fas fa-database"></i> 50TB Data</span>
-                            <span><i class="fas fa-calendar"></i> 3 Days</span>
+                            <span><i class="fas fa-video"></i> 20 Cameras</span>
+                            <span><i class="fas fa-key"></i> Access Control</span>
+                            <span><i class="fas fa-tools"></i> Quarterly Service</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="../images/support-case-4.svg" alt="Security Incident" />
+                        <img src="../images/project-1.svg" alt="Emergency Repair" />
                         <div class="project-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Security Incident Response</h3>
-                        <p>Rapid response to security breach with complete system lockdown</p>
+                        <h3>Emergency Repair Services</h3>
+                        <p>Critical server recovery and data backup restoration</p>
                         <div class="project-stats">
-                            <span><i class="fas fa-shield-alt"></i> Threat Contained</span>
-                            <span><i class="fas fa-lock"></i> Zero Data Loss</span>
-                            <span><i class="fas fa-clock"></i> 8min Response</span>
+                            <span><i class="fas fa-server"></i> Server Recovery</span>
+                            <span><i class="fas fa-clock"></i> 2-Hour Response</span>
+                            <span><i class="fas fa-database"></i> Data Restored</span>
                         </div>
                     </div>
                 </div>
@@ -193,7 +380,142 @@
         </div>
     </section>
 
-
+    <!-- Service Request Form -->
+    <section class="service-request">
+        <div class="container">
+            <div class="request-content">
+                <div class="request-info">
+                    <h2>Request Maintenance & Support Service</h2>
+                    <p>Need reliable technical support? Fill out the form and our support team will contact you within 24 hours to discuss your maintenance needs and support options.</p>
+                    <div class="request-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free system assessment</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Flexible maintenance schedules</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Fast emergency response</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>User training included</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="request-form">
+                    <form class="service-form">
+                        <div class="form-group">
+                            <label for="service-type">Support Type</label>
+                            <select id="service-type" name="serviceType" required>
+                                <option value="">Select Service</option>
+                                <option value="maintenance-contract">Maintenance Contract</option>
+                                <option value="emergency-repair">Emergency Repair</option>
+                                <option value="system-updates">System Updates</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="performance-optimization">Performance Optimization</option>
+                                <option value="training">User Training</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-name">Full Name</label>
+                                <input type="text" id="client-name" name="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-phone">Phone Number</label>
+                                <input type="tel" id="client-phone" name="clientPhone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">Email Address</label>
+                            <input type="email" id="client-email" name="clientEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" placeholder="Company name (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Service Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, area or full address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="system-type">Systems to Support</label>
+                            <select id="system-type" name="systemType" required>
+                                <option value="">Select System Type</option>
+                                <option value="computers">Computers & Laptops</option>
+                                <option value="network">Network Equipment</option>
+                                <option value="security">Security Systems</option>
+                                <option value="servers">Servers & Storage</option>
+                                <option value="mixed">Mixed IT Infrastructure</option>
+                                <option value="all">Complete IT Environment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency">Service Urgency</label>
+                            <select id="urgency" name="urgency" required>
+                                <option value="">Select Urgency</option>
+                                <option value="emergency">Emergency (System Down)</option>
+                                <option value="urgent">Urgent (Critical Issue)</option>
+                                <option value="normal">Normal (Planned Maintenance)</option>
+                                <option value="scheduled">Scheduled Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="devices-count">Number of Devices/Systems</label>
+                            <select id="devices-count" name="devicesCount">
+                                <option value="">Select Device Count</option>
+                                <option value="1-5">1-5 Devices</option>
+                                <option value="6-15">6-15 Devices</option>
+                                <option value="16-30">16-30 Devices</option>
+                                <option value="31-50">31-50 Devices</option>
+                                <option value="51-100">51-100 Devices</option>
+                                <option value="100+">100+ Devices</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-issues">Current Issues or Problems</label>
+                            <textarea id="current-issues" name="currentIssues" rows="4" placeholder="Describe any current problems, error messages, or performance issues"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="maintenance-frequency">Preferred Maintenance Frequency</label>
+                            <select id="maintenance-frequency" name="maintenanceFrequency">
+                                <option value="">Select Frequency</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="as-needed">As Needed</option>
+                                <option value="one-time">One-time Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-services">Additional Services Needed</label>
+                            <textarea id="additional-services" name="additionalServices" rows="3" placeholder="e.g., data backup, security updates, user training, hardware upgrades"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Monthly Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-500">Under $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000-2500">$1,000 - $2,500</option>
+                                <option value="2500-5000">$2,500 - $5,000</option>
+                                <option value="over-5000">Over $5,000</option>
+                                <option value="project-based">Project-based pricing</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-tools"></i>
+                            Request Support Service
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -202,6 +524,13 @@
         </div>
     </footer>
 
-    <script src="service-page.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <div class="whatsapp-float">
+        <a href="https://api.whatsapp.com/send?phone=972507195100&text=Hello! I'm interested in your technical support services." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="service-page.js?v=2"></script>
 </body>
 </html> 
