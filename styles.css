@@ -2447,7 +2447,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-container {
         position: relative;
     }
@@ -2672,7 +2672,7 @@ body {
 }
 
 /* Medium tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 901px) and (max-width: 1024px) {
     .process-steps {
         gap: 1rem;
         flex-direction: row;
