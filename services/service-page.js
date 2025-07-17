@@ -9,32 +9,32 @@ window.serviceTranslations = {
             contact: "Contact us"
         },
         networking: {
-            title: "Network Solutions",
-            subtitle: "Professional network infrastructure design and implementation for modern businesses",
+            title: "Networking & Cybersecurity",
+            subtitle: "Professional network infrastructure and cybersecurity solutions for businesses and organizations",
             networks_installed: "Networks Installed",
             uptime: "Uptime",
             support: "Support",
             what_we_do: "What We Offer",
-            description: "SubNet Group specializes in designing and implementing robust network infrastructures that meet the unique needs of your business. Our team of certified network engineers ensures your network is secure, scalable, and optimized for performance.",
-            feature1: "Custom Network Design",
-            feature2: "Enterprise-grade Equipment",
-            feature3: "Scalable Solutions",
-            feature4: "24/7 Monitoring",
-            feature5: "Security Integration",
-            feature6: "Performance Optimization",
+            description: "We offer full network infrastructure maintenance services for organizations, including routine audits, updates, and ongoing support.",
+            feature1: "LAN/WAN Network Design",
+            feature2: "Structured Cabling Infrastructure", 
+            feature3: "Router & Switch Configuration",
+            feature4: "VLAN, VPN, QoS, PoE Setup",
+            feature5: "Wi-Fi Network Deployment",
+            feature6: "Network Security & Monitoring",
             our_services: "Our Network Services",
-            design_planning: "Network Design & Planning",
-            design_desc: "Comprehensive network architecture design tailored to your business requirements and growth plans.",
-            installation: "Installation & Configuration",
-            installation_desc: "Professional installation of switches, routers, access points, and network infrastructure.",
-            wireless: "Wireless Networks",
-            wireless_desc: "Enterprise-grade wireless solutions for seamless connectivity throughout your facility.",
-            optimization: "Performance Optimization",
-            optimization_desc: "Network performance tuning and optimization to ensure maximum efficiency and speed.",
-            security: "Network Security",
-            security_desc: "Implementation of firewalls, VPNs, and security protocols to protect your network.",
-            maintenance: "Maintenance & Support",
-            maintenance_desc: "Ongoing maintenance, monitoring, and support to keep your network running smoothly.",
+            design_planning: "LAN/WAN Network Design & Installation",
+            design_desc: "Design and installation of LAN/WAN networks for businesses and organizations.",
+            installation: "Structured Cabling Solutions", 
+            installation_desc: "Structured cabling: Ethernet and fiber optic infrastructure.",
+            wireless: "Network Equipment Setup",
+            wireless_desc: "Setup and configuration of routers, switches, and wireless access points.",
+            optimization: "Advanced Network Configuration",
+            optimization_desc: "VLAN, VPN, QoS, PoE configuration.",
+            security: "Wi-Fi Network Deployment",
+            security_desc: "Deployment of Wi-Fi networks for offices, warehouses, and outdoor areas.",
+            maintenance: "Network Security & Troubleshooting",
+            maintenance_desc: "Network security with firewalls, IDS/IPS systems. Access control policy setup and network segmentation. Web filtering and protection against external threats. Network troubleshooting and optimization.",
             recent_projects: "Our Network Projects",
             gallery_subtitle: "Take a look at some of our recent network installations and configurations",
             project1_title: "Corporate Office Network",
@@ -66,19 +66,98 @@ window.serviceTranslations = {
             cta_description: "Contact us today for a free consultation and discover how we can improve your network infrastructure."
         },
         cybersecurity: {
-            title: "Cybersecurity Services",
-            subtitle: "Comprehensive security solutions to protect your digital assets and ensure business continuity",
-            what_we_do: "Security Solutions"
+            title: "Video Surveillance (CCTV)",
+            subtitle: "Professional CCTV and video surveillance solutions for comprehensive security monitoring",
+            what_we_do: "Video Surveillance Services",
+            description: "We offer long-term service contracts for surveillance systems, including periodic checks, software updates, and hardware replacement.",
+            feature1: "CCTV System Design & Installation",
+            feature2: "Camera Setup & Configuration",
+            feature3: "Power & Cabling Infrastructure", 
+            feature4: "NVR/DVR Configuration",
+            feature5: "Remote Viewing Access",
+            feature6: "Smart Analytics & Integration",
+            design_planning: "IP, Analog & Hybrid CCTV Systems",
+            design_desc: "Design and installation of IP, analog, and hybrid CCTV systems.",
+            installation: "Camera Installation Services",
+            installation_desc: "Indoor, outdoor, PTZ, and thermal camera setup.",
+            wireless: "Infrastructure & Power Solutions",
+            wireless_desc: "Cabling and power infrastructure (PoE or 12V).",
+            optimization: "Storage & Recording Systems",
+            optimization_desc: "Configuration of NVR/DVR units and storage servers.",
+            security: "Remote Access & Mobile Viewing",
+            security_desc: "Remote viewing on smartphones and computers.",
+            maintenance: "Advanced Integration & Analytics",
+            maintenance_desc: "Integration with access control and alarm systems. Smart video analytics: motion detection, face/object recognition. Maintenance and troubleshooting of camera systems."
         },
         monitoring: {
-            title: "System Monitoring",
-            subtitle: "24/7 monitoring and maintenance of your IT infrastructure with proactive issue resolution",
-            what_we_do: "Monitoring Services"
+            title: "Access Control Systems",
+            subtitle: "Planning and installation of professional access control systems",
+            what_we_do: "What We Offer",
+            description: "We provide ongoing service and maintenance of access control systems for offices, schools, public buildings, and businesses.",
+            feature1: "Electric/Magnetic Locks Installation",
+            feature2: "Keypads & Card Readers Setup", 
+            feature3: "Biometric Solutions",
+            feature4: "Access Level Configuration",
+            feature5: "Employee Attendance Integration",
+            feature6: "Mobile Access via Apps (BLE/NFC)",
+            our_services: "Our Access Control Services",
+            design_planning: "Professional System Planning",
+            design_desc: "Planning and installation of professional access control systems.",
+            installation: "Lock & Reader Installation", 
+            installation_desc: "Installation of electric/magnetic locks, keypads, and card readers.",
+            wireless: "Biometric Solutions",
+            wireless_desc: "Biometric solutions: fingerprint, face recognition, palm scanning.",
+            optimization: "Access Configuration",
+            optimization_desc: "Access level configuration for employees and visitors.",
+            security: "System Integration",
+            security_desc: "Integration with employee attendance systems.",
+            maintenance: "Maintenance & Upgrades",
+            maintenance_desc: "Standalone or networked systems. Maintenance and upgrades of existing access control infrastructure. Mobile access options via apps (BLE/NFC).",
+            recent_projects: "Our Access Control Projects",
+            gallery_subtitle: "Take a look at some of our recent access control installations",
+            project1_title: "Corporate Access System",
+            project1_desc: "Complete access control for 300+ employees",
+            project2_title: "School Security System", 
+            project2_desc: "Biometric access control for educational facility",
+            project3_title: "Hospital Access Control",
+            project3_desc: "Multi-level access system for medical staff",
+            project4_title: "Office Building Access",
+            project4_desc: "Card-based access control with mobile integration"
         },
         support: {
-            title: "Technical Support",
-            subtitle: "Expert technical support and consultation services with rapid response times and comprehensive solutions",
-            what_we_do: "Support Services"
+            title: "Intrusion & Alarm Systems",
+            subtitle: "Planning and installation of intrusion and emergency alert systems",
+            what_we_do: "What We Offer",
+            description: "We provide complete support and maintenance for alarm systems in offices, stores, institutions, and private homes, including integration with local security providers and police response where applicable.",
+            feature1: "Motion & Glass Break Detectors",
+            feature2: "Door/Window Contact Sensors",
+            feature3: "Water/Gas Leak Detection",
+            feature4: "Panic Button Installation",
+            feature5: "24/7 Security Center Integration",
+            feature6: "Mobile Alerts & Backup Power",
+            our_services: "Our Alarm System Services",
+            design_planning: "System Planning & Design",
+            design_desc: "Planning and installation of intrusion and emergency alert systems.",
+            installation: "Sensor Installation",
+            installation_desc: "Setup of motion detectors, glass break sensors, door/window contacts, water/gas leak detectors.",
+            wireless: "Panic Button Systems",
+            wireless_desc: "Panic buttons (hidden or wall-mounted).",
+            optimization: "Security Center Integration",
+            optimization_desc: "Integration with 24/7 local security monitoring centers (מוקד אבטחה).",
+            security: "Alert Systems",
+            security_desc: "Real-time alerts via SMS or mobile apps.",
+            maintenance: "Full System Support",
+            maintenance_desc: "Installation of indoor/outdoor sirens with strobe lights. Backup power and disconnection alerts. Full system maintenance and reliability checks.",
+            recent_projects: "Our Alarm System Projects",
+            gallery_subtitle: "Take a look at some of our recent alarm system installations",
+            project1_title: "Office Intrusion System",
+            project1_desc: "Complete alarm system for business premises",
+            project2_title: "Retail Store Security",
+            project2_desc: "Advanced intrusion detection with panic buttons",
+            project3_title: "Home Alarm System",
+            project3_desc: "Residential security with mobile integration",
+            project4_title: "Industrial Facility Alert",
+            project4_desc: "Multi-zone alarm system with gas leak detection"
         },
         // Add services object for compatibility with main page translations
         services: {
@@ -86,7 +165,7 @@ window.serviceTranslations = {
                 title: "Internet & Networking"
             },
             security: {
-                title: "Video Surveillance"
+                title: "Networking & Cybersecurity"
             },
             monitoring: {
                 title: "Access Control"
@@ -121,32 +200,32 @@ window.serviceTranslations = {
             contact: "צור קשר"
         },
         networking: {
-            title: "פתרונות רשת",
-            subtitle: "עיצוב והטמעה מקצועית של תשתית רשת לעסקים מודרניים",
+            title: "רשתות ואבטחת מידע",
+            subtitle: "פתרונות מקצועיים לתשתית רשת ואבטחת מידע לעסקים וארגונים",
             networks_installed: "רשתות שהותקנו",
             uptime: "זמן פעילות",
             support: "תמיכה",
             what_we_do: "מה אנחנו מציעים",
-            description: "SubNet Group מתמחה בעיצוב והטמעה של תשתיות רשת חזקות העונות על הצרכים הייחודיים של העסק שלכם. צוות מהנדסי הרשת המוסמכים שלנו מבטיח שהרשת שלכם תהיה מאובטחת, ניתנת להרחבה ומותאמת לביצועים.",
-            feature1: "עיצוב רשת מותאם אישית",
-            feature2: "ציוד ברמה עסקית",
-            feature3: "פתרונות ניתנים להרחבה",
-            feature4: "ניטור 24/7",
-            feature5: "אינטגרציית אבטחה",
-            feature6: "אופטימיזציית ביצועים",
+            description: "אנו מציעים שירותי תחזוקה שוטפת של תשתיות רשת לארגונים, כולל ביקורות תקופתיות, עדכונים ותמיכה שוטפת.",
+            feature1: "תכנון והתקנת רשתות LAN/WAN",
+            feature2: "פריסת תשתית כבלים",
+            feature3: "התקנה והגדרה של ציוד רשת",
+            feature4: "הגדרת VLAN, VPN, QoS, PoE",
+            feature5: "הקמת רשתות Wi-Fi",
+            feature6: "אבטחת רשת וניטור",
             our_services: "שירותי הרשת שלנו",
-            design_planning: "עיצוב ותכנון רשת",
-            design_desc: "עיצוב מקיף של ארכיטקטורת רשת המותאם לדרישות ותוכניות הצמיחה של העסק שלכם.",
-            installation: "התקנה ותצורה",
-            installation_desc: "התקנה מקצועית של מתגים, נתבים, נקודות גישה ותשתית רשת.",
-            wireless: "רשתות אלחוטיות",
-            wireless_desc: "פתרונות אלחוטיים ברמה עסקית לקישוריות חלקה בכל המתקן שלכם.",
-            optimization: "אופטימיזציית ביצועים",
-            optimization_desc: "כוונון ואופטימיזציה של ביצועי הרשת להבטחת יעילות ומהירות מקסימלית.",
-            security: "אבטחת רשת",
-            security_desc: "הטמעת חומות אש, VPN ופרוטוקולי אבטחה להגנה על הרשת שלכם.",
-            maintenance: "תחזוקה ותמיכה",
-            maintenance_desc: "תחזוקה מתמשכת, ניטור ותמיכה כדי לשמור על הרשת שלכם פועלת בחלקות.",
+            design_planning: "תכנון והתקנת רשתות תקשורת (LAN/WAN)",
+            design_desc: "תכנון והתקנת רשתות תקשורת (LAN/WAN) בעסקים וארגונים.",
+            installation: "פריסת תשתית כבלים",
+            installation_desc: "פריסת תשתית כבלים – כבלי רשת, סיבי אופטיים.",
+            wireless: "התקנה והגדרה של ציוד רשת",
+            wireless_desc: "התקנה והגדרה של נתבים, מתגים ונקודות גישה.",
+            optimization: "הגדרות רשת מתקדמות",
+            optimization_desc: "הגדרת VLAN, VPN, QoS, PoE ועוד.",
+            security: "הקמת רשתות Wi-Fi",
+            security_desc: "הקמת רשתות Wi-Fi למשרדים, מחסנים ומרחבים פתוחים.",
+            maintenance: "אבטחת רשת ואיתור תקלות",
+            maintenance_desc: "אבטחת רשת באמצעות חומות אש (Firewall), מערכות גילוי/מניעת פריצות (IDS/IPS). חלוקת גישת משתמשים לפי מדיניות אבטחה. סינון תכנים והגנה מפני איומים חיצוניים. איתור ופתרון תקלות רשת.",
             recent_projects: "פרויקטי הרשת שלנו",
             gallery_subtitle: "הציצו לכמה מההתקנות והתצורות הרשת האחרונות שלנו",
             project1_title: "רשת משרד תאגידי",
@@ -178,26 +257,30 @@ window.serviceTranslations = {
             cta_description: "צרו קשר היום ליעוץ חינם וגלו איך אנחנו יכולים לשפר את תשתית הרשת שלכם."
         },
         cybersecurity: {
-            title: "שירותי אבטחת סייבר",
-            subtitle: "פתרונות אבטחה מקיפים להגנה על הנכסים הדיגיטליים שלכם ולהבטחת רציפות עסקית",
-            what_we_do: "פתרונות אבטחה",
-            description: "הגנו על הבית או העסק שלכם עם מערכות מעקב וידאו מקצועיות הכוללות מצלמות בחדות גבוהה, הקלטה חכמה ויכולות גישה מרחוק.",
+            title: "מערכות מעקב וידאו (CCTV)",
+            subtitle: "פתרונות מעקב וידאו מקצועיים למערכות CCTV ומעקב אבטחה מקיף",
+            what_we_do: "שירותי מערכות מעקב וידאו",
+            description: "אנו מציעים חוזי שירות ארוכי טווח למערכות מעקב, כולל בדיקות תקופתיות, עדכוני תוכנה והחלפת חומרה.",
             features: "התכונות שלנו",
-            feature1: "מעקב 24/7",
-            feature2: "גישה מרחוק",
-            feature3: "הקלטה באיכות HD",
-            feature4: "זיהוי תנועה",
-            feature5: "התראות חכמות",
-            feature6: "אחסון ענן",
-            our_services: "שירותי האבטחה שלנו",
-            camera_installation: "התקנת מצלמות",
-            camera_installation_desc: "התקנה מקצועית של מצלמות אבטחה באיכות HD עם כיסוי מלא",
-            recording_systems: "מערכות הקלטה",
-            recording_systems_desc: "מערכות הקלטה דיגיטליות עם יכולות אחסון מקומי וענן",
-            remote_monitoring: "ניטור מרחוק",
-            remote_monitoring_desc: "צפייה ובקרה מכל מקום באמצעות אפליקציה ייעודית",
-            maintenance: "תחזוקה ותמיכה",
-            maintenance_desc: "תחזוקה שוטפת ותמיכה טכנית 24/7 למערכות האבטחה",
+            feature1: "תכנון והתקנת מערכות CCTV",
+            feature2: "התקנה והגדרת מצלמות",
+            feature3: "תשתית חשמל וכבלים",
+            feature4: "הגדרת יחידות NVR/DVR",
+            feature5: "גישה מרחוק ותצוגה ניידת",
+            feature6: "אנליטיקה חכמה ואינטגרציה",
+            our_services: "שירותי המעקב שלנו",
+            camera_installation: "מערכות CCTV IP, אנלוגיות והיברידיות",
+            camera_installation_desc: "תכנון והתקנת מערכות CCTV IP, אנלוגיות והיברידיות.",
+            recording_systems: "שירותי התקנת מצלמות",
+            recording_systems_desc: "התקנת מצלמות פנימיות, חיצוניות, PTZ ותרמיות.",
+            remote_monitoring: "פתרונות תשתית וחשמל",
+            remote_monitoring_desc: "תשתית כבלים וחשמל (PoE או 12V).",
+            maintenance: "מערכות אחסון והקלטה",
+            maintenance_desc: "הגדרת יחידות NVR/DVR ושרתי אחסון.",
+            design_planning: "גישה מרחוק וצפייה ניידת",
+            design_desc: "צפייה מרחוק בסמארטפונים ומחשבים.",
+            installation: "אינטגרציה מתקדמת ואנליטיקה",
+            installation_desc: "אינטגרציה עם בקרת גישה ומערכות אזעקה. אנליטיקה חכמה: זיהוי תנועה, זיהוי פנים/אובייקטים. תחזוקה ופתרון בעיות במערכות מצלמות.",
             recent_projects: "התקנות מעקב אחרונות",
             project1_title: "מערכת אבטחה למשרד",
             project1_desc: "12 מצלמות HD עם מערכת הקלטה מרכזית",
@@ -209,9 +292,39 @@ window.serviceTranslations = {
             cta_description: "צרו קשר היום להתקנה מקצועית של מערכת מעקב מתקדמת"
         },
         monitoring: {
-            title: "מערכות בקרת גישה",
-            subtitle: "ניטור ותחזוקה 24/7 של תשתית ה-IT שלכם עם פתרון יזום לבעיות",
-            what_we_do: "שירותי בקרת גישה",
+            title: "מערכות בקרת כניסה",
+            subtitle: "תכנון והתקנת מערכות בקרת כניסה מקצועיות לעסקים ומוסדות",
+            what_we_do: "מה אנחנו מציעים",
+            description: "אנו מספקים שירות ותחזוקה שוטפים של מערכות בקרת כניסה למשרדים, בתי ספר, מבני ציבור ועסקים.",
+            feature1: "התקנת מנעולים חשמליים/מגנטיים",
+            feature2: "התקנת לוחות מקשים וקוראי כרטיסים",
+            feature3: "פתרונות ביומטריים",
+            feature4: "הגדרת רמות גישה",
+            feature5: "אינטגרציה עם מערכות נוכחות",
+            feature6: "גישה ניידת דרך אפליקציות",
+            our_services: "שירותי בקרת הכניסה שלנו",
+            design_planning: "תכנון מערכת מקצועי",
+            design_desc: "תכנון והתקנת מערכות בקרת כניסה מקצועיות.",
+            installation: "התקנת מנעולים וקוראים",
+            installation_desc: "התקנת מנעולים חשמליים/מגנטיים, לוחות מקשים וקוראי כרטיסים.",
+            wireless: "פתרונות ביומטריים",
+            wireless_desc: "פתרונות ביומטריים: טביעת אצבע, זיהוי פנים, סריקת כף יד.",
+            optimization: "הגדרת גישה",
+            optimization_desc: "הגדרת רמות גישה לעובדים ומבקרים.",
+            security: "אינטגרציה של מערכות",
+            security_desc: "אינטגרציה עם מערכות נוכחות עובדים.",
+            maintenance: "תחזוקה ושדרוגים",
+            maintenance_desc: "מערכות עצמאיות או ברשת. תחזוקה ושדרוגים של תשתית בקרת כניסה קיימת. אפשרויות גישה ניידת דרך אפליקציות (BLE/NFC).",
+            recent_projects: "פרויקטי בקרת הכניסה שלנו",
+            gallery_subtitle: "הציצו בכמה מההתקנות האחרונות שלנו",
+            project1_title: "מערכת גישה ארגונית",
+            project1_desc: "בקרת גישה מלאה ל-300+ עובדים",
+            project2_title: "מערכת אבטחה לבית ספר",
+            project2_desc: "בקרת גישה ביומטרית למוסד חינוכי",
+            project3_title: "בקרת גישה לבית חולים",
+            project3_desc: "מערכת גישה רב-רמתית לצוות רפואי",
+            project4_title: "גישה לבניין משרדים",
+            project4_desc: "בקרת גישה מבוססת כרטיסים עם אינטגרציה ניידת",
             description: "בקרו על הגישה לנכס שלכם עם מערכות בקרת גישה חכמות הכוללות מנעולים דיגיטליים, קוראי כרטיסים וניהול מרחוק",
             features: "התכונות שלנו",
             feature1: "מנעולים חכמים",
@@ -240,17 +353,29 @@ window.serviceTranslations = {
             cta_description: "צרו קשר היום להתקנה מקצועית של מערכת בקרת גישה מתקדמת"
         },
         support: {
-            title: "תמיכה טכנית ותחזוקה",
-            subtitle: "שירותי תמיכה טכנית מומחים ושירותי ייעוץ עם זמני תגובה מהירים ופתרונות מקיפים",
-            what_we_do: "שירותי התמיכה שלנו",
-            description: "שמרו על המערכות שלכם פועלות בצורה מיטבית עם שירותי התמיכה והתחזוקה המקצועיים שלנו",
-            features: "התכונות שלנו",
-            feature1: "תמיכה 24/7",
-            feature2: "תחזוקה מונעת",
-            feature3: "אבחון מרחוק",
-            feature4: "עדכוני מערכת",
-            feature5: "גיבוי נתונים",
-            feature6: "תיקונים מהירים",
+            title: "מערכות אזעקה והתראה",
+            subtitle: "תכנון והתקנת מערכות אזעקה חכמות - קוויות ואלחוטיות",
+            what_we_do: "מה אנחנו מציעים",
+            description: "אנו מציעים שירות ותחזוקה מלא של מערכות אזעקה למשרדים, חנויות, מוסדות ובתים פרטיים, כולל חיבור למוקד אבטחה ואינטגרציה עם המשטרה במידת הצורך.",
+            feature1: "התקנת גלאים: תנועה, פתיחה, שבירת זכוכית",
+            feature2: "גלאי דלתות וחלונות",
+            feature3: "זיהוי פריץ זמן אמת",
+            feature4: "כפתורי חירום נסתרים או קיריים",
+            feature5: "אינטגרציה עם מוקד אבטחה פרטי (מוקד 24/7)",
+            feature6: "שליחת התראות למידע או לאפליקציה",
+            our_services: "שירותי מערכות האזעקה שלנו",
+            design_planning: "תכנון והתקנה מקצועית",
+            design_desc: "תכנון והתקנת מערכות אזעקה והתראה למבנים.",
+            installation: "התקנת חיישנים",
+            installation_desc: "התקנת גלאי תנועה, שבירת זכוכית, מגעי דלתות/חלונות, גלאי דליפת מים/גז.",
+            wireless: "מערכות כפתורי חירום",
+            wireless_desc: "כפתורי חירום (נסתרים או צמודי קיר).",
+            optimization: "אינטגרציה עם מוקד אבטחה",
+            optimization_desc: "אינטגרציה עם מוקד אבטחה מקומי 24/7 (מוקד אבטחה).",
+            security: "מערכות התראה",
+            security_desc: "התראות בזמן אמת דרך SMS או אפליקציות ניידות.",
+            maintenance: "תמיכה מלאה במערכת",
+            maintenance_desc: "התקנת צופרים פנימיים/חיצוניים עם אורות מהבהבים. התראות כוח גיבוי וניתוק. תחזוקת מערכת מלאה ובדיקות אמינות.",
             our_services: "שירותי התמיכה שלנו",
             technical_support: "תמיכה טכנית",
             technical_support_desc: "תמיכה טכנית מקצועית זמינה 24/7 לפתרון בעיות מיידי",
@@ -276,7 +401,7 @@ window.serviceTranslations = {
                 title: "אינטרנט ורשתות"
             },
             security: {
-                title: "מעקבי וידאו"
+                title: "רשתות ואבטחת מידע"
             },
             monitoring: {
                 title: "בקרת גישה"
@@ -892,6 +1017,141 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Export for potential use in other scripts
+// =============================================
+//         MODERN MOBILE NAVIGATION
+// =============================================
+
+// Mobile Navigation Handler
+function initMobileNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    const body = document.body;
+    
+    // Hamburger menu toggle
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('nav-open');
+        });
+    }
+    
+    // Mobile dropdown handling
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdown = this.closest('.dropdown');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.dropdown.active').forEach(dd => {
+                    if (dd !== dropdown) dd.classList.remove('active');
+                });
+                
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+    
+    // Close mobile menu when clicking nav links
+    document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(link => {
+        link.addEventListener('click', function() {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('nav-open');
+            }
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar') && navMenu && navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            body.classList.remove('nav-open');
+            
+            // Close all dropdowns
+            document.querySelectorAll('.dropdown.active').forEach(dd => {
+                dd.classList.remove('active');
+            });
+        }
+    });
+    
+    // Close mobile menu on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 992) {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('nav-open');
+            }
+            
+            // Close all dropdowns
+            document.querySelectorAll('.dropdown.active').forEach(dd => {
+                dd.classList.remove('active');
+            });
+        }
+    });
+}
+
+// Touch and Mobile Optimizations
+function initTouchOptimizations() {
+    // Prevent iOS zoom on form focus
+    const formInputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], textarea, select');
+    
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.setAttribute('content', 
+                        'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+                }
+            }
+        });
+        
+        input.addEventListener('blur', function() {
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.setAttribute('content', 
+                        'width=device-width, initial-scale=1.0, user-scalable=yes');
+                }
+            }
+        });
+    });
+    
+    // Touch feedback for buttons
+    document.querySelectorAll('.btn, .feature-card, .gallery-item').forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        
+        element.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
+}
+
+// Initialize all mobile features
+function initMobileFeatures() {
+    initMobileNavigation();
+    initTouchOptimizations();
+    
+    console.log('✅ Mobile features initialized');
+}
+
+// Auto-initialize on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileFeatures);
+} else {
+    initMobileFeatures();
+}
+
 window.ServicePageComponents = {
     StatCounter,
     SmoothScroll,
@@ -899,5 +1159,8 @@ window.ServicePageComponents = {
     HeaderScroll,
     MobileMenu,
     ServiceCardEffects,
-    LanguageSwitcher
+    LanguageSwitcher,
+    initMobileNavigation,
+    initTouchOptimizations,
+    initMobileFeatures
 }; 

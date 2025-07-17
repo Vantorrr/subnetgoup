@@ -794,7 +794,7 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
     gap: 3rem;
     margin-top: 4rem;
     max-width: 1400px;
@@ -947,7 +947,7 @@ body {
 
 
 .service-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: #ffffff;
@@ -955,6 +955,13 @@ body {
     z-index: 2;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
+    line-height: 1.3;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .service-card:hover h3 {
@@ -3842,4 +3849,10 @@ body {
 @keyframes ambientPulse {
     0%, 100% { opacity: 0.5; transform: translateX(-50%) scaleX(1); }
     50% { opacity: 0.8; transform: translateX(-50%) scaleX(1.2); }
+}
+
+/* Special style for long service titles */
+.service-card h3.long-title {
+    font-size: 1.4rem;
+    line-height: 1.2;
 }

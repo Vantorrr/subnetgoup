@@ -25,8 +25,8 @@ const translations = {
                 description: "WiFi setup, cable installation, and router configuration"
             },
             security: {
-                title: "Video Surveillance",
-                description: "HD cameras, recording systems, and remote monitoring"
+                title: "Networking & Cybersecurity",
+                description: "Professional network infrastructure and cybersecurity solutions"
             },
             monitoring: {
                 title: "Access Control",
@@ -112,15 +112,15 @@ const translations = {
             title: "השירותים שלנו",
             networking: {
                 title: "אינטרנט ורשתות",
-                description: "התקנת WiFi, הטמעת כבלים והגדרת נתבים"
+                description: "הקמת WiFi, התקנת כבלים והגדרת נתבים"
             },
             security: {
-                title: "מעקבי וידאו",
-                description: "מצלמות HD, מערכות הקלטה וניטור מרחוק"
+                title: "רשתות ואבטחת מידע",
+                description: "פתרונות תשתית רשת ואבטחת מידע מקצועיים לעסקים וארגונים"
             },
             monitoring: {
                 title: "בקרת גישה",
-                description: "מנעולים חכמים, קוראי כרטיסים וניהול אפליקציות"
+                description: "מנעולים חכמים, קוראי כרטיסים וניהול באפליקציה"
             },
             support: {
                 title: "תחזוקה ותמיכה",
