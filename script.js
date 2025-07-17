@@ -21,20 +21,20 @@ const translations = {
         services: {
             title: "Our Services",
             networking: {
-                title: "Internet & Networking",
-                description: "WiFi setup, cable installation, and router configuration"
-            },
-            security: {
                 title: "Networking & Cybersecurity",
                 description: "Professional network infrastructure and cybersecurity solutions"
             },
+            security: {
+                title: "Video Surveillance (CCTV)",
+                description: "Professional CCTV and video surveillance solutions for comprehensive security monitoring"
+            },
             monitoring: {
-                title: "Access Control",
+                title: "Access Control Systems",
                 description: "Smart locks, card readers, and mobile app management"
             },
             support: {
-                title: "Maintenance & Support",
-                description: "System updates, repairs, and ongoing technical support"
+                title: "Intrusion & Alarm Systems",
+                description: "Motion detectors, panic buttons, and 24/7 security monitoring"
             }
         },
         about: {
@@ -111,20 +111,20 @@ const translations = {
         services: {
             title: "השירותים שלנו",
             networking: {
-                title: "אינטרנט ורשתות",
-                description: "הקמת WiFi, התקנת כבלים והגדרת נתבים"
+                title: "רשתות ואבטחת סייבר",
+                description: "פתרונות תשתית רשת מקצועית ואבטחת סייבר"
             },
             security: {
-                title: "רשתות ואבטחת מידע",
-                description: "פתרונות תשתית רשת ואבטחת מידע מקצועיים לעסקים וארגונים"
+                title: "מעקב וידאו (CCTV)",
+                description: "פתרונות מעקב וידאו ו-CCTV מקצועיים לניטור אבטחה מקיף"
             },
             monitoring: {
-                title: "בקרת גישה",
-                description: "מנעולים חכמים, קוראי כרטיסים וניהול באפליקציה"
+                title: "מערכות בקרת גישה",
+                description: "מנעולים חכמים, קוראי כרטיסים וניהול אפליקציות נייד"
             },
             support: {
-                title: "תחזוקה ותמיכה",
-                description: "עדכוני מערכת, תיקונים ותמיכה טכנית שוטפת"
+                title: "מערכות חדירה ואזעקה",
+                description: "גלאי תנועה, כפתורי חירום וניטור אבטחה 24/7"
             }
         },
         about: {

@@ -162,16 +162,16 @@ window.serviceTranslations = {
         // Add services object for compatibility with main page translations
         services: {
             networking: {
-                title: "Internet & Networking"
-            },
-            security: {
                 title: "Networking & Cybersecurity"
             },
+            security: {
+                title: "Video Surveillance (CCTV)"
+            },
             monitoring: {
-                title: "Access Control"
+                title: "Access Control Systems"
             },
             support: {
-                title: "Maintenance & Support"
+                title: "Intrusion & Alarm Systems"
             }
         },
         // Add surveillance translations
@@ -398,16 +398,16 @@ window.serviceTranslations = {
         // Add services object for compatibility with main page translations
         services: {
             networking: {
-                title: "אינטרנט ורשתות"
+                title: "רשתות ואבטחת סייבר"
             },
             security: {
-                title: "רשתות ואבטחת מידע"
+                title: "מעקב וידאו (CCTV)"
             },
             monitoring: {
-                title: "בקרת גישה"
+                title: "מערכות בקרת גישה"
             },
             support: {
-                title: "תחזוקה ותמיכה"
+                title: "מערכות חדירה ואזעקה"
             }
         },
         // Add surveillance translations
