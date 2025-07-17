@@ -1482,13 +1482,14 @@ body {
 
 .process-steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     position: relative;
-    gap: 2rem;
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 50px auto 0;
     padding-top: 30px;
+    flex-wrap: wrap;
 }
 
 /* Connection Line */
@@ -1552,7 +1553,9 @@ body {
 }
 
 .step {
-    flex: 1;
+    flex: 0 1 350px;
+    max-width: 350px;
+    min-width: 300px;
     background: 
         linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
     backdrop-filter: blur(20px);
@@ -2646,7 +2649,8 @@ body {
         flex-wrap: nowrap;
         margin: 50px auto 0;
         padding-top: 30px;
-        max-width: 400px;
+        max-width: 100%;
+        justify-content: center;
     }
     
     .step {
@@ -2664,6 +2668,24 @@ body {
         height: 38px;
         font-size: 1rem;
         top: -16px;
+    }
+}
+
+/* Medium tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .process-steps {
+        gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .step {
+        flex: 0 1 300px;
+        min-width: 280px;
+        max-width: 300px;
+        margin: 10px;
     }
 }
 
