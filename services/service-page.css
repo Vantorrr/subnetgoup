@@ -721,11 +721,9 @@ body {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    color: #1a2332;
-    background: linear-gradient(135deg, #1a2332 0%, #00d4ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
     letter-spacing: -1px;
 }
@@ -742,12 +740,13 @@ body {
 }
 
 .service-description p {
-    color: #555;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.9;
     font-size: 1.2rem;
     margin-bottom: 3rem;
     font-weight: 300;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .features-list {
@@ -891,13 +890,7 @@ body {
     color: #1a2332;
 }
 
-/* Simple white background for the services section only */
-.service-description {
-    background: #ffffff;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+/* Remove white background from service-description */
 
 .services-grid {
     display: grid !important;
@@ -905,6 +898,23 @@ body {
     gap: 2rem;
     margin-top: 3rem;
     width: 100%;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.services-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    border-radius: 25px;
+    z-index: -1;
 }
 
 /* Mobile responsive for services grid */
@@ -928,10 +938,11 @@ body {
     padding: 2.5rem 2rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .service-item::before {
