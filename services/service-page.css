@@ -891,16 +891,19 @@ body {
     color: #1a2332;
 }
 
+.service-description {
+    background: #ffffff !important;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 .services-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem;
     margin-top: 3rem;
     width: 100%;
-    background: #ffffff !important;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile responsive for services grid */
