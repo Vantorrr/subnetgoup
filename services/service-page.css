@@ -642,7 +642,7 @@ body {
     text-shadow: 0 0 40px rgba(0, 212, 255, 0.4);
     animation: heroTextReveal 1.5s ease-out forwards, gradientShift 4s ease-in-out infinite;
     letter-spacing: -2px;
-    line-height: 1.1;
+    line-height: 1.4;
     position: relative;
     z-index: 10;
 }
@@ -909,10 +909,11 @@ body {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem;
     margin-top: 3rem;
+    width: 100%;
 }
 
 /* Mobile responsive for services grid */
