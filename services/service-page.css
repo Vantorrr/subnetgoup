@@ -17,6 +17,12 @@ body {
     background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
 }
 
+/* Override body background for service section */
+.service-details {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
 /* PREMIUM ANIMATIONS */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -701,18 +707,25 @@ body {
 /* Service Details Section - WHITE BACKGROUND FOR ALL SERVICES */
 .service-details {
     padding: 120px 0;
-    background: #ffffff;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
     position: relative;
     overflow: hidden;
 }
 
 /* Removed gradient overlay for clean white background */
 
+.service-details .container {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
 .service-content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     position: relative;
+    background: #ffffff !important;
 }
 
 .service-description h2 {
