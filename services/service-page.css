@@ -5611,30 +5611,50 @@ body.nav-open {
 /* EXPAND CONTAINER FOR SERVICES */
 .service-details .container {
     max-width: none !important;
-    padding: 0 1rem !important;
-    width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
+    width: 100% !important;
+    padding: 0 2rem !important;
+}
+
+.service-content {
+    display: block !important;
+    grid-template-columns: none !important;
+}
+
+.service-description {
+    max-width: none !important;
 }
 
 /* SIMPLE SERVICES GRID LAYOUT */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 2rem 0;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 1.5rem;
+    box-sizing: border-box;
 }
 
 /* Force 3+ columns on desktop */
 @media (min-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
     }
 }
 
 @media (min-width: 900px) and (max-width: 1199px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
