@@ -698,12 +698,10 @@ body {
     margin-top: 3rem;
 }
 
-/* Service Details Section - PREMIUM ENHANCED */
+/* Service Details Section - WHITE BACKGROUND FOR ALL SERVICES */
 .service-details {
     padding: 120px 0;
-    background: 
-        linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f0f7ff 100%),
-        radial-gradient(ellipse at top, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
@@ -932,11 +930,12 @@ body {
 }
 
 .service-item {
-    background: white;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
     padding: 2.5rem 2rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -957,15 +956,37 @@ body {
     left: 100%;
 }
 
+/* COLOR SCHEMES FOR EACH SERVICE */
+
+/* Networking & Cybersecurity - Blue/Cyan */
+.networking-page .service-item {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+}
+
+/* Video Surveillance (CCTV) - Red/Orange */
+.surveillance-page .service-item {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+/* Access Control Systems - Green/Emerald */
+.access-control-page .service-item {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+/* Intrusion & Alarm Systems - Purple/Violet */
+.intrusion-alarm-page .service-item {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .service-item .service-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -973,17 +994,19 @@ body {
     margin: 0 auto 1.5rem;
     font-size: 2rem;
     color: white;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .service-item h3 {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1a2332;
+    color: white;
 }
 
 .service-item p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
 }
 
