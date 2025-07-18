@@ -5611,10 +5611,13 @@ body.nav-open {
 /* SIMPLE SERVICES GRID LAYOUT */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 1.5rem;
+    box-sizing: border-box;
 }
 
 /* For larger screens, auto-fit with good spacing */
@@ -5643,20 +5646,20 @@ body.nav-open {
 .service-item {
     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border: 1px solid rgba(0, 212, 255, 0.1);
-    border-radius: 20px;
-    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    padding: 1.8rem 1.5rem;
     text-align: center;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 220px;
+    min-height: 200px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
     box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.08),
-        0 4px 12px rgba(0, 212, 255, 0.1);
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        0 3px 10px rgba(0, 212, 255, 0.1);
 }
 
 .service-item::before {
@@ -5685,21 +5688,21 @@ body.nav-open {
 }
 
 .service-item i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #00d4ff;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem;
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
     border-radius: 50%;
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1.2rem;
     box-shadow: 
-        0 10px 25px rgba(0, 212, 255, 0.15),
-        0 5px 15px rgba(0, 0, 0, 0.05);
+        0 8px 20px rgba(0, 212, 255, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 2;
@@ -5714,10 +5717,10 @@ body.nav-open {
 }
 
 .service-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #1a2332;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     line-height: 1.3;
     position: relative;
     z-index: 2;
@@ -5731,8 +5734,8 @@ body.nav-open {
 
 .service-item p {
     color: #64748b;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
     margin: 0;
     flex-grow: 1;
     position: relative;
