@@ -5607,3 +5607,46 @@ body.nav-open {
         color: black !important;
     }
 }
+
+/* SIMPLE SERVICES GRID LAYOUT */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.service-item {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
