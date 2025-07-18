@@ -891,11 +891,32 @@ body {
     color: #1a2332;
 }
 
-.service-description {
-    background: #ffffff !important;
-    padding: 3rem;
-    border-radius: 20px;
+/* Create white box only around title + description + cards */
+.service-description h2,
+.service-description > p:first-of-type,
+.services-grid {
+    background: #ffffff;
+    margin: 0;
+}
+
+.service-description h2 {
+    padding: 3rem 3rem 1rem 3rem;
+    border-radius: 20px 20px 0 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+.service-description > p:first-of-type {
+    padding: 0 3rem 2rem 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #ffffff;
+}
+
+.services-grid {
+    padding: 2rem 3rem 3rem 3rem;
+    border-radius: 0 0 20px 20px;
+    margin-top: 0;
 }
 
 .services-grid {
