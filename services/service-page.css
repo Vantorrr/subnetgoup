@@ -5614,7 +5614,10 @@ body.nav-open {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 
 /* For larger screens, force exactly 3 columns with full width */
