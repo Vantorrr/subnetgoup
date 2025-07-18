@@ -5611,19 +5611,18 @@ body.nav-open {
 /* SIMPLE SERVICES GRID LAYOUT */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin: 2rem 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 }
 
-/* For larger screens, force exactly 3 columns */
+/* For larger screens, force exactly 2 columns with full width */
 @media (min-width: 992px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        max-width: none;
     }
 }
 
@@ -5631,40 +5630,41 @@ body.nav-open {
 @media (min-width: 768px) and (max-width: 991px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 2rem;
     }
 }
 
 .service-item {
     background: white;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
     text-align: center;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-height: 200px;
 }
 
 .service-item i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #00d4ff;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .service-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #1a2332;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     line-height: 1.3;
 }
 
 .service-item p {
     color: #64748b;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 0;
     flex-grow: 1;
 }
