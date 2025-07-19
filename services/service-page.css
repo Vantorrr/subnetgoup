@@ -5863,3 +5863,12 @@ body.nav-open {
 .access-card .card-icon {
     margin: 0 auto 1.5rem auto !important;
 }
+
+/* FIX: Center align all support cards content - фиолетовые карточки по центру */
+.support-card {
+    text-align: center !important;
+}
+
+.support-card .card-icon {
+    margin: 0 auto 1.5rem auto !important;
+}
