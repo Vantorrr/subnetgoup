@@ -1,116 +1,169 @@
-<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
   <defs>
-    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:0.05"/>
     </linearGradient>
-    <linearGradient id="lockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    <linearGradient id="cameraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#ea580c"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge> 
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937"/>
+      <stop offset="100%" style="stop-color:#374151"/>
+    </linearGradient>
   </defs>
   
-  <!-- Background -->
-  <rect width="400" height="300" fill="#f8fafc"/>
-  
-  <!-- Main Shield -->
-  <path d="M200 30 L140 60 L140 150 Q140 180 160 200 Q180 220 200 240 Q220 220 240 200 Q260 180 260 150 L260 60 Z" 
-        fill="url(#shieldGradient)" stroke="#1e3a8a" stroke-width="3" filter="url(#glow)">
-    <animateTransform attributeName="transform" 
-                      type="scale" 
-                      values="1;1.05;1" 
-                      dur="3s" 
-                      repeatCount="indefinite"/>
-  </path>
-  
-  <!-- Lock Icon -->
-  <g transform="translate(180, 110)">
-    <!-- Lock body -->
-    <rect x="5" y="15" width="30" height="25" rx="3" fill="url(#lockGradient)" stroke="#d97706" stroke-width="2"/>
-    <!-- Lock shackle -->
-    <path d="M10 15 Q10 5 20 5 Q30 5 30 15" fill="none" stroke="url(#lockGradient)" stroke-width="3"/>
-    <!-- Keyhole -->
-    <circle cx="20" cy="25" r="3" fill="#ffffff"/>
-    <rect x="19" y="25" width="2" height="8" fill="#ffffff"/>
-  </g>
-  
-  <!-- Security Icons around shield -->
-  <!-- Firewall -->
-  <g transform="translate(80, 80)">
-    <rect x="0" y="10" width="30" height="2" fill="#ef4444" opacity="0.8">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="0" y="15" width="25" height="2" fill="#ef4444" opacity="0.6">
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="0" y="20" width="30" height="2" fill="#ef4444" opacity="0.7">
-      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
-    </rect>
-    <text x="35" y="20" font-family="Arial, sans-serif" font-size="10" fill="#374151">Firewall</text>
-  </g>
-  
-  <!-- Antivirus -->
-  <g transform="translate(290, 100)">
-    <circle cx="15" cy="15" r="12" fill="#10b981" opacity="0.3"/>
-    <circle cx="15" cy="15" r="8" fill="#10b981" opacity="0.6"/>
-    <circle cx="15" cy="15" r="4" fill="#10b981">
-      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <path d="M10 15 L13 18 L20 11" stroke="#ffffff" stroke-width="2" fill="none"/>
-    <text x="-10" y="35" font-family="Arial, sans-serif" font-size="10" fill="#374151">Antivirus</text>
-  </g>
-  
-  <!-- Network Security -->
-  <g transform="translate(60, 180)">
-    <circle cx="10" cy="10" r="6" fill="#8b5cf6"/>
-    <circle cx="25" cy="10" r="6" fill="#8b5cf6"/>
-    <circle cx="40" cy="10" r="6" fill="#8b5cf6"/>
-    <line x1="16" y1="10" x2="19" y2="10" stroke="#6d28d9" stroke-width="2">
-      <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
-    </line>
-    <line x1="31" y1="10" x2="34" y2="10" stroke="#6d28d9" stroke-width="2">
-      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
-    </line>
-    <text x="0" y="30" font-family="Arial, sans-serif" font-size="10" fill="#374151">Network Security</text>
-  </g>
-  
-  <!-- Encryption -->
-  <g transform="translate(300, 200)">
-    <rect x="0" y="0" width="20" height="15" fill="#f59e0b" opacity="0.7"/>
-    <rect x="5" y="5" width="10" height="5" fill="#ffffff"/>
-    <text x="0" y="10" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">101</text>
-    <text x="-20" y="30" font-family="Arial, sans-serif" font-size="10" fill="#374151">Encryption</text>
-    
-    <animateTransform attributeName="transform" 
-                      type="translate" 
-                      values="300,200;310,200;300,200" 
-                      dur="3s" 
-                      repeatCount="indefinite"/>
-  </g>
-  
-  <!-- Warning symbols -->
-  <g transform="translate(120, 250)" opacity="0.7">
-    <polygon points="10,0 20,15 0,15" fill="#ef4444"/>
-    <text x="7" y="12" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">!</text>
-    <animate attributeName="opacity" values="0.4;1;0.4" dur="1s" repeatCount="indefinite"/>
-  </g>
-  
-  <g transform="translate(270, 250)" opacity="0.6">
-    <polygon points="10,0 20,15 0,15" fill="#ef4444"/>
-    <text x="7" y="12" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" font-weight="bold">!</text>
-    <animate attributeName="opacity" values="1;0.4;1" dur="1.3s" repeatCount="indefinite"/>
-  </g>
+  <!-- Background Rectangle -->
+  <rect width="400" height="300" fill="url(#bgGradient)" rx="20"/>
   
   <!-- Title -->
-  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f2937">
-    Cybersecurity Protection
-  </text>
+  <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f97316">CCTV Monitoring System</text>
+  
+  <!-- Central Monitor -->
+  <g transform="translate(150, 50)">
+    <rect x="0" y="0" width="100" height="80" fill="url(#screenGradient)" stroke="#f97316" stroke-width="2" rx="8"/>
+    <rect x="5" y="5" width="90" height="60" fill="#000000" rx="4"/>
+    
+    <!-- Screen Content - Live Feed Grid -->
+    <g transform="translate(10, 10)">
+      <!-- Camera Feed 1 -->
+      <rect x="0" y="0" width="35" height="25" fill="#1f2937" stroke="#f97316" stroke-width="1"/>
+      <text x="17.5" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316">CAM 1</text>
+      <circle cx="30" cy="5" r="2" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Camera Feed 2 -->
+      <rect x="45" y="0" width="35" height="25" fill="#1f2937" stroke="#f97316" stroke-width="1"/>
+      <text x="62.5" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316">CAM 2</text>
+      <circle cx="75" cy="5" r="2" fill="#10b981">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Camera Feed 3 -->
+      <rect x="0" y="30" width="35" height="25" fill="#1f2937" stroke="#f97316" stroke-width="1"/>
+      <text x="17.5" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316">CAM 3</text>
+      <circle cx="30" cy="35" r="2" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Camera Feed 4 -->
+      <rect x="45" y="30" width="35" height="25" fill="#1f2937" stroke="#f97316" stroke-width="1"/>
+      <text x="62.5" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316">CAM 4</text>
+      <circle cx="75" cy="35" r="2" fill="#f59e0b">
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Monitor Stand -->
+    <rect x="45" y="80" width="10" height="15" fill="#374151"/>
+    <rect x="35" y="95" width="30" height="5" fill="#374151" rx="2"/>
+    
+    <!-- Status Bar -->
+    <rect x="8" y="70" width="84" height="8" fill="rgba(249, 115, 22, 0.2)" rx="2"/>
+    <text x="50" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#f97316">RECORDING • 24/7 ACTIVE</text>
+  </g>
+  
+  <!-- Security Camera - Left -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="15" width="30" height="20" fill="url(#cameraGradient)" rx="10"/>
+    <circle cx="15" cy="25" r="8" fill="#1f2937"/>
+    <circle cx="15" cy="25" r="5" fill="#000000"/>
+    <circle cx="15" cy="25" r="2" fill="#f97316">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Camera Mount -->
+    <rect x="12" y="35" width="6" height="10" fill="#6b7280"/>
+    <rect x="8" y="45" width="14" height="3" fill="#6b7280"/>
+    
+    <!-- Motion Detection Zone -->
+    <rect x="-5" y="5" width="40" height="30" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <text x="15" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316" font-weight="bold">CAM-01</text>
+  </g>
+  
+  <!-- Security Camera - Right -->
+  <g transform="translate(320, 80)">
+    <rect x="0" y="15" width="30" height="20" fill="url(#cameraGradient)" rx="10"/>
+    <circle cx="15" cy="25" r="8" fill="#1f2937"/>
+    <circle cx="15" cy="25" r="5" fill="#000000"/>
+    <circle cx="15" cy="25" r="2" fill="#f97316">
+      <animate attributeName="r" values="2;3;2" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Camera Mount -->
+    <rect x="12" y="35" width="6" height="10" fill="#6b7280"/>
+    <rect x="8" y="45" width="14" height="3" fill="#6b7280"/>
+    
+    <!-- Motion Detection Zone -->
+    <rect x="-5" y="5" width="40" height="30" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" opacity="0.6">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    
+    <text x="15" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f97316" font-weight="bold">CAM-02</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <g stroke="#f97316" stroke-width="2" fill="none" opacity="0.5">
+    <!-- Left camera to monitor -->
+    <path d="M80 95 Q115 85 150 95">
+      <animate attributeName="stroke-dasharray" values="0,100;15,85;0,100" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Right camera to monitor -->
+    <path d="M320 95 Q285 85 250 95">
+      <animate attributeName="stroke-dasharray" values="0,100;15,85;0,100" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Control Panel - Bottom -->
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="240" height="80" fill="rgba(249, 115, 22, 0.1)" stroke="#f97316" stroke-width="2" rx="12"/>
+    
+    <!-- Panel Header -->
+    <text x="120" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f97316" font-weight="bold">🎥 Surveillance Control Center</text>
+    
+    <!-- Status Indicators -->
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="200" height="35" fill="rgba(31, 41, 55, 0.3)" rx="8"/>
+      
+      <!-- Recording Status -->
+      <g transform="translate(10, 8)">
+        <circle cx="8" cy="8" r="4" fill="#ef4444">
+          <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+        </circle>
+        <text x="18" y="12" font-family="Arial, sans-serif" font-size="8" fill="#f97316">Recording Active</text>
+      </g>
+      
+      <!-- Storage Status -->
+      <g transform="translate(110, 8)">
+        <circle cx="8" cy="8" r="4" fill="#10b981"/>
+        <text x="18" y="12" font-family="Arial, sans-serif" font-size="8" fill="#f97316">Storage: 67% Free</text>
+      </g>
+      
+      <!-- Analytics -->
+      <g transform="translate(10, 20)">
+        <text x="0" y="8" font-family="Arial, sans-serif" font-size="7" fill="#6b7280">Motion Detected: 3 events • Night Vision: ON • Remote Access: Available</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Data Flow Indicators -->
+  <g fill="#f97316" opacity="0.7">
+    <!-- Data packets flowing -->
+    <circle cx="100" cy="95" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;50,-10;100,0" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="300" cy="95" r="2">
+      <animateTransform attributeName="transform" type="translate" values="0,0;-50,-10;-100,0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 </svg> 
