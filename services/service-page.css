@@ -5854,3 +5854,12 @@ body.nav-open {
         gap: 1rem;
     }
 }
+
+/* FIX: Center align all access cards content - иконки и текст по центру */
+.access-card {
+    text-align: center !important;
+}
+
+.access-card .card-icon {
+    margin: 0 auto 1.5rem auto !important;
+}
