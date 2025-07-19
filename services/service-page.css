@@ -5872,3 +5872,12 @@ body.nav-open {
 .support-card .card-icon {
     margin: 0 auto 1.5rem auto !important;
 }
+
+/* FIX: Center align all security cards content - оранжевые карточки по центру */
+.security-card {
+    text-align: center !important;
+}
+
+.security-card .card-icon {
+    margin: 0 auto 1.5rem auto !important;
+}
