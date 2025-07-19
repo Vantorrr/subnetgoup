@@ -5527,13 +5527,13 @@ body.nav-open {
     
     /* WhatsApp button mobile */
     .whatsapp-float {
-        bottom: 80px;
-        right: 15px;
+        bottom: 20px;
+        right: 20px;
         width: 55px;
         height: 55px;
     }
     
-    .whatsapp-float i {
+    .whatsapp-float a {
         font-size: 1.5rem;
     }
     
@@ -5884,6 +5884,57 @@ body.nav-open {
 
 .security-card .card-icon {
     margin: 0 auto 1.5rem auto !important;
+}
+
+/* WhatsApp Floating Button - плавающая кнопка для всех страниц сервисов */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #20B858);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: whatsappPulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.whatsapp-float i {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover i {
+    transform: rotate(15deg);
+}
+
+@keyframes whatsappPulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7), 0 0 0 15px rgba(37, 211, 102, 0.1);
+    }
 }
 
 /* Support Team Info Cards - красивые карточки вместо стремного SVG */
