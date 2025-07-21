@@ -383,6 +383,9 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 3000 !important;
+    background: rgba(255,0,0,0.2) !important;
+    pointer-events: auto !important;
 }
 
 .hamburger span {
