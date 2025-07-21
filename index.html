@@ -12,7 +12,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="stylesheet" href="styles.css?v=17">
+    <link rel="stylesheet" href="styles.css?v=18">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -383,27 +383,40 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4 data-translate="contact.phone">Phone</h4>
-                            <p>+972-507-195-100</p>
+                            <p>050-719-5100</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4 data-translate="contact.email">E-Mail</h4>
-                            <p>Sub@index.com</p>
+                            <p>info@subnetgroup.net</p>
                         </div>
                     </div>
                     
                     <div class="social-links">
                         <a href="https://wa.me/972507195100" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/subnetgroup/" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:info@subnetgroup.net" class="social-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="social-link instagram-placeholder" title="Instagram coming soon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form">
                     <form id="contactForm">
-                        <input type="text" placeholder="Name" data-translate-placeholder="contact.name" required>
-                        <input type="email" placeholder="Email address" data-translate-placeholder="contact.email_address" required>
-                        <textarea placeholder="Message" data-translate-placeholder="contact.message" required></textarea>
+                        <input type="text" name="name" placeholder="Name" data-translate-placeholder="contact.name" required>
+                        <input type="email" name="email" placeholder="Email address" data-translate-placeholder="contact.email_address">
+                        <input type="tel" name="phone" placeholder="Phone number" data-translate-placeholder="contact.phone_number">
+                        <textarea name="message" placeholder="Message" data-translate-placeholder="contact.message" required></textarea>
+                        
+                        <div class="form-verification">
+                            <label class="verification-checkbox">
+                                <input type="checkbox" name="human_verification" required>
+                                <span class="checkmark"></span>
+                                <span data-translate="contact.verify_human">I'm not a robot</span>
+                            </label>
+                        </div>
+                        
                         <button type="submit" data-translate="contact.send_message">Send Message</button>
                     </form>
                 </div>
@@ -430,12 +443,12 @@
                 <div class="cert-card">
                     <i class="fas fa-medal"></i>
                     <h3>CCNP</h3>
-                    <p data-translate="certifications.ccnp">Cisco Certified Network Professional</p>
+                    <p data-translate="certifications.ccnp">CCNA/CCNP</p>
                 </div>
                 <div class="cert-card">
                     <i class="fas fa-star"></i>
-                    <h3>Microsoft Partner</h3>
-                    <p data-translate="certifications.microsoft">Gold Competency Status</p>
+                    <h3>Ruckus Partner</h3>
+                    <p data-translate="certifications.microsoft">Ruckus Certification Program</p>
                 </div>
             </div>
         </div>
@@ -495,6 +508,6 @@
         </a>
     </div>
 
-    <script src="script.js?v=17"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html> 

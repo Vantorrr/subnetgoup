@@ -1,0 +1,74 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="performanceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c5ce7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a29bfe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="#0f1419"/>
+  
+  <!-- Dashboard screen -->
+  <rect x="40" y="40" width="220" height="120" fill="#1e272e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  
+  <!-- Performance gauge -->
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#34495e" stroke-width="4"/>
+  <path d="M70 100 A30 30 0 0 1 130 100" fill="none" stroke="url(#performanceGrad)" stroke-width="4">
+    <animate attributeName="stroke-dasharray" values="0,188;140,188" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Gauge needle -->
+  <line x1="100" y1="100" x2="120" y2="85" stroke="#fff" stroke-width="2">
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;90 100 100;0 100 100" dur="4s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Performance percentage -->
+  <text x="100" y="130" text-anchor="middle" font-family="monospace" font-size="12" fill="#00d4ff">85%</text>
+  
+  <!-- Bar charts -->
+  <rect x="160" y="90" width="8" height="30" fill="#2ecc71">
+    <animate attributeName="height" values="30;40;30" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="172" y="80" width="8" height="40" fill="#74b9ff">
+    <animate attributeName="height" values="40;50;40" dur="2.2s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="184" y="85" width="8" height="35" fill="#ffa502">
+    <animate attributeName="height" values="35;45;35" dur="1.8s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="196" y="75" width="8" height="45" fill="#e17055">
+    <animate attributeName="height" values="45;55;45" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="208" y="70" width="8" height="50" fill="#6c5ce7">
+    <animate attributeName="height" values="50;60;50" dur="1.9s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Status lights -->
+  <circle cx="220" cy="55" r="4" fill="#2ecc71">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="235" cy="55" r="4" fill="#2ecc71">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="55" r="4" fill="#ffa502">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Data stream -->
+  <rect x="45" y="130" width="1" height="10" fill="#00d4ff">
+    <animate attributeName="x" values="45;250;45" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="50" y="135" width="1" height="8" fill="#43d8ff">
+    <animate attributeName="x" values="50;255;50" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Analytics text -->
+  <text x="50" y="180" font-family="monospace" font-size="10" fill="#00d4ff">Throughput: 1.2 GB/s</text>
+  <text x="180" y="180" font-family="monospace" font-size="10" fill="#2ecc71">Uptime: 99.98%</text>
+  
+  <!-- Alert indicator -->
+  <polygon points="270,45 280,60 260,60" fill="#ffa502">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </polygon>
+  <text x="270" y="56" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">!</text>
+</svg> 

@@ -1,0 +1,68 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43d8ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="#0f1419"/>
+  
+  <!-- Server rack -->
+  <rect x="50" y="50" width="60" height="80" fill="url(#monitorGrad)" rx="5" stroke="#fff" stroke-width="1"/>
+  <rect x="55" y="60" width="50" height="8" fill="#2c3e50" rx="2"/>
+  <rect x="55" y="75" width="50" height="8" fill="#2c3e50" rx="2"/>
+  <rect x="55" y="90" width="50" height="8" fill="#2c3e50" rx="2"/>
+  <rect x="55" y="105" width="50" height="8" fill="#2c3e50" rx="2"/>
+  
+  <!-- Server lights -->
+  <circle cx="62" cy="64" r="2" fill="#2ecc71">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="62" cy="79" r="2" fill="#2ecc71">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="62" cy="94" r="2" fill="#ffa502">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="62" cy="109" r="2" fill="#2ecc71">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Monitoring chart -->
+  <rect x="140" y="60" width="120" height="80" fill="#1e272e" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  
+  <!-- Chart lines -->
+  <polyline points="150,120 160,110 170,115 180,100 190,105 200,95 210,100 220,85 230,90 240,80 250,75" 
+            fill="none" stroke="url(#chartGrad)" stroke-width="2">
+    <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+  </polyline>
+  
+  <!-- Chart grid -->
+  <line x1="150" y1="70" x2="250" y2="70" stroke="#34495e" stroke-width="0.5"/>
+  <line x1="150" y1="90" x2="250" y2="90" stroke="#34495e" stroke-width="0.5"/>
+  <line x1="150" y1="110" x2="250" y2="110" stroke="#34495e" stroke-width="0.5"/>
+  <line x1="150" y1="130" x2="250" y2="130" stroke="#34495e" stroke-width="0.5"/>
+  
+  <!-- CPU usage indicator -->
+  <text x="150" y="155" font-family="monospace" font-size="10" fill="#00d4ff">CPU: 78%</text>
+  <text x="200" y="155" font-family="monospace" font-size="10" fill="#2ecc71">RAM: 65%</text>
+  
+  <!-- Network activity -->
+  <circle cx="80" cy="160" r="3" fill="#00d4ff">
+    <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Status indicators -->
+  <rect x="20" y="170" width="8" height="8" fill="#2ecc71" rx="1"/>
+  <text x="32" y="178" font-family="monospace" font-size="8" fill="#2ecc71">ONLINE</text>
+  
+  <rect x="80" y="170" width="8" height="8" fill="#ffa502" rx="1"/>
+  <text x="92" y="178" font-family="monospace" font-size="8" fill="#ffa502">WARNING</text>
+</svg> 

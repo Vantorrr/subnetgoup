@@ -1,0 +1,71 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="remoteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b894;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cec9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="#0f1419"/>
+  
+  <!-- Computer screen -->
+  <rect x="80" y="50" width="140" height="90" fill="#1e272e" stroke="#00d4ff" stroke-width="2" rx="5"/>
+  <rect x="85" y="55" width="130" height="70" fill="#2c3e50" rx="3"/>
+  
+  <!-- Screen content -->
+  <rect x="90" y="60" width="25" height="15" fill="#74b9ff" rx="2"/>
+  <rect x="120" y="60" width="35" height="15" fill="#fd79a8" rx="2"/>
+  <rect x="160" y="60" width="45" height="15" fill="#2ecc71" rx="2"/>
+  
+  <rect x="90" y="80" width="60" height="8" fill="#ddd" rx="1"/>
+  <rect x="90" y="92" width="80" height="8" fill="#ddd" rx="1"/>
+  <rect x="90" y="104" width="50" height="8" fill="#ddd" rx="1"/>
+  
+  <!-- Remote cursor -->
+  <polygon points="160,90 165,100 162,100 160,105 155,95" fill="#e74c3c">
+    <animateTransform attributeName="transform" type="translate" values="0,0;20,10;-10,15;0,0" dur="4s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Connection indicator -->
+  <circle cx="50" cy="80" r="20" fill="url(#remoteGrad)" stroke="#fff" stroke-width="2">
+    <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="50" y="85" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">VPN</text>
+  
+  <!-- Data transfer -->
+  <rect x="25" y="130" width="250" height="2" fill="#34495e" rx="1"/>
+  <rect x="25" y="130" width="180" height="2" fill="url(#remoteGrad)" rx="1">
+    <animate attributeName="width" values="0;250;0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Transfer speed -->
+  <text x="30" y="125" font-family="monospace" font-size="10" fill="#00d4ff">Upload: 45.2 MB/s</text>
+  <text x="180" y="125" font-family="monospace" font-size="10" fill="#2ecc71">Download: 98.7 MB/s</text>
+  
+  <!-- Remote assistant -->
+  <circle cx="250" cy="80" r="20" fill="#fd79a8" stroke="#fff" stroke-width="2"/>
+  <circle cx="245" cy="75" r="2" fill="#fff"/>
+  <circle cx="255" cy="75" r="2" fill="#fff"/>
+  <path d="M245 88 Q250 92 255 88" stroke="#fff" stroke-width="2" fill="none"/>
+  
+  <!-- Tools -->
+  <rect x="240" y="110" width="20" height="3" fill="#ffa502" rx="1"/>
+  <rect x="240" y="115" width="15" height="3" fill="#74b9ff" rx="1"/>
+  <rect x="240" y="120" width="18" height="3" fill="#2ecc71" rx="1"/>
+  
+  <!-- Session info -->
+  <rect x="40" y="160" width="100" height="20" fill="#1e272e" stroke="#00d4ff" stroke-width="1" rx="2"/>
+  <text x="45" y="173" font-family="monospace" font-size="9" fill="#2ecc71">Session Active</text>
+  
+  <rect x="160" y="160" width="100" height="20" fill="#1e272e" stroke="#00d4ff" stroke-width="1" rx="2"/>
+  <text x="165" y="173" font-family="monospace" font-size="9" fill="#ffa502">Duration: 15:42</text>
+  
+  <!-- Security lock -->
+  <rect x="270" y="45" width="15" height="10" fill="#34495e" stroke="#2ecc71" stroke-width="1" rx="2"/>
+  <path d="M275 45 L275 40 Q275 37 278 37 L282 37 Q285 37 285 40 L285 45" fill="none" stroke="#2ecc71" stroke-width="1"/>
+  
+  <!-- Success indicator -->
+  <text x="20" y="190" font-family="monospace" font-size="10" fill="#2ecc71">Connection: Secure</text>
+  <text x="180" y="190" font-family="monospace" font-size="10" fill="#00d4ff">Status: Connected</text>
+</svg> 

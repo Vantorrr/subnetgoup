@@ -65,8 +65,11 @@ const translations = {
             email: "E-Mail",
             name: "Name",
             email_address: "Email address",
+            phone_number: "Phone number",
             message: "Message",
-            send_message: "Send Message"
+            send_message: "Send Message",
+            verify_human: "I'm not a robot",
+            email_or_phone_required: "Please provide either email or phone number"
         },
         footer: {
             description: "Installation, configuration and maintenance of access control systems, computer networks and other modern systems",
@@ -80,8 +83,8 @@ const translations = {
             title: "Certifications & Achievements",
             iso: "Information Security Management",
             cissp: "Certified Information Systems Security Professional",
-            ccnp: "Cisco Certified Network Professional",
-            microsoft: "Gold Competency Status"
+            ccnp: "CCNA/CCNP",
+            microsoft: "Ruckus Certification Program"
         },
         stats: {
             projects: "Projects Completed",
@@ -155,8 +158,11 @@ const translations = {
             email: "אימייל",
             name: "שם",
             email_address: "כתובת אימייל",
+            phone_number: "מספר טלפון",
             message: "הודעה",
-            send_message: "שלח הודעה"
+            send_message: "שלח הודעה",
+            verify_human: "אני לא רובוט",
+            email_or_phone_required: "אנא ספק אימייל או מספר טלפון"
         },
         footer: {
             description: "התקנה, תצורה ותחזוקה של מערכות בקרת גישה, רשתות מחשבים ומערכות מודרניות אחרות",
@@ -170,8 +176,8 @@ const translations = {
             title: "הסמכות והישגים",
             iso: "ניהול אבטחת מידע",
             cissp: "מומחה מוסמך לאבטחת מערכות מידע",
-            ccnp: "מומחה רשתות מוסמך סיסקו",
-            microsoft: "סטטוס יכולת זהב"
+            ccnp: "CCNA/CCNP",
+            microsoft: "Ruckus Certification Program"
         },
         stats: {
             projects: "פרויקטים שהושלמו",
@@ -548,13 +554,42 @@ if (contactForm) {
         
         // Get form data
         const formData = new FormData(contactForm);
-        const name = formData.get('name') || contactForm.querySelector('input[type="text"]').value;
-        const email = formData.get('email') || contactForm.querySelector('input[type="email"]').value;
-        const message = formData.get('message') || contactForm.querySelector('textarea').value;
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const message = formData.get('message');
+        const humanVerification = formData.get('human_verification');
         
-        // Simple validation
-        if (!name || !email || !message) {
-            showNotification('Please fill in all fields', 'error');
+        // Get current language for error messages
+        const currentLang = document.documentElement.getAttribute('data-lang') || 'en';
+        const errorMessages = {
+            en: {
+                fillRequired: 'Please fill in all required fields',
+                emailOrPhone: 'Please provide either email or phone number',
+                verification: 'Please verify that you are human'
+            },
+            he: {
+                fillRequired: 'אנא מלא את כל השדות הנדרשים',
+                emailOrPhone: 'אנא ספק אימייל או מספר טלפון',
+                verification: 'אנא אמת שאתה אדם'
+            }
+        };
+        
+        const msgs = errorMessages[currentLang] || errorMessages.en;
+        
+        // Validation
+        if (!name || !message) {
+            showNotification(msgs.fillRequired, 'error');
+            return;
+        }
+        
+        if (!email && !phone) {
+            showNotification(msgs.emailOrPhone, 'error');
+            return;
+        }
+        
+        if (!humanVerification) {
+            showNotification(msgs.verification, 'error');
             return;
         }
         
@@ -565,7 +600,7 @@ if (contactForm) {
         contactForm.reset();
         
         // Here you would typically send the data to your server
-        console.log('Form submitted:', { name, email, message });
+        console.log('Form submitted:', { name, email, phone, message });
     });
 }
 

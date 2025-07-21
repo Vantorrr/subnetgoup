@@ -1,52 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="serverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43d8ff;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#00a8cc;stop-opacity:0.7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
   <!-- Background -->
-  <rect width="400" height="300" fill="#f0f9ff"/>
+  <rect width="300" height="200" fill="#0f1419"/>
   
-  <!-- Title -->
-  <text x="200" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1e40af">
-    Corporate Network Infrastructure
-  </text>
-  
-  <!-- Office Building -->
-  <rect x="50" y="80" width="120" height="120" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <!-- Building outline -->
+  <rect x="50" y="40" width="200" height="140" fill="url(#buildingGrad)" stroke="#43d8ff" stroke-width="2" rx="8"/>
   
   <!-- Windows -->
-  <rect x="60" y="90" width="12" height="12" fill="#3b82f6"/>
-  <rect x="80" y="90" width="12" height="12" fill="#3b82f6"/>
-  <rect x="100" y="90" width="12" height="12" fill="#fbbf24"/>
-  <rect x="120" y="90" width="12" height="12" fill="#3b82f6"/>
-  <rect x="140" y="90" width="12" height="12" fill="#3b82f6"/>
+  <rect x="70" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="100" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="130" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="160" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="190" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="220" y="60" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
   
-  <rect x="60" y="110" width="12" height="12" fill="#fbbf24"/>
-  <rect x="80" y="110" width="12" height="12" fill="#3b82f6"/>
-  <rect x="100" y="110" width="12" height="12" fill="#3b82f6"/>
-  <rect x="120" y="110" width="12" height="12" fill="#fbbf24"/>
-  <rect x="140" y="110" width="12" height="12" fill="#3b82f6"/>
+  <rect x="70" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="100" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="130" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="160" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="190" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
+  <rect x="220" y="85" width="20" height="15" fill="#43d8ff" opacity="0.7" rx="2"/>
   
-  <!-- Server -->
-  <rect x="250" y="100" width="40" height="60" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
-  <rect x="255" y="105" width="30" height="6" fill="#3b82f6"/>
-  <rect x="255" y="115" width="30" height="6" fill="#10b981"/>
-  <rect x="255" y="125" width="30" height="6" fill="#3b82f6"/>
-  <rect x="255" y="135" width="30" height="6" fill="#10b981"/>
+  <!-- Central server room -->
+  <rect x="120" y="120" width="60" height="40" fill="url(#serverGrad)" stroke="#43d8ff" stroke-width="2" rx="4"/>
   
-  <!-- Network Switch -->
-  <rect x="300" y="130" width="50" height="20" fill="#059669" stroke="#047857" stroke-width="2"/>
-  <circle cx="310" cy="140" r="2" fill="#22c55e"/>
-  <circle cx="320" cy="140" r="2" fill="#22c55e"/>
-  <circle cx="330" cy="140" r="2" fill="#fbbf24"/>
-  <circle cx="340" cy="140" r="2" fill="#22c55e"/>
+  <!-- Server racks -->
+  <rect x="125" y="125" width="8" height="30" fill="#00d4ff" rx="1"/>
+  <rect x="135" y="125" width="8" height="30" fill="#00d4ff" rx="1"/>
+  <rect x="145" y="125" width="8" height="30" fill="#00d4ff" rx="1"/>
+  <rect x="155" y="125" width="8" height="30" fill="#00d4ff" rx="1"/>
+  <rect x="165" y="125" width="8" height="30" fill="#00d4ff" rx="1"/>
   
-  <!-- Connections -->
-  <line x1="170" y1="140" x2="250" y2="130" stroke="#6366f1" stroke-width="2"/>
-  <line x1="290" y1="130" x2="300" y2="140" stroke="#6366f1" stroke-width="2"/>
+  <!-- Network connections -->
+  <line x1="150" y1="120" x2="150" y2="85" stroke="#43d8ff" stroke-width="3" filter="url(#glow)"/>
+  <line x1="150" y1="85" x2="80" y2="85" stroke="#43d8ff" stroke-width="2" filter="url(#glow)"/>
+  <line x1="150" y1="85" x2="220" y2="85" stroke="#43d8ff" stroke-width="2" filter="url(#glow)"/>
+  <line x1="110" y1="85" x2="110" y2="70" stroke="#43d8ff" stroke-width="2"/>
+  <line x1="140" y1="85" x2="140" y2="70" stroke="#43d8ff" stroke-width="2"/>
+  <line x1="170" y1="85" x2="170" y2="70" stroke="#43d8ff" stroke-width="2"/>
+  <line x1="200" y1="85" x2="200" y2="70" stroke="#43d8ff" stroke-width="2"/>
+  <line x1="230" y1="85" x2="230" y2="70" stroke="#43d8ff" stroke-width="2"/>
   
-  <!-- Stats -->
-  <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="12" fill="#64748b">
-    Complete network redesign for 200+ employee corporate office
-  </text>
+  <!-- Network hubs -->
+  <circle cx="80" cy="85" r="4" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="220" cy="85" r="4" fill="#00d4ff" filter="url(#glow)"/>
   
-  <text x="80" y="270" font-family="Arial" font-size="10" fill="#0284c7">👥 200+ Users</text>
-  <text x="180" y="270" font-family="Arial" font-size="10" fill="#0284c7">🖥️ 15 Servers</text>
-  <text x="280" y="270" font-family="Arial" font-size="10" fill="#0284c7">📡 50 Access Points</text>
+  <!-- Main router -->
+  <rect x="140" y="100" width="20" height="8" fill="#43d8ff" stroke="#00d4ff" stroke-width="1" rx="2"/>
+  <circle cx="143" cy="104" r="1" fill="#00d4ff"/>
+  <circle cx="147" cy="104" r="1" fill="#00d4ff"/>
+  <circle cx="151" cy="104" r="1" fill="#00d4ff"/>
+  <circle cx="155" cy="104" r="1" fill="#00d4ff"/>
+  
+  <!-- Data flow animation -->
+  <circle cx="150" cy="95" r="2" fill="#43d8ff" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Wi-Fi signals -->
+  <g transform="translate(270,50)">
+    <path d="M 0,0 A 8,8 0 0,1 0,16" stroke="#43d8ff" stroke-width="2" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,2 A 6,6 0 0,1 0,14" stroke="#43d8ff" stroke-width="2" fill="none" opacity="0.8">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,4 A 4,4 0 0,1 0,12" stroke="#43d8ff" stroke-width="2" fill="none" opacity="1">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Status indicator -->
+  <text x="20" y="30" fill="#43d8ff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ACTIVE</text>
+  <circle cx="10" cy="25" r="3" fill="#00ff88">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+  </circle>
 </svg> 

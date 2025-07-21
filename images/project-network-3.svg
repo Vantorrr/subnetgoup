@@ -1,45 +1,194 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="building1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="building2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43d8ff;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#00a8cc;stop-opacity:0.5"/>
+    </linearGradient>
+    <linearGradient id="fiberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0.7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
   <!-- Background -->
-  <rect width="400" height="300" fill="#f0fdf4"/>
+  <rect width="300" height="200" fill="#0f1419"/>
   
-  <!-- Title -->
-  <text x="200" y="25" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#15803d">
-    Multi-Building Campus Network
-  </text>
+  <!-- Campus ground -->
+  <ellipse cx="150" cy="180" rx="140" ry="15" fill="#1a2332" opacity="0.8"/>
   
-  <!-- Buildings -->
-  <rect x="50" y="60" width="50" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
-  <text x="75" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#475569">Bldg 1</text>
+  <!-- Building 1 -->
+  <rect x="30" y="80" width="50" height="80" fill="url(#building1Grad)" stroke="#43d8ff" stroke-width="2" rx="4"/>
+  <rect x="35" y="90" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="45" y="90" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="55" y="90" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="65" y="90" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="35" y="105" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="45" y="105" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="55" y="105" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="65" y="105" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="35" y="120" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="45" y="120" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="55" y="120" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="65" y="120" width="8" height="8" fill="#43d8ff" opacity="0.8" rx="1"/>
   
-  <rect x="150" y="60" width="50" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
-  <text x="175" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#475569">Bldg 2</text>
+  <!-- Building 2 (taller) -->
+  <rect x="100" y="50" width="40" height="110" fill="url(#building2Grad)" stroke="#43d8ff" stroke-width="2" rx="4"/>
+  <rect x="105" y="60" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="60" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="60" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="70" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="70" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="70" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="80" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="80" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="80" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="90" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="90" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="90" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="105" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="115" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="125" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
   
-  <rect x="250" y="60" width="50" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
-  <text x="275" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#475569">Bldg 3</text>
+  <!-- Building 3 -->
+  <rect x="170" y="70" width="45" height="90" fill="url(#building1Grad)" stroke="#43d8ff" stroke-width="2" rx="4"/>
+  <rect x="175" y="80" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="185" y="80" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="195" y="80" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="205" y="80" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="175" y="95" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="185" y="95" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="195" y="95" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="205" y="95" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="175" y="110" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="185" y="110" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="195" y="110" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="205" y="110" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="175" y="125" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="185" y="125" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="195" y="125" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="205" y="125" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="175" y="140" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="185" y="140" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="195" y="140" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="205" y="140" width="7" height="7" fill="#43d8ff" opacity="0.8" rx="1"/>
   
-  <rect x="100" y="160" width="50" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
-  <text x="125" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#475569">Bldg 4</text>
+  <!-- Building 4 -->
+  <rect x="240" y="90" width="35" height="70" fill="url(#building2Grad)" stroke="#43d8ff" stroke-width="2" rx="4"/>
+  <rect x="245" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="255" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="265" y="100" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="245" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="255" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="265" y="110" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="245" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="255" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="265" y="120" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="245" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="255" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="265" y="130" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="245" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="255" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
+  <rect x="265" y="140" width="6" height="6" fill="#43d8ff" opacity="0.8" rx="1"/>
   
-  <rect x="200" y="160" width="50" height="60" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
-  <text x="225" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#475569">Bldg 5</text>
+  <!-- Fiber optic connections -->
+  <line x1="80" y1="150" x2="100" y2="150" stroke="url(#fiberGrad)" stroke-width="4" filter="url(#glow)"/>
+  <line x1="140" y1="150" x2="170" y2="150" stroke="url(#fiberGrad)" stroke-width="4" filter="url(#glow)"/>
+  <line x1="215" y1="150" x2="240" y2="150" stroke="url(#fiberGrad)" stroke-width="4" filter="url(#glow)"/>
   
-  <!-- Central Switch -->
-  <circle cx="200" cy="130" r="15" fill="#059669" stroke="#047857" stroke-width="2"/>
-  <text x="200" y="135" text-anchor="middle" font-family="Arial" font-size="8" fill="white">CORE</text>
+  <!-- Central network hub -->
+  <circle cx="150" cy="150" r="12" fill="url(#fiberGrad)" stroke="#ffd700" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="150" cy="150" r="8" fill="#1a2332"/>
+  <circle cx="150" cy="150" r="4" fill="#ffd700">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
   
-  <!-- Fiber Connections -->
-  <line x1="75" y1="120" x2="185" y2="130" stroke="#22c55e" stroke-width="3"/>
-  <line x1="175" y1="120" x2="190" y2="125" stroke="#22c55e" stroke-width="3"/>
-  <line x1="275" y1="120" x2="215" y2="130" stroke="#22c55e" stroke-width="3"/>
-  <line x1="125" y1="160" x2="190" y2="140" stroke="#22c55e" stroke-width="3"/>
-  <line x1="225" y1="160" x2="210" y2="140" stroke="#22c55e" stroke-width="3"/>
+  <!-- Network switches in buildings -->
+  <rect x="48" y="145" width="12" height="6" fill="#43d8ff" stroke="#00d4ff" stroke-width="1" rx="1"/>
+  <rect x="115" y="145" width="12" height="6" fill="#43d8ff" stroke="#00d4ff" stroke-width="1" rx="1"/>
+  <rect x="185" y="145" width="12" height="6" fill="#43d8ff" stroke="#00d4ff" stroke-width="1" rx="1"/>
+  <rect x="250" y="145" width="12" height="6" fill="#43d8ff" stroke="#00d4ff" stroke-width="1" rx="1"/>
   
-  <!-- Stats -->
-  <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="12" fill="#047857">
-    Fiber optic backbone connecting 5 buildings across campus
-  </text>
+  <!-- Data flow indicators -->
+  <circle cx="90" cy="150" r="1.5" fill="#ffd700">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="155" cy="150" r="1.5" fill="#ffd700">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="227" cy="150" r="1.5" fill="#ffd700">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
   
-  <text x="60" y="270" font-family="Arial" font-size="10" fill="#15803d">🏢 5 Buildings</text>
-  <text x="160" y="270" font-family="Arial" font-size="10" fill="#15803d">🌐 Fiber Backbone</text>
-  <text x="280" y="270" font-family="Arial" font-size="10" fill="#15803d">👥 1000+ Users</text>
+  <!-- WiFi coverage indicators -->
+  <g transform="translate(55,120)">
+    <path d="M 0,0 A 15,15 0 0,1 0,30" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,5 A 10,10 0 0,1 0,25" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <g transform="translate(120,100)">
+    <path d="M 0,0 A 20,20 0 0,1 0,40" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,5 A 15,15 0 0,1 0,35" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <g transform="translate(192,120)">
+    <path d="M 0,0 A 18,18 0 0,1 0,36" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,4 A 14,14 0 0,1 0,32" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <g transform="translate(257,125)">
+    <path d="M 0,0 A 12,12 0 0,1 0,24" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.4">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.9s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 0,3 A 9,9 0 0,1 0,21" stroke="#43d8ff" stroke-width="1" fill="none" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Campus network status -->
+  <text x="20" y="30" fill="#43d8ff" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CAMPUS NETWORK</text>
+  <circle cx="10" cy="25" r="3" fill="#00ff88">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Building labels -->
+  <text x="55" y="175" fill="#43d8ff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">BLDG A</text>
+  <text x="120" y="175" fill="#43d8ff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">BLDG B</text>
+  <text x="192" y="175" fill="#43d8ff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">BLDG C</text>
+  <text x="257" y="175" fill="#43d8ff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">BLDG D</text>
 </svg> 

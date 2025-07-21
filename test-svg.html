@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Test</title>
+    <style>
+        body { background: #0f1419; color: white; padding: 20px; }
+        .test-container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #43d8ff;
+            margin: 20px 0;
+        }
+        .test-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG Test</h1>
+    
+    <h2>PNG Test:</h2>
+    <div class="test-container">
+        <img src="images/subnet-logo.png" alt="PNG Test">
+    </div>
+    
+    <h2>SVG Test 1:</h2>
+    <div class="test-container">
+        <img src="images/project-network-1.svg" alt="SVG Test 1">
+    </div>
+    
+    <h2>SVG Test 2:</h2>
+    <div class="test-container">
+        <img src="images/project-network-2.svg" alt="SVG Test 2">
+    </div>
+    
+    <h2>SVG Direct Test:</h2>
+    <div class="test-container">
+        <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="200" fill="#43d8ff"/>
+            <text x="150" y="100" text-anchor="middle" fill="white" font-size="20">DIRECT SVG WORKS!</text>
+        </svg>
+    </div>
+</body>
+</html> 

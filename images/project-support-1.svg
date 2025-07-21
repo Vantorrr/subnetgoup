@@ -1,0 +1,68 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="supportGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="#0f1419"/>
+  
+  <!-- Support agent headset -->
+  <circle cx="150" cy="80" r="25" fill="url(#supportGrad)" stroke="#fff" stroke-width="2"/>
+  <circle cx="140" cy="75" r="3" fill="#fff"/>
+  <circle cx="160" cy="75" r="3" fill="#fff"/>
+  <path d="M140 90 Q150 95 160 90" stroke="#fff" stroke-width="2" fill="none"/>
+  
+  <!-- Headset -->
+  <path d="M120 70 Q120 50 150 50 Q180 50 180 70" stroke="#2c3e50" stroke-width="4" fill="none"/>
+  <circle cx="115" cy="75" r="8" fill="#2c3e50"/>
+  <rect x="110" y="80" width="10" height="15" fill="#2c3e50" rx="2"/>
+  
+  <!-- Chat bubbles -->
+  <ellipse cx="80" cy="120" rx="25" ry="15" fill="#74b9ff" stroke="#fff" stroke-width="1">
+    <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  <text x="80" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff">Hello!</text>
+  
+  <ellipse cx="220" cy="140" rx="30" ry="18" fill="#2ecc71" stroke="#fff" stroke-width="1">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </ellipse>
+  <text x="220" y="143" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">How can I</text>
+  <text x="220" y="155" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">help you?</text>
+  
+  <!-- Ticket system -->
+  <rect x="40" y="160" width="80" height="25" fill="#1e272e" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="50" y="175" font-family="monospace" font-size="9" fill="#2ecc71">Ticket #12345</text>
+  <text x="50" y="185" font-family="monospace" font-size="8" fill="#ffa502">RESOLVED</text>
+  
+  <rect x="140" y="160" width="80" height="25" fill="#1e272e" stroke="#00d4ff" stroke-width="1" rx="3"/>
+  <text x="150" y="175" font-family="monospace" font-size="9" fill="#ff6b7a">Ticket #12346</text>
+  <text x="150" y="185" font-family="monospace" font-size="8" fill="#ff6b7a">URGENT</text>
+  
+  <!-- Support tools -->
+  <rect x="240" y="50" width="20" height="25" fill="#34495e" stroke="#fff" stroke-width="1" rx="2"/>
+  <rect x="243" y="53" width="14" height="2" fill="#00d4ff"/>
+  <rect x="243" y="57" width="14" height="2" fill="#00d4ff"/>
+  <rect x="243" y="61" width="14" height="2" fill="#00d4ff"/>
+  <rect x="243" y="65" width="14" height="2" fill="#00d4ff"/>
+  <rect x="243" y="69" width="14" height="2" fill="#00d4ff"/>
+  
+  <!-- Response time indicator -->
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#34495e" stroke-width="3"/>
+  <path d="M35 50 A15 15 0 0 1 50 35" fill="none" stroke="#2ecc71" stroke-width="3">
+    <animate attributeName="stroke-dasharray" values="0,94;70,94" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="50" y="55" text-anchor="middle" font-family="monospace" font-size="8" fill="#2ecc71">2min</text>
+  
+  <!-- Notification bell -->
+  <path d="M270 100 Q275 95 280 100 L280 110 Q275 115 270 110 Z" fill="#ffa502">
+    <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="282" cy="98" r="3" fill="#e74c3c"/>
+  
+  <!-- Success rate -->
+  <text x="20" y="190" font-family="monospace" font-size="10" fill="#2ecc71">Success Rate: 98.5%</text>
+  <text x="180" y="190" font-family="monospace" font-size="10" fill="#00d4ff">Avg Response: 1.8min</text>
+</svg> 
