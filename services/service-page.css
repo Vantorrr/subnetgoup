@@ -6043,3 +6043,25 @@ body.nav-open {
     border-radius: 1.2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .features-list,
+  .service-features,
+  .services-grid,
+  .gallery-grid,
+  .process-timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .feature,
+  .service-item,
+  .gallery-item,
+  .timeline-item {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 1.2rem !important;
+    margin: 0 !important;
+  }
+}
