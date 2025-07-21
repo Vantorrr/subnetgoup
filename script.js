@@ -193,10 +193,6 @@ let currentLanguage = 'en';
 
 // DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const langButtons = document.querySelectorAll('.lang-btn');
-const serviceCards = document.querySelectorAll('.service-card');
 
 // Loading Screen Animation
 window.addEventListener('load', () => {
@@ -210,34 +206,9 @@ window.addEventListener('load', () => {
     }, 3000); // Show loading for 3 seconds
 });
 
-// Mobile Menu Toggle
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-}
-
 // Language Switcher
 function updateLanguage(lang) {
     currentLanguage = lang;
-    
-    // Update active language button
-    langButtons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.lang === lang) {
-            btn.classList.add('active');
-        }
-    });
     
     // Update all translated elements
     const elements = document.querySelectorAll('[data-translate]');
@@ -268,13 +239,6 @@ function updateLanguage(lang) {
 function getNestedTranslation(obj, path) {
     return path.split('.').reduce((current, key) => current && current[key], obj);
 }
-
-// Initialize language buttons
-langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        updateLanguage(btn.dataset.lang);
-    });
-});
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -741,39 +705,64 @@ if (heroSection) {
 
 // Initialize the website
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
+    // Language Switcher
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            updateLanguage(btn.dataset.lang);
+        });
+    });
+
+    // Service card hover effects
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Add floating animation to WhatsApp button
+    const whatsappButton = document.querySelector('.whatsapp-float a');
+    if (whatsappButton) {
+        setInterval(() => {
+            whatsappButton.style.animation = 'none';
+            setTimeout(() => {
+                whatsappButton.style.animation = 'bounce 2s infinite';
+            }, 10);
+        }, 10000);
+    }
+
     // Set initial language
     updateLanguage(currentLanguage);
-    
+
     // Add loading class to body initially
     document.body.classList.add('loading');
-    
+
     // Initialize scroll animations
     new ScrollAnimations();
-    
+
     console.log('SubNet Group website initialized successfully!');
 });
-
-// Service card hover effects
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Add floating animation to WhatsApp button
-const whatsappButton = document.querySelector('.whatsapp-float a');
-if (whatsappButton) {
-    setInterval(() => {
-        whatsappButton.style.animation = 'none';
-        setTimeout(() => {
-            whatsappButton.style.animation = 'bounce 2s infinite';
-        }, 10);
-    }, 10000); // Re-animate every 10 seconds
-}
 
 // Animated counter for statistics
 function animateCounter(element, target) {
@@ -810,52 +799,6 @@ const statsObserver = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.5 });
-
-// Enhanced initialization
-document.addEventListener('DOMContentLoaded', function() {
-    // ... existing DOMContentLoaded code ...
-    
-    // Add modal HTML to body
-    const modalHTML = `
-        <div id="projectModal" class="modal">
-            <div class="modal-content" id="modalContent">
-                <!-- Content will be dynamically loaded -->
-            </div>
-        </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', modalHTML);
-    
-    // Observe stats section
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) {
-        statsObserver.observe(statsSection);
-    }
-    
-    // Enhanced smooth scrolling for new sections
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    // Enhanced scroll effects
-    window.addEventListener('scroll', () => {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                section.classList.add('visible');
-            }
-        });
-    });
-});
 
 // ANCHOR LINK NAVIGATION FIX
 class AnchorNavigation {
