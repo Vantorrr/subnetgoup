@@ -306,100 +306,102 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     });
 
-    // --- Новый фиксированный гамбургер ---
-    const fixedHamburger = document.createElement('div');
-    fixedHamburger.className = 'fixed-hamburger';
-    fixedHamburger.innerHTML = `
-      <span class="bar bar1"></span>
-      <span class="bar bar2"></span>
-      <span class="bar bar3"></span>
-    `;
-    document.body.appendChild(fixedHamburger);
+    // --- Новый фиксированный гамбургер и offcanvas меню ---
+    if (isServicePage()) {
+      const fixedHamburger = document.createElement('div');
+      fixedHamburger.className = 'fixed-hamburger';
+      fixedHamburger.innerHTML = `
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      `;
+      document.body.appendChild(fixedHamburger);
 
-    // --- Overlay ---
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
+      // --- Overlay ---
+      const overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
 
-    // --- Off-canvas меню ---
-    const offcanvas = document.createElement('nav');
-    offcanvas.className = 'offcanvas-menu';
-    offcanvas.innerHTML = `
-      <div class="menu-langs"></div>
-      <div class="menu-nav">
-        <a href="../index.html" data-translate="nav.home">Home</a>
-        <a href="../index.html#about" data-translate="nav.about">About us</a>
-        <a href="../index.html#services" data-translate="nav.services">Services</a>
-        <a href="../index.html#partners" data-translate="nav.partners">Our Partners</a>
-        <a href="../index.html#contact" data-translate="nav.contact">Contact us</a>
-      </div>
-    `;
-    document.body.appendChild(offcanvas);
+      // --- Off-canvas меню ---
+      const offcanvas = document.createElement('nav');
+      offcanvas.className = 'offcanvas-menu';
+      offcanvas.innerHTML = `
+        <div class="menu-langs"></div>
+        <div class="menu-nav">
+          <a href="../index.html" data-translate="nav.home">Home</a>
+          <a href="../index.html#about" data-translate="nav.about">About us</a>
+          <a href="../index.html#services" data-translate="nav.services">Services</a>
+          <a href="../index.html#partners" data-translate="nav.partners">Our Partners</a>
+          <a href="../index.html#contact" data-translate="nav.contact">Contact us</a>
+        </div>
+      `;
+      document.body.appendChild(offcanvas);
 
-    // --- Языки внутри меню ---
-    const langs = [
-      { code: 'en', flag: '🇺🇸' },
-      { code: 'he', flag: '🇮🇱' }
-    ];
-    const menuLangs = offcanvas.querySelector('.menu-langs');
-    if (!menuLangs) {
-      console.error('menu-langs not found in offcanvas!');
-      return;
-    }
-    langs.forEach(l => {
-      const btn = document.createElement('button');
-      btn.className = 'lang-btn';
-      btn.dataset.lang = l.code;
-      btn.innerHTML = `<span class="flag-icon">${l.flag}</span>`;
-      if (document.documentElement.lang === l.code) btn.classList.add('active');
-      btn.onclick = () => {
-        if (!isServicePage()) {
-          updateLanguage(l.code);
-        }
-        menuLangs.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        if (window.ServicePageComponents && window.ServicePageComponents.LanguageSwitcher) {
-          try {
-            new window.ServicePageComponents.LanguageSwitcher().applyTranslations(l.code);
-          } catch (e) {}
-        }
+      // --- Языки внутри меню ---
+      const langs = [
+        { code: 'en', flag: '🇺🇸' },
+        { code: 'he', flag: '🇮🇱' }
+      ];
+      const menuLangs = offcanvas.querySelector('.menu-langs');
+      if (!menuLangs) {
+        console.error('menu-langs not found in offcanvas!');
+        return;
+      }
+      langs.forEach(l => {
+        const btn = document.createElement('button');
+        btn.className = 'lang-btn';
+        btn.dataset.lang = l.code;
+        btn.innerHTML = `<span class="flag-icon">${l.flag}</span>`;
+        if (document.documentElement.lang === l.code) btn.classList.add('active');
+        btn.onclick = () => {
+          if (!isServicePage()) {
+            updateLanguage(l.code);
+          }
+          menuLangs.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          if (window.ServicePageComponents && window.ServicePageComponents.LanguageSwitcher) {
+            try {
+              new window.ServicePageComponents.LanguageSwitcher().applyTranslations(l.code);
+            } catch (e) {}
+          }
+        };
+        menuLangs.appendChild(btn);
+      });
+
+      // --- Открытие/закрытие меню ---
+      function closeMenu() {
+        fixedHamburger.classList.remove('active');
+        offcanvas.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      function openMenu() {
+        fixedHamburger.classList.add('active');
+        offcanvas.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      fixedHamburger.onclick = () => {
+        if (offcanvas.classList.contains('active')) closeMenu();
+        else openMenu();
       };
-      menuLangs.appendChild(btn);
-    });
+      overlay.onclick = closeMenu;
+      // Закрытие по клику на ссылку
+      const menuNav = offcanvas.querySelector('.menu-nav');
+      if (!menuNav) {
+        console.error('menu-nav not found in offcanvas!');
+        return;
+      }
+      menuNav.querySelectorAll('a').forEach(link => {
+        link.onclick = closeMenu;
+      });
+      // Закрытие по Esc
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeMenu();
+      });
+    }
 
-    // --- Открытие/закрытие меню ---
-    function closeMenu() {
-      fixedHamburger.classList.remove('active');
-      offcanvas.classList.remove('active');
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    function openMenu() {
-      fixedHamburger.classList.add('active');
-      offcanvas.classList.add('active');
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    fixedHamburger.onclick = () => {
-      if (offcanvas.classList.contains('active')) closeMenu();
-      else openMenu();
-    };
-    overlay.onclick = closeMenu;
-    // Закрытие по клику на ссылку
-    const menuNav = offcanvas.querySelector('.menu-nav');
-    if (!menuNav) {
-      console.error('menu-nav not found in offcanvas!');
-      return;
-    }
-    menuNav.querySelectorAll('a').forEach(link => {
-      link.onclick = closeMenu;
-    });
-    // Закрытие по Esc
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenu();
-    });
-
-    // Animated counter for statistics
+    // --- Animated counter for statistics (работает на всех страницах) ---
     function animateCounter(element, target) {
         const duration = 2000; // 2 seconds
         const steps = 60;
@@ -421,7 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, duration / steps);
     }
 
-    // Intersection Observer for stats animation
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -434,6 +435,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stats-grid').forEach(grid => {
+        statsObserver.observe(grid);
+    });
 
     // ANCHOR LINK NAVIGATION FIX
     class AnchorNavigation {
