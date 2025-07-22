@@ -4065,3 +4065,27 @@ body {
     font-size: 1.4rem;
     line-height: 1.2;
 }
+
+.verification-checkbox:hover .checkmark {
+    border-color: #43d8ff;
+    background: rgba(67, 216, 255, 0.1);
+}
+
+/* Instagram placeholder */
+.instagram-placeholder {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .step {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 24px 0;
+  }
+}
