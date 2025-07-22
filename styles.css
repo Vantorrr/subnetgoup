@@ -4088,4 +4088,138 @@ body {
     min-width: 0 !important;
     margin: 0 0 24px 0 !important;
   }
+}.fixed-hamburger {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15,20,25,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: background 0.2s;
 }
+.fixed-hamburger:hover {
+  background: rgba(0,212,255,0.15);
+}
+
+.fixed-hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.fixed-hamburger.active .bar1 {
+  transform: translateY(7px) rotate(45deg);
+}
+.fixed-hamburger.active .bar2 {
+  opacity: 0;
+}
+.fixed-hamburger.active .bar3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Off-canvas меню */
+.offcanvas-menu {
+  position: fixed;
+  top: 0; right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: #10151c;
+  z-index: 3001;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px 24px 24px;
+  transition: right 0.35s cubic-bezier(.77,0,.18,1);
+}
+.offcanvas-menu.active {
+  right: 0;
+}
+
+.offcanvas-menu .menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+.offcanvas-menu .menu-nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.offcanvas-menu .menu-nav a:hover {
+  color: #00d4ff;
+}
+
+/* Языки внутри меню */
+.offcanvas-menu .menu-langs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  justify-content: flex-start;
+}
+.offcanvas-menu .lang-btn {
+  min-width: 48px;
+  height: 44px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid #00d4ff;
+  background: #181f29;
+  color: #fff;
+  transition: background 0.2s, border 0.2s;
+}
+.offcanvas-menu .lang-btn.active,
+.offcanvas-menu .lang-btn:hover {
+  background: #00d4ff;
+  color: #10151c;
+  border-color: #fff;
+}
+
+/* Скрыть старый гамбургер на мобилке */
+@media (max-width: 768px) {
+  .nav-container .hamburger { display: none !important; }
+  .language-switcher { display: none !important; }
+  .fixed-hamburger { display: flex !important; }
+  .offcanvas-menu { display: block !important; }
+}
+
+@media (max-width: 400px) {
+  .offcanvas-menu { width: 100vw; min-width: 0; padding: 32px 10px 10px 10px; }
+}
+
+/* По умолчанию скрываем фиксированный гамбургер и off-canvas меню */
+.fixed-hamburger, .offcanvas-menu { display: none; }
+
+@media (max-width: 768px) {
+  .nav-container .hamburger { display: none !important; }
+  .language-switcher { display: none !important; }
+  .fixed-hamburger { display: flex !important; }
+  .offcanvas-menu { display: block !important; }
+
+@media (max-width: 900px) { .hamburger { display: none !important; } }
