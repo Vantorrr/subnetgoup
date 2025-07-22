@@ -114,7 +114,12 @@ window.serviceTranslations = {
             project4_desc: "Emergency repair services for network issues",
             project4_stat1: "Emergency",
             project4_stat2: "Repair",
-            project4_stat3: "Services"
+            project4_stat3: "Services",
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "EXCELLENT"
         },
         cybersecurity: {
             title: "Video Surveillance (CCTV)",
@@ -164,7 +169,29 @@ window.serviceTranslations = {
             project4_desc: "Large area coverage with PTZ cameras and perimeter monitoring",
             project4_stat1: "Warehouse",
             project4_stat2: "20 Cameras",
-            project4_stat3: "PTZ Control"
+            project4_stat3: "PTZ Control",
+            camera_entrance: "Entrance",
+            camera_parking: "Parking",
+            camera_office: "Office",
+            monitoring_title: "24/7 Monitoring",
+            monitoring_desc: "Round-the-clock surveillance with motion detection and instant alerts",
+            monitoring_badge: "+ Monitoring Center",
+            remote_title: "Remote Access",
+            remote_desc: "View live footage and recordings from your smartphone or computer",
+            remote_badge: "+ Mobile App",
+            recording_title: "Secure Recording",
+            recording_desc: "Automatic recording with cloud and local storage options",
+            recording_badge: "+ Backup Systems",
+            stat_cameras: "Cameras Installed",
+            stat_uptime: "Uptime",
+            stat_missed: "Missed Events",
+            process_title: "Security System Installation Process",
+            process_step1: "Security Assessment",
+            process_step1_desc: "Risk evaluation and camera placement planning for maximum coverage",
+            process_step2: "Equipment Installation",
+            process_step2_desc: "Professional mounting of HD cameras, recording servers, and network infrastructure",
+            process_step3: "System Configuration",
+            process_step3_desc: "Setup of recording, motion detection, and remote access capabilities"
         },
         monitoring: {
             title: "Access Control Systems",
@@ -218,7 +245,29 @@ window.serviceTranslations = {
             project4_desc: "School access control with visitor management and emergency lockdown",
             project4_stat1: "School",
             project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock"
+            project4_stat3: "Emergency Lock",
+            access_points: "Access Points",
+            system_status: "System Status",
+            active_users: "Active Users",
+            smart_solutions: "Smart Access Control Solutions",
+            control_panel: "Access Control Panel",
+            status_online: "ONLINE",
+            log_entry_main: "John Doe - Main Entrance",
+            // --- Monitoring new keys ---
+            mobile_app_control: "Mobile App Control",
+            mobile_app_control_desc: "Control all locks and access points remotely from your smartphone",
+            multiple_access_methods: "Multiple Access Methods",
+            multiple_access_methods_desc: "Key cards, PIN codes, biometrics, and mobile credentials",
+            access_logging: "Access Logging",
+            access_logging_desc: "Complete audit trail of all entry and exit activities",
+            security_assessment: "Security Assessment",
+            security_assessment_desc: "Evaluation of access points and security control system planning",
+            equipment_installation: "Equipment Installation",
+            equipment_installation_desc: "Professional mounting of electronic locks, card readers, and biometric scanners",
+            system_configuration: "System Configuration",
+            system_configuration_desc: "User setup, access permissions, and mobile app integration",
+            support_monitoring: "Support & Monitoring",
+            support_monitoring_desc: "Continuous system monitoring, updates, and technical maintenance"
         },
         support: {
             title: "Intrusion & Alarm Systems",
@@ -272,7 +321,27 @@ window.serviceTranslations = {
             project4_desc: "School access control with visitor management and emergency lockdown",
             project4_stat1: "School",
             project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock"
+            project4_stat3: "Emergency Lock",
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "EXCELLENT",
+            // --- Support new keys ---
+            support_available: "24/7 Support Available",
+            support_available_desc: "Round-the-clock technical assistance when you need it most",
+            regular_maintenance: "Regular Maintenance",
+            regular_maintenance_desc: "Scheduled maintenance to prevent issues before they occur",
+            quick_repairs: "Quick Repairs",
+            quick_repairs_desc: "Fast diagnosis and repair of hardware and software issues",
+            system_diagnostics: "System Diagnostics",
+            system_diagnostics_desc: "Comprehensive analysis of all system components and performance",
+            scheduled_maintenance: "Scheduled Maintenance",
+            scheduled_maintenance_desc: "Regular updates, cleaning, and system optimization",
+            issue_resolution: "Issue Resolution",
+            issue_resolution_desc: "Quick identification and resolution of hardware and software problems",
+            continuous_monitoring: "Continuous Monitoring",
+            continuous_monitoring_desc: "24/7 performance tracking and preventive measures"
         },
         // Add services object for compatibility with main page translations
         services: {
@@ -429,7 +498,49 @@ window.serviceTranslations = {
             project4_desc: "שירותי תיקון חירום למערכות מעקב וידאו",
             project4_stat1: "תיקון",
             project4_stat2: "חירום",
-            project4_stat3: "שירות"
+            project4_stat3: "שירות",
+            camera_entrance: "כניסה",
+            camera_parking: "חניה",
+            camera_office: "משרד",
+            monitoring_title: "ניטור 24/7",
+            monitoring_desc: "ניטור מסביב לשעון עם זיהוי תנועה והתראות מיידיות",
+            monitoring_badge: "+ מרכז ניטור",
+            remote_title: "גישה מרחוק",
+            remote_desc: "צפייה בשידור חי והקלטות מהסמארטפון או מהמחשב",
+            remote_badge: "+ אפליקציה",
+            recording_title: "הקלטה מאובטחת",
+            recording_desc: "הקלטה אוטומטית עם אפשרויות אחסון בענן ומקומי",
+            recording_badge: "+ מערכות גיבוי",
+            stat_cameras: "מצלמות מותקנות",
+            stat_uptime: "זמן פעילות",
+            stat_missed: "אירועים שהוחמצו",
+            process_title: "תהליך התקנת מערכת אבטחה",
+            process_step1: "הערכת אבטחה",
+            process_step1_desc: "הערכת סיכונים ותכנון מיקום מצלמות לכיסוי מרבי",
+            process_step2: "התקנת ציוד",
+            process_step2_desc: "התקנה מקצועית של מצלמות HD, שרתי הקלטה ותשתית רשת",
+            process_step3: "הגדרת מערכת",
+            process_step3_desc: "הגדרת הקלטה, זיהוי תנועה ויכולות גישה מרחוק",
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "מצוין",
+            // --- Support new keys ---
+            support_available: "תמיכה 24/7 זמינה",
+            support_available_desc: "סיוע טכני מסביב לשעון כשאתם צריכים",
+            regular_maintenance: "תחזוקה שוטפת",
+            regular_maintenance_desc: "תחזוקה מתוזמנת למניעת תקלות מראש",
+            quick_repairs: "תיקונים מהירים",
+            quick_repairs_desc: "אבחון ותיקון מהיר של תקלות חומרה ותוכנה",
+            system_diagnostics: "אבחון מערכות",
+            system_diagnostics_desc: "ניתוח מקיף של כל רכיבי המערכת וביצועיה",
+            scheduled_maintenance: "תחזוקה מתוזמנת",
+            scheduled_maintenance_desc: "עדכונים שוטפים, ניקוי ואופטימיזציה",
+            issue_resolution: "פתרון תקלות",
+            issue_resolution_desc: "זיהוי מהיר ופתרון בעיות חומרה ותוכנה",
+            continuous_monitoring: "ניטור מתמשך",
+            continuous_monitoring_desc: "מעקב ביצועים 24/7 ופעולות מנע"
         },
         cybersecurity: {
             title: "מערכות מעקב וידאו (CCTV)",
@@ -474,7 +585,68 @@ window.serviceTranslations = {
             benefit2: "Performance optimization",
             benefit3: "Enterprise-grade security",
             benefit4: "24/7 support included",
-            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution."
+            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.",
+            project2_title: "Office Building Security",
+            project2_desc: "Multi-floor office surveillance with access control integration",
+            project2_stat1: "3-Floor Office",
+            project2_stat2: "15 Cameras",
+            project2_stat3: "Access Control",
+            project3_title: "Retail Store Surveillance",
+            project3_desc: "Comprehensive retail security with POS integration",
+            project3_stat1: "Retail Store",
+            project3_stat2: "12 Cameras",
+            project3_stat3: "POS Integration",
+            project4_title: "Warehouse Security System",
+            project4_desc: "Large area coverage with PTZ cameras and perimeter monitoring",
+            project4_stat1: "Warehouse",
+            project4_stat2: "20 Cameras",
+            project4_stat3: "PTZ Control",
+            camera_entrance: "Entrance",
+            camera_parking: "Parking",
+            camera_office: "Office",
+            monitoring_title: "24/7 Monitoring",
+            monitoring_desc: "Round-the-clock surveillance with motion detection and instant alerts",
+            monitoring_badge: "+ Monitoring Center",
+            remote_title: "Remote Access",
+            remote_desc: "View live footage and recordings from your smartphone or computer",
+            remote_badge: "+ Mobile App",
+            recording_title: "Secure Recording",
+            recording_desc: "Automatic recording with cloud and local storage options",
+            recording_badge: "+ Backup Systems",
+            stat_cameras: "Cameras Installed",
+            stat_uptime: "Uptime",
+            stat_missed: "Missed Events",
+            process_title: "Security System Installation Process",
+            process_step1: "Security Assessment",
+            process_step1_desc: "Risk evaluation and camera placement planning for maximum coverage",
+            process_step2: "Equipment Installation",
+            process_step2_desc: "Professional mounting of HD cameras, recording servers, and network infrastructure",
+            process_step3: "System Configuration",
+            process_step3_desc: "Setup of recording, motion detection, and remote access capabilities",
+            wireless: "פתרונות תשתית וחשמל",
+            wireless_desc: "תשתית כבלים וחשמל (PoE או 12V).",
+            optimization: "מערכות אחסון והקלטה",
+            optimization_desc: "הגדרת יחידות NVR/DVR ושרתי אחסון.",
+            security: "גישה מרחוק וצפייה ניידת",
+            security_desc: "צפייה מרחוק בסמארטפונים ומחשבים.",
+            recording_title: "הקלטה מאובטחת",
+            recording_desc: "הקלטה אוטומטית עם אפשרויות אחסון בענן ומקומי.",
+            remote_title: "גישה מרחוק",
+            remote_desc: "צפייה בשידור חי והקלטות מהסמארטפון או מהמחשב.",
+            monitoring_title: "ניטור 24/7",
+            monitoring_desc: "ניטור מסביב לשעון עם זיהוי תנועה והתראות מיידיות.",
+            monitoring_badge: "+ מרכז ניטור",
+            remote_badge: "+ אפליקציה",
+            recording_badge: "+ מערכות גיבוי",
+            process_title: "תהליך התקנת מערכת אבטחה",
+            process_step1: "הערכת אבטחה",
+            process_step1_desc: "הערכת סיכונים ותכנון מיקום מצלמות לכיסוי מרבי",
+            process_step2: "התקנת ציוד",
+            process_step2_desc: "התקנה מקצועית של מצלמות HD, שרתי הקלטה ותשתית רשת",
+            process_step3: "הגדרת מערכת",
+            process_step3_desc: "הגדרת הקלטה, זיהוי תנועה ויכולות גישה מרחוק",
+            process_step4: "ניטור ותמיכה",
+            process_step4_desc: "ניטור מערכת מתמשך, עדכונים ותחזוקה טכנית"
         },
         monitoring: {
             title: "מערכות בקרת כניסה",
@@ -557,7 +729,34 @@ window.serviceTranslations = {
             project4_desc: "School access control with visitor management and emergency lockdown",
             project4_stat1: "School",
             project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock"
+            project4_stat3: "Emergency Lock",
+            access_points: "Access Points",
+            system_status: "System Status",
+            active_users: "Active Users",
+            smart_solutions: "Smart Access Control Solutions",
+            control_panel: "Access Control Panel",
+            status_online: "ONLINE",
+            log_entry_main: "John Doe - Main Entrance",
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "מצוין",
+            // --- Support new keys ---
+            support_available: "תמיכה 24/7 זמינה",
+            support_available_desc: "סיוע טכני מסביב לשעון כשאתם צריכים",
+            regular_maintenance: "תחזוקה שוטפת",
+            regular_maintenance_desc: "תחזוקה מתוזמנת למניעת תקלות מראש",
+            quick_repairs: "תיקונים מהירים",
+            quick_repairs_desc: "אבחון ותיקון מהיר של תקלות חומרה ותוכנה",
+            system_diagnostics: "אבחון מערכות",
+            system_diagnostics_desc: "ניתוח מקיף של כל רכיבי המערכת וביצועיה",
+            scheduled_maintenance: "תחזוקה מתוזמנת",
+            scheduled_maintenance_desc: "עדכונים שוטפים, ניקוי ואופטימיזציה",
+            issue_resolution: "פתרון תקלות",
+            issue_resolution_desc: "זיהוי מהיר ופתרון בעיות חומרה ותוכנה",
+            continuous_monitoring: "ניטור מתמשך",
+            continuous_monitoring_desc: "מעקב ביצועים 24/7 ופעולות מנע"
         },
         support: {
             title: "מערכות אזעקה והתראה",
@@ -616,7 +815,34 @@ window.serviceTranslations = {
             project4_desc: "School access control with visitor management and emergency lockdown",
             project4_stat1: "School",
             project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock"
+            project4_stat3: "Emergency Lock",
+            access_points: "Access Points",
+            system_status: "System Status",
+            active_users: "Active Users",
+            smart_solutions: "Smart Access Control Solutions",
+            control_panel: "Access Control Panel",
+            status_online: "ONLINE",
+            log_entry_main: "John Doe - Main Entrance",
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "מצוין",
+            // --- Support new keys ---
+            support_available: "תמיכה 24/7 זמינה",
+            support_available_desc: "סיוע טכני מסביב לשעון כשאתם צריכים",
+            regular_maintenance: "תחזוקה שוטפת",
+            regular_maintenance_desc: "תחזוקה מתוזמנת למניעת תקלות מראש",
+            quick_repairs: "תיקונים מהירים",
+            quick_repairs_desc: "אבחון ותיקון מהיר של תקלות חומרה ותוכנה",
+            system_diagnostics: "אבחון מערכות",
+            system_diagnostics_desc: "ניתוח מקיף של כל רכיבי המערכת וביצועיה",
+            scheduled_maintenance: "תחזוקה מתוזמנת",
+            scheduled_maintenance_desc: "עדכונים שוטפים, ניקוי ואופטימיזציה",
+            issue_resolution: "פתרון תקלות",
+            issue_resolution_desc: "זיהוי מהיר ופתרון בעיות חומרה ותוכנה",
+            continuous_monitoring: "ניטור מתמשך",
+            continuous_monitoring_desc: "מעקב ביצועים 24/7 ופעולות מנע"
         },
         // Add services object for compatibility with main page translations
         services: {
@@ -651,6 +877,60 @@ window.serviceTranslations = {
         }
     }
 };
+
+// --- Cybersecurity project stats (he) ---
+window.serviceTranslations.he.cybersecurity.project1_stat1 = "בית פרטי";
+window.serviceTranslations.he.cybersecurity.project1_stat2 = "8 מצלמות";
+window.serviceTranslations.he.cybersecurity.project1_stat3 = "הקלטה 24/7";
+window.serviceTranslations.he.cybersecurity.project2_stat1 = "משרד 3 קומות";
+window.serviceTranslations.he.cybersecurity.project2_stat2 = "15 מצלמות";
+window.serviceTranslations.he.cybersecurity.project2_stat3 = "בקרת גישה";
+window.serviceTranslations.he.cybersecurity.project3_stat1 = "חנות קמעונאות";
+window.serviceTranslations.he.cybersecurity.project3_stat2 = "12 מצלמות";
+window.serviceTranslations.he.cybersecurity.project3_stat3 = "POS אינטגרציה";
+window.serviceTranslations.he.cybersecurity.project4_stat1 = "מחסן";
+window.serviceTranslations.he.cybersecurity.project4_stat2 = "20 מצלמות";
+window.serviceTranslations.he.cybersecurity.project4_stat3 = "PTZ שליטה";
+// --- Monitoring project stats (he) ---
+window.serviceTranslations.he.monitoring.project1_stat1 = "משרד 3 קומות";
+window.serviceTranslations.he.monitoring.project1_stat2 = "12 נקודות גישה";
+window.serviceTranslations.he.monitoring.project1_stat3 = "50 עובדים";
+window.serviceTranslations.he.monitoring.project2_stat1 = "24 דירות";
+window.serviceTranslations.he.monitoring.project2_stat2 = "מנעולים חכמים";
+window.serviceTranslations.he.monitoring.project2_stat3 = "אינטרקום וידאו";
+window.serviceTranslations.he.monitoring.project3_stat1 = "תעשייתי";
+window.serviceTranslations.he.monitoring.project3_stat2 = "ביומטרי";
+window.serviceTranslations.he.monitoring.project3_stat3 = "אזורי זמן";
+window.serviceTranslations.he.monitoring.project4_stat1 = "בית ספר";
+window.serviceTranslations.he.monitoring.project4_stat2 = "בקרת מבקרים";
+window.serviceTranslations.he.monitoring.project4_stat3 = "נעילת חירום";
+// --- Support project stats (he) ---
+window.serviceTranslations.he.support.project1_stat1 = "בניין משרדים";
+window.serviceTranslations.he.support.project1_stat2 = "50 עמדות עבודה";
+window.serviceTranslations.he.support.project1_stat3 = "שירות חודשי";
+window.serviceTranslations.he.support.project2_stat1 = "תמיכת רשת";
+window.serviceTranslations.he.support.project2_stat2 = "ניטור 24/7";
+window.serviceTranslations.he.support.project2_stat3 = "99.9% זמינות";
+window.serviceTranslations.he.support.project3_stat1 = "20 מצלמות";
+window.serviceTranslations.he.support.project3_stat2 = "בקרת גישה";
+window.serviceTranslations.he.support.project3_stat3 = "שירות רבעוני";
+window.serviceTranslations.he.support.project4_stat1 = "שחזור שרת";
+window.serviceTranslations.he.support.project4_stat2 = "תגובה תוך שעתיים";
+window.serviceTranslations.he.support.project4_stat3 = "שחזור נתונים";
+// --- Networking project stats (he) ---
+window.serviceTranslations.he.networking.project1_stat1 = "200+ משתמשים";
+window.serviceTranslations.he.networking.project1_stat2 = "15 שרתים";
+window.serviceTranslations.he.networking.project1_stat3 = "50 נקודות גישה";
+window.serviceTranslations.he.networking.project2_stat1 = "10Gbps";
+window.serviceTranslations.he.networking.project2_stat2 = "100TB אחסון";
+window.serviceTranslations.he.networking.project2_stat3 = "99.9% זמינות";
+window.serviceTranslations.he.networking.project3_stat1 = "5 מבנים";
+window.serviceTranslations.he.networking.project3_stat2 = "סיב אופטי";
+window.serviceTranslations.he.networking.project3_stat3 = "1000+ משתמשים";
+window.serviceTranslations.he.networking.project4_stat1 = "Wi-Fi 6";
+window.serviceTranslations.he.networking.project4_stat2 = "100% כיסוי";
+window.serviceTranslations.he.networking.project4_stat3 = "500+ מכשירים";
+// ...
 
 // Stat Counter functionality
 class StatCounter {
@@ -1362,9 +1642,9 @@ function initTouchOptimizations() {
 
 // Initialize all mobile features
 function initMobileFeatures() {
+    new LanguageSwitcher();
     initMobileNavigation();
     initTouchOptimizations();
-    
     console.log('✅ Mobile features initialized');
 }
 
@@ -1387,3 +1667,252 @@ window.ServicePageComponents = {
     initTouchOptimizations,
     initMobileFeatures
 }; 
+
+// --- Monitoring form fields and benefits (he) ---
+window.serviceTranslations.he.monitoring.form = {
+  service_type_label: "סוג בקרת גישה",
+  service_type_placeholder: "בחר סוג שירות",
+  service_type_option: "בחר שירות",
+  service_type_option1: "מנעולים אלקטרוניים",
+  service_type_option2: "מערכת כרטיסים",
+  service_type_option3: "גישה באפליקציה",
+  service_type_option4: "בקרת גישה ביומטרית",
+  service_type_option5: "מערכת גישה מלאה",
+  service_type_option6: "שדרוג מערכת",
+  full_name_label: "שם מלא",
+  full_name_placeholder: "הכנס שם מלא",
+  phone_label: "מספר טלפון",
+  phone_placeholder: "הכנס טלפון",
+  email_label: "אימייל",
+  email_placeholder: "הכנס אימייל",
+  location_label: "מיקום הנכס",
+  location_placeholder: "עיר, אזור או כתובת מלאה",
+  property_type_label: "סוג נכס",
+  property_type_placeholder: "בחר סוג נכס",
+  property_type_option: "בחר סוג נכס",
+  property_type_option1: "בניין מגורים",
+  property_type_option2: "בניין משרדים",
+  property_type_option3: "חנות קמעונאית",
+  property_type_option4: "מחסן/תעשייה",
+  property_type_option5: "מוסד חינוכי",
+  property_type_option6: "רפואה/בריאות",
+  property_type_option7: "מבנה ממשלתי",
+  door_count_label: "מספר נקודות גישה",
+  door_count_placeholder: "בחר מספר דלתות",
+  door_count_option: "בחר מספר דלתות",
+  door_count_option1: "דלת אחת",
+  door_count_option2: "2-3 דלתות",
+  door_count_option3: "4-8 דלתות",
+  door_count_option4: "9-15 דלתות",
+  door_count_option5: "16-30 דלתות",
+  door_count_option6: "30+ דלתות",
+  user_count_label: "מספר משתמשים",
+  user_count_placeholder: "בחר מספר משתמשים",
+  user_count_option: "בחר מספר משתמשים",
+  user_count_option1: "1-5 משתמשים",
+  user_count_option2: "6-15 משתמשים",
+  user_count_option3: "16-50 משתמשים",
+  user_count_option4: "51-100 משתמשים",
+  user_count_option5: "101-500 משתמשים",
+  user_count_option6: "500+ משתמשים",
+  access_methods_label: "שיטות גישה מועדפות",
+  access_methods_placeholder: "למשל: כרטיסים, אפליקציה, קוד, טביעת אצבע, זיהוי פנים",
+  description_label: "דרישות בקרת גישה",
+  description_placeholder: "תאר צרכי אבטחה, בעיות גישה, דרישות מיוחדות",
+  integration_label: "צרכי אינטגרציה",
+  integration_placeholder: "האם נדרש אינטגרציה עם מצלמות, אזעקות, ניהול מבנה?",
+  budget_label: "טווח תקציב",
+  budget_placeholder: "בחר תקציב",
+  budget_option: "בחר תקציב",
+  budget_option1: "עד 2,000 ₪",
+  budget_option2: "2,000 - 5,000 ₪",
+  budget_option3: "5,000 - 10,000 ₪",
+  budget_option4: "10,000 - 25,000 ₪",
+  budget_option5: "מעל 25,000 ₪",
+  submit_btn: "שלח בקשה"
+};
+window.serviceTranslations.he.monitoring.benefit1 = "הערכת אבטחה חינם";
+window.serviceTranslations.he.monitoring.benefit2 = "תכנון בקרת גישה מותאם";
+window.serviceTranslations.he.monitoring.benefit3 = "אחריות התקנה מקצועית";
+window.serviceTranslations.he.monitoring.benefit4 = "הדרכת משתמשים ותמיכה";
+window.serviceTranslations.he.monitoring.project1_title = "בקרת גישה למשרד";
+window.serviceTranslations.he.monitoring.project1_desc = "מערכת בקרת גישה מרובת דלתות עם כרטיסים ואפליקציה";
+window.serviceTranslations.he.monitoring.project2_title = "גישה לבניין מגורים";
+window.serviceTranslations.he.monitoring.project2_desc = "גישה חכמה עם אינטרקום ומובייל";
+window.serviceTranslations.he.monitoring.project3_title = "בקרת גישה למחסן";
+window.serviceTranslations.he.monitoring.project3_desc = "בקרת גישה תעשייתית עם קוראים ביומטריים ואזורי זמן";
+window.serviceTranslations.he.monitoring.project4_title = "גישה למוסד חינוכי";
+window.serviceTranslations.he.monitoring.project4_desc = "בקרת גישה לבית ספר עם ניהול מבקרים ונעילה בחירום";
+window.serviceTranslations.he.monitoring.project1_stat1 = "משרד 3 קומות";
+window.serviceTranslations.he.monitoring.project1_stat2 = "12 נקודות גישה";
+window.serviceTranslations.he.monitoring.project1_stat3 = "50 עובדים";
+window.serviceTranslations.he.monitoring.project2_stat1 = "24 דירות";
+window.serviceTranslations.he.monitoring.project2_stat2 = "מנעולים חכמים";
+window.serviceTranslations.he.monitoring.project2_stat3 = "אינטרקום וידאו";
+window.serviceTranslations.he.monitoring.project3_stat1 = "תעשייתי";
+window.serviceTranslations.he.monitoring.project3_stat2 = "ביומטרי";
+window.serviceTranslations.he.monitoring.project3_stat3 = "אזורי זמן";
+window.serviceTranslations.he.monitoring.project4_stat1 = "בית ספר";
+window.serviceTranslations.he.monitoring.project4_stat2 = "בקרת מבקרים";
+window.serviceTranslations.he.monitoring.project4_stat3 = "נעילת חירום";
+// ... 
+
+// --- Support form fields and benefits (he) ---
+window.serviceTranslations.he.support.form = {
+  service_type_label: "סוג תמיכה",
+  service_type_placeholder: "בחר שירות תמיכה",
+  service_type_option: "בחר שירות",
+  service_type_option1: "חוזה תחזוקה",
+  service_type_option2: "תיקון חירום",
+  service_type_option3: "עדכוני מערכת",
+  service_type_option4: "תמיכה טכנית",
+  service_type_option5: "אופטימיזציית ביצועים",
+  service_type_option6: "הדרכת משתמשים",
+  full_name_label: "שם מלא",
+  full_name_placeholder: "הכנס שם מלא",
+  phone_label: "מספר טלפון",
+  phone_placeholder: "הכנס טלפון",
+  email_label: "אימייל",
+  email_placeholder: "הכנס אימייל",
+  company_label: "חברה/ארגון",
+  company_placeholder: "הכנס שם חברה (לא חובה)",
+  location_label: "מיקום שירות",
+  location_placeholder: "עיר, אזור או כתובת מלאה",
+  system_type_label: "מערכות לתמיכה",
+  system_type_placeholder: "בחר מערכת",
+  system_type_option: "בחר מערכת",
+  system_type_option1: "מחשבים וניידים",
+  system_type_option2: "ציוד רשת",
+  system_type_option3: "מערכות אבטחה",
+  system_type_option4: "שרתים ואחסון",
+  system_type_option5: "תשתית IT מעורבת",
+  system_type_option6: "סביבת IT מלאה",
+  urgency_label: "דחיפות שירות",
+  urgency_placeholder: "בחר דחיפות",
+  urgency_option: "בחר דחיפות",
+  urgency_option1: "חירום (מערכת לא פועלת)",
+  urgency_option2: "דחוף (תקלה קריטית)",
+  urgency_option3: "רגיל (תחזוקה מתוכננת)",
+  urgency_option4: "שירות מתוזמן",
+  devices_count_label: "מספר מכשירים/מערכות",
+  devices_count_placeholder: "בחר כמות",
+  devices_count_option: "בחר כמות",
+  devices_count_option1: "1-5 מכשירים",
+  devices_count_option2: "6-15 מכשירים",
+  devices_count_option3: "16-30 מכשירים",
+  devices_count_option4: "31-50 מכשירים",
+  devices_count_option5: "51-100 מכשירים",
+  devices_count_option6: "100+ מכשירים",
+  current_issues_label: "בעיות נוכחיות",
+  current_issues_placeholder: "תאר בעיות, הודעות שגיאה, ביצועים",
+  maintenance_frequency_label: "תדירות תחזוקה מועדפת",
+  maintenance_frequency_placeholder: "בחר תדירות",
+  maintenance_frequency_option: "בחר תדירות",
+  maintenance_frequency_option1: "שבועי",
+  maintenance_frequency_option2: "חודשי",
+  maintenance_frequency_option3: "רבעוני",
+  maintenance_frequency_option4: "לפי צורך",
+  maintenance_frequency_option5: "שירות חד פעמי",
+  additional_services_label: "שירותים נוספים נדרשים",
+  additional_services_placeholder: "למשל: גיבוי נתונים, עדכוני אבטחה, הדרכה, שדרוגים",
+  budget_label: "טווח תקציב חודשי",
+  budget_placeholder: "בחר תקציב",
+  budget_option: "בחר תקציב",
+  budget_option1: "עד 500 ₪",
+  budget_option2: "500 - 1,000 ₪",
+  budget_option3: "1,000 - 2,500 ₪",
+  budget_option4: "2,500 - 5,000 ₪",
+  budget_option5: "מעל 5,000 ₪",
+  budget_option6: "תמחור לפי פרויקט",
+  submit_btn: "שלח בקשה"
+};
+window.serviceTranslations.he.support.benefit1 = "בדיקת מערכת חינם";
+window.serviceTranslations.he.support.benefit2 = "לוחות זמנים גמישים לתחזוקה";
+window.serviceTranslations.he.support.benefit3 = "תגובה מהירה לחירום";
+window.serviceTranslations.he.support.benefit4 = "הדרכת משתמשים כלולה";
+window.serviceTranslations.he.support.project1_title = "חוזה תחזוקת IT למשרד";
+window.serviceTranslations.he.support.project1_desc = "תמיכה ותחזוקה מלאה למשרד עם 50 עובדים";
+window.serviceTranslations.he.support.project2_title = "תמיכת תשתית רשת";
+window.serviceTranslations.he.support.project2_desc = "ניטור ותחזוקה 24/7 של מערכות רשת עסקיות";
+window.serviceTranslations.he.support.project3_title = "תחזוקת מערכות אבטחה";
+window.serviceTranslations.he.support.project3_desc = "תחזוקה שוטפת של מצלמות ובקרת גישה";
+window.serviceTranslations.he.support.project4_title = "שירותי תיקון חירום";
+window.serviceTranslations.he.support.project4_desc = "שחזור שרתים קריטיים ושחזור גיבויים";
+window.serviceTranslations.he.support.project1_stat1 = "בניין משרדים";
+window.serviceTranslations.he.support.project1_stat2 = "50 עמדות עבודה";
+window.serviceTranslations.he.support.project1_stat3 = "שירות חודשי";
+window.serviceTranslations.he.support.project2_stat1 = "תמיכת רשת";
+window.serviceTranslations.he.support.project2_stat2 = "ניטור 24/7";
+window.serviceTranslations.he.support.project2_stat3 = "99.9% זמינות";
+window.serviceTranslations.he.support.project3_stat1 = "20 מצלמות";
+window.serviceTranslations.he.support.project3_stat2 = "בקרת גישה";
+window.serviceTranslations.he.support.project3_stat3 = "שירות רבעוני";
+window.serviceTranslations.he.support.project4_stat1 = "שחזור שרת";
+window.serviceTranslations.he.support.project4_stat2 = "תגובה תוך שעתיים";
+window.serviceTranslations.he.support.project4_stat3 = "שחזור נתונים";
+// ... 
+
+// --- Monitoring new keys ---
+window.serviceTranslations.en.monitoring.mobile_app_control = "Mobile App Control";
+window.serviceTranslations.en.monitoring.mobile_app_control_desc = "Control all locks and access points remotely from your smartphone";
+window.serviceTranslations.en.monitoring.multiple_access_methods = "Multiple Access Methods";
+window.serviceTranslations.en.monitoring.multiple_access_methods_desc = "Key cards, PIN codes, biometrics, and mobile credentials";
+window.serviceTranslations.en.monitoring.access_logging = "Access Logging";
+window.serviceTranslations.en.monitoring.access_logging_desc = "Complete audit trail of all entry and exit activities";
+window.serviceTranslations.en.monitoring.security_assessment = "Security Assessment";
+window.serviceTranslations.en.monitoring.security_assessment_desc = "Evaluation of access points and security control system planning";
+window.serviceTranslations.en.monitoring.equipment_installation = "Equipment Installation";
+window.serviceTranslations.en.monitoring.equipment_installation_desc = "Professional mounting of electronic locks, card readers, and biometric scanners";
+window.serviceTranslations.en.monitoring.system_configuration = "System Configuration";
+window.serviceTranslations.en.monitoring.system_configuration_desc = "User setup, access permissions, and mobile app integration";
+window.serviceTranslations.en.monitoring.support_monitoring = "Support & Monitoring";
+window.serviceTranslations.en.monitoring.support_monitoring_desc = "Continuous system monitoring, updates, and technical maintenance";
+window.serviceTranslations.he.monitoring.mobile_app_control = "שליטה באפליקציה";
+window.serviceTranslations.he.monitoring.mobile_app_control_desc = "שליטה מרחוק על כל המנעולים ונקודות הגישה מהסמארטפון";
+window.serviceTranslations.he.monitoring.multiple_access_methods = "שיטות גישה מרובות";
+window.serviceTranslations.he.monitoring.multiple_access_methods_desc = "כרטיסי גישה, קודי PIN, ביומטריה ואפליקציות ניידות";
+window.serviceTranslations.he.monitoring.access_logging = "רישום גישות";
+window.serviceTranslations.he.monitoring.access_logging_desc = "מעקב מלא אחרי כל כניסה ויציאה";
+window.serviceTranslations.he.monitoring.security_assessment = "הערכת אבטחה";
+window.serviceTranslations.he.monitoring.security_assessment_desc = "הערכת נקודות גישה ותכנון מערכת בקרה";
+window.serviceTranslations.he.monitoring.equipment_installation = "התקנת ציוד";
+window.serviceTranslations.he.monitoring.equipment_installation_desc = "התקנה מקצועית של מנעולים, קוראי כרטיסים וסורקים ביומטריים";
+window.serviceTranslations.he.monitoring.system_configuration = "הגדרת מערכת";
+window.serviceTranslations.he.monitoring.system_configuration_desc = "הגדרת משתמשים, הרשאות גישה ואינטגרציה לאפליקציה";
+window.serviceTranslations.he.monitoring.support_monitoring = "תמיכה וניטור";
+window.serviceTranslations.he.monitoring.support_monitoring_desc = "ניטור ועדכונים שוטפים, תחזוקה טכנית";
+// --- Support new keys ---
+window.serviceTranslations.en.support.support_available = "24/7 Support Available";
+window.serviceTranslations.en.support.support_available_desc = "Round-the-clock technical assistance when you need it most";
+window.serviceTranslations.en.support.regular_maintenance = "Regular Maintenance";
+window.serviceTranslations.en.support.regular_maintenance_desc = "Scheduled maintenance to prevent issues before they occur";
+window.serviceTranslations.en.support.quick_repairs = "Quick Repairs";
+window.serviceTranslations.en.support.quick_repairs_desc = "Fast diagnosis and repair of hardware and software issues";
+window.serviceTranslations.en.support.system_diagnostics = "System Diagnostics";
+window.serviceTranslations.en.support.system_diagnostics_desc = "Comprehensive analysis of all system components and performance";
+window.serviceTranslations.en.support.scheduled_maintenance = "Scheduled Maintenance";
+window.serviceTranslations.en.support.scheduled_maintenance_desc = "Regular updates, cleaning, and system optimization";
+window.serviceTranslations.en.support.issue_resolution = "Issue Resolution";
+window.serviceTranslations.en.support.issue_resolution_desc = "Quick identification and resolution of hardware and software problems";
+window.serviceTranslations.en.support.continuous_monitoring = "Continuous Monitoring";
+window.serviceTranslations.en.support.continuous_monitoring_desc = "24/7 performance tracking and preventive measures";
+window.serviceTranslations.he.support.support_available = "תמיכה 24/7 זמינה";
+window.serviceTranslations.he.support.support_available_desc = "סיוע טכני מסביב לשעון כשאתם צריכים";
+window.serviceTranslations.he.support.regular_maintenance = "תחזוקה שוטפת";
+window.serviceTranslations.he.support.regular_maintenance_desc = "תחזוקה מתוזמנת למניעת תקלות מראש";
+window.serviceTranslations.he.support.quick_repairs = "תיקונים מהירים";
+window.serviceTranslations.he.support.quick_repairs_desc = "אבחון ותיקון מהיר של תקלות חומרה ותוכנה";
+window.serviceTranslations.he.support.system_diagnostics = "אבחון מערכות";
+window.serviceTranslations.he.support.system_diagnostics_desc = "ניתוח מקיף של כל רכיבי המערכת וביצועיה";
+window.serviceTranslations.he.support.scheduled_maintenance = "תחזוקה מתוזמנת";
+window.serviceTranslations.he.support.scheduled_maintenance_desc = "עדכונים שוטפים, ניקוי ואופטימיזציה";
+window.serviceTranslations.he.support.issue_resolution = "פתרון תקלות";
+window.serviceTranslations.he.support.issue_resolution_desc = "זיהוי מהיר ופתרון בעיות חומרה ותוכנה";
+window.serviceTranslations.he.support.continuous_monitoring = "ניטור מתמשך";
+window.serviceTranslations.he.support.continuous_monitoring_desc = "מעקב ביצועים 24/7 ופעולות מנע";
+// --- Cybersecurity new key ---
+window.serviceTranslations.en.cybersecurity.monitoring_support = "Monitoring & Support";
+window.serviceTranslations.en.cybersecurity.monitoring_support_desc = "Continuous system monitoring, updates, and technical maintenance";
+window.serviceTranslations.he.cybersecurity.monitoring_support = "ניטור ותמיכה";
+window.serviceTranslations.he.cybersecurity.monitoring_support_desc = "ניטור ועדכונים שוטפים, תחזוקה טכנית";
+// ...

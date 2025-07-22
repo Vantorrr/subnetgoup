@@ -189,7 +189,7 @@ const translations = {
 };
 
 // Global variables
-let currentLanguage = 'en';
+let currentLanguage = document.documentElement.lang || 'en';
 
 // DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
@@ -288,58 +288,382 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.service-card, .step, .partner-logo');
-    animatedElements.forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
+    // --- Обработчики для стандартных кнопок смены языка (desktop) ---
+    document.querySelectorAll('.language-switcher .lang-btn').forEach(btn => {
+      btn.onclick = () => {
+        const lang = btn.dataset.lang;
+        if (!isServicePage()) {
+          updateLanguage(lang);
+        }
+        document.querySelectorAll('.language-switcher .lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // Для сервисных страниц: вызвать LanguageSwitcher для перевода всего контента
+        if (window.ServicePageComponents && window.ServicePageComponents.LanguageSwitcher) {
+          try {
+            new window.ServicePageComponents.LanguageSwitcher().applyTranslations(lang);
+          } catch (e) {}
+        }
+      };
     });
 
-    // Hamburger menu
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    // --- Новый фиксированный гамбургер ---
+    const fixedHamburger = document.createElement('div');
+    fixedHamburger.className = 'fixed-hamburger';
+    fixedHamburger.innerHTML = `
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    `;
+    document.body.appendChild(fixedHamburger);
+
+    // --- Overlay ---
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+
+    // --- Off-canvas меню ---
+    const offcanvas = document.createElement('nav');
+    offcanvas.className = 'offcanvas-menu';
+    offcanvas.innerHTML = `
+      <div class="menu-langs"></div>
+      <div class="menu-nav">
+        <a href="../index.html" data-translate="nav.home">Home</a>
+        <a href="../index.html#about" data-translate="nav.about">About us</a>
+        <a href="../index.html#services" data-translate="nav.services">Services</a>
+        <a href="../index.html#partners" data-translate="nav.partners">Our Partners</a>
+        <a href="../index.html#contact" data-translate="nav.contact">Contact us</a>
+      </div>
+    `;
+    document.body.appendChild(offcanvas);
+
+    // --- Языки внутри меню ---
+    const langs = [
+      { code: 'en', flag: '🇺🇸' },
+      { code: 'he', flag: '🇮🇱' }
+    ];
+    const menuLangs = offcanvas.querySelector('.menu-langs');
+    if (!menuLangs) {
+      console.error('menu-langs not found in offcanvas!');
+      return;
+    }
+    langs.forEach(l => {
+      const btn = document.createElement('button');
+      btn.className = 'lang-btn';
+      btn.dataset.lang = l.code;
+      btn.innerHTML = `<span class="flag-icon">${l.flag}</span>`;
+      if (document.documentElement.lang === l.code) btn.classList.add('active');
+      btn.onclick = () => {
+        if (!isServicePage()) {
+          updateLanguage(l.code);
+        }
+        menuLangs.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (window.ServicePageComponents && window.ServicePageComponents.LanguageSwitcher) {
+          try {
+            new window.ServicePageComponents.LanguageSwitcher().applyTranslations(l.code);
+          } catch (e) {}
+        }
+      };
+      menuLangs.appendChild(btn);
+    });
+
+    // --- Открытие/закрытие меню ---
+    function closeMenu() {
+      fixedHamburger.classList.remove('active');
+      offcanvas.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function openMenu() {
+      fixedHamburger.classList.add('active');
+      offcanvas.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    fixedHamburger.onclick = () => {
+      if (offcanvas.classList.contains('active')) closeMenu();
+      else openMenu();
+    };
+    overlay.onclick = closeMenu;
+    // Закрытие по клику на ссылку
+    const menuNav = offcanvas.querySelector('.menu-nav');
+    if (!menuNav) {
+      console.error('menu-nav not found in offcanvas!');
+      return;
+    }
+    menuNav.querySelectorAll('a').forEach(link => {
+      link.onclick = closeMenu;
+    });
+    // Закрытие по Esc
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Animated counter for statistics
+    function animateCounter(element, target) {
+        const duration = 2000; // 2 seconds
+        const steps = 60;
+        const increment = target / steps;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            
+            if (target === 99.9) {
+                element.textContent = current.toFixed(1);
+            } else {
+                element.textContent = Math.floor(current).toLocaleString();
+            }
+        }, duration / steps);
+    }
+
+    // Intersection Observer for stats animation
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(statNumber => {
+                    const target = parseFloat(statNumber.dataset.number);
+                    animateCounter(statNumber, target);
+                });
+                statsObserver.unobserve(entry.target);
+            }
         });
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+    }, { threshold: 0.5 });
+
+    // ANCHOR LINK NAVIGATION FIX
+    class AnchorNavigation {
+        constructor() {
+            this.init();
+        }
+
+        init() {
+            this.handleHashOnLoad();
+            this.smoothScrollToAnchors();
+        }
+
+        handleHashOnLoad() {
+            // Проверяем есть ли хеш в URL при загрузке страницы
+            window.addEventListener('load', () => {
+                const hash = window.location.hash;
+                if (hash) {
+                    // Небольшая задержка чтобы страница полностью загрузилась
+                    setTimeout(() => {
+                        this.scrollToElement(hash);
+                    }, 300);
+                }
             });
-        });
+
+            // Также обрабатываем если пользователь пришел по прямой ссылке
+            document.addEventListener('DOMContentLoaded', () => {
+                const hash = window.location.hash;
+                if (hash) {
+                    setTimeout(() => {
+                        this.scrollToElement(hash);
+                    }, 500);
+                }
+            });
+        }
+
+        scrollToElement(hash) {
+            const element = document.querySelector(hash);
+            if (element) {
+                // Учитываем высоту хедера
+                const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight - 20;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Обновляем URL без перезагрузки
+                history.replaceState(null, null, hash);
+            }
+        }
+
+        smoothScrollToAnchors() {
+            // Обрабатываем клики по якорным ссылкам на текущей странице
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href^="#"]');
+                if (link) {
+                    e.preventDefault();
+                    const hash = link.getAttribute('href');
+                    this.scrollToElement(hash);
+                }
+            });
+        }
     }
 
-    // Language Switcher
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            updateLanguage(btn.dataset.lang);
-        });
-    });
+    // NAVIGATION IMPROVEMENTS
+    class NavigationEnhancer {
+        constructor() {
+            this.init();
+        }
 
-    // Service card hover effects
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
+        init() {
+            this.highlightActiveSection();
+            this.improveNavigationUX();
+        }
 
-    // Add floating animation to WhatsApp button
-    const whatsappButton = document.querySelector('.whatsapp-float a');
-    if (whatsappButton) {
-        setInterval(() => {
-            whatsappButton.style.animation = 'none';
-            setTimeout(() => {
-                whatsappButton.style.animation = 'bounce 2s infinite';
-            }, 10);
-        }, 10000);
+        highlightActiveSection() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        
+                        // Убираем активный класс со всех ссылок
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        
+                        // Добавляем активный класс к текущей ссылке
+                        const activeLink = document.querySelector(`.nav-menu a[href="#${id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '-100px 0px -100px 0px',
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        }
+
+        improveNavigationUX() {
+            // Добавляем эффекты для логотипа
+            const logo = document.querySelector('.logo');
+            if (logo) {
+                logo.addEventListener('click', (e) => {
+                    // Если мы уже на главной странице, прокручиваем вверх
+                    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+
+            // Добавляем прелоадер эффект при переходах между страницами
+            const externalLinks = document.querySelectorAll('a[href^="../"], a[href^="services/"], a[href="index.html"]');
+            externalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Добавляем эффект загрузки
+                    document.body.style.opacity = '0.8';
+                    document.body.style.transition = 'opacity 0.3s ease';
+                });
+            });
+        }
     }
+
+    // PREMIUM SCROLL ANIMATIONS SYSTEM
+    class ScrollAnimations {
+        constructor() {
+            this.animatedElements = [];
+            this.init();
+        }
+
+        init() {
+            this.addAnimationClasses();
+            this.observeElements();
+            this.addStaggeredAnimations();
+        }
+
+        addAnimationClasses() {
+            // Add animation classes to elements
+            const animations = [
+                { selector: '.services h2, .partners h2, .about h2, .contact h2, .certifications h2', class: 'fade-in-up', delay: 0 },
+                { selector: '.services .section-subtitle, .partners .section-subtitle, .about .section-subtitle', class: 'fade-in-up', delay: 0.2 },
+                { selector: '.service-card', class: 'slide-in-up', delay: 'staggered' },
+                { selector: '.partner-card', class: 'scale-in', delay: 'staggered' },
+                { selector: '.contact-info, .contact-form', class: 'slide-in-up', delay: 'staggered' },
+                { selector: '.contact-item', class: 'slide-in-left', delay: 'staggered' },
+                { selector: '.social-link', class: 'rotate-in', delay: 'staggered' },
+                { selector: '.certification-card', class: 'flip-in', delay: 'staggered' },
+                { selector: '.hero-subtitle, .hero-description', class: 'fade-in-up', delay: 0.3 }
+            ];
+
+            animations.forEach(anim => {
+                const elements = document.querySelectorAll(anim.selector);
+                elements.forEach((el, index) => {
+                    el.classList.add(anim.class);
+                    if (anim.delay === 'staggered') {
+                        el.style.animationDelay = `${index * 0.1}s`;
+                    } else {
+                        el.style.animationDelay = `${anim.delay}s`;
+                    }
+                });
+            });
+        }
+
+        observeElements() {
+            const options = {
+                root: null,
+                rootMargin: '-5% 0px -5% 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        this.animateElement(entry.target);
+                    }
+                });
+            }, options);
+
+            // Observe all animation elements
+            const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-up, .slide-in-left, .slide-in-right, .scale-in, .rotate-in, .flip-in');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        animateElement(element) {
+            element.classList.add('animated');
+            
+            // Add shimmer effect to titles
+            if (element.tagName === 'H2' && element.querySelector('::after')) {
+                setTimeout(() => {
+                    element.style.transform = 'translateY(0)';
+                }, 300);
+            }
+        }
+
+        addStaggeredAnimations() {
+            // Add enhanced staggered animations for card grids
+            const cardContainers = [
+                { selector: '.services-grid', childSelector: '.service-card' },
+                { selector: '.partners-grid', childSelector: '.partner-card' },
+                { selector: '.certifications-grid', childSelector: '.certification-card' }
+            ];
+
+            cardContainers.forEach(container => {
+                const parent = document.querySelector(container.selector);
+                if (parent) {
+                    const cards = parent.querySelectorAll(container.childSelector);
+                    cards.forEach((card, index) => {
+                        const delay = index * 0.1 + 0.2;
+                        card.style.animationDelay = `${delay}s`;
+                    });
+                }
+            });
+        }
+    }
+
+    new AnchorNavigation();
+    new NavigationEnhancer();
 
     // Set initial language
     updateLanguage(currentLanguage);
@@ -351,270 +675,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new ScrollAnimations();
 
     console.log('SubNet Group website initialized successfully!');
-
-    new AnchorNavigation();
-    new NavigationEnhancer();
 });
 
-// Animated counter for statistics
-function animateCounter(element, target) {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = target / steps;
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
-        }
-        
-        if (target === 99.9) {
-            element.textContent = current.toFixed(1);
-        } else {
-            element.textContent = Math.floor(current).toLocaleString();
-        }
-    }, duration / steps);
-}
-
-// Intersection Observer for stats animation
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
-            statNumbers.forEach(statNumber => {
-                const target = parseFloat(statNumber.dataset.number);
-                animateCounter(statNumber, target);
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-// ANCHOR LINK NAVIGATION FIX
-class AnchorNavigation {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.handleHashOnLoad();
-        this.smoothScrollToAnchors();
-    }
-
-    handleHashOnLoad() {
-        // Проверяем есть ли хеш в URL при загрузке страницы
-        window.addEventListener('load', () => {
-            const hash = window.location.hash;
-            if (hash) {
-                // Небольшая задержка чтобы страница полностью загрузилась
-                setTimeout(() => {
-                    this.scrollToElement(hash);
-                }, 300);
-            }
-        });
-
-        // Также обрабатываем если пользователь пришел по прямой ссылке
-        document.addEventListener('DOMContentLoaded', () => {
-            const hash = window.location.hash;
-            if (hash) {
-                setTimeout(() => {
-                    this.scrollToElement(hash);
-                }, 500);
-            }
-        });
-    }
-
-    scrollToElement(hash) {
-        const element = document.querySelector(hash);
-        if (element) {
-            // Учитываем высоту хедера
-            const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
-            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerHeight - 20;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-
-            // Обновляем URL без перезагрузки
-            history.replaceState(null, null, hash);
-        }
-    }
-
-    smoothScrollToAnchors() {
-        // Обрабатываем клики по якорным ссылкам на текущей странице
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('a[href^="#"]');
-            if (link) {
-                e.preventDefault();
-                const hash = link.getAttribute('href');
-                this.scrollToElement(hash);
-            }
-        });
-    }
-}
-
-// NAVIGATION IMPROVEMENTS
-class NavigationEnhancer {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        this.highlightActiveSection();
-        this.improveNavigationUX();
-    }
-
-    highlightActiveSection() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    
-                    // Убираем активный класс со всех ссылок
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    
-                    // Добавляем активный класс к текущей ссылке
-                    const activeLink = document.querySelector(`.nav-menu a[href="#${id}"]`);
-                    if (activeLink) {
-                        activeLink.classList.add('active');
-                    }
-                }
-            });
-        }, {
-            rootMargin: '-100px 0px -100px 0px',
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    }
-
-    improveNavigationUX() {
-        // Добавляем эффекты для логотипа
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.addEventListener('click', (e) => {
-                // Если мы уже на главной странице, прокручиваем вверх
-                if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }
-
-        // Добавляем прелоадер эффект при переходах между страницами
-        const externalLinks = document.querySelectorAll('a[href^="../"], a[href^="services/"], a[href="index.html"]');
-        externalLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Добавляем эффект загрузки
-                document.body.style.opacity = '0.8';
-                document.body.style.transition = 'opacity 0.3s ease';
-            });
-        });
-    }
-}
-
-// PREMIUM SCROLL ANIMATIONS SYSTEM
-class ScrollAnimations {
-    constructor() {
-        this.animatedElements = [];
-        this.init();
-    }
-
-    init() {
-        this.addAnimationClasses();
-        this.observeElements();
-        this.addStaggeredAnimations();
-    }
-
-    addAnimationClasses() {
-        // Add animation classes to elements
-        const animations = [
-            { selector: '.services h2, .partners h2, .about h2, .contact h2, .certifications h2', class: 'fade-in-up', delay: 0 },
-            { selector: '.services .section-subtitle, .partners .section-subtitle, .about .section-subtitle', class: 'fade-in-up', delay: 0.2 },
-            { selector: '.service-card', class: 'slide-in-up', delay: 'staggered' },
-            { selector: '.partner-card', class: 'scale-in', delay: 'staggered' },
-            { selector: '.contact-info, .contact-form', class: 'slide-in-up', delay: 'staggered' },
-            { selector: '.contact-item', class: 'slide-in-left', delay: 'staggered' },
-            { selector: '.social-link', class: 'rotate-in', delay: 'staggered' },
-            { selector: '.certification-card', class: 'flip-in', delay: 'staggered' },
-            { selector: '.hero-subtitle, .hero-description', class: 'fade-in-up', delay: 0.3 }
-        ];
-
-        animations.forEach(anim => {
-            const elements = document.querySelectorAll(anim.selector);
-            elements.forEach((el, index) => {
-                el.classList.add(anim.class);
-                if (anim.delay === 'staggered') {
-                    el.style.animationDelay = `${index * 0.1}s`;
-                } else {
-                    el.style.animationDelay = `${anim.delay}s`;
-                }
-            });
-        });
-    }
-
-    observeElements() {
-        const options = {
-            root: null,
-            rootMargin: '-5% 0px -5% 0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-                    this.animateElement(entry.target);
-                }
-            });
-        }, options);
-
-        // Observe all animation elements
-        const animatedElements = document.querySelectorAll('.fade-in-up, .slide-in-up, .slide-in-left, .slide-in-right, .scale-in, .rotate-in, .flip-in');
-        animatedElements.forEach(el => {
-            observer.observe(el);
-        });
-    }
-
-    animateElement(element) {
-        element.classList.add('animated');
-        
-        // Add shimmer effect to titles
-        if (element.tagName === 'H2' && element.querySelector('::after')) {
-            setTimeout(() => {
-                element.style.transform = 'translateY(0)';
-            }, 300);
-        }
-    }
-
-    addStaggeredAnimations() {
-        // Add enhanced staggered animations for card grids
-        const cardContainers = [
-            { selector: '.services-grid', childSelector: '.service-card' },
-            { selector: '.partners-grid', childSelector: '.partner-card' },
-            { selector: '.certifications-grid', childSelector: '.certification-card' }
-        ];
-
-        cardContainers.forEach(container => {
-            const parent = document.querySelector(container.selector);
-            if (parent) {
-                const cards = parent.querySelectorAll(container.childSelector);
-                cards.forEach((card, index) => {
-                    const delay = index * 0.1 + 0.2;
-                    card.style.animationDelay = `${delay}s`;
-                });
-            }
-        });
-    }
+function isServicePage() {
+  return window.location.pathname.includes('/services/');
 } 
