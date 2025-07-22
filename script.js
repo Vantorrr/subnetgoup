@@ -189,7 +189,7 @@ const translations = {
 };
 
 // Global variables
-let currentLanguage = document.documentElement.lang || 'en';
+let currentLanguage = 'he';
 
 // DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
