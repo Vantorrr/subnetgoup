@@ -1516,8 +1516,66 @@ document.addEventListener('DOMContentLoaded', () => {
     new EnhancedInteractions();
     new PerformanceOptimizer();
 
+    // Initialize fixed hamburger menu
+    initFixedHamburger();
+    
     console.log('Service page initialized successfully!');
 });
+
+// === FIXED HAMBURGER MENU JAVASCRIPT ===
+function initFixedHamburger() {
+    const fixedHamburger = document.getElementById('fixedHamburger');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const offcanvasMenu = document.getElementById('offcanvasMenu');
+    
+    if (fixedHamburger && menuOverlay && offcanvasMenu) {
+        function toggleMenu() {
+            fixedHamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            offcanvasMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+        
+        // Hamburger click
+        fixedHamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Fixed hamburger clicked!');
+            toggleMenu();
+        });
+        
+        // Overlay click to close
+        menuOverlay.addEventListener('click', function() {
+            console.log('Menu overlay clicked');
+            toggleMenu();
+        });
+        
+        // Menu links click to close
+        const menuLinks = offcanvasMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Menu link clicked');
+                toggleMenu();
+            });
+        });
+        
+        // Escape key to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && offcanvasMenu.classList.contains('active')) {
+                console.log('Escape pressed');
+                toggleMenu();
+            }
+        });
+        
+        console.log('✅ Fixed hamburger menu initialized successfully');
+    } else {
+        console.warn('❌ Fixed hamburger menu elements not found:', {
+            fixedHamburger: !!fixedHamburger,
+            menuOverlay: !!menuOverlay,
+            offcanvasMenu: !!offcanvasMenu
+        });
+    }
+}
 
 // Export for potential use in other scripts
 // =============================================

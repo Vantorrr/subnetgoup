@@ -6103,7 +6103,7 @@ body.nav-open {
   right: 24px;
   width: 44px;
   height: 44px;
-  z-index: 3000;
+  z-index: 99999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6112,9 +6112,21 @@ body.nav-open {
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   cursor: pointer;
   transition: background 0.2s;
+  pointer-events: auto !important;
+  user-select: none;
 }
 .fixed-hamburger:hover {
   background: rgba(0,212,255,0.15);
+}
+
+/* RTL позиционирование для Hebrew - ИСПРАВЛЕНО */
+.rtl-mode .fixed-hamburger,
+html[dir="rtl"] .fixed-hamburger,
+body.rtl-mode .fixed-hamburger {
+  right: auto !important;
+  left: 24px !important;
+  pointer-events: auto !important;
+  z-index: 99999 !important;
 }
 
 .fixed-hamburger .bar {
@@ -6214,7 +6226,23 @@ body.nav-open {
 @media (max-width: 768px) {
   .nav-container .hamburger { display: none !important; }
   .language-switcher { display: none !important; }
-  .fixed-hamburger { display: flex !important; }
+  
+  .fixed-hamburger { 
+    display: flex !important; 
+    pointer-events: auto !important;
+    z-index: 99999 !important;
+    position: fixed !important;
+  }
+  
+  /* RTL мобильный гамбургер */
+  .rtl-mode .fixed-hamburger,
+  html[dir="rtl"] .fixed-hamburger,
+  body.rtl-mode .fixed-hamburger {
+    right: auto !important;
+    left: 24px !important;
+    pointer-events: auto !important;
+  }
+  
   .offcanvas-menu { display: block !important; }
 }
 
@@ -6232,7 +6260,18 @@ body.nav-open {
   .offcanvas-menu { display: block !important; }
 }
 
+/* ИСПРАВЛЕНО: ПК меню должно быть кликабельным */
+@media (min-width: 769px) {
+  .nav-menu { 
+    pointer-events: auto !important; 
+  }
+}
+
 @media (max-width: 768px) {
-  .nav-menu { pointer-events: none; }
-  .nav-menu.active { pointer-events: auto; }
+  .nav-menu { 
+    pointer-events: none !important; 
+  }
+  .nav-menu.active { 
+    pointer-events: auto !important; 
+  }
 }
