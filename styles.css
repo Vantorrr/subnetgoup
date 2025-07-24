@@ -2509,6 +2509,76 @@ body {
     }
 }
 
+/* Large Tablet adaptation (iPad Pro landscape) */
+@media (max-width: 1024px) and (min-width: 901px) {
+    .command-center {
+        width: 450px !important;
+        height: 380px !important;
+        margin: 0 auto !important;
+    }
+    
+    .monitors-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 18px !important;
+        padding: 18px !important;
+    }
+    
+    .monitor {
+        min-height: 90px !important;
+        border-radius: 12px !important;
+    }
+    
+    .screen-content {
+        font-size: 11px !important;
+    }
+    
+    .network-topology::before,
+    .security-dashboard::before,
+    .data-flow::before,
+    .system-stats::before,
+    .traffic-analysis::before,
+    .threat-detection::before {
+        font-size: 10px !important;
+        padding: 12px !important;
+    }
+}
+
+/* Medium Tablet adaptation (iPad portrait) */
+@media (max-width: 900px) and (min-width: 769px) {
+    .command-center {
+        width: 400px !important;
+        height: 340px !important;
+        margin: 0 auto !important;
+    }
+    
+    .monitors-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 14px !important;
+        padding: 14px !important;
+    }
+    
+    .monitor {
+        min-height: 75px !important;
+        border-radius: 10px !important;
+    }
+    
+    .screen-content {
+        font-size: 9px !important;
+    }
+    
+    .network-topology::before,
+    .security-dashboard::before,
+    .data-flow::before,
+    .system-stats::before,
+    .traffic-analysis::before,
+    .threat-detection::before {
+        font-size: 8px !important;
+        padding: 8px !important;
+    }
+}
+
 @media (max-width: 900px) {
     .nav-container {
         position: relative;
@@ -3304,6 +3374,49 @@ body {
     text-align: right;
 }
 
+/* ULTIMATE RTL FOR DESKTOP ABOUT SECTION */
+.rtl-mode .about h2,
+.rtl-mode .about-text h2 {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .about-text,
+.rtl-mode .about-text p {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .about-content {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.rtl-mode .about-features {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.rtl-mode .about-features .feature {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+    direction: rtl !important;
+    justify-content: flex-start !important;
+}
+
+.rtl-mode .about-features .feature-icon {
+    order: 2 !important;
+    margin-left: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+.rtl-mode .about-features .feature span {
+    order: 1 !important;
+    text-align: right !important;
+    direction: rtl !important;
+    flex-grow: 1 !important;
+}
+
 .rtl-mode .about-features .feature {
     flex-direction: row-reverse;
 }
@@ -3316,6 +3429,75 @@ body {
 .rtl-mode .contact-item {
     flex-direction: row-reverse;
     text-align: right;
+}
+
+/* FORCE RTL FOR DESKTOP CONTACT SECTION */
+.rtl-mode .contact h2 {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .contact-info h2,
+.rtl-mode .contact-info h4,
+.rtl-mode .contact-info p {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* SPECIFIC FIX FOR HEBREW CONTACT LABELS */
+.rtl-mode .contact-item h4,
+.rtl-mode .contact-item div h4,
+[data-translate="contact.phone"],
+[data-translate="contact.email"] {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+}
+
+/* FORCE RTL FOR ALL CONTACT ITEM TEXT */
+.rtl-mode .contact-item {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .contact-item div {
+    text-align: right !important;
+    direction: rtl !important;
+    flex-grow: 1 !important;
+}
+
+.rtl-mode .contact-item i {
+    order: 2 !important;
+    margin-left: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+.rtl-mode .contact-form {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.rtl-mode .contact-form input,
+.rtl-mode .contact-form textarea {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .verification-checkbox {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .verification-checkbox .checkmark {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+.rtl-mode .verification-checkbox span {
+    text-align: right !important;
+    direction: rtl !important;
 }
 
 .rtl-mode .footer-content {
@@ -3362,11 +3544,56 @@ body {
 }
 
 .rtl-mode .services-grid {
-    direction: rtl;
+    direction: rtl !important;
+    text-align: center !important;
+    justify-items: center !important;
 }
 
 .rtl-mode .service-card {
-    text-align: center; /* Keep service cards centered */
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+/* FORCE RTL FOR SERVICES SECTION */
+.rtl-mode .services h2 {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .services .section-title {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .service-card h3 {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .service-card p {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+/* FORCE SERVICES SECTION PERFECT ALIGNMENT */
+.rtl-mode .services {
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.rtl-mode .services .container {
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.rtl-mode .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(280px, 1fr)) !important;
+    gap: 3rem !important;
+    margin: 4rem auto 0 auto !important;
+    max-width: 1400px !important;
+    justify-content: center !important;
+    align-items: stretch !important;
 }
 
 /* Hebrew font support */
@@ -3387,6 +3614,354 @@ body {
     .rtl-mode .contact-content,
     .rtl-mode .about-content {
         grid-template-columns: 1fr;
+        direction: rtl;
+        text-align: right;
+    }
+    
+    .rtl-mode .about-text {
+        text-align: right;
+    }
+    
+    .rtl-mode .about-text h2 {
+        text-align: right;
+    }
+    
+    .rtl-mode .about-text p {
+        text-align: right;
+    }
+    
+    .rtl-mode .about-features {
+        direction: rtl;
+    }
+    
+    .rtl-mode .about-features .feature {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+}
+
+/* Extra Small Mobile RTL */
+@media (max-width: 480px) {
+    .rtl-mode .about-content {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+    
+    .rtl-mode .about-text {
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .about-text h2,
+    .rtl-mode .about-text p {
+        text-align: right !important;
+    }
+    
+    .rtl-mode .about-features {
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .about-features .feature {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .feature span {
+        text-align: right !important;
+    }
+    
+    /* Force RTL for mobile feature cards */
+    .rtl-mode .about-features .feature {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+        direction: rtl !important;
+        justify-content: flex-start !important;
+    }
+    
+    .rtl-mode .about-features .feature .feature-icon {
+        order: 2 !important;
+        margin-left: 0 !important;
+        margin-right: 1.5rem !important;
+    }
+    
+    .rtl-mode .about-features .feature span {
+        order: 1 !important;
+        text-align: right !important;
+        direction: rtl !important;
+        flex-grow: 1 !important;
+    }
+    
+    /* HEBREW CONTACT EXTRA SMALL MOBILE FORCE RTL */
+    html[lang="he"] .contact-item,
+    html[dir="rtl"] .contact-item,
+    .rtl-mode .contact-item {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+        direction: rtl !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+    
+    html[lang="he"] .contact-item h4,
+    html[lang="he"] .contact-item div h4,
+    html[dir="rtl"] .contact-item h4,
+    html[dir="rtl"] .contact-item div h4,
+    .rtl-mode .contact-item h4,
+    .rtl-mode .contact-item div h4,
+    [data-translate="contact.phone"],
+    [data-translate="contact.email"] {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: embed !important;
+        width: 100% !important;
+    }
+    
+    html[lang="he"] .contact-item div,
+    html[dir="rtl"] .contact-item div,
+    .rtl-mode .contact-item div {
+        text-align: right !important;
+        direction: rtl !important;
+        flex-grow: 1 !important;
+        order: 1 !important;
+        width: 100% !important;
+    }
+    
+    html[lang="he"] .contact-item i,
+    html[dir="rtl"] .contact-item i,
+    .rtl-mode .contact-item i {
+        order: 2 !important;
+        margin-left: 0 !important;
+        margin-right: 1rem !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+/* Mobile RTL adjustments */
+@media (max-width: 768px) {
+    .rtl-mode .about-features .feature {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+        direction: rtl !important;
+        justify-content: flex-start !important;
+    }
+    
+    .rtl-mode .about-features .feature .feature-icon {
+        order: 2 !important;
+        margin-left: 0 !important;
+        margin-right: 1.5rem !important;
+    }
+    
+    .rtl-mode .about-features .feature span {
+        order: 1 !important;
+        text-align: right !important;
+        direction: rtl !important;
+        flex-grow: 1 !important;
+    }
+    
+    /* HEBREW CONTACT MOBILE FORCE RTL */
+    html[lang="he"] .contact-item,
+    html[dir="rtl"] .contact-item,
+    .rtl-mode .contact-item {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+        direction: rtl !important;
+        justify-content: flex-start !important;
+    }
+    
+    html[lang="he"] .contact-item h4,
+    html[lang="he"] .contact-item div h4,
+    html[dir="rtl"] .contact-item h4,
+    html[dir="rtl"] .contact-item div h4,
+    .rtl-mode .contact-item h4,
+    .rtl-mode .contact-item div h4 {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: embed !important;
+    }
+    
+    html[lang="he"] .contact-item div,
+    html[dir="rtl"] .contact-item div,
+    .rtl-mode .contact-item div {
+        text-align: right !important;
+        direction: rtl !important;
+        flex-grow: 1 !important;
+        order: 1 !important;
+    }
+    
+    html[lang="he"] .contact-item i,
+    html[dir="rtl"] .contact-item i,
+    .rtl-mode .contact-item i {
+        order: 2 !important;
+        margin-left: 0 !important;
+        margin-right: 1.5rem !important;
+    }
+    
+    /* RTL Contact Form Fixes */
+    .rtl-mode .contact-form {
+        direction: rtl !important;
+        text-align: right !important;
+    }
+    
+    .rtl-mode .contact-form input,
+    .rtl-mode .contact-form textarea {
+        text-align: right !important;
+        direction: rtl !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+    
+    .rtl-mode .contact-form input[type="text"],
+    .rtl-mode .contact-form input[type="email"],
+    .rtl-mode .contact-form input[type="tel"],
+    .rtl-mode .contact-form textarea {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: bidi-override !important;
+    }
+
+/* EXTREME FORCE RTL FOR ALL MOBILE CONTACT FORM INPUTS */
+@media (max-width: 768px) {
+    html[dir="rtl"] .contact-form input,
+    html[dir="rtl"] .contact-form textarea,
+    body.rtl-mode .contact-form input,
+    body.rtl-mode .contact-form textarea,
+    body.rtl-mode input[name="name"],
+    body.rtl-mode input[name="email"], 
+    body.rtl-mode input[name="phone"],
+    body.rtl-mode textarea[name="message"],
+    .rtl-mode input,
+    .rtl-mode textarea {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: embed !important;
+        -webkit-text-align: right !important;
+        -moz-text-align: right !important;
+        writing-mode: horizontal-tb !important;
+        text-align-last: right !important;
+    }
+}
+
+/* ULTIMATE RTL CONTACT FORM - MAX PRIORITY */
+html[lang="he"] .contact-form input,
+html[lang="he"] .contact-form textarea,
+html[dir="rtl"] .contact-form input,
+html[dir="rtl"] .contact-form textarea,
+body.rtl-mode .contact-form input,
+body.rtl-mode .contact-form textarea,
+.rtl-mode .contact-form input[type="text"],
+.rtl-mode .contact-form input[type="email"],
+.rtl-mode .contact-form input[type="tel"],
+.rtl-mode .contact-form textarea {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+}
+
+/* ULTIMATE HEBREW CONTACT LABELS FIX */
+html[lang="he"] .contact-item h4,
+html[lang="he"] .contact-item div h4,
+html[lang="he"] [data-translate="contact.phone"],
+html[lang="he"] [data-translate="contact.email"],
+html[dir="rtl"] .contact-item h4,
+html[dir="rtl"] .contact-item div h4,
+html[dir="rtl"] [data-translate="contact.phone"],
+html[dir="rtl"] [data-translate="contact.email"],
+body.rtl-mode .contact-item h4,
+body.rtl-mode .contact-item div h4,
+body.rtl-mode [data-translate="contact.phone"],
+body.rtl-mode [data-translate="contact.email"] {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+    justify-self: flex-end !important;
+}
+
+/* ULTIMATE HEBREW CONTACT SECTION FIX */
+html[lang="he"] .contact-item,
+html[dir="rtl"] .contact-item,
+body.rtl-mode .contact-item {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[lang="he"] .contact-item div,
+html[dir="rtl"] .contact-item div,
+body.rtl-mode .contact-item div {
+    text-align: right !important;
+    direction: rtl !important;
+    flex-grow: 1 !important;
+}
+
+html[lang="he"] .contact-item i,
+html[dir="rtl"] .contact-item i,
+body.rtl-mode .contact-item i {
+    order: 2 !important;
+    margin-left: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+html[lang="he"] .contact-form input::placeholder,
+html[lang="he"] .contact-form textarea::placeholder,
+html[dir="rtl"] .contact-form input::placeholder,
+html[dir="rtl"] .contact-form textarea::placeholder,
+body.rtl-mode .contact-form input::placeholder,
+body.rtl-mode .contact-form textarea::placeholder {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[lang="he"] .verification-checkbox,
+html[dir="rtl"] .verification-checkbox,
+body.rtl-mode .verification-checkbox {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[lang="he"] .verification-checkbox .checkmark,
+html[dir="rtl"] .verification-checkbox .checkmark,
+body.rtl-mode .verification-checkbox .checkmark {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+
+html[lang="he"] .verification-checkbox span,
+html[dir="rtl"] .verification-checkbox span,
+body.rtl-mode .verification-checkbox span {
+    text-align: right !important;
+    direction: rtl !important;
+}
+    
+    .rtl-mode .contact-form input::placeholder,
+    .rtl-mode .contact-form textarea::placeholder {
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .verification-checkbox {
+        flex-direction: row-reverse !important;
+        justify-content: flex-end !important;
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .verification-checkbox .checkmark {
+        margin-right: 0 !important;
+        margin-left: 10px !important;
+        order: 2 !important;
+    }
+    
+    .rtl-mode .verification-checkbox span {
+        order: 1 !important;
+        text-align: right !important;
+        direction: rtl !important;
+    }
+    
+    .rtl-mode .contact-form button {
+        text-align: center !important;
     }
     
     .rtl-mode .language-switcher {
@@ -4088,6 +4663,65 @@ body {
     min-width: 0 !important;
     margin: 0 0 24px 0 !important;
   }
+}
+
+/* ULTIMATE HEBREW TEXT RTL FIX - MAXIMUM PRIORITY */
+html[lang="he"] h4,
+html[dir="rtl"] h4,
+.rtl-mode h4,
+html[lang="he"] [data-translate*="contact"],
+html[dir="rtl"] [data-translate*="contact"],
+.rtl-mode [data-translate*="contact"],
+html[lang="he"] .contact-item *,
+html[dir="rtl"] .contact-item *,
+.rtl-mode .contact-item * {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* FORCE HEBREW LANGUAGE SPECIFIC */
+html[lang="he"] .contact-item,
+html[lang="he"] .contact-item div,
+html[lang="he"] .contact-item h4 {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+}
+
+/* GLOBAL RTL OVERRIDE FOR ALL DEVICES */
+@media screen {
+    html[lang="he"] .contact-item h4,
+    html[dir="rtl"] .contact-item h4,
+    .rtl-mode .contact-item h4,
+    [data-translate="contact.phone"],
+    [data-translate="contact.email"] {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: embed !important;
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+/* HEBREW STATISTICS NUMBERS - PREVENT RTL FLIP */
+.rtl-mode .stat-number,
+html[lang="he"] .stat-number,
+html[dir="rtl"] .stat-number {
+    direction: ltr !important;
+    text-align: center !important;
+    unicode-bidi: normal !important;
+}
+
+/* Ensure numbers with plus display correctly in Hebrew */
+.rtl-mode .stat-number[data-number="10"],
+.rtl-mode .stat-number[data-number="30"],
+html[lang="he"] .stat-number[data-number="10"],
+html[lang="he"] .stat-number[data-number="30"],
+html[dir="rtl"] .stat-number[data-number="10"],
+html[dir="rtl"] .stat-number[data-number="30"] {
+    direction: ltr !important;
+    display: inline-block !important;
+    text-align: center !important;
 }.fixed-hamburger {
   position: fixed;
   top: 24px;

@@ -83,7 +83,7 @@ const translations = {
             title: "Certifications & Achievements",
             iso: "Information Security Management",
             cissp: "Certified Information Systems Security Professional",
-            ccnp: "CCNA/CCNP",
+            ccnp: "Cisco Certified Network Professional and Associate - Advanced networking and routing protocols expertise",
             microsoft: "Ruckus Certification Program"
         },
         stats: {
@@ -176,7 +176,7 @@ const translations = {
             title: "הסמכות והישגים",
             iso: "ניהול אבטחת מידע",
             cissp: "מומחה מוסמך לאבטחת מערכות מידע",
-            ccnp: "CCNA/CCNP",
+            ccnp: "הסמכת רשתות סיסקו מקצועית ובסיסית - מומחיות מתקדמת ברשתות ופרוטוקולי ניתוב",
             microsoft: "Ruckus Certification Program"
         },
         stats: {
@@ -234,6 +234,11 @@ function updateLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
     document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
+    
+    // Force RTL contact form if mobile
+    if (window.innerWidth <= 768) {
+        setTimeout(forceRTLContactForm, 100);
+    }
 }
 
 function getNestedTranslation(obj, path) {
@@ -626,6 +631,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial language
     updateLanguage(currentLanguage);
+    
+    // FORCE RTL FOR CONTACT FORM ON MOBILE
+    if (window.innerWidth <= 768) {
+        forceRTLContactForm();
+    }
+    
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            forceRTLContactForm();
+        }
+    });
 
     // Add loading class to body initially
     document.body.classList.add('loading');
@@ -638,4 +654,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function isServicePage() {
   return window.location.pathname.includes('/services/');
+}
+
+// ULTIMATE RTL FORCE FOR CONTACT FORM
+function forceRTLContactForm() {
+    console.log('forceRTLContactForm called, currentLanguage:', currentLanguage);
+    
+    if (currentLanguage === 'he') {
+        // Force contact form inputs to RTL with maximum specificity
+        const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+        console.log('Found contact form inputs:', contactInputs.length);
+        
+        contactInputs.forEach((input, index) => {
+            console.log(`Setting ULTIMATE RTL for contact input ${index}:`, input);
+            input.style.setProperty('text-align', 'right', 'important');
+            input.style.setProperty('direction', 'rtl', 'important');
+            input.style.setProperty('unicode-bidi', 'bidi-override', 'important');
+            input.setAttribute('dir', 'rtl');
+            
+            // Force placeholder RTL too
+            if (input.placeholder) {
+                input.style.setProperty('text-align', 'right', 'important');
+            }
+        });
+        
+        // Force verification checkbox
+        const checkbox = document.querySelector('.verification-checkbox');
+        if (checkbox) {
+            console.log('Forcing checkbox RTL');
+            checkbox.style.setProperty('flex-direction', 'row-reverse', 'important');
+            checkbox.style.setProperty('text-align', 'right', 'important');
+            checkbox.style.setProperty('direction', 'rtl', 'important');
+            
+            const checkmark = checkbox.querySelector('.checkmark');
+            if (checkmark) {
+                checkmark.style.setProperty('margin-right', '0', 'important');
+                checkmark.style.setProperty('margin-left', '10px', 'important');
+            }
+        }
+        
+        console.log('ULTIMATE Contact form RTL force completed');
+    }
 } 
