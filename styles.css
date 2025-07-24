@@ -2713,10 +2713,35 @@ body {
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 100%;
         margin: 0 auto;
+        padding: 0 1rem;
+    }
+    
+    .service-card {
+        padding: 2rem 1.5rem 2rem;
+        min-height: 350px;
+        border-radius: 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
     .process-steps {
@@ -2805,10 +2830,41 @@ body {
     }
     
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 350px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: 100%;
         margin: 0 auto;
+        padding: 0 0.5rem;
+    }
+    
+    .service-card {
+        padding: 1.8rem 1rem 1.5rem;
+        min-height: 320px;
+        border-radius: 16px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+    }
+    
+    .service-card p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .learn-more-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
     }
     
     .process-steps {
@@ -2896,8 +2952,45 @@ body {
     }
 }
 
-/* Very small screens */
+/* Very small mobile services optimization */
 @media (max-width: 360px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 0 0.3rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem 0.8rem 1.2rem;
+        min-height: 280px;
+        border-radius: 14px;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+        font-size: 0.9rem;
+        line-height: 1.1;
+        margin-bottom: 0.6rem;
+    }
+    
+    .service-card p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .learn-more-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+    }
+    
+    /* Hero adaptations for very small screens */
     .hero-title {
         font-size: 1.2rem;
         line-height: 1.0;
