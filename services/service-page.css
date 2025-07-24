@@ -5767,28 +5767,19 @@ body.nav-open {
     }
 }
 
-/* For larger screens, auto-fit with good spacing */
-@media (min-width: 1200px) {
+/* МОБИЛЬНЫЕ УСТРОЙСТВА - 2x2 СЕТКА */
+@media (max-width: 599px) {
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-        gap: 2.5rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        padding: 0 1rem !important;
+        margin: 1.5rem 0 !important;
+        width: 100% !important;
+        margin-left: 0 !important;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
-
-/* For medium screens, force exactly 2 columns */
-@media (min-width: 768px) and (max-width: 991px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
+/* Убрал дублирующиеся медиа-запросы для избежания конфликтов */
 
 .service-item {
     background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);

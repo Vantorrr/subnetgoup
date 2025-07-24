@@ -2713,11 +2713,11 @@ body {
     }
 
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 1rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
     }
     
     .service-card {
@@ -2830,11 +2830,11 @@ body {
     }
     
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 0.5rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 0.5rem !important;
     }
     
     .service-card {
@@ -3681,12 +3681,63 @@ body {
 
 .rtl-mode .services-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, minmax(280px, 1fr)) !important;
     gap: 3rem !important;
     margin: 4rem auto 0 auto !important;
     max-width: 1400px !important;
     justify-content: center !important;
     align-items: stretch !important;
+}
+
+/* Desktop RTL services grid */
+@media (min-width: 769px) {
+    .rtl-mode .services-grid {
+        grid-template-columns: repeat(4, minmax(280px, 1fr)) !important;
+    }
+}
+
+/* Mobile RTL services grid */
+@media (max-width: 768px) {
+    .rtl-mode .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        padding: 0 1rem !important;
+        margin: 2rem auto 0 auto !important;
+    }
+    
+    .rtl-mode .service-card {
+        padding: 2rem 1.5rem !important;
+        min-height: 350px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .rtl-mode .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        padding: 0 0.5rem !important;
+        margin: 1.5rem auto 0 auto !important;
+    }
+    
+    .rtl-mode .service-card {
+        padding: 1.8rem 1rem !important;
+        min-height: 320px !important;
+    }
+    
+    .rtl-mode .service-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    .rtl-mode .service-card h3 {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .rtl-mode .service-card p {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
 }
 
 /* Hebrew font support */
