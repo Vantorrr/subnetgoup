@@ -1129,7 +1129,7 @@ class ServiceCardEffects {
 // Language Switcher Handler
 class LanguageSwitcher {
     constructor() {
-        this.currentLanguage = 'en';
+        this.currentLanguage = 'he'; // Дефолт иврит для сервисов тоже
         this.init();
     }
 
@@ -1164,6 +1164,7 @@ class LanguageSwitcher {
                 // Update document language and direction
                 document.documentElement.lang = lang;
                 document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+                document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
                 
                 // Apply translations if available
                 this.applyTranslations(lang);
@@ -1501,13 +1502,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     const savedLang = localStorage.getItem('preferred-language');
-    const defaultLang = langParam || savedLang || 'en';
+    const defaultLang = langParam || savedLang || 'he'; // ДЕФОЛТ ИВРИТ!
     
-    // Set initial language
+    // Set initial language - всегда устанавливаем язык
     if (defaultLang === 'he') {
         const hebrewBtn = document.querySelector('.lang-btn[data-lang="he"]');
         if (hebrewBtn) {
             hebrewBtn.click();
+        }
+    } else if (defaultLang === 'en') {
+        const englishBtn = document.querySelector('.lang-btn[data-lang="en"]');
+        if (englishBtn) {
+            englishBtn.click();
         }
     }
 

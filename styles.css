@@ -196,19 +196,60 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px; /* БОЛЬШЕ зазора! Был 10px → 16px */
+    padding: 8px 12px; /* Добавил внутренние отступы */
+    border-radius: 12px; /* Скругление контейнера */
+    background: rgba(0, 212, 255, 0.05); /* Фоновая подсветка */
+    border: 1px solid rgba(0, 212, 255, 0.2); /* Тонкая граница */
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 55px; /* БОЛЬШЕ! Был 40px → 55px */
+    height: 55px;
     object-fit: contain;
+    filter: brightness(1.3) saturate(1.5) drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)); /* БОЛЬШЕ ЭФФЕКТОВ */
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Скругление */
+}
+
+.logo-img:hover {
+    transform: scale(1.1) rotate(2deg); /* Больше эффект + поворот */
+    filter: brightness(1.5) saturate(1.8) drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.85rem; /* БОЛЬШЕ! Был 1.5rem → 1.85rem */
+    font-weight: 800; /* Жирнее! */
     color: #00d4ff;
+    line-height: 1.1; 
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3); /* ДВОЙНОЕ свечение */
+    letter-spacing: 1px; /* Больше разрядка */
+    background: linear-gradient(45deg, #00d4ff, #00ff88, #00d4ff); /* Градиент */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: logoGlow 3s ease-in-out infinite; /* Анимация */
+}
+
+/* LOGO ANIMATION - ЗАМЕТНЫЕ ЭФФЕКТЫ */
+@keyframes logoGlow {
+    0%, 100% { 
+        background-position: 0% 50%;
+        text-shadow: 0 0 15px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3);
+    }
+    50% { 
+        background-position: 100% 50%;
+        text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 212, 255, 0.5);
+    }
 }
 
 .nav-menu {
@@ -2132,7 +2173,7 @@ body {
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 5rem; /* ОГРОМНОЕ расстояние для всех */
     margin-bottom: 2rem;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
@@ -2142,13 +2183,92 @@ body {
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
+    /* DEFAULT: Icon left, text right for LTR (English) */
+    flex-direction: row !important;
+    text-align: left !important;
+    direction: ltr !important;
 }
+
+/* ENGLISH LTR EXPLICIT OVERRIDE */
+body:not(.rtl-mode) .contact-item,
+html[lang="en"] .contact-item,
+html[dir="ltr"] .contact-item {
+    flex-direction: row !important; /* Icon left, text right */
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+body:not(.rtl-mode) .contact-item div,
+body:not(.rtl-mode) .contact-item > div,
+html[lang="en"] .contact-item div,
+html[lang="en"] .contact-item > div,
+html[dir="ltr"] .contact-item div,
+html[dir="ltr"] .contact-item > div {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+body:not(.rtl-mode) .contact-item h4,
+body:not(.rtl-mode) .contact-item div h4,
+body:not(.rtl-mode) .contact-item p,
+body:not(.rtl-mode) .contact-item div p,
+html[lang="en"] .contact-item h4,
+html[lang="en"] .contact-item div h4,
+html[lang="en"] .contact-item p,
+html[lang="en"] .contact-item div p,
+html[dir="ltr"] .contact-item h4,
+html[dir="ltr"] .contact-item div h4,
+html[dir="ltr"] .contact-item p,
+html[dir="ltr"] .contact-item div p {
+    text-align: left !important;
+    direction: ltr !important;
+}
+
+/* АДАПТИВНЫЕ РАССТОЯНИЯ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+    .contact-item {
+        gap: 3rem !important; /* На планшете тоже большое */
+        padding: 1.2rem !important;
+    }
+    
+    /* RTL для планшетов */
+    body.rtl-mode .contact-item,
+    html[lang="he"] .contact-item,
+    html[dir="rtl"] .contact-item,
+    .rtl-mode .contact-item {
+        gap: 3rem !important; /* Иврит на планшете */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-item {
+        gap: 2.5rem !important; /* На мобиле чуть меньше но все равно большое */
+        padding: 1rem !important;
+    }
+    
+    /* RTL для мобильных */
+    body.rtl-mode .contact-item,
+    html[lang="he"] .contact-item,
+    html[dir="rtl"] .contact-item,
+    .rtl-mode .contact-item {
+        gap: 2.5rem !important; /* Иврит на мобиле */
+    }
+}
+
+/* УБРАЛ DEBUG НАДПИСИ */
 
 .contact-item:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(0, 212, 255, 0.2);
-    transform: translateX(8px);
+    transform: translateX(8px); /* LTR: move right */
     box-shadow: 0 8px 24px rgba(0, 212, 255, 0.1);
+}
+
+/* RTL CONTACT ITEM HOVER - MOVE LEFT IN HEBREW */
+.rtl-mode .contact-item:hover,
+html[lang="he"] .contact-item:hover,
+html[dir="rtl"] .contact-item:hover {
+    transform: translateX(-8px) !important; /* RTL: move left */
 }
 
 .contact-item i {
@@ -2290,6 +2410,19 @@ body {
 .contact-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 300;
+}
+
+/* ENGLISH LTR OVERRIDE - PREVENT RTL LEAK */
+html[lang="en"] .contact-form input,
+html[lang="en"] .contact-form textarea,
+html[lang="en"] .contact-form input::placeholder,
+html[lang="en"] .contact-form textarea::placeholder,
+body:not(.rtl-mode) .contact-form input,
+body:not(.rtl-mode) .contact-form textarea,
+body:not(.rtl-mode) .contact-form input::placeholder,
+body:not(.rtl-mode) .contact-form textarea::placeholder {
+    text-align: left !important;
+    direction: ltr !important;
 }
 
 .contact-form textarea {
@@ -3519,51 +3652,78 @@ body {
     direction: rtl;
 }
 
-.rtl-mode .contact-item {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-/* FORCE RTL FOR DESKTOP CONTACT SECTION */
-.rtl-mode .contact h2 {
+/* ===== MAXIMUM PRIORITY RTL CONTACT SECTION ===== */
+body.rtl-mode .contact-item,
+body.rtl-mode div.contact-item,
+html[lang="he"] .contact-item,
+html[lang="he"] div.contact-item,
+html[dir="rtl"] .contact-item,
+html[dir="rtl"] div.contact-item,
+.rtl-mode .contact-item,
+.rtl-mode div.contact-item {
+    flex-direction: row-reverse !important; /* Icon right, text left */
     text-align: right !important;
     direction: rtl !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important; /* ОГРОМНЫЙ gap для иврита */
 }
 
-.rtl-mode .contact-info h2,
-.rtl-mode .contact-info h4,
-.rtl-mode .contact-info p {
+body.rtl-mode .contact-item div,
+body.rtl-mode .contact-item > div,
+html[lang="he"] .contact-item div,
+html[lang="he"] .contact-item > div,
+html[dir="rtl"] .contact-item div,
+html[dir="rtl"] .contact-item > div,
+.rtl-mode .contact-item div,
+.rtl-mode .contact-item > div {
     text-align: right !important;
     direction: rtl !important;
+    width: 100% !important;
 }
 
-/* SPECIFIC FIX FOR HEBREW CONTACT LABELS */
+body.rtl-mode .contact-item h4,
+body.rtl-mode .contact-item div h4,
+body.rtl-mode .contact-item > div > h4,
+html[lang="he"] .contact-item h4,
+html[lang="he"] .contact-item div h4,
+html[lang="he"] .contact-item > div > h4,
+html[dir="rtl"] .contact-item h4,
+html[dir="rtl"] .contact-item div h4,
+html[dir="rtl"] .contact-item > div > h4,
 .rtl-mode .contact-item h4,
 .rtl-mode .contact-item div h4,
+.rtl-mode .contact-item > div > h4,
 [data-translate="contact.phone"],
 [data-translate="contact.email"] {
     text-align: right !important;
     direction: rtl !important;
     unicode-bidi: embed !important;
+    width: 100% !important;
 }
 
-/* FORCE RTL FOR ALL CONTACT ITEM TEXT */
-.rtl-mode .contact-item {
-    flex-direction: row-reverse !important;
+body.rtl-mode .contact-item p,
+body.rtl-mode .contact-item div p,
+body.rtl-mode .contact-item > div > p,
+html[lang="he"] .contact-item p,
+html[lang="he"] .contact-item div p,
+html[lang="he"] .contact-item > div > p,
+html[dir="rtl"] .contact-item p,
+html[dir="rtl"] .contact-item div p,
+html[dir="rtl"] .contact-item > div > p,
+.rtl-mode .contact-item p,
+.rtl-mode .contact-item div p,
+.rtl-mode .contact-item > div > p {
     text-align: right !important;
     direction: rtl !important;
+    width: 100% !important;
 }
 
-.rtl-mode .contact-item div {
+body.rtl-mode .contact h2,
+html[lang="he"] .contact h2,
+html[dir="rtl"] .contact h2,
+.rtl-mode .contact h2 {
     text-align: right !important;
     direction: rtl !important;
-    flex-grow: 1 !important;
-}
-
-.rtl-mode .contact-item i {
-    order: 2 !important;
-    margin-left: 0 !important;
-    margin-right: 1.5rem !important;
 }
 
 .rtl-mode .contact-form {
@@ -3595,7 +3755,35 @@ body {
 
 .rtl-mode .footer-content {
     direction: rtl;
-    text-align: right;
+    text-align: center !important; /* ЦЕНТРОВКА для иврита */
+}
+
+.rtl-mode .footer-section,
+html[lang="he"] .footer-section,
+html[dir="rtl"] .footer-section {
+    text-align: center !important;
+    direction: rtl !important;
+}
+
+.rtl-mode .footer-section h3,
+.rtl-mode .footer-section h4,
+html[lang="he"] .footer-section h3,
+html[lang="he"] .footer-section h4,
+html[dir="rtl"] .footer-section h3,
+html[dir="rtl"] .footer-section h4 {
+    text-align: center !important;
+}
+
+.rtl-mode .footer-section ul,
+html[lang="he"] .footer-section ul,
+html[dir="rtl"] .footer-section ul {
+    text-align: center !important;
+}
+
+.rtl-mode .footer-section ul li,
+html[lang="he"] .footer-section ul li,  
+html[dir="rtl"] .footer-section ul li {
+    text-align: center !important;
 }
 
 .rtl-mode .language-switcher {
@@ -3603,9 +3791,27 @@ body {
     right: auto;
 }
 
-.rtl-mode .whatsapp-float {
-    left: 30px;
-    right: auto;
+/* RTL STATS SECTION - CENTER ALIGNMENT FOR HEBREW */
+.rtl-mode .stats-section,
+html[lang="he"] .stats-section,
+html[dir="rtl"] .stats-section {
+    text-align: center !important;
+}
+
+.rtl-mode .stats-grid,
+html[lang="he"] .stats-grid,
+html[dir="rtl"] .stats-grid {
+    direction: ltr; /* Keep grid direction LTR */
+    text-align: center;
+    justify-items: center;
+}
+
+/* RTL WHATSAPP BUTTON - KEEP ON RIGHT FOR HEBREW */
+.rtl-mode .whatsapp-float,
+html[lang="he"] .whatsapp-float,
+html[dir="rtl"] .whatsapp-float {
+    right: 30px !important;
+    left: auto !important;
 }
 
 .rtl-mode .hamburger {
@@ -3836,49 +4042,7 @@ body {
         flex-grow: 1 !important;
     }
     
-    /* HEBREW CONTACT EXTRA SMALL MOBILE FORCE RTL */
-    html[lang="he"] .contact-item,
-    html[dir="rtl"] .contact-item,
-    .rtl-mode .contact-item {
-        flex-direction: row-reverse !important;
-        text-align: right !important;
-        direction: rtl !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-    }
-    
-    html[lang="he"] .contact-item h4,
-    html[lang="he"] .contact-item div h4,
-    html[dir="rtl"] .contact-item h4,
-    html[dir="rtl"] .contact-item div h4,
-    .rtl-mode .contact-item h4,
-    .rtl-mode .contact-item div h4,
-    [data-translate="contact.phone"],
-    [data-translate="contact.email"] {
-        text-align: right !important;
-        direction: rtl !important;
-        unicode-bidi: embed !important;
-        width: 100% !important;
-    }
-    
-    html[lang="he"] .contact-item div,
-    html[dir="rtl"] .contact-item div,
-    .rtl-mode .contact-item div {
-        text-align: right !important;
-        direction: rtl !important;
-        flex-grow: 1 !important;
-        order: 1 !important;
-        width: 100% !important;
-    }
-    
-    html[lang="he"] .contact-item i,
-    html[dir="rtl"] .contact-item i,
-    .rtl-mode .contact-item i {
-        order: 2 !important;
-        margin-left: 0 !important;
-        margin-right: 1rem !important;
-        flex-shrink: 0 !important;
-    }
+    /* REMOVED DUPLICATE RTL RULES - HANDLED BY MAIN RULES ABOVE */
 }
 
 /* Mobile RTL adjustments */
@@ -4113,9 +4277,22 @@ body.rtl-mode .verification-checkbox span {
         right: auto;
     }
     
-    .rtl-mode .whatsapp-float {
-        left: 20px;
-        right: auto;
+    /* Mobile RTL Stats positioning */
+    .rtl-mode .stats-grid,
+    html[lang="he"] .stats-grid,
+    html[dir="rtl"] .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Keep 2-column on mobile */
+        direction: ltr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    /* Mobile RTL WhatsApp positioning */
+    .rtl-mode .whatsapp-float,
+    html[lang="he"] .whatsapp-float,
+    html[dir="rtl"] .whatsapp-float {
+        right: 20px !important;
+        left: auto !important;
     }
 }
 
@@ -4521,6 +4698,21 @@ body.rtl-mode .verification-checkbox span {
         height: 220px !important;
     }
     
+    /* LOGO MOBILE ADAPTATIONS */
+    .logo-img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    
+    .logo-text {
+        font-size: 1.45rem !important;
+        letter-spacing: 0.3px !important;
+    }
+    
+    .logo {
+        gap: 10px !important;
+    }
+    
     .certifications-grid {
         grid-template-columns: 1fr;
     }
@@ -4528,6 +4720,16 @@ body.rtl-mode .verification-checkbox span {
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    /* RTL Stats for very small screens */
+    .rtl-mode .stats-grid,
+    html[lang="he"] .stats-grid,
+    html[dir="rtl"] .stats-grid {
+        grid-template-columns: 1fr !important; /* Single column on very small screens */
+        direction: ltr;
+        text-align: center;
+        justify-items: center;
     }
     
     .project-stats {
@@ -4847,6 +5049,44 @@ html[lang="he"] .contact-item h4 {
     }
 }
 
+/* DESKTOP VIEWPORT FIX - ENSURE PROPER HEIGHT ON PC */
+@media screen and (min-width: 769px) {
+    .offcanvas-menu {
+        height: 100vh !important; /* Standard viewport height for desktop */
+        max-height: none !important; /* Remove mobile restrictions */
+    }
+    
+    /* Ensure body works properly on desktop */
+    body {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    html {
+        height: auto !important; /* Let content determine height */
+    }
+}
+
+/* MOBILE VIEWPORT FIX - PREVENT CONTENT CLIPPING */
+@media screen and (max-width: 768px) {
+    .offcanvas-menu {
+        height: 100dvh !important; /* Dynamic viewport height for mobile */
+        min-height: 100vh !important; /* Fallback */
+    }
+    
+    /* Ensure body doesn't overflow on mobile */
+    body {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Fix for mobile Chrome address bar hiding */
+    html {
+        height: 100%;
+        height: 100dvh;
+    }
+}
+
 /* HEBREW STATISTICS NUMBERS - PREVENT RTL FLIP */
 .rtl-mode .stat-number,
 html[lang="he"] .stat-number,
@@ -4925,7 +5165,7 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   position: fixed;
   top: 0; right: -320px;
   width: 320px;
-  height: 100vh;
+  height: 100vh; /* Standard viewport height for desktop */
   background: #10151c;
   z-index: 3001;
   box-shadow: -4px 0 24px rgba(0,0,0,0.18);

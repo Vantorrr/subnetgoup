@@ -238,31 +238,65 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px; /* БОЛЬШЕ зазора! */
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    padding: 8px 12px; /* Внутренние отступы */
+    border-radius: 12px; /* Скругление */
+    background: rgba(0, 212, 255, 0.05); /* Фоновая подсветка */
+    border: 1px solid rgba(0, 212, 255, 0.2); /* Граница */
 }
 
 .logo:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    background: rgba(0, 212, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 55px; /* БОЛЬШЕ! */
+    height: 55px;
     object-fit: contain;
     opacity: 1 !important;
-    transition: none !important;
+    transition: all 0.3s ease !important;
     visibility: visible !important;
     display: inline-block !important;
+    filter: brightness(1.3) saturate(1.5) drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)); /* БОЛЬШЕ ЭФФЕКТОВ */
+    border-radius: 8px;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.5) saturate(1.8) drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.85rem; /* БОЛЬШЕ! */
+    font-weight: 800; /* Жирнее! */
     color: #00d4ff;
+    line-height: 1.1;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3); /* ДВОЙНОЕ свечение */
+    letter-spacing: 1px; /* Больше разрядка */
+    background: linear-gradient(45deg, #00d4ff, #00ff88, #00d4ff); /* Градиент */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: logoGlow 3s ease-in-out infinite; /* Анимация */
+}
+
+/* LOGO ANIMATION - ЗАМЕТНЫЕ ЭФФЕКТЫ */
+@keyframes logoGlow {
+    0%, 100% { 
+        background-position: 0% 50%;
+        text-shadow: 0 0 15px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3);
+    }
+    50% { 
+        background-position: 100% 50%;
+        text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 212, 255, 0.5);
+    }
 }
 
 .nav-menu {
@@ -1967,6 +2001,19 @@ body {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: rgba(255, 255, 255, 0.5);
+}
+
+/* ENGLISH LTR OVERRIDE - PREVENT RTL LEAK */
+html[lang="en"] .form-group input,
+html[lang="en"] .form-group textarea,
+html[lang="en"] .form-group input::placeholder,
+html[lang="en"] .form-group textarea::placeholder,
+body:not(.rtl-mode) .form-group input,
+body:not(.rtl-mode) .form-group textarea,
+body:not(.rtl-mode) .form-group input::placeholder,
+body:not(.rtl-mode) .form-group textarea::placeholder {
+    text-align: left !important;
+    direction: ltr !important;
 }
 
 .form-group select {
@@ -5581,6 +5628,21 @@ body.nav-open {
         font-size: 2.5rem;
     }
     
+    /* LOGO MOBILE ADAPTATIONS */
+    .logo-img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    
+    .logo-text {
+        font-size: 1.45rem !important;
+        letter-spacing: 0.3px !important;
+    }
+    
+    .logo {
+        gap: 10px !important;
+    }
+    
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -6168,7 +6230,7 @@ body.rtl-mode .fixed-hamburger {
   position: fixed;
   top: 0; right: -320px;
   width: 320px;
-  height: 100vh;
+  height: 100vh; /* Standard viewport height for desktop */
   background: #10151c;
   z-index: 3001;
   box-shadow: -4px 0 24px rgba(0,0,0,0.18);
@@ -6274,4 +6336,60 @@ body.rtl-mode .fixed-hamburger {
   .nav-menu.active { 
     pointer-events: auto !important; 
   }
+}
+
+/* DESKTOP VIEWPORT FIX - ENSURE PROPER HEIGHT ON PC */
+@media screen and (min-width: 769px) {
+    .offcanvas-menu {
+        height: 100vh !important; /* Standard viewport height for desktop */
+        max-height: none !important; /* Remove mobile restrictions */
+    }
+    
+    /* Ensure body works properly on desktop */
+    body {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    html {
+        height: auto !important; /* Let content determine height */
+    }
+}
+
+/* MOBILE VIEWPORT FIX - PREVENT CONTENT CLIPPING ON CHROME MOBILE */
+@media screen and (max-width: 768px) {
+    .offcanvas-menu {
+        height: 100dvh !important; /* Dynamic viewport height for mobile */
+        min-height: 100vh !important; /* Fallback */
+    }
+    
+    /* Ensure body doesn't overflow on mobile */
+    body {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Fix for mobile Chrome address bar hiding */
+    html {
+        height: 100%;
+        height: 100dvh;
+    }
+}
+
+/* RTL WHATSAPP BUTTON POSITIONING - MOVE TO RIGHT FOR HEBREW */
+.rtl-mode .whatsapp-float,
+html[lang="he"] .whatsapp-float,
+html[dir="rtl"] .whatsapp-float {
+    right: 30px !important;
+    left: auto !important;
+}
+
+/* Mobile RTL WhatsApp positioning */
+@media screen and (max-width: 768px) {
+    .rtl-mode .whatsapp-float,
+    html[lang="he"] .whatsapp-float,
+    html[dir="rtl"] .whatsapp-float {
+        right: 20px !important;
+        left: auto !important;
+    }
 }

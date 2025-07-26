@@ -209,6 +209,9 @@ window.addEventListener('load', () => {
 // Language Switcher
 function updateLanguage(lang) {
     currentLanguage = lang;
+    // СОХРАНЯЕМ ЯЗЫК В LOCALSTORAGE ДЛЯ СЕРВИСОВ!
+    localStorage.setItem('preferred-language', lang);
+    console.log('Saved language to localStorage:', lang); // DEBUG
     
     // Update all translated elements
     const elements = document.querySelectorAll('[data-translate]');
@@ -293,6 +296,17 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize with Hebrew by default
+    if (!isServicePage()) {
+        updateLanguage('he');
+        // Set Hebrew button as active
+        const heBtn = document.querySelector('.lang-btn[data-lang="he"]');
+        if (heBtn) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            heBtn.classList.add('active');
+        }
+    }
+    
     // --- Обработчики для стандартных кнопок смены языка (desktop) ---
     document.querySelectorAll('.language-switcher .lang-btn').forEach(btn => {
       btn.onclick = () => {
@@ -384,10 +398,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            console.log('Stats intersection:', entry.isIntersecting, entry.target);
             if (entry.isIntersecting) {
                 const statNumbers = entry.target.querySelectorAll('.stat-number');
+                console.log('Found stat numbers:', statNumbers.length);
                 statNumbers.forEach(statNumber => {
                     const target = parseFloat(statNumber.dataset.number);
+                    console.log('Animating:', statNumber, 'to target:', target);
                     animateCounter(statNumber, target);
                 });
                 statsObserver.unobserve(entry.target);
@@ -395,9 +412,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.5 });
 
-    document.querySelectorAll('.stats-grid').forEach(grid => {
-        statsObserver.observe(grid);
-    });
+    // Initialize stats observer with delay to ensure DOM is ready
+    setTimeout(() => {
+        document.querySelectorAll('.stats-grid').forEach(grid => {
+            console.log('Observing stats grid:', grid);
+            statsObserver.observe(grid);
+        });
+    }, 500);
 
     // ANCHOR LINK NAVIGATION FIX
     class AnchorNavigation {
