@@ -6421,3 +6421,27 @@ html[dir="rtl"] .language-switcher,
     left: 20px !important;
     right: auto !important;
 }
+
+/* === RTL CHECKBOX SPACING === */
+html[lang="he"] .verification-checkbox,
+html[dir="rtl"] .verification-checkbox,
+body.rtl-mode .verification-checkbox {
+    flex-direction: row-reverse !important;
+    justify-content: flex-start !important;
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+html[lang="he"] .verification-checkbox .checkmark,
+html[dir="rtl"] .verification-checkbox .checkmark,
+body.rtl-mode .verification-checkbox .checkmark {
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+
+html[lang="he"] .verification-checkbox span,
+html[dir="rtl"] .verification-checkbox span,
+body.rtl-mode .verification-checkbox span {
+    text-align: right !important;
+    direction: rtl !important;
+}

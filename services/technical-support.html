@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link rel="stylesheet" href="service-page.css?v=115&rtl_flags_fixed=true">
+    <link rel="stylesheet" href="service-page.css?v=118&checkbox_spacing_fixed=true">
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -140,7 +140,7 @@
                 </div>
                 <h1 class="support-title slide-in-left" data-translate="support.title">
                     <span class="gradient-text-support">Intrusion & Alarm Systems</span>
-                    <br><span class="sub-title-support">& Emergency Alerts</span>
+                    <br><span class="sub-title-support" data-translate="support.sub_title">& Emergency Alerts</span>
                 </h1>
                 <p class="slide-in-right" data-translate="support.subtitle">Planning and installation of intrusion and emergency alert systems</p>
                 
@@ -220,21 +220,21 @@
                                 </div>
                                 <div class="health-metrics">
                                     <div class="metric-bar">
-                                        <span>CPU Usage</span>
+                                        <span data-translate="support.cpu_usage">CPU Usage</span>
                                         <div class="bar">
                                             <div class="fill" style="width: 45%"></div>
                                         </div>
                                         <span>45%</span>
                                     </div>
                                     <div class="metric-bar">
-                                        <span>Memory</span>
+                                        <span data-translate="support.memory">Memory</span>
                                         <div class="bar">
                                             <div class="fill" style="width: 62%"></div>
                                         </div>
                                         <span>62%</span>
                                     </div>
                                     <div class="metric-bar">
-                                        <span>Storage</span>
+                                        <span data-translate="support.storage">Storage</span>
                                         <div class="bar">
                                             <div class="fill" style="width: 35%"></div>
                                         </div>
@@ -245,17 +245,17 @@
                             <div class="support-actions">
                                 <div class="action-card active">
                                     <i class="fas fa-sync-alt"></i>
-                                    <span>System Update</span>
+                                    <span data-translate="support.system_update">System Update</span>
                                     <div class="action-status running"></div>
                                 </div>
                                 <div class="action-card">
                                     <i class="fas fa-shield-alt"></i>
-                                    <span>Security Scan</span>
+                                    <span data-translate="support.security_scan">Security Scan</span>
                                     <div class="action-status completed"></div>
                                 </div>
                                 <div class="action-card">
                                     <i class="fas fa-broom"></i>
-                                    <span>Disk Cleanup</span>
+                                    <span data-translate="support.disk_cleanup">Disk Cleanup</span>
                                     <div class="action-status pending"></div>
                                 </div>
                             </div>
@@ -270,7 +270,7 @@
                             <div class="card-content">
                                 <h4 data-translate="support.support_available">24/7 Support Available</h4>
                                 <p data-translate="support.support_available_desc">Round-the-clock technical assistance when you need it most</p>
-                                <div class="service-badge support-badge">+ Priority Service</div>
+                                <div class="service-badge support-badge" data-translate="support.priority_service">+ Priority Service</div>
                             </div>
                             <div class="card-glow support-glow"></div>
                         </div>
@@ -281,7 +281,7 @@
                             <div class="card-content">
                                 <h4 data-translate="support.regular_maintenance">Regular Maintenance</h4>
                                 <p data-translate="support.regular_maintenance_desc">Scheduled maintenance to prevent issues before they occur</p>
-                                <div class="service-badge support-badge">+ Preventive Checks</div>
+                                <div class="service-badge support-badge" data-translate="support.preventive_checks">+ Preventive Checks</div>
                             </div>
                             <div class="card-glow support-glow"></div>
                         </div>
@@ -292,7 +292,7 @@
                             <div class="card-content">
                                 <h4 data-translate="support.quick_repairs">Quick Repairs</h4>
                                 <p data-translate="support.quick_repairs_desc">Fast diagnosis and repair of hardware and software issues</p>
-                                <div class="service-badge support-badge">+ Emergency Calls</div>
+                                <div class="service-badge support-badge" data-translate="support.emergency_calls">+ Emergency Calls</div>
                             </div>
                             <div class="card-glow support-glow"></div>
                         </div>
@@ -302,15 +302,15 @@
                     <div class="support-stats">
                         <div class="stat-item">
                             <div class="stat-number support-number">500+</div>
-                            <div class="stat-label">Systems Maintained</div>
+                            <div class="stat-label" data-translate="support.systems_maintained">Systems Maintained</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number support-number">15min</div>
-                            <div class="stat-label">Average Response Time</div>
+                            <div class="stat-label" data-translate="support.average_response_time">Average Response Time</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number support-number">99.8%</div>
-                            <div class="stat-label">Issues Resolved</div>
+                            <div class="stat-label" data-translate="support.issues_resolved">Issues Resolved</div>
                         </div>
                     </div>
                 </div>
@@ -319,7 +319,7 @@
                 <div class="service-process support-process">
                     <h3 class="process-title support-process-title">
                         <i class="fas fa-cogs"></i>
-                        Technical Maintenance Process
+                        <span data-translate="support.maintenance_process">Technical Maintenance Process</span>
                     </h3>
                     <div class="process-steps">
                         <div class="step-item support-step">
@@ -579,7 +579,7 @@
         </a>
     </div>
 
-    <script src="service-page.js?v=133&footer_copyright_dot_fixed=true"></script>
+    <script src="service-page.js?v=136&footer_copyright_fixed=true"></script>
     <script src="../script.js?v=19"></script>
 </body>
 </html> 

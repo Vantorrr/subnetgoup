@@ -2085,6 +2085,23 @@ window.serviceTranslations.en.support.issue_resolution = "Issue Resolution";
 window.serviceTranslations.en.support.issue_resolution_desc = "Quick identification and resolution of hardware and software problems";
 window.serviceTranslations.en.support.continuous_monitoring = "Continuous Monitoring";
 window.serviceTranslations.en.support.continuous_monitoring_desc = "24/7 performance tracking and preventive measures";
+
+// SUPPORT INTERFACE ELEMENTS - ENGLISH
+window.serviceTranslations.en.support.sub_title = "& Emergency Alerts";
+window.serviceTranslations.en.support.cpu_usage = "CPU Usage";
+window.serviceTranslations.en.support.memory = "Memory";
+window.serviceTranslations.en.support.storage = "Storage";
+window.serviceTranslations.en.support.system_update = "System Update";
+window.serviceTranslations.en.support.security_scan = "Security Scan";
+window.serviceTranslations.en.support.disk_cleanup = "Disk Cleanup";
+window.serviceTranslations.en.support.priority_service = "+ Priority Service";
+window.serviceTranslations.en.support.preventive_checks = "+ Preventive Checks";
+window.serviceTranslations.en.support.emergency_calls = "+ Emergency Calls";
+window.serviceTranslations.en.support.systems_maintained = "Systems Maintained";
+window.serviceTranslations.en.support.average_response_time = "Average Response Time";
+window.serviceTranslations.en.support.issues_resolved = "Issues Resolved";
+window.serviceTranslations.en.support.maintenance_process = "Technical Maintenance Process";
+window.serviceTranslations.en.support.avg_response = "Avg Response Time";
 window.serviceTranslations.he.support.support_available = "תמיכה 24/7 זמינה";
 window.serviceTranslations.he.support.support_available_desc = "סיוע טכני מסביב לשעון כשאתם צריכים";
 window.serviceTranslations.he.support.regular_maintenance = "תחזוקה שוטפת";
@@ -2099,6 +2116,23 @@ window.serviceTranslations.he.support.issue_resolution = "פתרון תקלות"
 window.serviceTranslations.he.support.issue_resolution_desc = "זיהוי מהיר ופתרון בעיות חומרה ותוכנה";
 window.serviceTranslations.he.support.continuous_monitoring = "ניטור מתמשך";
 window.serviceTranslations.he.support.continuous_monitoring_desc = "מעקב ביצועים 24/7 ופעולות מנע";
+
+// SUPPORT INTERFACE ELEMENTS - HEBREW  
+window.serviceTranslations.he.support.sub_title = "ומערכות התראה חירום";
+window.serviceTranslations.he.support.cpu_usage = "שימוש במעבד";
+window.serviceTranslations.he.support.memory = "זיכרון";
+window.serviceTranslations.he.support.storage = "אחסון";
+window.serviceTranslations.he.support.system_update = "עדכון מערכת";
+window.serviceTranslations.he.support.security_scan = "סריקת אבטחה";
+window.serviceTranslations.he.support.disk_cleanup = "ניקוי דיסק";
+window.serviceTranslations.he.support.priority_service = "+ שירות מועדף";
+window.serviceTranslations.he.support.preventive_checks = "+ בדיקות מונעות";
+window.serviceTranslations.he.support.emergency_calls = "+ קריאות חירום";
+window.serviceTranslations.he.support.systems_maintained = "מערכות בתחזוקה";
+window.serviceTranslations.he.support.average_response_time = "זמן תגובה ממוצע";
+window.serviceTranslations.he.support.issues_resolved = "בעיות שנפתרו";
+window.serviceTranslations.he.support.maintenance_process = "תהליך תחזוקה טכנית";
+window.serviceTranslations.he.support.avg_response = "זמן תגובה ממוצע";
 // --- Cybersecurity new key ---
 window.serviceTranslations.en.cybersecurity.monitoring_support = "Monitoring & Support";
 window.serviceTranslations.en.cybersecurity.monitoring_support_desc = "Continuous system monitoring, updates, and technical maintenance";
@@ -2187,7 +2221,7 @@ window.serviceTranslations.he.networking.form.budget_option6 = "זקוק ליע�
 
 // === FOOTER COPYRIGHT ===
 window.serviceTranslations.en.footer = {};
-window.serviceTranslations.en.footer.copyright = "© 2025 SubNet Group. All rights reserved.";
+window.serviceTranslations.en.footer.copyright = "© 2025 SubNet Group. All rights reserved";
 
 window.serviceTranslations.he.footer = {};
 window.serviceTranslations.he.footer.copyright = "© 2025 SubNet Group כל הזכויות שמורות";
