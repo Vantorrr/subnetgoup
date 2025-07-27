@@ -6173,7 +6173,7 @@ body.nav-open {
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, opacity 0.3s ease;
   pointer-events: auto !important;
   user-select: none;
 }
@@ -6181,12 +6181,12 @@ body.nav-open {
   background: rgba(0,212,255,0.15);
 }
 
-/* RTL позиционирование для Hebrew - ИСПРАВЛЕНО */
+/* RTL позиционирование для Hebrew - СПРАВА КАК И ДОЛЖНО БЫТЬ! */
 .rtl-mode .fixed-hamburger,
 html[dir="rtl"] .fixed-hamburger,
 body.rtl-mode .fixed-hamburger {
-  right: auto !important;
-  left: 24px !important;
+  right: 24px !important;
+  left: auto !important;
   pointer-events: auto !important;
   z-index: 99999 !important;
 }
@@ -6243,6 +6243,13 @@ body.rtl-mode .fixed-hamburger {
   right: 0;
 }
 
+/* Скрыть hamburger когда меню открыто */
+.menu-open .fixed-hamburger {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
 .offcanvas-menu .menu-nav {
   display: flex;
   flex-direction: column;
@@ -6296,12 +6303,12 @@ body.rtl-mode .fixed-hamburger {
     position: fixed !important;
   }
   
-  /* RTL мобильный гамбургер */
+  /* RTL мобильный гамбургер - ОСТАВЛЯЕМ СПРАВА! */
   .rtl-mode .fixed-hamburger,
   html[dir="rtl"] .fixed-hamburger,
   body.rtl-mode .fixed-hamburger {
-    right: auto !important;
-    left: 24px !important;
+    right: 24px !important;
+    left: auto !important;
     pointer-events: auto !important;
   }
   
@@ -6314,13 +6321,6 @@ body.rtl-mode .fixed-hamburger {
 
 /* По умолчанию скрываем фиксированный гамбургер и off-canvas меню */
 .fixed-hamburger, .offcanvas-menu { display: none; }
-
-@media (max-width: 768px) {
-  .nav-container .hamburger { display: none !important; }
-  .language-switcher { display: none !important; }
-  .fixed-hamburger { display: flex !important; }
-  .offcanvas-menu { display: block !important; }
-}
 
 /* ИСПРАВЛЕНО: ПК меню должно быть кликабельным */
 @media (min-width: 769px) {
