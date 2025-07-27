@@ -6294,6 +6294,7 @@ body.rtl-mode .fixed-hamburger {
 /* Скрыть старый гамбургер на мобилке */
 @media (max-width: 768px) {
   .nav-container .hamburger { display: none !important; }
+  .nav-menu { display: none !important; }
   .language-switcher { display: none !important; }
   
   .fixed-hamburger { 
@@ -6312,7 +6313,14 @@ body.rtl-mode .fixed-hamburger {
     pointer-events: auto !important;
   }
   
-  .offcanvas-menu { display: block !important; }
+  /* Off-canvas меню доступно но скрыто по умолчанию */
+  .offcanvas-menu { 
+    display: flex !important; 
+    right: -320px !important;
+  }
+  .offcanvas-menu.active {
+    right: 0 !important;
+  }
 }
 
 @media (max-width: 400px) {

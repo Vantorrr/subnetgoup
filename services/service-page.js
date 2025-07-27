@@ -2219,6 +2219,21 @@ window.serviceTranslations.he.networking.form.budget_option4 = "$50,000 - $100,0
 window.serviceTranslations.he.networking.form.budget_option5 = "מעל $100,000";
 window.serviceTranslations.he.networking.form.budget_option6 = "זקוק ליעוץ";
 
+// === NAVIGATION ===
+window.serviceTranslations.en.nav = {};
+window.serviceTranslations.en.nav.home = "Home";
+window.serviceTranslations.en.nav.services = "Services";
+window.serviceTranslations.en.nav.about = "About";
+window.serviceTranslations.en.nav.partners = "Our Partners";
+window.serviceTranslations.en.nav.contact = "Contact us";
+
+window.serviceTranslations.he.nav = {};
+window.serviceTranslations.he.nav.home = "בית";
+window.serviceTranslations.he.nav.services = "שירותים";
+window.serviceTranslations.he.nav.about = "אודותינו";
+window.serviceTranslations.he.nav.partners = "השותפים שלנו";
+window.serviceTranslations.he.nav.contact = "צור קשר";
+
 // === FOOTER COPYRIGHT ===
 window.serviceTranslations.en.footer = {};
 window.serviceTranslations.en.footer.copyright = "© 2025 SubNet Group. All rights reserved";
