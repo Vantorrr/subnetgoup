@@ -6393,3 +6393,31 @@ html[dir="rtl"] .whatsapp-float {
         left: auto !important;
     }
 }
+
+html[lang="he"] .whatsapp-float,
+html[dir="rtl"] .whatsapp-float {
+    right: 20px !important;
+    left: auto !important;
+}
+
+/* === RTL NAVIGATION ALIGNMENT === */
+html[lang="he"] .nav-container,
+html[dir="rtl"] .nav-container,
+.rtl-mode .nav-container {
+    flex-direction: row-reverse !important;
+}
+
+html[lang="he"] .nav-menu,
+html[dir="rtl"] .nav-menu,
+.rtl-mode .nav-menu {
+    flex-direction: row-reverse !important;
+    text-align: right !important;
+}
+
+/* === RTL LANGUAGE SWITCHER === */
+html[lang="he"] .language-switcher,
+html[dir="rtl"] .language-switcher,
+.rtl-mode .language-switcher {
+    left: 20px !important;
+    right: auto !important;
+}

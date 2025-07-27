@@ -73,26 +73,7 @@ window.serviceTranslations = {
             request_title: "Request Network Solutions Service",
             form: {
                 service_type_label: "Network Service Type",
-                full_name_label: "Full Name",
-                phone_label: "Phone Number", 
-                email_label: "Email Address",
-                company_label: "Company Name",
-                network_size_label: "Network Size",
-                current_infrastructure_label: "Current Network Infrastructure",
-                requirements_label: "Network Requirements",
-                timeline_label: "Project Timeline",
-                budget_label: "Project Budget Range",
-                submit_btn: "Submit Request",
-                
-                // Placeholders
-                full_name_placeholder: "Enter your full name",
-                phone_placeholder: "Enter phone number",
-                email_placeholder: "Enter email address", 
-                company_placeholder: "Enter company name (optional)",
-                current_infrastructure_placeholder: "Describe your current network setup, equipment, and any issues",
-                requirements_placeholder: "Describe your network needs: internet speed, number of devices, special requirements, etc",
-                
-                // Service Type Options
+                service_type_placeholder: "Select Network Service",
                 service_type_option: "Select Service",
                 service_type_option1: "Custom Network Design",
                 service_type_option2: "Network Installation", 
@@ -100,31 +81,44 @@ window.serviceTranslations = {
                 service_type_option4: "Wireless Network Setup",
                 service_type_option5: "Network Security",
                 service_type_option6: "Performance Optimization",
-                
-                // Network Size Options
+                full_name_label: "Full Name",
+                full_name_placeholder: "Enter full name",
+                phone_label: "Phone Number",
+                phone_placeholder: "Enter phone number",
+                email_label: "Email Address",
+                email_placeholder: "Enter email address",
+                company_label: "Company Name",
+                company_placeholder: "Enter company name (optional)",
+                network_size_label: "Network Size",
+                network_size_placeholder: "Select Network Size",
                 network_size_option: "Select Network Size",
                 network_size_option1: "Small Office (1-20 users)",
                 network_size_option2: "Medium Business (21-100 users)",
                 network_size_option3: "Large Enterprise (100+ users)",
                 network_size_option4: "Multi-building Campus",
                 network_size_option5: "Data Center",
-                
-                // Timeline Options
+                current_infrastructure_label: "Current Network Infrastructure",
+                current_infrastructure_placeholder: "Describe your current network setup, equipment, and any issues",
+                requirements_label: "Network Requirements",
+                requirements_placeholder: "Describe your network needs: internet speed, number of devices, special requirements, etc.",
+                timeline_label: "Project Timeline",
+                timeline_placeholder: "Select Timeline",
                 timeline_option: "Select Timeline",
                 timeline_option1: "Urgent (Within 1 week)",
                 timeline_option2: "ASAP (Within 2-4 weeks)",
-                timeline_option3: "Within 1 month", 
+                timeline_option3: "Within 1 month",
                 timeline_option4: "Within 3 months",
                 timeline_option5: "Flexible timeline",
-                
-                // Budget Options
+                budget_label: "Project Budget Range",
+                budget_placeholder: "Select Budget Range",
                 budget_option: "Select Budget Range",
                 budget_option1: "Under $5,000",
                 budget_option2: "$5,000 - $15,000",
                 budget_option3: "$15,000 - $50,000",
                 budget_option4: "$50,000 - $100,000",
                 budget_option5: "Over $100,000",
-                budget_option6: "Need consultation"
+                budget_option6: "Need consultation",
+                submit_btn: "Request Network Solution"
             },
             benefit1: "Free network assessment",
             benefit2: "Performance optimization",
@@ -175,7 +169,11 @@ window.serviceTranslations = {
         },
         cybersecurity: {
             title: "Video Surveillance (CCTV)",
+            sub_title: "& Security Systems",
             subtitle: "Professional CCTV and video surveillance solutions for comprehensive security monitoring",
+            active_cameras: "Active Cameras",
+            recording: "Recording",
+            threat_level: "Threat Level",
             what_we_do: "Video Surveillance Services",
             description: "We offer long-term service contracts for surveillance systems, including periodic checks, software updates, and hardware replacement.",
             feature1: "Design and installation of IP, analog, and hybrid CCTV systems",
@@ -198,11 +196,58 @@ window.serviceTranslations = {
             security_desc: "Remote viewing on smartphones and computers.",
             maintenance: "Advanced Integration & Analytics",
             maintenance_desc: "Integration with access control and alarm systems. Smart video analytics: motion detection, face/object recognition. Maintenance and troubleshooting of camera systems.",
-            request_title: "Request Title",
+            request_title: "Request Video Surveillance Service",
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "Surveillance Type",
+                service_type_placeholder: "Select Service",
+                service_type_option: "Select Service",
+                service_type_option1: "Home Security System",
+                service_type_option2: "Business Surveillance",
+                service_type_option3: "Camera System Upgrade",
+                service_type_option4: "Remote Monitoring Setup",
+                service_type_option5: "System Maintenance",
+                full_name_label: "Full Name",
+                full_name_placeholder: "Enter full name",
+                phone_label: "Phone Number",
+                phone_placeholder: "Enter phone number",
+                email_label: "Email Address",
+                email_placeholder: "Enter email address",
+                location_label: "Property Location",
+                location_placeholder: "City, area or full address",
+                property_type_label: "Property Type",
+                property_type_placeholder: "Select Property Type",
+                property_type_option: "Select Property Type",
+                property_type_option1: "Residential Home",
+                property_type_option2: "Apartment/Condo",
+                property_type_option3: "Office Building",
+                property_type_option4: "Retail Store",
+                property_type_option5: "Warehouse/Industrial",
+                property_type_option6: "Restaurant/Hospitality",
+                area_size_label: "Area to Monitor",
+                area_size_placeholder: "e.g., 2-story house, 500 sqm office, parking lot",
+                camera_count_label: "Estimated Number of Cameras",
+                camera_count_placeholder: "Select Camera Count",
+                camera_count_option: "Select Camera Count",
+                camera_count_option1: "1-4 Cameras",
+                camera_count_option2: "5-8 Cameras",
+                camera_count_option3: "9-16 Cameras",
+                camera_count_option4: "17-32 Cameras",
+                camera_count_option5: "32+ Cameras",
+                features_label: "Required Features",
+                features_placeholder: "e.g., night vision, remote access, motion alerts, facial recognition",
+                description_label: "Security Concerns",
+                description_placeholder: "Describe what you want to monitor and any specific security concerns",
+                budget_label: "Budget Range",
+                budget_placeholder: "Select Budget Range",
+                budget_option: "Select Budget Range",
+                budget_option1: "Under $1,000",
+                budget_option2: "$1,000 - $2,500",
+                budget_option3: "$2,500 - $5,000",
+                budget_option4: "$5,000 - $10,000",
+                budget_option5: "Over $10,000",
+                submit_btn: "Request Security Solution"
             },
-            benefit1: "Free network assessment",
+            benefit1: "Free security assessment",
             benefit2: "Performance optimization",
             benefit3: "Enterprise-grade security",
             benefit4: "24/7 support included",
@@ -299,8 +344,21 @@ window.serviceTranslations = {
             project4_stat2: "Visitor Control",
             project4_stat3: "Emergency Lock",
             access_points: "Access Points",
+            secure: "SECURE",
             system_status: "System Status",
             active_users: "Active Users",
+            unknown_card: "Unknown Card - Side Door",
+            jane_smith: "Jane Smith - Office 201",
+            card_reader: "Card Reader",
+            biometric: "Biometric",
+            mobile_app: "Mobile App",
+            cloud_management: "+ Cloud Management",
+            backup_methods: "+ Backup Methods",
+            reports_analytics: "+ Reports & Analytics",
+            locks_installed: "Locks Installed",
+            system_availability: "System Availability",
+            unauthorized_access: "Unauthorized Access",
+            installation_process: "Access Control System Installation Process",
             smart_solutions: "Smart Access Control Solutions",
             control_panel: "Access Control Panel",
             status_online: "ONLINE",
@@ -360,10 +418,80 @@ window.serviceTranslations = {
             project3_desc: "Residential security with mobile integration",
             project4_title: "Industrial Facility Alert",
             project4_desc: "Multi-zone alarm system with gas leak detection",
-            request_title: "Request Title",
+            request_title: "Request Technical Support Service",
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "Support Type",
+                service_type_placeholder: "Select Support Service",
+                service_type_option: "Select Service",
+                service_type_option1: "Maintenance Contract",
+                service_type_option2: "Emergency Repair",
+                service_type_option3: "System Updates",
+                service_type_option4: "Technical Support",
+                service_type_option5: "Performance Optimization",
+                service_type_option6: "User Training",
+                full_name_label: "Full Name",
+                full_name_placeholder: "Enter full name",
+                phone_label: "Phone Number",
+                phone_placeholder: "Enter phone number",
+                email_label: "Email Address",
+                email_placeholder: "Enter email address",
+                company_label: "Company/Organization",
+                company_placeholder: "Enter company name (optional)",
+                location_label: "Service Location",
+                location_placeholder: "City, area or full address",
+                system_type_label: "Systems to Support",
+                system_type_placeholder: "Select System Type",
+                system_type_option: "Select System Type",
+                system_type_option1: "Computers & Laptops",
+                system_type_option2: "Network Equipment",
+                system_type_option3: "Security Systems",
+                system_type_option4: "Servers & Storage",
+                system_type_option5: "Mixed IT Infrastructure",
+                system_type_option6: "Complete IT Environment",
+                urgency_label: "Service Urgency",
+                urgency_placeholder: "Select Urgency",
+                urgency_option: "Select Urgency",
+                urgency_option1: "Emergency (System Down)",
+                urgency_option2: "Urgent (Critical Issue)",
+                urgency_option3: "Normal (Planned Maintenance)",
+                urgency_option4: "Scheduled Service",
+                devices_count_label: "Number of Devices/Systems",
+                devices_count_placeholder: "Select Device Count",
+                devices_count_option: "Select Device Count",
+                devices_count_option1: "1-5 Devices",
+                devices_count_option2: "6-15 Devices",
+                devices_count_option3: "16-30 Devices",
+                devices_count_option4: "31-50 Devices",
+                devices_count_option5: "51-100 Devices",
+                devices_count_option6: "100+ Devices",
+                current_issues_label: "Current Issues or Problems",
+                current_issues_placeholder: "Describe any current problems, error messages, or performance issues",
+                maintenance_frequency_label: "Preferred Maintenance Frequency",
+                maintenance_frequency_placeholder: "Select Frequency",
+                maintenance_frequency_option: "Select Frequency",
+                maintenance_frequency_option1: "Weekly",
+                maintenance_frequency_option2: "Monthly",
+                maintenance_frequency_option3: "Quarterly",
+                maintenance_frequency_option4: "As Needed",
+                maintenance_frequency_option5: "One-time Service",
+                additional_services_label: "Additional Services Needed",
+                additional_services_placeholder: "e.g., data backup, security updates, user training, hardware upgrades",
+                budget_label: "Monthly Budget Range",
+                budget_placeholder: "Select Budget Range",
+                budget_option: "Select Budget Range",
+                budget_option1: "Under $500",
+                budget_option2: "$500 - $1,000",
+                budget_option3: "$1,000 - $2,500",
+                budget_option4: "$2,500 - $5,000",
+                budget_option5: "Over $5,000",
+                budget_option6: "Project-based pricing",
+                submit_btn: "Submit Request"
             },
+            benefit1: "Free system assessment",
+            benefit2: "Flexible maintenance schedules",
+            benefit3: "Emergency response guaranteed",
+            benefit4: "User training included"
+        },
             benefit1: "Free network assessment",
             benefit2: "Performance optimization",
             benefit3: "Enterprise-grade security",
@@ -497,15 +625,65 @@ window.serviceTranslations = {
             step6_desc: "ניטור ותמיכה 24/7 להבטחת ביצועים אופטימליים",
             ready_to_upgrade: "מוכנים לשדרג את הרשת שלכם?",
             cta_description: "צרו קשר היום ליעוץ חינם וגלו איך אנחנו יכולים לשפר את תשתית הרשת שלכם.",
-            request_title: "Request Title",
+            request_title: "כותרת הבקשה", 
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "סוג שירות",
+                service_type_placeholder: "בחר שירות רשת",
+                service_type_option: "בחר שירות",
+                service_type_option1: "עיצוב רשת מותאם אישית",
+                service_type_option2: "התקנת רשת",
+                service_type_option3: "שדרוג רשת",
+                service_type_option4: "הקמת רשת אלחוטית",
+                service_type_option5: "אבטחת רשת",
+                service_type_option6: "אופטימיזציית ביצועים",
+                full_name_label: "שם מלא",
+                full_name_placeholder: "הכנס שם מלא",
+                phone_label: "מספר טלפון",
+                phone_placeholder: "הכנס טלפון",
+                email_label: "אימייל",
+                email_placeholder: "הכנס אימייל",
+                location_label: "מיקום הנכס",
+                location_placeholder: "עיר, אזור או כתובת מלאה",
+                property_type_label: "סוג נכס",
+                property_type_placeholder: "בחר סוג נכס",
+                company_label: "שם חברה",
+                company_placeholder: "הכנס שם חברה (לא חובה)",
+                network_size_label: "גודל רשת",
+                network_size_placeholder: "בחר גודל רשת",
+                network_size_option: "בחר גודל רשת",
+                network_size_option1: "משרד קטן (1-20 משתמשים)",
+                network_size_option2: "עסק בינוני (21-100 משתמשים)",
+                network_size_option3: "ארגון גדול (100+ משתמשים)",
+                network_size_option4: "קמפוס רב-בניינים",
+                network_size_option5: "מרכז נתונים",
+                current_infrastructure_label: "תשתית רשת נוכחית",
+                current_infrastructure_placeholder: "תאר את הגדרת הרשת הנוכחית, ציוד ובעיות קיימות",
+                requirements_label: "דרישות רשת",
+                requirements_placeholder: "תאר צרכי הרשת: מהירות אינטרנט, מספר מכשירים, דרישות מיוחדות וכו'",
+                timeline_label: "לוח זמנים לפרויקט",
+                timeline_placeholder: "בחר לוח זמנים",
+                timeline_option: "בחר לוח זמנים",
+                timeline_option1: "דחוף (תוך שבוע)",
+                timeline_option2: "בהקדם (תוך 2-4 שבועות)",
+                timeline_option3: "תוך חודש",
+                timeline_option4: "תוך 3 חודשים",
+                timeline_option5: "לוח זמנים גמיש",
+                budget_label: "טווח תקציב פרויקט",
+                budget_placeholder: "בחר טווח תקציב",
+                budget_option: "בחר טווח תקציב",
+                budget_option1: "עד 20,000 ₪",
+                budget_option2: "20,000 - 60,000 ₪",
+                budget_option3: "60,000 - 200,000 ₪",
+                budget_option4: "200,000 - 400,000 ₪",
+                budget_option5: "מעל 400,000 ₪",
+                budget_option6: "דרוש ייעוץ",
+                submit_btn: "בקש פתרון רשת"
             },
-            benefit1: "Free network assessment",
-            benefit2: "Performance optimization",
-            benefit3: "Enterprise-grade security",
-            benefit4: "24/7 support included",
-            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.",
+            benefit1: "הערכת רשת חינם",
+            benefit2: "אופטימיזציית ביצועים", 
+            benefit3: "אבטחה ברמה תאגידית",
+            benefit4: "תמיכה 24/7 כלולה",
+            request_desc: "מוכנים לשדרג את תשתית הרשת שלכם? מלאו את הטופס והמהנדסים שלנו יצרו קשר תוך 24 שעות כדי לדון בצרכי הרשת שלכם וליצור פתרון מותאם אישית.",
             project2_title: "אבטחה לבניין משרדים",
             project2_desc: "מעקב משרדי רב-קומות עם אינטגרציה לבקרת גישה",
             project2_stat1: "3 קומות",
@@ -596,7 +774,11 @@ window.serviceTranslations = {
         },
         cybersecurity: {
             title: "מערכות מעקב וידאו (CCTV)",
+            sub_title: "ומערכות אבטחה",
             subtitle: "פתרונות מעקב וידאו מקצועיים למערכות CCTV ומעקב אבטחה מקיף",
+            active_cameras: "מצלמות פעילות",
+            recording: "מקליט",
+            threat_level: "רמת איום",
             what_we_do: "שירותי מערכות מעקב וידאו",
             description: "אנו מציעים חוזי שירות ארוכי טווח למערכות מעקב, כולל בדיקות תקופתיות, עדכוני תוכנה והחלפת חומרה.",
             feature1: "תכנון והתקנה של מצלמות אבטחה - IP, אנלוגיות או היברידיות",
@@ -629,67 +811,93 @@ window.serviceTranslations = {
             project3_desc: "מערכת אבטחה חכמה עם זיהוי פנים",
             ready_to_secure: "מוכנים לאבטח את הנכס שלכם?",
             cta_description: "צרו קשר היום להתקנה מקצועית של מערכת מעקב מתקדמת",
-            request_title: "Request Title",
+            request_title: "כותרת הבקשה",
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "סוג שירות",
+                service_type_placeholder: "בחר שירות מעקב",
+                service_type_option: "בחר שירות",
+                service_type_option1: "מערכת מצלמות IP",
+                service_type_option2: "מערכת היברידית",
+                service_type_option3: "שדרוג מצלמות",
+                service_type_option4: "צפייה מרחוק",
+                service_type_option5: "אנליטיקה חכמה",
+                service_type_option6: "תחזוקת מצלמות",
+                full_name_label: "שם מלא",
+                full_name_placeholder: "הכנס שם מלא",
+                phone_label: "מספר טלפון",
+                phone_placeholder: "הכנס טלפון",
+                email_label: "אימייל",
+                email_placeholder: "הכנס אימייל",
+                location_label: "מיקום הנכס",
+                location_placeholder: "עיר, אזור או כתובת מלאה",
+                property_type_label: "סוג נכס",
+                property_type_placeholder: "בחר סוג נכס",
+                property_type_option: "בחר סוג נכס",
+                property_type_option1: "בית מגורים",
+                property_type_option2: "דירה/קונדו",
+                property_type_option3: "בניין משרדים",
+                property_type_option4: "חנות קמעונאות",
+                property_type_option5: "מחסן/תעשייה",
+                property_type_option6: "מסעדה/אירוח",
+                area_size_label: "אזור לניטור",
+                area_size_placeholder: "למשל: בית 2 קומות, משרד 500 מ״ר, חניה",
+                camera_count_label: "מספר מצלמות משוער",
+                camera_count_placeholder: "בחר מספר מצלמות",
+                camera_count_option: "בחר מספר מצלמות",
+                camera_count_option1: "1-4 מצלמות",
+                camera_count_option2: "5-8 מצלמות",
+                camera_count_option3: "9-16 מצלמות",
+                camera_count_option4: "17-32 מצלמות",
+                camera_count_option5: "32+ מצלמות",
+                features_label: "תכונות נדרשות",
+                features_placeholder: "למשל: ראיית לילה, גישה מרחוק, זיהוי תנועה, זיהוי פנים",
+                description_label: "דאגות אבטחה",
+                description_placeholder: "תאר מה אתה רוצה לנטר ואת הדאגות הביטחוניות הספציפיות",
+                budget_label: "טווח תקציב",
+                budget_placeholder: "בחר טווח תקציב",
+                budget_option: "בחר טווח תקציב",
+                budget_option1: "עד 4,000 ₪",
+                budget_option2: "4,000 - 10,000 ₪",
+                budget_option3: "10,000 - 20,000 ₪",
+                budget_option4: "20,000 - 40,000 ₪",
+                budget_option5: "מעל 40,000 ₪",
+                submit_btn: "בקש פתרון אבטחה"
             },
-            benefit1: "Free network assessment",
-            benefit2: "Performance optimization",
-            benefit3: "Enterprise-grade security",
-            benefit4: "24/7 support included",
-            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.",
-            project2_title: "Office Building Security",
-            project2_desc: "Multi-floor office surveillance with access control integration",
-            project2_stat1: "3-Floor Office",
-            project2_stat2: "15 Cameras",
-            project2_stat3: "Access Control",
-            project3_title: "Retail Store Surveillance",
-            project3_desc: "Comprehensive retail security with POS integration",
-            project3_stat1: "Retail Store",
-            project3_stat2: "12 Cameras",
-            project3_stat3: "POS Integration",
-            project4_title: "Warehouse Security System",
-            project4_desc: "Large area coverage with PTZ cameras and perimeter monitoring",
-            project4_stat1: "Warehouse",
-            project4_stat2: "20 Cameras",
-            project4_stat3: "PTZ Control",
-            camera_entrance: "Entrance",
-            camera_parking: "Parking",
-            camera_office: "Office",
-            monitoring_title: "24/7 Monitoring",
-            monitoring_desc: "Round-the-clock surveillance with motion detection and instant alerts",
-            monitoring_badge: "+ Monitoring Center",
-            remote_title: "Remote Access",
-            remote_desc: "View live footage and recordings from your smartphone or computer",
-            remote_badge: "+ Mobile App",
-            recording_title: "Secure Recording",
-            recording_desc: "Automatic recording with cloud and local storage options",
-            recording_badge: "+ Backup Systems",
-            stat_cameras: "Cameras Installed",
-            stat_uptime: "Uptime",
-            stat_missed: "Missed Events",
-            process_title: "Security System Installation Process",
-            process_step1: "Security Assessment",
-            process_step1_desc: "Risk evaluation and camera placement planning for maximum coverage",
-            process_step2: "Equipment Installation",
-            process_step2_desc: "Professional mounting of HD cameras, recording servers, and network infrastructure",
-            process_step3: "System Configuration",
-            process_step3_desc: "Setup of recording, motion detection, and remote access capabilities",
-            wireless: "פתרונות תשתית וחשמל",
-            wireless_desc: "תשתית כבלים וחשמל (PoE או 12V).",
-            optimization: "מערכות אחסון והקלטה",
-            optimization_desc: "הגדרת יחידות NVR/DVR ושרתי אחסון.",
-            security: "גישה מרחוק וצפייה ניידת",
-            security_desc: "צפייה מרחוק בסמארטפונים ומחשבים.",
-            recording_title: "הקלטה מאובטחת",
-            recording_desc: "הקלטה אוטומטית עם אפשרויות אחסון בענן ומקומי.",
-            remote_title: "גישה מרחוק",
-            remote_desc: "צפייה בשידור חי והקלטות מהסמארטפון או מהמחשב.",
+            benefit1: "הערכת אבטחה חינם",
+            benefit2: "מצלמות איכות גבוהה",
+            benefit3: "ניטור 24/7",
+            benefit4: "תמיכה טכנית כלולה",
+            request_desc: "מוכנים לאבטח את הנכס שלכם? מלאו את הטופס ומומחי האבטחה שלנו יצרו קשר תוך 24 שעות כדי לתכנן מערכת מעקב מותאמת לצרכים שלכם.",
+            project2_title: "אבטחה לבניין משרדים",
+            project2_desc: "מעקב משרדי רב-קומות עם אינטגרציה לבקרת גישה",
+            project2_stat1: "3 קומות",
+            project2_stat2: "15 מצלמות",
+            project2_stat3: "בקרת גישה",
+            project3_title: "מעקב לחנות קמעונאות",
+            project3_desc: "מערכת אבטחה חכמה עם זיהוי פנים",
+            project3_stat1: "חנות קמעונאות",
+            project3_stat2: "12 מצלמות",
+            project3_stat3: "אינטגרציית קופה",
+            project4_title: "מערכת אבטחה למחסן",
+            project4_desc: "כיסוי אזור נרחב עם מצלמות PTZ וניטור היקפי",
+            project4_stat1: "מחסן",
+            project4_stat2: "20 מצלמות",
+            project4_stat3: "שליטת PTZ",
+            camera_entrance: "כניסה",
+            camera_parking: "חניה",
+            camera_office: "משרד",
             monitoring_title: "ניטור 24/7",
-            monitoring_desc: "ניטור מסביב לשעון עם זיהוי תנועה והתראות מיידיות.",
+            monitoring_desc: "ניטור מסביב לשעון עם זיהוי תנועה והתראות מיידיות",
             monitoring_badge: "+ מרכז ניטור",
+            remote_title: "גישה מרחוק",
+            remote_desc: "צפייה בשידור חי והקלטות מהסמארטפון או מהמחשב",
             remote_badge: "+ אפליקציה",
+            recording_title: "הקלטה מאובטחת",
+            recording_desc: "הקלטה אוטומטית עם אפשרויות אחסון בענן ומקומי",
             recording_badge: "+ מערכות גיבוי",
+            stat_cameras: "מצלמות מותקנות",
+            stat_uptime: "זמן פעילות",
+            stat_missed: "אירועים שהוחמצו",
             process_title: "תהליך התקנת מערכת אבטחה",
             process_step1: "הערכת אבטחה",
             process_step1_desc: "הערכת סיכונים ותכנון מיקום מצלמות לכיסוי מרבי",
@@ -697,8 +905,26 @@ window.serviceTranslations = {
             process_step2_desc: "התקנה מקצועית של מצלמות HD, שרתי הקלטה ותשתית רשת",
             process_step3: "הגדרת מערכת",
             process_step3_desc: "הגדרת הקלטה, זיהוי תנועה ויכולות גישה מרחוק",
-            process_step4: "ניטור ותמיכה",
-            process_step4_desc: "ניטור מערכת מתמשך, עדכונים ותחזוקה טכנית"
+            avg_response: "Avg Response Time",
+            issue_resolution: "Issue Resolution",
+            support_available: "Support Available",
+            system_health: "System Health Monitor",
+            status_excellent: "מצוין",
+            // --- Support new keys ---
+            support_available: "תמיכה 24/7 זמינה",
+            support_available_desc: "סיוע טכני מסביב לשעון כשאתם צריכים",
+            regular_maintenance: "תחזוקה שוטפת",
+            regular_maintenance_desc: "תחזוקה מתוזמנת למניעת תקלות מראש",
+            quick_repairs: "תיקונים מהירים",
+            quick_repairs_desc: "אבחון ותיקון מהיר של תקלות חומרה ותוכנה",
+            system_diagnostics: "אבחון מערכות",
+            system_diagnostics_desc: "ניתוח מקיף של כל רכיבי המערכת וביצועיה",
+            scheduled_maintenance: "תחזוקה מתוזמנת",
+            scheduled_maintenance_desc: "עדכונים שוטפים, ניקוי ואופטימיזציה",
+            issue_resolution: "פתרון תקלות",
+            issue_resolution_desc: "זיהוי מהיר ופתרון בעיות חומרה ותוכנה",
+            continuous_monitoring: "ניטור מתמשך",
+            continuous_monitoring_desc: "מעקב ביצועים 24/7 ופעולות מנע"
         },
         monitoring: {
             title: "מערכות בקרת כניסה",
@@ -768,31 +994,62 @@ window.serviceTranslations = {
             project3_desc: "מנעולים חכמים עם שליטה באפליקציה",
             ready_to_control: "מוכנים לשלוט בגישה לנכס שלכם?",
             cta_description: "צרו קשר היום להתקנה מקצועית של מערכת בקרת גישה מתקדמת",
-            request_title: "Request Title",
+            request_title: "כותרת הבקשה",
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "סוג שירות",
+                service_type_placeholder: "בחר שירות בקרת גישה",
+                service_type_option: "בחר שירות",
+                service_type_option1: "מנעולים אלקטרוניים",
+                service_type_option2: "מערכת כרטיסים",
+                service_type_option3: "גישה באפליקציה",
+                service_type_option4: "בקרת גישה ביומטרית",
+                service_type_option5: "מערכת גישה מלאה",
+                service_type_option6: "שדרוג מערכת",
+                full_name_label: "שם מלא",
+                full_name_placeholder: "הכנס שם מלא",
+                phone_label: "מספר טלפון",
+                phone_placeholder: "הכנס טלפון",
+                email_label: "אימייל",
+                email_placeholder: "הכנס אימייל",
+                location_label: "מיקום הנכס",
+                location_placeholder: "עיר, אזור או כתובת מלאה",
+                property_type_label: "סוג נכס",
+                property_type_placeholder: "בחר סוג נכס"
             },
-            benefit1: "Free network assessment",
-            benefit2: "Performance optimization",
-            benefit3: "Enterprise-grade security",
-            benefit4: "24/7 support included",
-            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.",
-            project4_title: "Educational Facility Access",
-            project4_desc: "School access control with visitor management and emergency lockdown",
-            project4_stat1: "School",
-            project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock",
-            access_points: "Access Points",
-            system_status: "System Status",
-            active_users: "Active Users",
-            smart_solutions: "Smart Access Control Solutions",
-            control_panel: "Access Control Panel",
-            status_online: "ONLINE",
-            log_entry_main: "John Doe - Main Entrance",
-            avg_response: "Avg Response Time",
-            issue_resolution: "Issue Resolution",
-            support_available: "Support Available",
-            system_health: "System Health Monitor",
+            benefit1: "הערכת מערכת חינם",
+            benefit2: "מנעולים חכמים",
+            benefit3: "בקרת גישה ביומטרית",
+            benefit4: "תמיכה 24/7 כלולה",
+            request_desc: "מוכנים לשלוט בגישה לנכס שלכם? מלאו את הטופס ומומחי בקרת הגישה שלנו יצרו קשר תוך 24 שעות כדי לתכנן מערכת בקרת גישה מותאמת לצרכים שלכם.",
+            project4_title: "גישה למוסד חינוכי",
+            project4_desc: "בקרת גישה לבית ספר עם ניהול מבקרים ונעילת חירום",
+            project4_stat1: "בית ספר",
+            project4_stat2: "בקרת מבקרים",
+            project4_stat3: "נעילת חירום",
+            access_points: "נקודות גישה",
+            secure: "מאובטח",
+            system_status: "סטטוס מערכת",
+            active_users: "משתמשים פעילים",
+            unknown_card: "כרטיס לא מזוהה - דלת צדדית",
+            jane_smith: "יוחנן כהן - משרד 201",
+            card_reader: "קורא כרטיסים",
+            biometric: "ביומטרי",
+            mobile_app: "אפליקציה",
+            cloud_management: "+ ניהול ענן",
+            backup_methods: "+ שיטות גיבוי",
+            reports_analytics: "+ דוחות וניתוח",
+            locks_installed: "מנעולים מותקנים",
+            system_availability: "זמינות מערכת",
+            unauthorized_access: "גישה לא מורשית",
+            installation_process: "תהליך התקנת מערכת בקרת גישה",
+            smart_solutions: "פתרונות בקרת גישה חכמים",
+            control_panel: "לוח בקרת גישה",
+            status_online: "מקוון",
+            log_entry_main: "יוחנן כהן - כניסה ראשית",
+            avg_response: "זמן תגובה ממוצע",
+            issue_resolution: "פתרון תקלות",
+            support_available: "תמיכה זמינה",
+            system_health: "ניטור תקינות מערכת",
             status_excellent: "מצוין",
             // --- Support new keys ---
             support_available: "תמיכה 24/7 זמינה",
@@ -854,31 +1111,47 @@ window.serviceTranslations = {
             project3_desc: "שדרוג ועדכון מערכת רשת תאגידית מלאה",
             ready_to_maintain: "מוכנים לשמור על המערכות שלכם?",
             cta_description: "צרו קשר היום לשירותי תמיכה ותחזוקה מקצועיים",
-            request_title: "Request Title",
+            request_title: "כותרת הבקשה",
             form: {
-                service_type_label: "Service Type"
+                service_type_label: "סוג שירות",
+                service_type_placeholder: "בחר שירות תמיכה",
+                service_type_option: "בחר שירות",
+                service_type_option1: "חוזה תחזוקה",
+                service_type_option2: "תיקון חירום",
+                service_type_option3: "עדכוני מערכת",
+                service_type_option4: "תמיכה טכנית",
+                service_type_option5: "אופטימיזציית ביצועים",
+                service_type_option6: "הדרכת משתמשים",
+                full_name_label: "שם מלא",
+                full_name_placeholder: "הכנס שם מלא",
+                phone_label: "מספר טלפון",
+                phone_placeholder: "הכנס טלפון",
+                email_label: "אימייל",
+                email_placeholder: "הכנס אימייל",
+                location_label: "מיקום שירות",
+                location_placeholder: "עיר, אזור או כתובת מלאה"
             },
-            benefit1: "Free network assessment",
-            benefit2: "Performance optimization",
-            benefit3: "Enterprise-grade security",
-            benefit4: "24/7 support included",
-            request_desc: "Ready to upgrade your network infrastructure? Fill out the form and our network engineers will contact you within 24 hours to discuss your networking needs and create a custom solution.",
-            project4_title: "Educational Facility Access",
-            project4_desc: "School access control with visitor management and emergency lockdown",
-            project4_stat1: "School",
-            project4_stat2: "Visitor Control",
-            project4_stat3: "Emergency Lock",
-            access_points: "Access Points",
-            system_status: "System Status",
-            active_users: "Active Users",
-            smart_solutions: "Smart Access Control Solutions",
-            control_panel: "Access Control Panel",
-            status_online: "ONLINE",
-            log_entry_main: "John Doe - Main Entrance",
-            avg_response: "Avg Response Time",
-            issue_resolution: "Issue Resolution",
-            support_available: "Support Available",
-            system_health: "System Health Monitor",
+            benefit1: "הערכת מערכת חינם",
+            benefit2: "תמיכה טכנית מקצועית",
+            benefit3: "תחזוקה שוטפת כלולה",
+            benefit4: "שירות 24/7 זמין",
+            request_desc: "מוכנים לשמור על המערכות שלכם? מלאו את הטופס והטכנאים שלנו יצרו קשר תוך 24 שעות כדי לדון בצרכי התחזוקה שלכם ולספק שירות מותאם אישית.",
+            project4_title: "גישה למוסד חינוכי",
+            project4_desc: "בקרת גישה לבית ספר עם ניהול מבקרים ונעילת חירום",
+            project4_stat1: "בית ספר",
+            project4_stat2: "בקרת מבקרים",
+            project4_stat3: "נעילת חירום",
+            access_points: "נקודות גישה",
+            system_status: "סטטוס מערכת",
+            active_users: "משתמשים פעילים",
+            smart_solutions: "פתרונות בקרת גישה חכמים",
+            control_panel: "לוח בקרת גישה",
+            status_online: "מקוון",
+            log_entry_main: "יוחנן כהן - כניסה ראשית",
+            avg_response: "זמן תגובה ממוצע",
+            issue_resolution: "פתרון תקלות",
+            support_available: "תמיכה זמינה",
+            system_health: "ניטור תקינות מערכת",
             status_excellent: "מצוין",
             // --- Support new keys ---
             support_available: "תמיכה 24/7 זמינה",
@@ -2031,271 +2304,116 @@ window.serviceTranslations.en.cybersecurity.monitoring_support = "Monitoring & S
 window.serviceTranslations.en.cybersecurity.monitoring_support_desc = "Continuous system monitoring, updates, and technical maintenance";
 window.serviceTranslations.he.cybersecurity.monitoring_support = "ניטור ותמיכה";
 window.serviceTranslations.he.cybersecurity.monitoring_support_desc = "ניטור ועדכונים שוטפים, תחזוקה טכנית";
-
-// === NETWORKING FORM ПЕРЕВОДЫ НА ИВРИТ ===
-window.serviceTranslations.he.networking.request_title = "בקשת שירותי רשתות";
-window.serviceTranslations.he.networking.request_desc = "מוכנים לשדרג את תשתית הרשת שלכם? מלאו את הטופס ומהנדסי הרשת שלנו ייצרו איתכם קשר תוך 24 שעות כדי לדון בצרכי הרשת שלכם וליצור פתרון מותאם אישית.";
-window.serviceTranslations.he.networking.benefit1 = "הערכת רשת חינם";
-window.serviceTranslations.he.networking.benefit2 = "אופטימיזציית ביצועים";
-window.serviceTranslations.he.networking.benefit3 = "אבטחה ברמה ארגונית";
-window.serviceTranslations.he.networking.benefit4 = "תמיכה 24/7 כלולה";
-
-// Form fields
-window.serviceTranslations.he.networking.service_type_label = "סוג שירות";
-window.serviceTranslations.he.networking.company_label = "שם חברה";
-window.serviceTranslations.he.networking.email_label = "כתובת אימייל";
-window.serviceTranslations.he.networking.phone_label = "מספר טלפון";
-window.serviceTranslations.he.networking.full_name_label = "שם מלא";
-window.serviceTranslations.he.networking.network_size_label = "גודל רשת";
-window.serviceTranslations.he.networking.current_infrastructure_label = "תשתית רשת נוכחית";
-window.serviceTranslations.he.networking.requirements_label = "דרישות רשת";
-window.serviceTranslations.he.networking.timeline_label = "לוח זמנים פרויקט";
-window.serviceTranslations.he.networking.budget_label = "טווח תקציב פרויקט";
-window.serviceTranslations.he.networking.submit_btn = "שלח בקשה";
-
 // ...
 
-// === ПОЛНЫЕ ПЕРЕВОДЫ ФОРМЫ NETWORKING.FORM.* ===
-// Form Labels
-window.serviceTranslations.he.networking.form = {};
-window.serviceTranslations.he.networking.form.service_type_label = "סוג שירות רשת";
-window.serviceTranslations.he.networking.form.full_name_label = "שם מלא";
-window.serviceTranslations.he.networking.form.phone_label = "מספר טלפון";
-window.serviceTranslations.he.networking.form.email_label = "כתובת אימייל";
-window.serviceTranslations.he.networking.form.company_label = "שם חברה";
-window.serviceTranslations.he.networking.form.network_size_label = "גודל רשת";
-window.serviceTranslations.he.networking.form.current_infrastructure_label = "תשתית רשת נוכחית";
-window.serviceTranslations.he.networking.form.requirements_label = "דרישות רשת";
-window.serviceTranslations.he.networking.form.timeline_label = "לוח זמנים פרויקט";
-window.serviceTranslations.he.networking.form.budget_label = "טווח תקציב פרויקט";
-window.serviceTranslations.he.networking.form.submit_btn = "שלח בקשה";
+// === ПОЛНЫЕ ПЕРЕВОДЫ ДЛЯ SUPPORT СТРАНИЦЫ ===
 
-// Placeholders
-window.serviceTranslations.he.networking.form.full_name_placeholder = "הכנס שם מלא";
-window.serviceTranslations.he.networking.form.phone_placeholder = "הכנס מספר טלפון";
-window.serviceTranslations.he.networking.form.email_placeholder = "הכנס כתובת אימייל";
-window.serviceTranslations.he.networking.form.company_placeholder = "הכנס שם חברה (אופציונלי)";
-window.serviceTranslations.he.networking.form.current_infrastructure_placeholder = "תאר את מערך הרשת הנוכחי שלך, ציוד וכל בעיות קיימות";
-window.serviceTranslations.he.networking.form.requirements_placeholder = "תאר את צרכי הרשת שלך: מהירות אינטרנט, מספר מכשירים, דרישות מיוחדות וכו'";
+// --- Main Support Content EN ---
+window.serviceTranslations.en.support.title = "Technical Support & Maintenance";
+window.serviceTranslations.en.support.subtitle = "Professional technical support and maintenance services for your IT infrastructure";
+window.serviceTranslations.en.support.avg_response = "Avg Response Time";
+window.serviceTranslations.en.support.what_we_do = "Technical Support & Maintenance";
+window.serviceTranslations.en.support.description = "We provide comprehensive technical support and maintenance services for all types of IT infrastructure, including computers, networks, security systems, and software solutions.";
 
-// Service Type Options
-window.serviceTranslations.he.networking.form.service_type_option = "בחר שירות";
-window.serviceTranslations.he.networking.form.service_type_option1 = "עיצוב רשת מותאם";
-window.serviceTranslations.he.networking.form.service_type_option2 = "התקנת רשת";
-window.serviceTranslations.he.networking.form.service_type_option3 = "שדרוג רשת";
-window.serviceTranslations.he.networking.form.service_type_option4 = "הקמת רשת אלחוטית";
-window.serviceTranslations.he.networking.form.service_type_option5 = "אבטחת רשת";
-window.serviceTranslations.he.networking.form.service_type_option6 = "אופטימיזציית ביצועים";
+// --- Service Categories EN ---
+window.serviceTranslations.en.support.design_planning = "System Analysis & Planning";
+window.serviceTranslations.en.support.design_desc = "Comprehensive analysis of your IT infrastructure and maintenance planning.";
+window.serviceTranslations.en.support.installation = "Hardware Support";
+window.serviceTranslations.en.support.installation_desc = "Professional repair and maintenance of computers, servers, and network equipment.";
+window.serviceTranslations.en.support.wireless = "Software Support";
+window.serviceTranslations.en.support.wireless_desc = "Software installation, updates, troubleshooting, and optimization.";
+window.serviceTranslations.en.support.optimization = "Network Maintenance";
+window.serviceTranslations.en.support.optimization_desc = "Network monitoring, configuration, and performance optimization.";
+window.serviceTranslations.en.support.security = "Security Support";
+window.serviceTranslations.en.support.security_desc = "Security system maintenance, updates, and incident response.";
+window.serviceTranslations.en.support.maintenance = "Preventive Maintenance";
+window.serviceTranslations.en.support.maintenance_desc = "Regular maintenance schedules to prevent system failures and downtime.";
 
-// Network Size Options
-window.serviceTranslations.he.networking.form.network_size_option = "בחר גודל רשת";
-window.serviceTranslations.he.networking.form.network_size_option1 = "משרד קטן (1-20 משתמשים)";
-window.serviceTranslations.he.networking.form.network_size_option2 = "עסק בינוני (21-100 משתמשים)";
-window.serviceTranslations.he.networking.form.network_size_option3 = "ארגון גדול (100+ משתמשים)";
-window.serviceTranslations.he.networking.form.network_size_option4 = "קמפוס רב מבנים";
-window.serviceTranslations.he.networking.form.network_size_option5 = "מרכז נתונים";
+// --- System Monitor EN ---
+window.serviceTranslations.en.support.system_health = "System Health Monitor";
+window.serviceTranslations.en.support.status_excellent = "EXCELLENT";
 
-// Timeline Options
-window.serviceTranslations.he.networking.form.timeline_option = "בחר לוח זמנים";
-window.serviceTranslations.he.networking.form.timeline_option1 = "דחוף (תוך שבוע)";
-window.serviceTranslations.he.networking.form.timeline_option2 = "בהקדם (תוך 2-4 שבועות)";
-window.serviceTranslations.he.networking.form.timeline_option3 = "תוך חודש";
-window.serviceTranslations.he.networking.form.timeline_option4 = "תוך 3 חודשים";
-window.serviceTranslations.he.networking.form.timeline_option5 = "לוח זמנים גמיש";
+// --- Projects EN ---
+window.serviceTranslations.en.support.recent_projects = "Recent Support & Maintenance Projects";
+window.serviceTranslations.en.support.project1_title = "Office IT Maintenance Contract";
+window.serviceTranslations.en.support.project1_desc = "Complete IT support and maintenance for 50-employee office";
+window.serviceTranslations.en.support.project1_stat1 = "Office Building";
+window.serviceTranslations.en.support.project1_stat2 = "50 Workstations";
+window.serviceTranslations.en.support.project1_stat3 = "Monthly Service";
+window.serviceTranslations.en.support.project2_title = "Network Infrastructure Support";
+window.serviceTranslations.en.support.project2_desc = "24/7 monitoring and maintenance of business network systems";
+window.serviceTranslations.en.support.project2_stat1 = "Network Support";
+window.serviceTranslations.en.support.project2_stat2 = "24/7 Monitoring";
+window.serviceTranslations.en.support.project2_stat3 = "99.9% Uptime";
+window.serviceTranslations.en.support.project3_title = "Security System Maintenance";
+window.serviceTranslations.en.support.project3_desc = "Regular maintenance of cameras and access control systems";
+window.serviceTranslations.en.support.project3_stat1 = "20 Cameras";
+window.serviceTranslations.en.support.project3_stat2 = "Access Control";
+window.serviceTranslations.en.support.project3_stat3 = "Quarterly Service";
+window.serviceTranslations.en.support.project4_title = "Emergency Repair Services";
+window.serviceTranslations.en.support.project4_desc = "Critical server recovery and data backup restoration";
+window.serviceTranslations.en.support.project4_stat1 = "Server Recovery";
+window.serviceTranslations.en.support.project4_stat2 = "2-Hour Response";
+window.serviceTranslations.en.support.project4_stat3 = "Data Restored";
 
-// Budget Options
-window.serviceTranslations.he.networking.form.budget_option = "בחר טווח תקציב";
-window.serviceTranslations.he.networking.form.budget_option1 = "מתחת ל-$5,000";
-window.serviceTranslations.he.networking.form.budget_option2 = "$5,000 - $15,000";
-window.serviceTranslations.he.networking.form.budget_option3 = "$15,000 - $50,000";
-window.serviceTranslations.he.networking.form.budget_option4 = "$50,000 - $100,000";
-window.serviceTranslations.he.networking.form.budget_option5 = "מעל $100,000";
-window.serviceTranslations.he.networking.form.budget_option6 = "זקוק ליעוץ";
+// --- Form Benefits EN ---
+window.serviceTranslations.en.support.request_desc = "Need reliable technical support? Fill out the form and our support team will contact you within 24 hours to discuss your maintenance needs and support options.";
+window.serviceTranslations.en.support.benefit1 = "Free system assessment";
+window.serviceTranslations.en.support.benefit2 = "Flexible maintenance schedules";
+window.serviceTranslations.en.support.benefit3 = "Fast emergency response";
+window.serviceTranslations.en.support.benefit4 = "User training included";
 
-// === FOOTER COPYRIGHT ===
-window.serviceTranslations.en.footer = {};
-window.serviceTranslations.en.footer.copyright = "© 2025 SubNet Group. All rights reserved.";
+// --- Main Support Content HE ---
+window.serviceTranslations.he.support.title = "תמיכה טכנית ותחזוקה";
+window.serviceTranslations.he.support.subtitle = "שירותי תמיכה טכנית ותחזוקה מקצועיים לתשתית ה-IT שלכם";
+window.serviceTranslations.he.support.avg_response = "זמן תגובה ממוצע";
+window.serviceTranslations.he.support.what_we_do = "תמיכה טכנית ותחזוקה";
+window.serviceTranslations.he.support.description = "אנו מספקים שירותי תמיכה טכנית ותחזוקה מקיפים לכל סוגי תשתיות ה-IT, כולל מחשבים, רשתות, מערכות אבטחה ופתרונות תוכנה.";
 
-window.serviceTranslations.he.footer = {};
-window.serviceTranslations.he.footer.copyright = "© 2025 SubNet Group כל הזכויות שמורות";
+// --- Service Categories HE ---
+window.serviceTranslations.he.support.design_planning = "ניתוח מערכות ותכנון";
+window.serviceTranslations.he.support.design_desc = "ניתוח מקיף של תשתית ה-IT שלכם ותכנון תחזוקה.";
+window.serviceTranslations.he.support.installation = "תמיכה בחומרה";
+window.serviceTranslations.he.support.installation_desc = "תיקון ותחזוקה מקצועיים של מחשבים, שרתים וציוד רשת.";
+window.serviceTranslations.he.support.wireless = "תמיכה בתוכנה";
+window.serviceTranslations.he.support.wireless_desc = "התקנת תוכנות, עדכונים, פתרון בעיות ואופטימיזציה.";
+window.serviceTranslations.he.support.optimization = "תחזוקת רשתות";
+window.serviceTranslations.he.support.optimization_desc = "ניטור רשתות, הגדרות ואופטימיזציית ביצועים.";
+window.serviceTranslations.he.support.security = "תמיכה באבטחה";
+window.serviceTranslations.he.support.security_desc = "תחזוקת מערכות אבטחה, עדכונים ותגובה לאירועים.";
+window.serviceTranslations.he.support.maintenance = "תחזוקה מונעת";
+window.serviceTranslations.he.support.maintenance_desc = "לוחות תחזוקה קבועים למניעת כשלים והפסקות במערכת.";
 
-// ...
+// --- System Monitor HE ---
+window.serviceTranslations.he.support.system_health = "ניטור בריאות המערכת";
+window.serviceTranslations.he.support.status_excellent = "מעולה";
 
-// === CYBERSECURITY INTERFACE ПЕРЕВОДЫ ===
-window.serviceTranslations.en.cybersecurity.sub_title = "& Security Systems";
-window.serviceTranslations.en.cybersecurity.active_cameras = "Active Cameras";
-window.serviceTranslations.en.cybersecurity.recording = "Recording";
-window.serviceTranslations.en.cybersecurity.threat_level = "Threat Level";
-window.serviceTranslations.en.cybersecurity.camera_entrance = "Entrance";
-window.serviceTranslations.en.cybersecurity.camera_parking = "Parking";
-window.serviceTranslations.en.cybersecurity.camera_office = "Office";
-window.serviceTranslations.en.cybersecurity.stat_cameras = "Cameras Installed";
-window.serviceTranslations.en.cybersecurity.stat_uptime = "Uptime";
-window.serviceTranslations.en.cybersecurity.stat_missed = "Missed Events";
-window.serviceTranslations.en.cybersecurity.project2_title = "Office Building Security";
-window.serviceTranslations.en.cybersecurity.project2_desc = "Multi-floor office surveillance with access control integration";
-window.serviceTranslations.en.cybersecurity.project3_title = "Retail Store Surveillance";
-window.serviceTranslations.en.cybersecurity.project3_desc = "Comprehensive retail security with POS integration";
-window.serviceTranslations.en.cybersecurity.project4_title = "Warehouse Security System";
-window.serviceTranslations.en.cybersecurity.project4_desc = "Large area coverage with PTZ cameras and perimeter monitoring";
+// --- Projects HE ---
+window.serviceTranslations.he.support.recent_projects = "פרויקטי תמיכה ותחזוקה אחרונים";
+window.serviceTranslations.he.support.project1_title = "חוזה תחזוקת IT למשרד";
+window.serviceTranslations.he.support.project1_desc = "תמיכה ותחזוקת IT מלאה למשרד בן 50 עובדים";
+window.serviceTranslations.he.support.project1_stat1 = "בניין משרדים";
+window.serviceTranslations.he.support.project1_stat2 = "50 תחנות עבודה";
+window.serviceTranslations.he.support.project1_stat3 = "שירות חודשי";
+window.serviceTranslations.he.support.project2_title = "תמיכה בתשתית רשתות";
+window.serviceTranslations.he.support.project2_desc = "ניטור ותחזוקה 24/7 של מערכות רשת עסקיות";
+window.serviceTranslations.he.support.project2_stat1 = "תמיכה ברשתות";
+window.serviceTranslations.he.support.project2_stat2 = "ניטור 24/7";
+window.serviceTranslations.he.support.project2_stat3 = "זמינות 99.9%";
+window.serviceTranslations.he.support.project3_title = "תחזוקת מערכות אבטחה";
+window.serviceTranslations.he.support.project3_desc = "תחזוקה שוטפת של מצלמות ומערכות בקרת גישה";
+window.serviceTranslations.he.support.project3_stat1 = "20 מצלמות";
+window.serviceTranslations.he.support.project3_stat2 = "בקרת גישה";
+window.serviceTranslations.he.support.project3_stat3 = "שירות רבעוני";
+window.serviceTranslations.he.support.project4_title = "שירותי תיקון חירום";
+window.serviceTranslations.he.support.project4_desc = "שחזור שרתים קריטיים ושחזור גיבוי נתונים";
+window.serviceTranslations.he.support.project4_stat1 = "שחזור שרת";
+window.serviceTranslations.he.support.project4_stat2 = "תגובה תוך שעתיים";
+window.serviceTranslations.he.support.project4_stat3 = "שחזור נתונים";
 
-// CYBERSECURITY FORM ENGLISH
-window.serviceTranslations.en.cybersecurity.form = {
-    service_type_label: "Surveillance Type",
-    full_name_label: "Full Name",
-    phone_label: "Phone Number", 
-    email_label: "Email Address",
-    location_label: "Property Location",
-    property_type_label: "Property Type",
-    area_size_label: "Area to Monitor",
-    camera_count_label: "Estimated Number of Cameras",
-    features_label: "Required Features",
-    description_label: "Security Concerns",
-    budget_label: "Budget Range",
-    submit_btn: "Request Security Quote",
-    // Placeholders
-    full_name_placeholder: "Enter your full name",
-    phone_placeholder: "Enter phone number",
-    email_placeholder: "Enter email address",
-    location_placeholder: "City, area or full address",
-    area_size_placeholder: "e.g., 2-story house, 500 sqm office, parking lot",
-    features_placeholder: "e.g., night vision, remote access, motion alerts, facial recognition",
-    description_placeholder: "Describe what you want to monitor and any specific security concerns",
-    // Service Type Options
-    service_type_option: "Select Service",
-    service_type_option1: "Home Security System",
-    service_type_option2: "Business Surveillance",
-    service_type_option3: "Camera System Upgrade",
-    service_type_option4: "Remote Monitoring Setup",
-    service_type_option5: "System Maintenance",
-    // Property Type Options
-    property_type_option: "Select Property Type",
-    property_type_option1: "Residential Home",
-    property_type_option2: "Apartment/Condo",
-    property_type_option3: "Office Building",
-    property_type_option4: "Retail Store",
-    property_type_option5: "Warehouse/Industrial",
-    property_type_option6: "Restaurant/Hospitality",
-    // Camera Count Options
-    camera_count_option: "Select Camera Count",
-    camera_count_option1: "1-4 Cameras",
-    camera_count_option2: "5-8 Cameras",
-    camera_count_option3: "9-16 Cameras",
-    camera_count_option4: "17-32 Cameras",
-    camera_count_option5: "32+ Cameras",
-    // Budget Options
-    budget_option: "Select Budget Range",
-    budget_option1: "Under $1,000",
-    budget_option2: "$1,000 - $2,500",
-    budget_option3: "$2,500 - $5,000",
-    budget_option4: "$5,000 - $10,000",
-    budget_option5: "Over $10,000"
-};
-
-// CYBERSECURITY REQUEST BLOCK ENGLISH
-window.serviceTranslations.en.cybersecurity.request_title = "Request Video Surveillance (CCTV) Service";
-window.serviceTranslations.en.cybersecurity.request_desc = "Ready to secure your property? Fill out the form and our security experts will contact you within 24 hours for a free consultation and quote.";
-window.serviceTranslations.en.cybersecurity.benefit1 = "Free security assessment";
-window.serviceTranslations.en.cybersecurity.benefit2 = "Custom camera placement plan";
-window.serviceTranslations.en.cybersecurity.benefit3 = "Professional installation warranty";
-window.serviceTranslations.en.cybersecurity.benefit4 = "Ongoing technical support";
-
-// CYBERSECURITY PROJECTS ENGLISH
-window.serviceTranslations.en.cybersecurity.project1_title = "Residential Security System";
-window.serviceTranslations.en.cybersecurity.project1_desc = "Complete home surveillance with 8 cameras and mobile access";
-window.serviceTranslations.en.cybersecurity.project1_stat1 = "Private Home";
-window.serviceTranslations.en.cybersecurity.project1_stat2 = "8 Cameras";
-window.serviceTranslations.en.cybersecurity.project1_stat3 = "24/7 Recording";
-window.serviceTranslations.en.cybersecurity.project4_stat1 = "Warehouse";
-window.serviceTranslations.en.cybersecurity.project4_stat2 = "20 Cameras";
-window.serviceTranslations.en.cybersecurity.project4_stat3 = "PTZ Control";
-
-window.serviceTranslations.he.cybersecurity.sub_title = "ומערכות אבטחה";
-window.serviceTranslations.he.cybersecurity.active_cameras = "מצלמות פעילות";
-window.serviceTranslations.he.cybersecurity.recording = "מקליט";
-window.serviceTranslations.he.cybersecurity.threat_level = "רמת איום";
-window.serviceTranslations.he.cybersecurity.camera_entrance = "כניסה";
-window.serviceTranslations.he.cybersecurity.camera_parking = "חניה";
-window.serviceTranslations.he.cybersecurity.camera_office = "משרד";
-window.serviceTranslations.he.cybersecurity.stat_cameras = "מצלמות מותקנות";
-window.serviceTranslations.he.cybersecurity.stat_uptime = "זמן פעילות";
-window.serviceTranslations.he.cybersecurity.stat_missed = "אירועים שהוחמצו";
-window.serviceTranslations.he.cybersecurity.project2_title = "אבטחה לבניין משרדים";
-window.serviceTranslations.he.cybersecurity.project2_desc = "מעקב משרדי רב-קומות עם אינטגרציה לבקרת גישה";
-window.serviceTranslations.he.cybersecurity.project3_title = "מעקב לחנות קמעונאות";
-window.serviceTranslations.he.cybersecurity.project3_desc = "אבטחה מקיפה לחנות עם אינטגרציה למערכת POS";
-window.serviceTranslations.he.cybersecurity.project4_title = "מערכת אבטחה למחסן";
-window.serviceTranslations.he.cybersecurity.project4_desc = "כיסוי שטח נרחב עם מצלמות PTZ וניטור היקפי";
-
-// CYBERSECURITY FORM HEBREW
-window.serviceTranslations.he.cybersecurity.form = {
-    service_type_label: "סוג מעקב",
-    full_name_label: "שם מלא",
-    phone_label: "מספר טלפון",
-    email_label: "כתובת אימייל", 
-    location_label: "מיקום הנכס",
-    property_type_label: "סוג נכס",
-    area_size_label: "אזור לניטור",
-    camera_count_label: "מספר מצלמות משוער",
-    features_label: "תכונות נדרשות",
-    description_label: "דאגות אבטחה",
-    budget_label: "טווח תקציב",
-    submit_btn: "בקש הצעת מחיר",
-    // Placeholders
-    full_name_placeholder: "הכנס שם מלא",
-    phone_placeholder: "הכנס מספר טלפון",
-    email_placeholder: "הכנס כתובת אימייל",
-    location_placeholder: "עיר, אזור או כתובת מלאה",
-    area_size_placeholder: "לדוגמה: בית דו-קומתי, משרד 500 מ\"ר, חניה",
-    features_placeholder: "לדוגמה: ראיית לילה, גישה מרחוק, התראות תנועה, זיהוי פנים",
-    description_placeholder: "תאר מה ברצונך לנטר ודאגות אבטחה ספציפיות",
-    // Service Type Options
-    service_type_option: "בחר שירות",
-    service_type_option1: "מערכת אבטחה לבית",
-    service_type_option2: "מעקב עסקי",
-    service_type_option3: "שדרוג מערכת מצלמות",
-    service_type_option4: "הקמת ניטור מרחוק", 
-    service_type_option5: "תחזוקת מערכת",
-    // Property Type Options
-    property_type_option: "בחר סוג נכס",
-    property_type_option1: "בית מגורים",
-    property_type_option2: "דירה/משכונת",
-    property_type_option3: "בניין משרדים",
-    property_type_option4: "חנות קמעונאות",
-    property_type_option5: "מחסן/תעשייה",
-    property_type_option6: "מסעדה/הכנסת אורחים",
-    // Camera Count Options
-    camera_count_option: "בחר מספר מצלמות",
-    camera_count_option1: "1-4 מצלמות",
-    camera_count_option2: "5-8 מצלמות",
-    camera_count_option3: "9-16 מצלמות",
-    camera_count_option4: "17-32 מצלמות",
-    camera_count_option5: "32+ מצלמות",
-    // Budget Options
-    budget_option: "בחר טווח תקציב",
-    budget_option1: "מתחת ל-$1,000",
-    budget_option2: "$1,000 - $2,500",
-    budget_option3: "$2,500 - $5,000",
-    budget_option4: "$5,000 - $10,000",
-    budget_option5: "מעל $10,000"
-};
-
-// CYBERSECURITY REQUEST BLOCK HEBREW
-window.serviceTranslations.he.cybersecurity.request_title = "בקש שירותי מעקב וידאו (CCTV)";
-window.serviceTranslations.he.cybersecurity.request_desc = "מוכן לאבטח את הנכס שלך? מלא את הטופס ומומחי האבטחה שלנו ייצרו איתך קשר תוך 24 שעות לייעוץ והצעת מחיר חינם.";
-window.serviceTranslations.he.cybersecurity.benefit1 = "הערכת אבטחה חינם";
-window.serviceTranslations.he.cybersecurity.benefit2 = "תכנון מיקום מצלמות מותאם";
-window.serviceTranslations.he.cybersecurity.benefit3 = "אחריות התקנה מקצועית";
-window.serviceTranslations.he.cybersecurity.benefit4 = "תמיכה טכנית שוטפת";
-
-// CYBERSECURITY PROJECTS HEBREW
-window.serviceTranslations.he.cybersecurity.project1_title = "מערכת אבטחה למגורים";
-window.serviceTranslations.he.cybersecurity.project1_desc = "מעקב בית מלא עם 8 מצלמות וגישה נוידת";
-window.serviceTranslations.he.cybersecurity.project1_stat1 = "בית פרטי";
-window.serviceTranslations.he.cybersecurity.project1_stat2 = "8 מצלמות";
-window.serviceTranslations.he.cybersecurity.project1_stat3 = "הקלטה 24/7";
-window.serviceTranslations.he.cybersecurity.project4_stat1 = "מחסן";
-window.serviceTranslations.he.cybersecurity.project4_stat2 = "20 מצלמות";
-window.serviceTranslations.he.cybersecurity.project4_stat3 = "שליטה PTZ";
-
-// ...
+// --- Form Benefits HE ---
+window.serviceTranslations.he.support.request_desc = "צריכים תמיכה טכנית אמינה? מלאו את הטופס וצוות התמיכה שלנו יפנה אליכם תוך 24 שעות כדי לדון בצרכי התחזוקה ובאפשרויות התמיכה שלכם.";
+window.serviceTranslations.he.support.benefit1 = "הערכת מערכת חינם";
+window.serviceTranslations.he.support.benefit2 = "לוחות תחזוקה גמישים";
+window.serviceTranslations.he.support.benefit3 = "תגובה מהירה לחירום";
+window.serviceTranslations.he.support.benefit4 = "הכשרת משתמשים כלולה";
