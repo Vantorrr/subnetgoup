@@ -1997,6 +1997,79 @@ window.serviceTranslations.he.monitoring.system_configuration = "הגדרת מע
 window.serviceTranslations.he.monitoring.system_configuration_desc = "הגדרת משתמשים, הרשאות גישה ואינטגרציה לאפליקציה";
 window.serviceTranslations.he.monitoring.support_monitoring = "תמיכה וניטור";
 window.serviceTranslations.he.monitoring.support_monitoring_desc = "ניטור ועדכונים שוטפים, תחזוקה טכנית";
+
+// MONITORING DASHBOARD INTERFACE - ENGLISH
+window.serviceTranslations.en.monitoring.access_points = "Access Points";
+window.serviceTranslations.en.monitoring.active_users = "Active Users";
+window.serviceTranslations.en.monitoring.secure = "SECURE";
+window.serviceTranslations.en.monitoring.system_status = "System Status";
+window.serviceTranslations.en.monitoring.smart_solutions = "Smart Access Control Solutions";
+window.serviceTranslations.en.monitoring.control_panel = "Access Control Panel";
+window.serviceTranslations.en.monitoring.status_online = "ONLINE";
+window.serviceTranslations.en.monitoring.log_entry_main = "John Doe - Main Entrance";
+window.serviceTranslations.en.monitoring.unknown_card = "Unknown Card - Side Door";
+window.serviceTranslations.en.monitoring.jane_smith = "Jane Smith - Office 201";
+window.serviceTranslations.en.monitoring.card_reader = "Card Reader";
+window.serviceTranslations.en.monitoring.biometric = "Biometric";
+window.serviceTranslations.en.monitoring.mobile_app = "Mobile App";
+window.serviceTranslations.en.monitoring.cloud_management = "+ Cloud Management";
+window.serviceTranslations.en.monitoring.backup_methods = "+ Backup Methods";
+window.serviceTranslations.en.monitoring.reports_analytics = "+ Reports & Analytics";
+window.serviceTranslations.en.monitoring.locks_installed = "Locks Installed";
+window.serviceTranslations.en.monitoring.system_availability = "System Availability";
+window.serviceTranslations.en.monitoring.unauthorized_access = "Unauthorized Access";
+window.serviceTranslations.en.monitoring.installation_process = "Access Control System Installation Process";
+
+// MONITORING REQUEST BLOCK ENGLISH
+window.serviceTranslations.en.monitoring.request_title = "Request Access Control Service";
+window.serviceTranslations.en.monitoring.request_desc = "Ready to upgrade your security? Fill out the form and our access control experts will contact you within 24 hours for a free consultation and system design.";
+window.serviceTranslations.en.monitoring.benefit1 = "Free security assessment";
+window.serviceTranslations.en.monitoring.benefit2 = "Custom access control design";
+window.serviceTranslations.en.monitoring.benefit3 = "Professional installation warranty";
+window.serviceTranslations.en.monitoring.benefit4 = "User training and support";
+
+// ACCESS METHODS PLACEHOLDER
+window.serviceTranslations.en.monitoring.form = window.serviceTranslations.en.monitoring.form || {};
+window.serviceTranslations.en.monitoring.form.access_methods_placeholder = "e.g., key cards, mobile app, PIN codes, fingerprint, facial recognition";
+window.serviceTranslations.en.monitoring.form.description_placeholder = "Describe your security needs, current access issues, or specific requirements";
+window.serviceTranslations.en.monitoring.form.integration_placeholder = "Do you need integration with video surveillance, alarm systems, or building management?";
+
+// MONITORING DASHBOARD INTERFACE - HEBREW
+window.serviceTranslations.he.monitoring.access_points = "נקודות גישה";
+window.serviceTranslations.he.monitoring.active_users = "משתמשים פעילים";
+window.serviceTranslations.he.monitoring.secure = "מאובטח";
+window.serviceTranslations.he.monitoring.system_status = "סטטוס מערכת";
+window.serviceTranslations.he.monitoring.smart_solutions = "פתרונות בקרת גישה חכמים";
+window.serviceTranslations.he.monitoring.control_panel = "פאנל בקרת גישה";
+window.serviceTranslations.he.monitoring.status_online = "מחובר";
+window.serviceTranslations.he.monitoring.log_entry_main = "ג'ון דו - כניסה ראשית";
+window.serviceTranslations.he.monitoring.unknown_card = "כרטיס לא מוכר - דלת צדדית";
+window.serviceTranslations.he.monitoring.jane_smith = "ג'יין סמית' - משרד 201";
+window.serviceTranslations.he.monitoring.card_reader = "קורא כרטיסים";
+window.serviceTranslations.he.monitoring.biometric = "ביומטרי";
+window.serviceTranslations.he.monitoring.mobile_app = "אפליקציה ניידת";
+window.serviceTranslations.he.monitoring.cloud_management = "+ ניהול ענן";
+window.serviceTranslations.he.monitoring.backup_methods = "+ שיטות גיבוי";
+window.serviceTranslations.he.monitoring.reports_analytics = "+ דוחות ואנליטיקה";
+window.serviceTranslations.he.monitoring.locks_installed = "מנעולים מותקנים";
+window.serviceTranslations.he.monitoring.system_availability = "זמינות מערכת";
+window.serviceTranslations.he.monitoring.unauthorized_access = "גישה לא מורשית";
+window.serviceTranslations.he.monitoring.installation_process = "תהליך התקנת מערכת בקרת גישה";
+
+// MONITORING REQUEST BLOCK HEBREW
+window.serviceTranslations.he.monitoring.request_title = "בקש שירותי בקרת גישה";
+window.serviceTranslations.he.monitoring.request_desc = "מוכן לשדרג את האבטחה שלך? מלא את הטופס ומומחי בקרת הגישה שלנו ייצרו איתך קשר תוך 24 שעות לייעוץ חינם ועיצוב מערכת.";
+window.serviceTranslations.he.monitoring.benefit1 = "הערכת אבטחה חינם";
+window.serviceTranslations.he.monitoring.benefit2 = "תכנון בקרת גישה מותאם";
+window.serviceTranslations.he.monitoring.benefit3 = "אחריות התקנה מקצועית";
+window.serviceTranslations.he.monitoring.benefit4 = "הדרכת משתמשים ותמיכה";
+
+// ACCESS METHODS PLACEHOLDER HEBREW
+window.serviceTranslations.he.monitoring.form = window.serviceTranslations.he.monitoring.form || {};
+window.serviceTranslations.he.monitoring.form.access_methods_placeholder = "לדוגמה: כרטיסי גישה, אפליקציה ניידת, קודי PIN, טביעת אצבע, זיהוי פנים";
+window.serviceTranslations.he.monitoring.form.description_placeholder = "תאר את צרכי האבטחה שלך, בעיות גישה נוכחיות או דרישות ספציפיות";
+window.serviceTranslations.he.monitoring.form.integration_placeholder = "האם אתה זקוק לאינטגרציה עם מעקב וידאו, מערכות אזעקה או ניהול מבנה?";
+
 // --- Support new keys ---
 window.serviceTranslations.en.support.support_available = "24/7 Support Available";
 window.serviceTranslations.en.support.support_available_desc = "Round-the-clock technical assistance when you need it most";

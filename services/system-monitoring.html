@@ -148,8 +148,8 @@
                             <div class="point-label" data-translate="monitoring.access_points">Access Points</div>
                         </div>
                         <div class="access-level">
-                            <div class="level-badge secure">SECURE</div>
-                            <div class="level-label">System Status</div>
+                            <div class="level-badge secure" data-translate="monitoring.secure">SECURE</div>
+                            <div class="level-label" data-translate="monitoring.system_status">System Status</div>
                         </div>
                         <div class="active-users">
                             <div class="user-count">15</div>
@@ -222,12 +222,12 @@
                                     </div>
                                     <div class="log-entry denied">
                                         <i class="fas fa-times-circle"></i>
-                                        <span>Unknown Card - Side Door</span>
+                                        <span data-translate="monitoring.unknown_card">Unknown Card - Side Door</span>
                                         <time>15:38</time>
                                     </div>
                                     <div class="log-entry granted">
                                         <i class="fas fa-check-circle"></i>
-                                        <span>Jane Smith - Office 201</span>
+                                        <span data-translate="monitoring.jane_smith">Jane Smith - Office 201</span>
                                         <time>15:35</time>
                                     </div>
                                 </div>
@@ -235,17 +235,17 @@
                             <div class="access-methods">
                                 <div class="method-card active">
                                     <i class="fas fa-id-card"></i>
-                                    <span>Card Reader</span>
+                                    <span data-translate="monitoring.card_reader">Card Reader</span>
                                     <div class="method-status"></div>
                                 </div>
                                 <div class="method-card">
                                     <i class="fas fa-fingerprint"></i>
-                                    <span>Biometric</span>
+                                    <span data-translate="monitoring.biometric">Biometric</span>
                                     <div class="method-status"></div>
                                 </div>
                                 <div class="method-card">
                                     <i class="fas fa-mobile-alt"></i>
-                                    <span>Mobile App</span>
+                                    <span data-translate="monitoring.mobile_app">Mobile App</span>
                                     <div class="method-status"></div>
                                 </div>
                             </div>
@@ -260,7 +260,7 @@
                             <div class="card-content">
                                 <h4 data-translate="monitoring.mobile_app_control">Mobile App Control</h4>
                                 <p data-translate="monitoring.mobile_app_control_desc">Control all locks and access points remotely from your smartphone</p>
-                                <div class="service-badge access-badge-green">+ Cloud Management</div>
+                                <div class="service-badge access-badge-green" data-translate="monitoring.cloud_management">+ Cloud Management</div>
                             </div>
                             <div class="card-glow access-glow"></div>
                         </div>
@@ -271,7 +271,7 @@
                             <div class="card-content">
                                 <h4 data-translate="monitoring.multiple_access_methods">Multiple Access Methods</h4>
                                 <p data-translate="monitoring.multiple_access_methods_desc">Key cards, PIN codes, biometrics, and mobile credentials</p>
-                                <div class="service-badge access-badge-green">+ Backup Methods</div>
+                                <div class="service-badge access-badge-green" data-translate="monitoring.backup_methods">+ Backup Methods</div>
                             </div>
                             <div class="card-glow access-glow"></div>
                         </div>
@@ -282,7 +282,7 @@
                             <div class="card-content">
                                 <h4 data-translate="monitoring.access_logging">Access Logging</h4>
                                 <p data-translate="monitoring.access_logging_desc">Complete audit trail of all entry and exit activities</p>
-                                <div class="service-badge access-badge-green">+ Reports & Analytics</div>
+                                <div class="service-badge access-badge-green" data-translate="monitoring.reports_analytics">+ Reports & Analytics</div>
                             </div>
                             <div class="card-glow access-glow"></div>
                         </div>
@@ -292,15 +292,15 @@
                     <div class="access-stats">
                         <div class="stat-item">
                             <div class="stat-number access-number">200+</div>
-                            <div class="stat-label">Locks Installed</div>
+                            <div class="stat-label" data-translate="monitoring.locks_installed">Locks Installed</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number access-number">99.9%</div>
-                            <div class="stat-label">System Availability</div>
+                            <div class="stat-label" data-translate="monitoring.system_availability">System Availability</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number access-number">0</div>
-                            <div class="stat-label">Unauthorized Access</div>
+                            <div class="stat-label" data-translate="monitoring.unauthorized_access">Unauthorized Access</div>
                         </div>
                     </div>
                 </div>
@@ -309,7 +309,7 @@
                 <div class="service-process access-process">
                     <h3 class="process-title access-process-title">
                         <i class="fas fa-cogs"></i>
-                        Access Control System Installation Process
+                        <span data-translate="monitoring.installation_process">Access Control System Installation Process</span>
                     </h3>
                     <div class="process-steps">
                         <div class="step-item access-step">
@@ -515,15 +515,15 @@
                         </div>
                         <div class="form-group">
                             <label for="access-methods" data-translate="monitoring.form.access_methods_label">Preferred Access Methods</label>
-                            <textarea id="access-methods" name="accessMethods" rows="3" data-translate-placeholder="monitoring.form.access_methods_placeholder">e.g., key cards, mobile app, PIN codes, fingerprint, facial recognition</textarea>
+                            <textarea id="access-methods" name="accessMethods" rows="3" data-translate-placeholder="monitoring.form.access_methods_placeholder"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="description" data-translate="monitoring.form.description_label">Access Control Requirements</label>
-                            <textarea id="description" name="description" rows="4" data-translate-placeholder="monitoring.form.description_placeholder">Describe your security needs, current access issues, or specific requirements</textarea>
+                            <textarea id="description" name="description" rows="4" data-translate-placeholder="monitoring.form.description_placeholder"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="integration" data-translate="monitoring.form.integration_label">Integration Needs</label>
-                            <textarea id="integration" name="integration" rows="2" data-translate-placeholder="monitoring.form.integration_placeholder">Do you need integration with video surveillance, alarm systems, or building management?</textarea>
+                            <textarea id="integration" name="integration" rows="2" data-translate-placeholder="monitoring.form.integration_placeholder"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="budget" data-translate="monitoring.form.budget_label">Budget Range</label>
@@ -549,7 +549,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p data-translate="footer.copyright">&copy; 2025 SubNet Group. All rights reserved.</p>
+            <p data-translate="footer.copyright">© 2025 SubNet Group. All rights reserved.</p>
         </div>
     </footer>
 
@@ -560,7 +560,7 @@
         </a>
     </div>
 
-    <script src="service-page.js?v=126&cybersecurity_projects_fixed=true"></script>
+    <script src="service-page.js?v=133&footer_copyright_dot_fixed=true"></script>
     <script src="../script.js?v=19"></script>
 </body>
 </html> 
