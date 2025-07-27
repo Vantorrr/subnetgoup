@@ -2196,6 +2196,7 @@ html[dir="ltr"] .contact-item {
     flex-direction: row !important; /* Icon left, text right */
     text-align: left !important;
     direction: ltr !important;
+    justify-content: flex-start !important; /* Align to LEFT */
 }
 
 body:not(.rtl-mode) .contact-item div,
@@ -2487,6 +2488,7 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
     cursor: pointer;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
+    gap: 15px !important;
 }
 
 .verification-checkbox input[type="checkbox"] {
