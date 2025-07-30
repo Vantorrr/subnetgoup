@@ -6352,7 +6352,7 @@ body.rtl-mode .fixed-hamburger {
 @media (max-width: 768px) {
   .nav-container .hamburger { display: none !important; }
   .nav-menu { display: none !important; }
-  .language-switcher { display: none !important; }
+  /* .language-switcher { display: none !important; } - УБРАНО! Теперь показываем на мобилке */
   
   .fixed-hamburger { 
     display: flex !important; 
@@ -6380,8 +6380,128 @@ body.rtl-mode .fixed-hamburger {
   }
 }
 
-@media (max-width: 400px) {
-  .offcanvas-menu { width: 100vw; min-width: 0; padding: 32px 10px 10px 10px; }
+@media (max-width: 900px) {
+  /* Убираем языки и старые элементы */
+  .language-switcher, .nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Красивый хедер - логотип слева + сексуальный гамбургер справа */
+  .nav-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 2rem !important;
+    direction: ltr !important;
+  }
+  
+  .logo {
+    display: flex !important;
+    order: 1 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* СЕКСУАЛЬНЫЙ ГАМБУРГЕР СПРАВА В ХЕДЕРЕ */
+  .hamburger, .fixed-hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: linear-gradient(135deg, #00d4ff, #0099cc) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    line-height: 1 !important;
+    margin-left: auto !important;
+    order: 2 !important;
+  }
+  
+  .hamburger:hover, .fixed-hamburger:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5) !important;
+    background: linear-gradient(135deg, #0099cc, #00d4ff) !important;
+  }
+  
+  .hamburger::before, .fixed-hamburger::before {
+    content: "≡" !important;
+    display: block !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .hamburger span, .fixed-hamburger span {
+    display: none !important;
+  }
+  
+  /* OFFCANVAS МЕНЮ */
+  .offcanvas-menu {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 300px !important;
+    height: 100vh !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 50, 100, 0.9)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-left: 2px solid rgba(0, 212, 255, 0.3) !important;
+    z-index: 1000 !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    padding: 80px 30px 30px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .offcanvas-menu.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    right: 0 !important;
+  }
+  
+  .menu-overlay {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Принудительно скрываем overflow */
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
 }
 
 /* По умолчанию скрываем фиксированный гамбургер и off-canvas меню */
