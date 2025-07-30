@@ -684,6 +684,52 @@ body {
     line-height: 1.4;
     position: relative;
     z-index: 10;
+    text-align: center !important;
+}
+
+/* RTL СПЕЦИАЛЬНЫЕ ПРАВИЛА ДЛЯ ЦЕНТРИРОВАНИЯ ЗАГОЛОВКОВ */
+html[lang="he"] .service-hero h1,
+html[dir="rtl"] .service-hero h1,
+.rtl-mode .service-hero h1,
+body.rtl-mode .service-hero h1,
+html[lang="he"] .security-title,
+html[dir="rtl"] .security-title,
+.rtl-mode .security-title,
+body.rtl-mode .security-title,
+html[lang="he"] .support-title,
+html[dir="rtl"] .support-title,
+.rtl-mode .support-title,
+body.rtl-mode .support-title,
+html[lang="he"] .access-title,
+html[dir="rtl"] .access-title,
+.rtl-mode .access-title,
+body.rtl-mode .access-title,
+html[lang="he"] .network-title,
+html[dir="rtl"] .network-title,
+.rtl-mode .network-title,
+body.rtl-mode .network-title {
+    text-align: center !important;
+    direction: ltr !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* RTL ЦЕНТРИРОВАНИЕ ДЛЯ HERO CONTENT */
+html[lang="he"] .hero-content,
+html[dir="rtl"] .hero-content,
+.rtl-mode .hero-content,
+body.rtl-mode .hero-content {
+    text-align: center !important;
+}
+
+/* RTL ЦЕНТРИРОВАНИЕ ТОЛЬКО ДЛЯ СЕТКИ (БЕЗ НАРУШЕНИЯ КАРТОЧЕК) */
+html[lang="he"] .services-grid,
+html[dir="rtl"] .services-grid,
+.rtl-mode .services-grid,
+body.rtl-mode .services-grid {
+    justify-content: center !important;
+    margin: 3rem auto 0 auto !important;
+    max-width: 1400px !important;
 }
 
 .service-hero h1::after {
@@ -942,7 +988,8 @@ body {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem;
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
+    max-width: 1400px;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -953,6 +1000,7 @@ body {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+        margin: 2rem auto 0 auto;
     }
 }
 
@@ -960,6 +1008,8 @@ body {
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        margin: 2rem auto 0 auto;
+        padding: 0 1rem;
     }
 }
 
@@ -1535,6 +1585,9 @@ body {
 
 .rtl-mode .services-grid {
     direction: rtl;
+    margin: 3rem auto 0 auto !important;
+    max-width: 1400px !important;
+    justify-content: center !important;
 }
 
 .rtl-mode .service-item {
@@ -3018,7 +3071,7 @@ body:not(.rtl-mode) .form-group textarea::placeholder {
 .security-title {
     font-size: 3.5rem;
     font-weight: 700;
-    text-align: center;
+    text-align: center !important;
     margin: 2rem 0;
 }
 
@@ -5669,9 +5722,9 @@ body.nav-open {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1rem !important;
         padding: 0 0.5rem !important;
-        margin: 1.5rem 0 !important;
+        margin: 1.5rem auto 0 auto !important;
         width: 100% !important;
-        margin-left: 0 !important;
+        max-width: 1400px !important;
     }
     
     .service-item {
@@ -5800,9 +5853,9 @@ body.nav-open {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    margin: 2rem 0;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    margin: 2rem auto 0 auto;
+    width: 100%;
+    max-width: 1400px;
     padding: 0 1.5rem;
     box-sizing: border-box;
 }
@@ -5835,7 +5888,7 @@ body.nav-open {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1rem !important;
         padding: 0 1rem !important;
-        margin: 1.5rem 0 !important;
+        margin: 1.5rem auto 0 auto !important;
         width: 100% !important;
         margin-left: 0 !important;
     }
@@ -5953,6 +6006,8 @@ body.nav-open {
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        margin: 2rem auto 0 auto !important;
+        max-width: 1400px !important;
     }
 }
 
@@ -6127,6 +6182,8 @@ body.nav-open {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin: 2rem auto 0 auto !important;
+    max-width: 1400px !important;
   }
   .service-item {
     min-width: 0;
@@ -6412,13 +6469,13 @@ html[dir="rtl"] .whatsapp-float {
 html[lang="he"] .nav-container,
 html[dir="rtl"] .nav-container,
 .rtl-mode .nav-container {
-    flex-direction: row-reverse !important;
+    direction: rtl !important;
 }
 
 html[lang="he"] .nav-menu,
 html[dir="rtl"] .nav-menu,
 .rtl-mode .nav-menu {
-    flex-direction: row-reverse !important;
+    direction: rtl !important;
     text-align: right !important;
 }
 

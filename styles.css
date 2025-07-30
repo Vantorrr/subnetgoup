@@ -828,9 +828,6 @@ body {
         transform: translateX(-50%) scaleX(1.3);
         filter: blur(1px);
     }
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
 }
 
 .services-grid {
@@ -3574,11 +3571,11 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
 }
 
 .rtl-mode .nav-container {
-    flex-direction: row-reverse;
+    direction: rtl;
 }
 
 .rtl-mode .nav-menu {
-    flex-direction: row-reverse;
+    direction: rtl;
 }
 
 .rtl-mode .hero-container {
@@ -5243,3 +5240,4 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   .offcanvas-menu { display: block !important; }
 
 @media (max-width: 900px) { .hamburger { display: none !important; } }
+}
