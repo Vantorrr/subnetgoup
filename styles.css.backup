@@ -1,10 +1,4 @@
-/* ========================================
-   SUBNET GROUP - CLEAN CSS (NO KOSTYLI!)
-   ======================================== */
-
-/* ========================================
-   RESET & BASE STYLES
-   ======================================== */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +7,6 @@
 
 html {
     scroll-behavior: smooth;
-    height: 100%;
 }
 
 body {
@@ -21,7 +14,6 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    background: #0a0f1a;
 }
 
 .container {
@@ -177,11 +169,8 @@ body {
 }
 
 .flag-icon {
-    width: 24px;
-    height: 18px;
+    font-size: 20px;
     display: block;
-    border-radius: 2px;
-    overflow: hidden;
 }
 
 /* Header */
@@ -223,12 +212,12 @@ body {
 }
 
 .logo-img {
-    width: 45px;
-    height: 45px;
+    width: 55px; /* БОЛЬШЕ! Был 40px → 55px */
+    height: 55px;
     object-fit: contain;
-    filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 4px rgba(0, 212, 255, 0.4));
+    filter: brightness(1.3) saturate(1.5) drop-shadow(0 0 8px rgba(0, 212, 255, 0.6)); /* БОЛЬШЕ ЭФФЕКТОВ */
     transition: all 0.3s ease;
-    border-radius: 6px;
+    border-radius: 8px; /* Скругление */
 }
 
 .logo-img:hover {
@@ -2725,37 +2714,76 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
 @media (max-width: 900px) {
     .nav-container {
         position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
     }
     
-    /* HIDE BOTH language switchers on mobile */
     .language-switcher {
-        display: none !important;
+        top: 15px;
+        right: 70px;
+        z-index: 1100;
     }
     
-    .header .language-switcher {
-        display: none !important;
-    }
-    
-    /* HIDE desktop navigation on mobile */
     .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(15, 20, 25, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Mobile Dropdown Styles */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(0, 212, 255, 0.1);
+        border: none;
+        border-radius: 8px;
+        margin: 1rem 0;
+        min-width: auto;
+        width: 90%;
+    }
+
+    .dropdown-item {
+        padding: 1rem 1.5rem;
+        margin: 0;
+        border-radius: 6px;
+    }
+
+    .dropdown-toggle i,
+    .dropdown-arrow {
         display: none;
     }
 
-    /* Logo STRICTLY LEFT */
-    .logo {
-        order: 0;
-        margin-right: auto;
+    .hamburger {
+        display: flex !important;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        z-index: 1050;
     }
 
-    .hamburger {
-        display: none !important;
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
-    
-    .fixed-hamburger {
-        display: flex !important;
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     /* HERO STYLES MOVED TO NEW SECTION BELOW */
@@ -2817,11 +2845,11 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
     }
 
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 1rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 1rem !important;
     }
     
     .service-card {
@@ -2934,11 +2962,11 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
     }
     
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 0.5rem;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 0.5rem !important;
     }
     
     .service-card {
@@ -3623,36 +3651,78 @@ body:not(.rtl-mode) .contact-form textarea::placeholder {
     direction: rtl;
 }
 
-/* RTL Contact Section */
-[dir="rtl"] .contact-item,
-.rtl-mode .contact-item {
-    flex-direction: row-reverse;
-    text-align: right;
-    direction: rtl;
+/* ===== MAXIMUM PRIORITY RTL CONTACT SECTION ===== */
+body.rtl-mode .contact-item,
+body.rtl-mode div.contact-item,
+html[lang="he"] .contact-item,
+html[lang="he"] div.contact-item,
+html[dir="rtl"] .contact-item,
+html[dir="rtl"] div.contact-item,
+.rtl-mode .contact-item,
+.rtl-mode div.contact-item {
+    flex-direction: row-reverse !important; /* Icon right, text left */
+    text-align: right !important;
+    direction: rtl !important;
+    justify-content: flex-start !important;
+    gap: 5rem !important; /* ОГРОМНЫЙ gap для иврита */
 }
 
-[dir="rtl"] .contact-item div,
-.rtl-mode .contact-item div {
-    text-align: right;
-    direction: rtl;
+body.rtl-mode .contact-item div,
+body.rtl-mode .contact-item > div,
+html[lang="he"] .contact-item div,
+html[lang="he"] .contact-item > div,
+html[dir="rtl"] .contact-item div,
+html[dir="rtl"] .contact-item > div,
+.rtl-mode .contact-item div,
+.rtl-mode .contact-item > div {
+    text-align: right !important;
+    direction: rtl !important;
+    width: 100% !important;
 }
 
-[dir="rtl"] .contact-item h4,
-.rtl-mode .contact-item h4 {
-    text-align: right;
-    direction: rtl;
+body.rtl-mode .contact-item h4,
+body.rtl-mode .contact-item div h4,
+body.rtl-mode .contact-item > div > h4,
+html[lang="he"] .contact-item h4,
+html[lang="he"] .contact-item div h4,
+html[lang="he"] .contact-item > div > h4,
+html[dir="rtl"] .contact-item h4,
+html[dir="rtl"] .contact-item div h4,
+html[dir="rtl"] .contact-item > div > h4,
+.rtl-mode .contact-item h4,
+.rtl-mode .contact-item div h4,
+.rtl-mode .contact-item > div > h4,
+[data-translate="contact.phone"],
+[data-translate="contact.email"] {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
+    width: 100% !important;
 }
 
-[dir="rtl"] .contact-item p,
-.rtl-mode .contact-item p {
-    text-align: right;
-    direction: rtl;
+body.rtl-mode .contact-item p,
+body.rtl-mode .contact-item div p,
+body.rtl-mode .contact-item > div > p,
+html[lang="he"] .contact-item p,
+html[lang="he"] .contact-item div p,
+html[lang="he"] .contact-item > div > p,
+html[dir="rtl"] .contact-item p,
+html[dir="rtl"] .contact-item div p,
+html[dir="rtl"] .contact-item > div > p,
+.rtl-mode .contact-item p,
+.rtl-mode .contact-item div p,
+.rtl-mode .contact-item > div > p {
+    text-align: right !important;
+    direction: rtl !important;
+    width: 100% !important;
 }
 
-[dir="rtl"] .contact h2,
+body.rtl-mode .contact h2,
+html[lang="he"] .contact h2,
+html[dir="rtl"] .contact h2,
 .rtl-mode .contact h2 {
-    text-align: right;
-    direction: rtl;
+    text-align: right !important;
+    direction: rtl !important;
 }
 
 .rtl-mode .contact-form {
@@ -4464,7 +4534,7 @@ body.rtl-mode .verification-checkbox span {
     /* HERO SECTION MOBILE FIXES */
     .hero {
         min-height: 100vh;
-        padding: 120px 0 40px;
+        padding: 80px 0 40px;
     }
     
     .hero-container {
@@ -4770,7 +4840,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .network-topology::before {
-    content: "NETWORK STATUS";
+    content: "NETWORK STATUS\A━━━━━━━━━━━━━━\A\AROUTER-01 ● ONLINE\ASWITCH-02 ● ONLINE\AFIREWALL ● ACTIVE\A\ATRAFFIC: 85.2 MB/s\ALATENCY: 12ms\AUPTIME: 99.8%";
     white-space: pre-line;
     animation: networkBlink 2s infinite;
 }
@@ -4794,7 +4864,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .security-dashboard::before {
-    content: "SECURITY CENTER";
+    content: "SECURITY CENTER\A━━━━━━━━━━━━━━\A\A🛡️ THREATS: 0\A🔒 BLOCKED: 1,247\A🔍 SCANNING...\A\ALAST SCAN: 00:12\ASTATUS: SECURE\AENC: AES-256";
     white-space: pre-line;
     animation: securityPulse 3s infinite;
 }
@@ -4817,7 +4887,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .data-flow::before {
-    content: "DATA ANALYTICS";
+    content: "DATA ANALYTICS\A━━━━━━━━━━━━━━\A\A▓▓▓▓▓░░░░░ 78%\A▓▓▓▓▓▓▓░░░ 85%\A▓▓▓▓░░░░░░ 45%\A\APROCESSED: 2.1TB\AQUEUE: 847 MB\AAPILOAD: NORMAL";
     white-space: pre-line;
 }
 
@@ -4834,7 +4904,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .system-stats::before {
-    content: "SYSTEM METRICS";
+    content: "SYSTEM METRICS\A━━━━━━━━━━━━━━\A\ACPU: ████░░░░ 45%\ARAM: ██████░░ 72%\ADISK: ███░░░░░ 38%\A\ATEMP: 42°C\AFANS: 2,340 RPM\ALOAD: 0.85";
     white-space: pre-line;
     animation: statsFlicker 2.5s infinite;
 }
@@ -4858,7 +4928,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .traffic-analysis::before {
-    content: "TRAFFIC MONITOR";
+    content: "TRAFFIC MONITOR\A━━━━━━━━━━━━━━\A\A↗ IN:  152.7 MB/s\A↙ OUT: 89.3 MB/s\A\ACONNECTIONS: 1,847\ABANDWIDTH: 87.2%\APACKETS: 2.1M/s\ADROPS: 0.02%";
     white-space: pre-line;
     animation: trafficUpdate 1.8s infinite;
 }
@@ -4883,7 +4953,7 @@ body.rtl-mode .verification-checkbox span {
 }
 
 .threat-detection::before {
-    content: "THREAT DETECTION";
+    content: "THREAT DETECTION\A━━━━━━━━━━━━━━\A\A⚠ SCANNING...\A✓ IPS: ACTIVE\A✓ DLP: MONITORING\A\AMALWARE: 0 FOUND\AINTRUSIONS: NONE\ASTATUS: ██ SAFE";
     white-space: pre-line;
     animation: threatScan 3s infinite;
 }
@@ -4940,25 +5010,41 @@ body.rtl-mode .verification-checkbox span {
   }
 }
 
-/* RTL Text Direction */
-[dir="rtl"] h4,
-.rtl-mode h4 {
-    text-align: right;
-    direction: rtl;
+/* ULTIMATE HEBREW TEXT RTL FIX - MAXIMUM PRIORITY */
+html[lang="he"] h4,
+html[dir="rtl"] h4,
+.rtl-mode h4,
+html[lang="he"] [data-translate*="contact"],
+html[dir="rtl"] [data-translate*="contact"],
+.rtl-mode [data-translate*="contact"],
+html[lang="he"] .contact-item *,
+html[dir="rtl"] .contact-item *,
+.rtl-mode .contact-item * {
+    text-align: right !important;
+    direction: rtl !important;
 }
 
-/* Hebrew Language Specific */
-html[lang="he"] .contact-item {
-    text-align: right;
-    direction: rtl;
+/* FORCE HEBREW LANGUAGE SPECIFIC */
+html[lang="he"] .contact-item,
+html[lang="he"] .contact-item div,
+html[lang="he"] .contact-item h4 {
+    text-align: right !important;
+    direction: rtl !important;
+    unicode-bidi: embed !important;
 }
 
-/* RTL Global Override */
+/* GLOBAL RTL OVERRIDE FOR ALL DEVICES */
 @media screen {
-    [dir="rtl"] .contact-item h4,
-    .rtl-mode .contact-item h4 {
-        text-align: right;
-        direction: rtl;
+    html[lang="he"] .contact-item h4,
+    html[dir="rtl"] .contact-item h4,
+    .rtl-mode .contact-item h4,
+    [data-translate="contact.phone"],
+    [data-translate="contact.email"] {
+        text-align: right !important;
+        direction: rtl !important;
+        unicode-bidi: embed !important;
+        display: block !important;
+        width: 100% !important;
     }
 }
 
@@ -5019,20 +5105,19 @@ html[dir="rtl"] .stat-number[data-number="30"] {
     direction: ltr !important;
     display: inline-block !important;
     text-align: center !important;
-}/* Fixed hamburger for mobile */
-.fixed-hamburger {
+}.fixed-hamburger {
   position: fixed;
   top: 24px;
   right: 24px;
   width: 44px;
   height: 44px;
   z-index: 3000;
-  display: none;
-  flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(15,20,25,0.95);
   border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -5045,18 +5130,18 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   width: 26px;
   height: 3px;
   background: #fff;
-  margin: 3px 0;
+  margin: 4px 0;
   border-radius: 2px;
   transition: 0.4s;
 }
 .fixed-hamburger.active .bar1 {
-  transform: translateY(9px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 .fixed-hamburger.active .bar2 {
   opacity: 0;
 }
 .fixed-hamburger.active .bar3 {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Overlay */
@@ -5074,12 +5159,12 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   pointer-events: auto;
 }
 
-/* Off-canvas menu */
+/* Off-canvas меню */
 .offcanvas-menu {
   position: fixed;
   top: 0; right: -320px;
   width: 320px;
-  height: 100vh;
+  height: 100vh; /* Standard viewport height for desktop */
   background: #10151c;
   z-index: 3001;
   box-shadow: -4px 0 24px rgba(0,0,0,0.18);
@@ -5109,7 +5194,7 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   color: #00d4ff;
 }
 
-/* Languages inside menu */
+/* Языки внутри меню */
 .offcanvas-menu .menu-langs {
   display: flex;
   gap: 12px;
@@ -5133,17 +5218,145 @@ html[dir="rtl"] .stat-number[data-number="30"] {
   border-color: #fff;
 }
 
-/* Mobile navigation fixes */
+/* Скрыть старый гамбургер на мобилке */
+@media (max-width: 768px) {
+  .nav-container .hamburger { display: none !important; }
+  /* .language-switcher { display: none !important; } - УБРАНО! Теперь показываем на мобилке */
+  .fixed-hamburger { display: flex !important; }
+  .offcanvas-menu { display: block !important; }
+}
+
 @media (max-width: 900px) {
-    .hamburger {
-        display: none !important;
-    }
-    
-    .fixed-hamburger {
-        display: flex !important;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
+  /* Убираем языки и старые элементы */
+  .language-switcher, .nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Красивый хедер - только логотип слева */
+  .nav-container {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 1rem 2rem !important;
+    direction: ltr !important;
+  }
+  
+  .logo {
+    display: flex !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* СЕКСУАЛЬНЫЙ ГАМБУРГЕР СПРАВА ВСЕГДА ВИДИМЫЙ */
+  .hamburger, .fixed-hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 1001 !important;
+    pointer-events: auto !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: linear-gradient(135deg, #00d4ff, #0099cc) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    line-height: 1 !important;
+  }
+  
+  .hamburger:hover, .fixed-hamburger:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.5) !important;
+    background: linear-gradient(135deg, #0099cc, #00d4ff) !important;
+  }
+  
+  .hamburger::before, .fixed-hamburger::before {
+    content: "≡" !important;
+    display: block !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  .hamburger span, .fixed-hamburger span {
+    display: none !important;
+  }
+  
+  /* OFFCANVAS МЕНЮ */
+  .offcanvas-menu {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 300px !important;
+    height: 100vh !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 50, 100, 0.9)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-left: 2px solid rgba(0, 212, 255, 0.3) !important;
+    z-index: 1000 !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    padding: 80px 30px 30px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .offcanvas-menu.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    right: 0 !important;
+  }
+  
+  .menu-overlay {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Принудительно скрываем overflow */
+  body, html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* По умолчанию скрываем фиксированный гамбургер и off-canvas меню */
+.fixed-hamburger, .offcanvas-menu { display: none; }
+
+@media (max-width: 768px) {
+  .nav-container .hamburger { display: none !important; }
+  /* .language-switcher { display: none !important; } - УБРАНО! Теперь показываем на мобилке */
+  .fixed-hamburger { display: flex !important; }
+  .offcanvas-menu { display: block !important; }
+
+@media (max-width: 900px) { .hamburger { display: none !important; } }
 }

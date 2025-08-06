@@ -1,0 +1,11 @@
+<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Israel Flag -->
+  <rect width="24" height="18" rx="2" fill="#FFFFFF"/>
+  <rect width="24" height="3" fill="#0038B8" y="0"/>
+  <rect width="24" height="3" fill="#0038B8" y="15"/>
+  <!-- Star of David simplified -->
+  <g transform="translate(12, 9)">
+    <polygon points="0,-3 2.598,1.5 -2.598,1.5" fill="none" stroke="#0038B8" stroke-width="0.8"/>
+    <polygon points="0,3 -2.598,-1.5 2.598,-1.5" fill="none" stroke="#0038B8" stroke-width="0.8"/>
+  </g>
+</svg>
