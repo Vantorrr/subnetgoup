@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST FLAGS - Debug Page</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+        
+        .flag-icon {
+            width: 24px;
+            height: 18px;
+            display: inline-block;
+            border: 2px solid red;
+            background: yellow;
+        }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 5px;
+            border: 3px solid lime;
+            padding: 10px;
+            background: rgba(255, 0, 0, 0.5);
+        }
+        
+        .lang-btn {
+            padding: 8px;
+            border: 2px solid white;
+            background: blue;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 45px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 ТЕСТ ФЛАГОВ - СТРАНИЦА ДИАГНОСТИКИ 🚨</h1>
+    
+    <div class="test-section">
+        <h2>1. Простые SVG флаги без CSS из service-page.css:</h2>
+        <img src="../images/flag-us.svg?v=3" alt="US" class="flag-icon">
+        <img src="../images/flag-il.svg?v=3" alt="IL" class="flag-icon">
+        <p>Если эти флаги НЕ ВИДНЫ - проблема в самих SVG файлах!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. Переключатель языков (как на сервисах):</h2>
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">
+                <img src="../images/flag-us.svg?v=3" alt="English" class="flag-icon">
+            </button>
+            <button class="lang-btn" data-lang="he">
+                <img src="../images/flag-il.svg?v=3" alt="עברית" class="flag-icon">
+            </button>
+        </div>
+        <p style="margin-top: 100px;">Если переключатель НЕ ВИДЕН - проблема в CSS!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>3. Проверка путей:</h2>
+        <p>Путь к US флагу: <code>../images/flag-us.svg?v=3</code></p>
+        <p>Путь к IL флагу: <code>../images/flag-il.svg?v=3</code></p>
+        <p>Откройте эти ссылки напрямую в браузере!</p>
+        <a href="../images/flag-us.svg?v=3" target="_blank" style="color: lime;">🇺🇸 US FLAG</a> | 
+        <a href="../images/flag-il.svg?v=3" target="_blank" style="color: lime;">🇮🇱 IL FLAG</a>
+    </div>
+    
+    <div class="test-section">
+        <h2>4. Console лог:</h2>
+        <p>Откройте Console (F12) и посмотрите есть ли ошибки загрузки!</p>
+    </div>
+
+    <script>
+        console.log('🚨 TEST PAGE LOADED');
+        console.log('🔍 Checking flag elements...');
+        
+        setTimeout(() => {
+            const flags = document.querySelectorAll('.flag-icon');
+            console.log(`📊 Found ${flags.length} flag elements`);
+            
+            flags.forEach((flag, i) => {
+                console.log(`🏳️ Flag ${i}:`, {
+                    src: flag.src,
+                    visible: flag.offsetWidth > 0 && flag.offsetHeight > 0,
+                    display: getComputedStyle(flag).display,
+                    opacity: getComputedStyle(flag).opacity
+                });
+            });
+            
+            const switcher = document.querySelector('.language-switcher');
+            if (switcher) {
+                console.log('🔄 Language switcher:', {
+                    visible: switcher.offsetWidth > 0 && switcher.offsetHeight > 0,
+                    display: getComputedStyle(switcher).display,
+                    position: getComputedStyle(switcher).position
+                });
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
