@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEAN FLAG TEST</title>
+    <link rel="stylesheet" href="../styles.css?v=129&hamburger_always_visible=true">
+    <link rel="stylesheet" href="service-page.css">
+</head>
+<body class="surveillance-page">
+    <!-- ТОЧНО КАК НА ГЛАВНОЙ СТРАНИЦЕ -->
+    <div class="language-switcher">
+        <button class="lang-btn" data-lang="en">
+            <img src="../images/flag-us.svg?v=1000" alt="English" class="flag-icon">
+        </button>
+        <button class="lang-btn active" data-lang="he">
+            <img src="../images/flag-il.svg?v=1000" alt="Hebrew" class="flag-icon">
+        </button>
+    </div>
+
+    <div style="padding: 100px; text-align: center; font-size: 30px; color: white;">
+        <h1>CLEAN FLAG TEST</h1>
+        <p>Если флаги видны здесь - значит проблема в service-page.js!</p>
+        <p>Если НЕ видны - проблема в CSS или SVG файлах!</p>
+        
+        <div style="margin: 50px 0; padding: 20px; background: rgba(255,255,255,0.1);">
+            <p data-translate="nav.home">Home</p>
+            <p data-translate="nav.about">About us</p>
+            <p data-translate="nav.services">Services</p>
+        </div>
+    </div>
+
+    <!-- ТОЛЬКО script.js - БЕЗ service-page.js! -->
+    <script src="../script.js?v=20"></script>
+</body>
+</html>
