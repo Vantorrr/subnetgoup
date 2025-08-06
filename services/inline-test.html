@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INLINE FLAG TEST</title>
+    <style>
+        body { 
+            background: black; 
+            color: white; 
+            font-size: 30px;
+            padding: 50px;
+        }
+        .flag-container {
+            border: 5px solid red;
+            padding: 20px;
+            margin: 20px 0;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 INLINE SVG TEST (NO FILES!) 🚨</h1>
+    
+    <div class="flag-container">
+        <h2>USA FLAG INLINE:</h2>
+        <svg width="48" height="36" style="border: 3px solid lime;">
+            <rect width="48" height="36" rx="2" fill="#B22234"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="2.76"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="8.3"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="13.84"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="19.38"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="24.92"/>
+            <rect width="48" height="2.76" fill="#FFFFFF" y="30.46"/>
+            <rect width="19.2" height="19.38" fill="#3C3B6E"/>
+        </svg>
+        <p>Если НЕ ВИДНО - проблема в браузере!</p>
+    </div>
+    
+    <div class="flag-container">
+        <h2>ISRAEL FLAG INLINE:</h2>
+        <svg width="48" height="36" style="border: 3px solid lime;">
+            <rect width="48" height="36" rx="2" fill="#FFFFFF"/>
+            <rect width="48" height="4" fill="#0038B8" y="4"/>
+            <rect width="48" height="4" fill="#0038B8" y="28"/>
+            <g transform="translate(24, 18)">
+                <polygon points="0,-8 6,4 -6,4" fill="none" stroke="#0038B8" stroke-width="2.4"/>
+                <polygon points="0,8 -6,-4 6,-4" fill="none" stroke="#0038B8" stroke-width="2.4"/>
+            </g>
+        </svg>
+        <p>Если НЕ ВИДНО - проблема в браузере!</p>
+    </div>
+    
+    <div class="flag-container">
+        <h2>ПРОСТОЙ ТЕСТ:</h2>
+        <div style="width: 50px; height: 30px; background: red; border: 3px solid blue;">RED BOX</div>
+        <p>Если НЕ ВИДНО красный блок - проблема СЕРЬЕЗНАЯ!</p>
+    </div>
+    
+    <script>
+        console.log('🔥 Inline test loaded - NO external files!');
+        
+        // Проверим элементы через 3 секунды
+        setTimeout(() => {
+            const svgs = document.querySelectorAll('svg');
+            console.log('📊 SVG elements found:', svgs.length);
+            
+            svgs.forEach((svg, i) => {
+                console.log(`📋 SVG ${i+1}:`, svg.getBoundingClientRect());
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
