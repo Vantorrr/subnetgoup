@@ -1224,6 +1224,29 @@ class LanguageSwitcher {
         });
     }
 
+    setLanguage(lang) {
+        // Set language without triggering click events to preserve flag icons
+        this.currentLanguage = lang;
+        
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        const targetBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
+        if (targetBtn) {
+            targetBtn.classList.add('active');
+        }
+        
+        // Save language preference
+        localStorage.setItem('preferred-language', lang);
+        
+        // Update document language and direction
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
+        
+        // Apply translations
+        this.applyTranslations(lang);
+    }
+
     applyTranslations(lang) {
         // Update all translated elements (exclude language buttons to preserve flag icons)
         const elements = document.querySelectorAll('[data-translate]:not(.lang-btn):not(.lang-btn *)');
@@ -1556,18 +1579,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred-language');
     const defaultLang = langParam || savedLang || 'he'; // ДЕФОЛТ ИВРИТ!
     
-    // Set initial language - всегда устанавливаем язык
-    if (defaultLang === 'he') {
-        const hebrewBtn = document.querySelector('.lang-btn[data-lang="he"]');
-        if (hebrewBtn) {
-            hebrewBtn.click();
-        }
-    } else if (defaultLang === 'en') {
-        const englishBtn = document.querySelector('.lang-btn[data-lang="en"]');
-        if (englishBtn) {
-            englishBtn.click();
-        }
-    }
+    // Set initial language - используем прямой метод без клика для сохранения флагов
+    languageSwitcher.setLanguage(defaultLang);
 
     // Initialize premium enhancements
     new ScrollAnimations();
