@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>БАЗОВЫЙ ТЕСТ</title>
+    <style>
+        body { 
+            background: black; 
+            color: white; 
+            font-size: 40px;
+            padding: 50px;
+        }
+        .test {
+            border: 10px solid red;
+            padding: 30px;
+            margin: 30px 0;
+            background: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔴 БАЗОВЫЙ ТЕСТ РЕНДЕРИНГА 🔴</h1>
+    
+    <div class="test">
+        <h2>ТЕСТ 1: HTML элементы</h2>
+        <p>Видишь этот текст? ДА/НЕТ</p>
+        <div style="width: 100px; height: 100px; background: red;">КРАСНЫЙ КВАДРАТ</div>
+    </div>
+    
+    <div class="test">
+        <h2>ТЕСТ 2: Простейший SVG</h2>
+        <svg width="100" height="100" style="border: 5px solid blue;">
+            <rect width="100" height="100" fill="green"/>
+        </svg>
+        <p>Видишь ЗЕЛЕНЫЙ КВАДРАТ в синей рамке? ДА/НЕТ</p>
+    </div>
+    
+    <div class="test">
+        <h2>ТЕСТ 3: SVG с цветами</h2>
+        <svg width="100" height="100" style="border: 5px solid blue;">
+            <rect width="100" height="50" fill="red"/>
+            <rect width="100" height="50" fill="blue" y="50"/>
+        </svg>
+        <p>Видишь КРАСНЫЙ и СИНИЙ прямоугольники? ДА/НЕТ</p>
+    </div>
+    
+    <div class="test">
+        <h2>ТЕСТ 4: Информация о браузере</h2>
+        <p id="browser-info">Загружается...</p>
+    </div>
+    
+    <script>
+        console.log('🔥 BASIC TEST STARTED');
+        
+        // Информация о браузере
+        document.getElementById('browser-info').innerHTML = `
+            <strong>Браузер:</strong> ${navigator.userAgent}<br>
+            <strong>Платформа:</strong> ${navigator.platform}<br>
+            <strong>Язык:</strong> ${navigator.language}<br>
+            <strong>SVG поддержка:</strong> ${document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1") ? 'ДА' : 'НЕТ'}
+        `;
+        
+        // Проверка SVG элементов
+        setTimeout(() => {
+            const svgs = document.querySelectorAll('svg');
+            console.log('📊 Найдено SVG элементов:', svgs.length);
+            
+            svgs.forEach((svg, i) => {
+                const rect = svg.getBoundingClientRect();
+                console.log(`📋 SVG ${i+1} размеры:`, rect.width, 'x', rect.height);
+                console.log(`📋 SVG ${i+1} видимый:`, rect.width > 0 && rect.height > 0);
+            });
+        }, 2000);
+    </script>
+</body>
+</html>
