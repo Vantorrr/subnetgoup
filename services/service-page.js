@@ -1575,34 +1575,39 @@ document.addEventListener('DOMContentLoaded', () => {
     new MobileMenu();
     new ServiceCardEffects();
     
-    // Initialize language switcher
-    const languageSwitcher = new LanguageSwitcher();
+    // НЕ ИНИЦИАЛИЗИРУЕМ LanguageSwitcher автоматически - это ломает флаги!
+    // Пусть флаги работают как на главной странице - ПРОСТО И НАДЕЖНО!
     
     // Check for saved language preference or detect from URL params
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
     const savedLang = localStorage.getItem('preferred-language');
-    const defaultLang = langParam || savedLang || 'he'; // ДЕФОЛТ ИВРИТ!
+    const defaultLang = langParam || savedLang || 'he';
     
-    // Устанавливаем язык БЕЗ вызова applyTranslations чтобы сохранить флаги
-    languageSwitcher.currentLanguage = defaultLang;
-    
-    // Устанавливаем состояние кнопок
+    // Просто устанавливаем active класс как на главной странице
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     const targetBtn = document.querySelector(`.lang-btn[data-lang="${defaultLang}"]`);
     if (targetBtn) {
         targetBtn.classList.add('active');
     }
     
-    // Устанавливаем направление и класс body без переводов
+    // Устанавливаем направление документа
     document.documentElement.lang = defaultLang;
     document.documentElement.dir = defaultLang === 'he' ? 'rtl' : 'ltr';
     document.body.className = defaultLang === 'he' ? 'rtl-mode' : 'ltr-mode';
     
-    // ТОЛЬКО СЕЙЧАС применяем переводы (флаги уже загружены)
-    setTimeout(() => {
-        languageSwitcher.applyTranslations(defaultLang);
-    }, 100); // Даем флагам время загрузиться
+    // Создаем простые обработчики как на главной странице  
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.onclick = () => {
+            const lang = btn.dataset.lang;
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            localStorage.setItem('preferred-language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+            document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
+        };
+    });
 
     // Initialize premium enhancements
     new ScrollAnimations();
