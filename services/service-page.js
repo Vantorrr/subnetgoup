@@ -1261,8 +1261,11 @@ class LanguageSwitcher {
             const key = element.dataset.translate;
             const translation = this.getTranslation(key, lang);
             if (translation) {
-                element.textContent = translation;
-                translatedCount++;
+                // НЕ трогаем кнопки языков и их дочерние элементы (флаги!)
+                if (!element.closest('.lang-btn') && !element.classList.contains('lang-btn')) {
+                    element.textContent = translation;
+                    translatedCount++;
+                }
             }
         });
         
