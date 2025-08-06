@@ -5879,11 +5879,11 @@ body.nav-open {
 @media print {
     .header,
     .whatsapp-float,
-    .language-switcher,
     .digital-background,
     .hero-effects {
         display: none !important;
     }
+    /* Оставляем language-switcher видимым даже при печати для тестирования */
     
     body {
         background: white !important;
@@ -6416,8 +6416,9 @@ body.nav-open {
 }
 
 @media (max-width: 900px) {
-  /* Hide language switcher on mobile */
-  .language-switcher, .nav-menu {
+  /* НЕ СКРЫВАЕМ language-switcher - ПУСТЬ ФЛАГИ ОСТАЮТСЯ ВИДИМЫМИ! */
+  /* .language-switcher, .nav-menu { display: none !important; } - УБРАНО! */
+  .nav-menu {
     display: none !important;
   }
   
