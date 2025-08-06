@@ -217,7 +217,18 @@ function updateLanguage(lang) {
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
-        const translation = getNestedTranslation(translations[lang], key);
+        
+        // Сначала ищем в расширенных переводах сервисов
+        let translation = null;
+        if (window.serviceTranslations && window.serviceTranslations[lang]) {
+            translation = getNestedTranslation(window.serviceTranslations[lang], key);
+        }
+        
+        // Если не найдено, ищем в основных переводах
+        if (!translation) {
+            translation = getNestedTranslation(translations[lang], key);
+        }
+        
         if (translation) {
             element.textContent = translation;
         }
