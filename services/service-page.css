@@ -235,7 +235,7 @@ body {
 
 .nav-container {
     display: flex !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
     align-items: center !important;
     padding: 1rem 2rem !important;
     max-width: 1200px !important;
@@ -252,13 +252,16 @@ body {
     color: inherit !important;
     transition: all 0.3s ease !important;
     padding: 8px 12px !important;
-    margin-right: auto !important;
-    margin-left: 0 !important;
-    order: 0 !important;
-    direction: ltr !important;
     border-radius: 12px; /* Скругление */
     background: rgba(0, 212, 255, 0.05); /* Фоновая подсветка */
     border: 1px solid rgba(0, 212, 255, 0.2); /* Граница */
+}
+
+/* Сдвиг логотипа вправо только на ПК */
+@media (min-width: 769px) {
+    .logo {
+        margin-left: auto !important;
+    }
 }
 
 .logo:hover {
