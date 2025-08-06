@@ -1262,8 +1262,15 @@ class LanguageSwitcher {
             const key = element.dataset.translate;
             const translation = this.getTranslation(key, lang);
             if (translation) {
-                // НЕ трогаем кнопки языков и их дочерние элементы (флаги!)
-                if (!element.closest('.lang-btn') && !element.classList.contains('lang-btn')) {
+                // МЕГА-ЗАЩИТА ФЛАГОВ! НЕ трогаем ничего связанное с языками
+                const isFlagRelated = element.closest('.lang-btn') || 
+                                    element.classList.contains('lang-btn') ||
+                                    element.closest('.language-switcher') ||
+                                    element.classList.contains('language-switcher') ||
+                                    element.classList.contains('flag-icon') ||
+                                    element.tagName === 'IMG';
+                
+                if (!isFlagRelated) {
                     element.textContent = translation;
                     translatedCount++;
                 }
@@ -1554,9 +1561,21 @@ window.testHebrew = function() {
         }
         
         if (value) {
-            el.textContent = value;
-            translated++;
-            console.log(`✅ Translated ${key}: ${value}`);
+            // МЕГА-ЗАЩИТА ФЛАГОВ! НЕ трогаем ничего связанное с языками
+            const isFlagRelated = el.closest('.lang-btn') || 
+                                el.classList.contains('lang-btn') ||
+                                el.closest('.language-switcher') ||
+                                el.classList.contains('language-switcher') ||
+                                el.classList.contains('flag-icon') ||
+                                el.tagName === 'IMG';
+            
+            if (!isFlagRelated) {
+                el.textContent = value;
+                translated++;
+                console.log(`✅ Translated ${key}: ${value}`);
+            } else {
+                console.log(`🛡️ Protected flag element ${key} from translation`);
+            }
         } else {
             console.log(`❌ No translation for ${key}`);
         }
