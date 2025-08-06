@@ -1584,16 +1584,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred-language');
     const defaultLang = langParam || savedLang || 'he'; // ДЕФОЛТ ИВРИТ!
     
-    // НЕ устанавливаем язык автоматически при загрузке - это стирает флаги!
-    // Только сохраняем текущее состояние
+    // Устанавливаем язык БЕЗ вызова applyTranslations чтобы сохранить флаги
     languageSwitcher.currentLanguage = defaultLang;
     
-    // Устанавливаем active класс без вызова переводов
+    // Устанавливаем состояние кнопок
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     const targetBtn = document.querySelector(`.lang-btn[data-lang="${defaultLang}"]`);
     if (targetBtn) {
         targetBtn.classList.add('active');
     }
+    
+    // Устанавливаем направление и класс body без переводов
+    document.documentElement.lang = defaultLang;
+    document.documentElement.dir = defaultLang === 'he' ? 'rtl' : 'ltr';
+    document.body.className = defaultLang === 'he' ? 'rtl-mode' : 'ltr-mode';
+    
+    // ТОЛЬКО СЕЙЧАС применяем переводы (флаги уже загружены)
+    setTimeout(() => {
+        languageSwitcher.applyTranslations(defaultLang);
+    }, 100); // Даем флагам время загрузиться
 
     // Initialize premium enhancements
     new ScrollAnimations();
