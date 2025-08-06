@@ -57,10 +57,25 @@
     <h1>🚨 ТЕСТ ФЛАГОВ - СТРАНИЦА ДИАГНОСТИКИ 🚨</h1>
     
     <div class="test-section">
-        <h2>1. Простые SVG флаги без CSS из service-page.css:</h2>
-        <img src="../images/flag-us.svg?v=3" alt="US" class="flag-icon">
-        <img src="../images/flag-il.svg?v=3" alt="IL" class="flag-icon">
-        <p>Если эти флаги НЕ ВИДНЫ - проблема в самих SVG файлах!</p>
+        <h2>1. Встроенные SVG флаги (должны ТОЧНО работать):</h2>
+        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="border: 2px solid red;">
+          <rect width="24" height="18" rx="2" fill="#B22234"/>
+          <rect width="24" height="1.38" fill="#FFFFFF" y="1.38"/>
+          <rect width="9.6" height="9.69" fill="#3C3B6E"/>
+        </svg>
+        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="border: 2px solid red;">
+          <rect width="24" height="18" rx="2" fill="#FFFFFF"/>
+          <rect width="24" height="3" fill="#0038B8" y="0"/>
+          <rect width="24" height="3" fill="#0038B8" y="15"/>
+        </svg>
+        <p>Если эти флаги НЕ ВИДНЫ - проблема в браузере!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>2. SVG флаги из файлов:</h2>
+        <img src="../images/flag-us.svg?v=999" alt="US" class="flag-icon">
+        <img src="../images/flag-il.svg?v=999" alt="IL" class="flag-icon">
+        <p>Если эти флаги НЕ ВИДНЫ - проблема в путях к файлам!</p>
     </div>
     
     <div class="test-section">
