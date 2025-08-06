@@ -218,8 +218,8 @@ body {
     overflow: hidden;
     object-fit: cover;
     flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.3) !important;
-    border: 2px solid rgba(0, 212, 255, 0.5) !important;
+    /* background: rgba(255, 255, 255, 0.3) !important; - УБРАНО! Создавало черные квадраты */
+    border: 1px solid rgba(0, 212, 255, 0.3) !important;
     min-width: 24px;
     min-height: 18px;
     max-width: 24px;
