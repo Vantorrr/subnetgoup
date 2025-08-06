@@ -1194,34 +1194,35 @@ class LanguageSwitcher {
             console.log(`Initializing LanguageSwitcher with ${langButtons.length} buttons`);
         }
         
-        langButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                // Find the actual button element (in case we clicked on span inside)
-                const button = e.target.closest('.lang-btn');
-                if (!button) return;
-                
-                // Remove active class from all buttons
-                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Get selected language
-                const lang = button.dataset.lang;
-                this.currentLanguage = lang;
-                
-                // Save language preference
-                localStorage.setItem('preferred-language', lang);
-                
-                // Update document language and direction
-                document.documentElement.lang = lang;
-                document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
-                document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
-                
-                // Apply translations if available
-                this.applyTranslations(lang);
-            });
-        });
+        // ОТКЛЮЧЕНО! script.js теперь обрабатывает переключение языков
+        // langButtons.forEach(btn => {
+        //     btn.addEventListener('click', (e) => {
+        //         // Find the actual button element (in case we clicked on span inside)
+        //         const button = e.target.closest('.lang-btn');
+        //         if (!button) return;
+        //         
+        //         // Remove active class from all buttons
+        //         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        //         
+        //         // Add active class to clicked button
+        //         button.classList.add('active');
+        //         
+        //         // Get selected language
+        //         const lang = button.dataset.lang;
+        //         this.currentLanguage = lang;
+        //         
+        //         // Save language preference
+        //         localStorage.setItem('preferred-language', lang);
+        //         
+        //         // Update document language and direction
+        //         document.documentElement.lang = lang;
+        //         document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        //         document.body.className = lang === 'he' ? 'rtl-mode' : 'ltr-mode';
+        //         
+        //         // Apply translations if available
+        //         this.applyTranslations(lang);
+        //     });
+        // });
     }
 
     setLanguage(lang) {
