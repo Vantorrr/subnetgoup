@@ -1225,8 +1225,8 @@ class LanguageSwitcher {
     }
 
     applyTranslations(lang) {
-        // Update all translated elements
-        const elements = document.querySelectorAll('[data-translate]');
+        // Update all translated elements (exclude language buttons to preserve flag icons)
+        const elements = document.querySelectorAll('[data-translate]:not(.lang-btn):not(.lang-btn *)');
         
         let translatedCount = 0;
         elements.forEach(element => {
