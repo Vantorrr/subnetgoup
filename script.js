@@ -297,27 +297,23 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize with Hebrew by default
-    if (!isServicePage()) {
-        updateLanguage('he');
-        // Set Hebrew button as active
-        const heBtn = document.querySelector('.lang-btn[data-lang="he"]');
-        if (heBtn) {
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            heBtn.classList.add('active');
-        }
+    // Инициализируем язык на ВСЕХ страницах
+    updateLanguage('he');
+    // Set Hebrew button as active
+    const heBtn = document.querySelector('.lang-btn[data-lang="he"]');
+    if (heBtn) {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        heBtn.classList.add('active');
     }
     
     // --- Обработчики для стандартных кнопок смены языка (desktop) ---
     document.querySelectorAll('.language-switcher .lang-btn').forEach(btn => {
       btn.onclick = () => {
         const lang = btn.dataset.lang;
-        if (!isServicePage()) {
-          updateLanguage(lang);
-        }
+        // Теперь всегда вызываем updateLanguage на ВСЕХ страницах
+        updateLanguage(lang);
         document.querySelectorAll('.language-switcher .lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        // На страницах сервисов используем их собственный переключатель языков - НЕ ВЫЗЫВАЕМ из script.js
-        // Убрано: window.ServicePageComponents.LanguageSwitcher().applyTranslations(lang) - это стирало флаги!
       };
     });
 
