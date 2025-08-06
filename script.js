@@ -316,12 +316,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.querySelectorAll('.language-switcher .lang-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        // Для сервисных страниц: вызвать LanguageSwitcher для перевода всего контента
-        if (window.ServicePageComponents && window.ServicePageComponents.LanguageSwitcher) {
-          try {
-            new window.ServicePageComponents.LanguageSwitcher().applyTranslations(lang);
-          } catch (e) {}
-        }
+        // На страницах сервисов используем их собственный переключатель языков - НЕ ВЫЗЫВАЕМ из script.js
+        // Убрано: window.ServicePageComponents.LanguageSwitcher().applyTranslations(lang) - это стирало флаги!
       };
     });
 
