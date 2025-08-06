@@ -6366,7 +6366,8 @@ body.nav-open {
 @media (max-width: 768px) {
   .nav-container .hamburger { display: none !important; }
   .nav-menu { display: none !important; }
-  .language-switcher { display: none !important; }
+  /* НЕ СКРЫВАЕМ language-switcher на мобильных - пусть флаги остаются видимыми! */
+  /* .language-switcher { display: none !important; } - УБРАНО! */
   
   /* FORCE SHOW FIXED HAMBURGER - CENTERED VERSION */
   .fixed-hamburger { 
