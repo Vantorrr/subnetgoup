@@ -1248,11 +1248,16 @@ class LanguageSwitcher {
     }
 
     applyTranslations(lang) {
-        // Update all translated elements (exclude language buttons to preserve flag icons)
-        const elements = document.querySelectorAll('[data-translate]:not(.lang-btn):not(.lang-btn *)');
+        // Update all translated elements (exclude ALL language switcher elements to preserve flag icons)
+        const elements = document.querySelectorAll('[data-translate]:not(.language-switcher *):not(.lang-btn):not(.menu-langs *)');
         
         let translatedCount = 0;
         elements.forEach(element => {
+            // Double check - skip any element that contains flag icons
+            if (element.closest('.language-switcher') || element.closest('.lang-btn') || element.closest('.menu-langs')) {
+                return;
+            }
+            
             const key = element.dataset.translate;
             const translation = this.getTranslation(key, lang);
             if (translation) {
@@ -1579,8 +1584,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred-language');
     const defaultLang = langParam || savedLang || 'he'; // ДЕФОЛТ ИВРИТ!
     
-    // Set initial language - используем прямой метод без клика для сохранения флагов
-    languageSwitcher.setLanguage(defaultLang);
+    // НЕ устанавливаем язык автоматически при загрузке - это стирает флаги!
+    // Только сохраняем текущее состояние
+    languageSwitcher.currentLanguage = defaultLang;
+    
+    // Устанавливаем active класс без вызова переводов
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    const targetBtn = document.querySelector(`.lang-btn[data-lang="${defaultLang}"]`);
+    if (targetBtn) {
+        targetBtn.classList.add('active');
+    }
 
     // Initialize premium enhancements
     new ScrollAnimations();
